@@ -787,7 +787,9 @@
                   </div>
 
                   <div>
-                    <label class="label-6">Address </label>
+                    <label class="label-6"
+                      >Address <span class="note">(Optional)</span>
+                    </label>
                     <label for="txtHouse" class="note"
                       >House Number, Building and Street Name</label
                     >
@@ -813,7 +815,7 @@
                     <input name="txtState" id="txtState" /> -->
 
                     <label for="txtDriversLicenseNo" class="label-6"
-                      >Drivers Licence
+                      >Drivers Licence <span class="note">(Optional)</span>
                     </label>
                     <input
                       name="txtDriversLicenseNo"
@@ -822,7 +824,7 @@
                     />
 
                     <label for="dtExpirationDate" class="label-6"
-                      >Expiration Date
+                      >Expiration Date <span class="note">(Optional)</span>
                     </label>
                     <input
                       name="dtExpirationDate"
@@ -832,7 +834,7 @@
                     />
 
                     <label for="txtRestrictionCode" class="label-6"
-                      >Restriction Code
+                      >Restriction Code <span class="note">(Optional)</span>
                     </label>
                     <input
                       name="txtRestrictionCode"
@@ -859,6 +861,7 @@
                   <div>
                     <label for="txtEmergencyContact" class="label-6"
                       >Emergency Contact Name:
+                      <span class="note">(Optional)</span>
                     </label>
                     <input
                       name="txtEmergencyContact"
@@ -868,6 +871,7 @@
 
                     <label for="txtEmergencyContactNo" class="label-6"
                       >Emergency Contact No.:
+                      <span class="note">(Optional)</span>
                     </label>
                     <input
                       name="txtEmergencyContactNo"
@@ -881,7 +885,9 @@
               <!-- HR Info Tab -->
               <div id="hr-info" class="tabNameHrModal" style="display:none">
                 <div>
-                  <label for="txtBioNumber" class="label-6">Bio Number</label>
+                  <label for="txtBioNumber" class="label-6"
+                    >Bio Number <span class="note">(Optional)</span></label
+                  >
                   <input
                     name="txtBioNumber"
                     type="number"
@@ -936,13 +942,13 @@
                   >
                   </select>
 
-                  <label for="selectManager" class="label-6"
+                  <label for="selectManager" class="label-6 hidden"
                     >Manager <span class="note">(Approver)</span></label
                   >
                   <select
                     name="selectManager"
                     id="selectManager"
-                    class="select"
+                    class="select hidden"
                   >
                   </select>
 
@@ -962,6 +968,22 @@
                     <option value="regular">Night Shift</option>
                   </select>
 
+                  <label class="label-6">Schedule</label>
+                  <label for="txtScheduleFrom" class="note">From</label>
+                  <input
+                    name="txtScheduleFrom"
+                    type="number"
+                    min="0"
+                    id="txtScheduleFrom"
+                  />
+                  <label for="txtScheduleTo" class="note">To</label>
+                  <input
+                    name="txtScheduleTo"
+                    type="number"
+                    min="0"
+                    id="txtScheduleTo"
+                  />
+
                   <label for="selectEmploymentStatus" class="label-6"
                     >Employment status</label
                   >
@@ -978,7 +1000,7 @@
                   </select>
 
                   <label id="txtLeaveLabel" class="label-6 disabled"
-                    >Leaves (Optional)</label
+                    >Leaves <span class="note">(Optional)</span></label
                   >
                   <label
                     id="txtSickLeaveLabel"
@@ -1023,7 +1045,9 @@
                 </div>
 
                 <div>
-                  <label for="txtTinNumber" class="label-6">TIN Number</label>
+                  <label for="txtTinNumber" class="label-6"
+                    >TIN Number <span class="note">(Optional)</span></label
+                  >
                   <input
                     name="txtTinNumber"
                     type="number"
@@ -1033,7 +1057,8 @@
                   />
 
                   <label for="txtPhilHealthNo" class="label-6"
-                    >Philhealth Number</label
+                    >Philhealth Number
+                    <span class="note">(Optional)</span></label
                   >
                   <input
                     name="txtPhilHealth"
@@ -1044,7 +1069,7 @@
                   />
 
                   <label for="txtPagIbigNo" class="label-6"
-                    >Pag-ibig Number</label
+                    >Pag-ibig Number <span class="note">(Optional)</span></label
                   >
                   <input
                     name="txtPagIbigNo"
@@ -1054,7 +1079,9 @@
                     maxlength="12"
                   />
 
-                  <label for="txtSssNo" class="label-6">SSS Number</label>
+                  <label for="txtSssNo" class="label-6"
+                    >SSS Number <span class="note">(Optional)</span></label
+                  >
                   <input
                     name="txtSssNo"
                     type="number"
@@ -1063,7 +1090,9 @@
                     maxlength="10"
                   />
 
-                  <label for="txtCardNo" class="label-6">Account Number</label>
+                  <label for="txtCardNo" class="label-6"
+                    >Account Number <span class="note">(Optional)</span></label
+                  >
                   <input
                     name="txtCardNo"
                     type="number"
@@ -1073,7 +1102,8 @@
 
                   <br />
                   <label for="txtDateEmployed" class="label-6"
-                    >Attached/Uploaded Requirements</label
+                    >Attached/Uploaded Requirements
+                    <span class="note">(Optional)</span></label
                   >
                   <div class="modal-rd-container">
                     <label for="optYesReq" class="radio">
@@ -1913,7 +1943,8 @@
                   <div>
                     <label class="label-6">Address: </label>
                     <p name="txtCompleteAddress" id="txtCompleteAddress">
-                      #222 Dahlia Street Malolos, Bulacan
+                      #222 Dahlia Street Alido Heights Subd. Bulihan, Malolos,
+                      Bulacan
                     </p>
                   </div>
                   <div>
@@ -1922,7 +1953,7 @@
                         >House Number, Building and Street Name</label
                       >
                       <p name="txtEmpAddress" id="txtEmpAddress">
-                        #222 Dahlia Street
+                        #222 Dahlia Street Alido Heights Subd.
                       </p>
                     </div>
                     <div>
@@ -1935,9 +1966,9 @@
                       >
                       <p name="txtEmpCity" id="txtEmpCity">Malolos</p>
                     </div>
-                    <div class="hidden">
-                      <label for="txtEmpState" class="note">State</label>
-                      <p name="txtEmpState" id="txtEmpState">-</p>
+                    <div>
+                      <label for="txtEmpBrgy" class="note">Barangay</label>
+                      <p name="txtEmpBrgy" id="txtEmpBrgy">-</p>
                     </div>
                   </div>
                 </div>
@@ -1946,6 +1977,16 @@
               <!-- HR Info Tab -->
               <div id="view-hr-info" class="tabViewIEList" style="display:none">
                 <div>
+                  <label for="lblBioNo" class="label-6">Bio Number </label>
+                  <p name="lblBioNo" id="lblBioNo">
+                    000
+                  </p>
+                  <label for="lblEmpID" class="label-6"
+                    >Employee ID Number
+                  </label>
+                  <p name="lblEmpID" id="lblEmpID">
+                    0000-0000
+                  </p>
                   <label for="lblDateEmployed" class="label-6"
                     >Date Hired
                   </label>
@@ -2016,10 +2057,8 @@
                   <label for="lblSssNo" class="label-6">SSS Number </label>
                   <p name="lblSssNo" id="lblSssNo">00-0000000-0</p>
 
-                  <label for="lblCreditCard" class="label-6"
-                    >Credit Card Number
-                  </label>
-                  <p name="lblCreditCard" id="lblCreditCard">0000-0000-0000</p>
+                  <label for="lblAccNo" class="label-6">Account Number </label>
+                  <p name="lblAccNo" id="lblAccNo">0000-0000-0000</p>
 
                   <br />
 
