@@ -687,8 +687,8 @@
               <div id="primary-info" class="tabNameHrModal">
                 <div>
                   <div>
-                    <label for="photo" class="label-6">Photo</label>
-                    <div class="profile_pic">
+                    <label for="photo" class="label-6 hidden">Photo</label>
+                    <div class="profile_pic hidden">
                       <img
                         src="/Images/user.png"
                         alt="Employee Picture"
@@ -706,12 +706,12 @@
                     <input name="txtLastName" type="text" id="txtLastName" />
 
                     <label for="txtFirstName" class="label-6"
-                      >First Name:
+                      >Given Name
                     </label>
                     <input name="txtFirstName" type="text" id="txtFirstName" />
 
                     <label for="txtMiddleName" class="label-6"
-                      >Middle Name:
+                      >Middle Name
                     </label>
                     <input
                       name="txtMiddleName"
@@ -720,7 +720,7 @@
                     />
 
                     <label for="dtPickerBirthday" class="label-6"
-                      >Birthday:
+                      >Birthday
                     </label>
                     <input
                       name="dtPickerBirthday"
@@ -728,9 +728,7 @@
                       id="dtPickerBirthday"
                       class="bdayPicker"
                     />
-                  </div>
 
-                  <div>
                     <label class="label-6">Gender</label>
                     <div class="modal-rd-container">
                       <label for="optMale" class="radio">
@@ -786,7 +784,9 @@
                         <span class="label"></span>Widowed
                       </label>
                     </div>
+                  </div>
 
+                  <div>
                     <label class="label-6">Address </label>
                     <label for="txtHouse" class="note"
                       >House Number, Building and Street Name</label
@@ -809,8 +809,36 @@
                     <!-- <select name="selectCity" id="selectCity" class="select" onchange="getCity()"> -->
                     <!-- </select> -->
 
-                    <label for="txtState" class="note">State</label>
-                    <input name="txtState" id="txtState" />
+                    <!-- <label for="txtState" class="note ">State</label>
+                    <input name="txtState" id="txtState" /> -->
+
+                    <label for="txtDriversLicenseNo" class="label-6"
+                      >Drivers Licence
+                    </label>
+                    <input
+                      name="txtDriversLicenseNo"
+                      type="text"
+                      id="txtDriversLicenseNo"
+                    />
+
+                    <label for="dtExpirationDate" class="label-6"
+                      >Expiration Date
+                    </label>
+                    <input
+                      name="dtExpirationDate"
+                      type="text"
+                      id="dtExpirationDate"
+                      class="expDatePicker"
+                    />
+
+                    <label for="txtRestrictionCode" class="label-6"
+                      >Restriction Code
+                    </label>
+                    <input
+                      name="txtRestrictionCode"
+                      type="text"
+                      id="txtRestrictionCode"
+                    />
                   </div>
                 </div>
                 <div>
@@ -818,8 +846,14 @@
                     <label for="txtEmail" class="label-6">Email </label>
                     <input name="txtEmail" type="text" id="txtEmail" />
 
-                    <label for="txtPhone" class="label-6">Phone </label>
-                    <input name="txtPhone" type="text" id="txtPhone" />
+                    <label for="txtPersonalContactNo" class="label-6"
+                      >Personal Contact No.
+                    </label>
+                    <input
+                      name="txtPersonalContactNo"
+                      type="text"
+                      id="txtPersonalContactNo"
+                    />
                   </div>
 
                   <div>
@@ -847,8 +881,28 @@
               <!-- HR Info Tab -->
               <div id="hr-info" class="tabNameHrModal" style="display:none">
                 <div>
+                  <label for="txtBioNumber" class="label-6">Bio Number</label>
+                  <input
+                    name="txtBioNumber"
+                    type="number"
+                    id="txtBioNumber"
+                    min="0"
+                    maxlength="3"
+                  />
+
+                  <label for="txtEmpIdNumber" class="label-6"
+                    >Employee ID Number</label
+                  >
+                  <input
+                    name="txtEmpIdNumber"
+                    type="number"
+                    id="txtEmpIdNumber"
+                    min="0"
+                    maxlength="9"
+                  />
+
                   <label for="txtDateEmployed" class="label-6"
-                    >Date Employed</label
+                    >Date Hired</label
                   >
                   <input
                     name="txtDateEmployed"
@@ -917,10 +971,10 @@
                     class="select"
                     onchange="toggleEndo();"
                   >
-                    <option value="trainee">Trainee</option>
                     <option value="probationary">Probationary</option>
                     <option value="regular">Regular</option>
-                    <option value="endo">End of Contract</option>
+                    <option value="resigned">Resigned</option>
+                    <option value="terminated">Terminated</option>
                   </select>
 
                   <label id="txtLeaveLabel" class="label-6 disabled"
@@ -969,7 +1023,7 @@
                 </div>
 
                 <div>
-                  <label for="txtTinNumber" class="label-6">Tin Number</label>
+                  <label for="txtTinNumber" class="label-6">TIN Number</label>
                   <input
                     name="txtTinNumber"
                     type="number"
@@ -989,11 +1043,13 @@
                     maxlength="12"
                   />
 
-                  <label for="txtHdmfNo" class="label-6">HDMF Number</label>
+                  <label for="txtPagIbigNo" class="label-6"
+                    >Pag-ibig Number</label
+                  >
                   <input
-                    name="txtHdmfNo"
+                    name="txtPagIbigNo"
                     type="number"
-                    id="txtHdmfNo"
+                    id="txtPagIbigNo"
                     min="0"
                     maxlength="12"
                   />
@@ -1007,9 +1063,7 @@
                     maxlength="10"
                   />
 
-                  <label for="txtCardNo" class="label-6"
-                    >Credit Card Number</label
-                  >
+                  <label for="txtCardNo" class="label-6">Account Number</label>
                   <input
                     name="txtCardNo"
                     type="number"
@@ -1321,8 +1375,14 @@
                     <label for="txtEmail2" class="label-6">Email </label>
                     <input name="txtEmail2" type="text" id="txtEmail2" />
 
-                    <label for="txtPhone2" class="label-6">Phone </label>
-                    <input name="txtPhone2" type="text" id="txtPhone2" />
+                    <label for="txtPersonalContactNo2" class="label-6"
+                      >Personal Contact No.
+                    </label>
+                    <input
+                      name="txtPersonalContactNo2"
+                      type="text"
+                      id="txtPersonalContactNo2"
+                    />
                   </div>
 
                   <div>
@@ -1355,7 +1415,7 @@
               >
                 <div>
                   <label for="txtDateEmployed2" class="label-6"
-                    >Date Employed</label
+                    >Date Hired</label
                   >
                   <input
                     name="txtDateEmployed2"
@@ -1469,7 +1529,7 @@
                 </div>
 
                 <div>
-                  <label for="txtTinNumber2" class="label-6">Tin Number</label>
+                  <label for="txtTinNumber2" class="label-6">TIN Number</label>
                   <input
                     name="txtTinNumber2"
                     type="number"
@@ -1489,11 +1549,13 @@
                     maxlength="12"
                   />
 
-                  <label for="txtHdmfNo2" class="label-6">HDMF Number</label>
+                  <label for="txtPagIbigNo2" class="label-6"
+                    >Pag-ibig Number</label
+                  >
                   <input
-                    name="txtHdmfNo2"
+                    name="txtPagIbigNo2"
                     type="number"
-                    id="txtHdmfNo2"
+                    id="txtPagIbigNo2"
                     min="0"
                     maxlength="12"
                   />
@@ -1788,11 +1850,18 @@
                     <label for="txtEmpEmail" class="label-6">Email: </label>
                     <p name="txtEmpEmail" id="txtEmpEmail">sample@email.com</p>
 
-                    <label for="txtEmpPhone" class="label-6">Phone: </label>
-                    <p name="txtEmpPhone" id="txtEmpPhone">09123456789</p>
+                    <label for="txtEmpPersonalContactNo" class="label-6"
+                      >Personal Contact No.:
+                    </label>
+                    <p
+                      name="txtEmpPersonalContactNo"
+                      id="txtEmpPersonalContactNo"
+                    >
+                      09123456789
+                    </p>
 
                     <label for="txtEmpEmergencyContact" class="label-6"
-                      >Emergency Contact Name::
+                      >Emergency Contact Name:
                     </label>
                     <p
                       name="txtEmpEmergencyContact"
@@ -1812,19 +1881,40 @@
                     </p>
                   </div>
                   <div>
-                    <label for="photo" class="label-6">Photo</label>
-                    <div class="profile_pic">
+                    <label for="photo" class="label-6 hidden">Photo</label>
+                    <div class="profile_pic hidden">
                       <img
                         src="/Images/user.png"
                         alt="Employee Picture"
                         class="img-circle profile_img"
                       />
                     </div>
+                    <label for="txtDriversLicenseNo" class="label-6"
+                      >Drivers Licence
+                    </label>
+                    <p name="txtDriversLicenseNo" id="txtDriversLicenseNo">
+                      000-00-000000
+                    </p>
+
+                    <label for="txtExpirationDate" class="label-6"
+                      >Expiration Date
+                    </label>
+                    <p name="txtExpirationDate" id="txtExpirationDate">
+                      6/5/2023
+                    </p>
+
+                    <label for="txtRestrictionCode" class="label-6"
+                      >Restriction Code
+                    </label>
+                    <p name="txtRestrictionCode" id="txtRestrictionCode">1,2</p>
                   </div>
                 </div>
                 <div>
                   <div>
                     <label class="label-6">Address: </label>
+                    <p name="txtCompleteAddress" id="txtCompleteAddress">
+                      #222 Dahlia Street Malolos, Bulacan
+                    </p>
                   </div>
                   <div>
                     <div>
@@ -1845,7 +1935,7 @@
                       >
                       <p name="txtEmpCity" id="txtEmpCity">Malolos</p>
                     </div>
-                    <div>
+                    <div class="hidden">
                       <label for="txtEmpState" class="note">State</label>
                       <p name="txtEmpState" id="txtEmpState">-</p>
                     </div>
@@ -1857,7 +1947,7 @@
               <div id="view-hr-info" class="tabViewIEList" style="display:none">
                 <div>
                   <label for="lblDateEmployed" class="label-6"
-                    >Date Employed
+                    >Date Hired
                   </label>
                   <p name="lblDateEmployed" id="lblDateEmployed">
                     January 06, 2020
@@ -1908,7 +1998,7 @@
                 </div>
 
                 <div>
-                  <label for="lblTinNo" class="label-6">Tin Number </label>
+                  <label for="lblTinNo" class="label-6">TIN Number </label>
                   <p name="lblTinNo" id="lblTinNo">000-000-000-000</p>
 
                   <label for="lblPhilhealthNo" class="label-6"
@@ -1918,8 +2008,10 @@
                     00-000000000-0
                   </p>
 
-                  <label for="lblHdmfNo" class="label-6">HDMF Number </label>
-                  <p name="lblHdmfNo" id="lblHdmfNo">0000-0000-0000</p>
+                  <label for="lblPagIbigNo" class="label-6"
+                    >Pag-ibig Number
+                  </label>
+                  <p name="lblPagIbigNo" id="lblPagIbigNo">0000-0000-0000</p>
 
                   <label for="lblSssNo" class="label-6">SSS Number </label>
                   <p name="lblSssNo" id="lblSssNo">00-0000000-0</p>

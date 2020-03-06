@@ -172,7 +172,22 @@ $(".bdayPicker").each(function() {
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
+      defaultDate: "-18Y",
       yearRange: "-80:-18"
+    });
+  } catch (e) {
+    console.log(e);
+  }
+});
+
+// Licence Expiration Date Picker
+$(".expDatePicker").each(function() {
+  try {
+    //Create jQueryUI datepicker
+    $(this).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      yearRange: "-10:+10"
     });
   } catch (e) {
     console.log(e);
@@ -943,7 +958,7 @@ function toggleEndo() {
       txtSickLeave.classList.remove("disabled");
       lblVELeave.classList.remove("disabled");
       txtVELeave.classList.remove("disabled");
-    } else if (selectEmploymentStatus === "End of Contract") {
+    } else if (selectEmploymentStatus === "Terminated") {
       dtTermDateLabel.classList.remove("disabled");
       dtTermDate.classList.remove("disabled");
     }
