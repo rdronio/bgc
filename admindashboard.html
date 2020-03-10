@@ -20,7 +20,7 @@
     <script src="Scripts/jquery-3.4.1.min.js"></script>
     <script src="Scripts/jquery-ui.min.js"></script>
 
-    <title>HRIS, Payroll & Time Keeping System</title>
+    <title>HRIS & Payroll System</title>
   </head>
 
   <body>
@@ -33,7 +33,7 @@
             <a href="home.html" class="logo-link">
               <h1>LOGO HERE</h1>
               <p>
-                HRIS & Payroll w/ Time Keeping System
+                HRIS & Payroll System
               </p>
             </a>
           </div>
@@ -70,22 +70,11 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="payrollapproval.html">Payroll Approval</a>
+                  <a href="leaverecords.html">Leave Records</a>
                 </li>
+                <li><a href="overtimerecords.html">Overtime Records</a></li>
                 <li>
-                  <a href="leaveapproval.html">Leave Approval</a>
-                </li>
-                <li><a href="overtimeapproval.html">Overtime Approval</a></li>
-                <li>
-                  <a href="timealterationapproval.html"
-                    >Time Alteration Approval</a
-                  >
-                </li>
-                <li>
-                  <a href="expenseapproval.html">Expense Approval</a>
-                </li>
-                <li>
-                  <a href="undertimeapproval.html">Undertime Approval</a>
+                  <a href="undertime.html">Undertime Records</a>
                 </li>
               </ul>
             </li>
@@ -105,11 +94,6 @@
               </ul>
             </li>
             <li>
-              <a href="underconstruction.html"
-                ><i class="fas fa-list"></i>Employee Assignment</a
-              >
-            </li>
-            <li>
               <a href="#"
                 ><i class="fas fa-bullhorn"></i>Memo / Notice<span
                   class="fa fa-chevron-down"
@@ -119,7 +103,9 @@
                 <li>
                   <a href="underconstruction.html">Bulk Email</a>
                 </li>
-                <li><a href="underconstruction.html">File Cabinet</a></li>
+                <li class="hidden">
+                  <a href="underconstruction.html">File Cabinet</a>
+                </li>
               </ul>
             </li>
             <li>
@@ -132,10 +118,12 @@
                 <li>
                   <a href="generatedtrreport.html">Generate DTR</a>
                 </li>
-                <li>
+                <li class="hidden">
                   <a href="underconstruction.html">Payroll Report</a>
                 </li>
-                <li><a href="underconstruction.html">Government Report</a></li>
+                <li class="hidden">
+                  <a href="underconstruction.html">Government Report</a>
+                </li>
               </ul>
             </li>
             <li>
@@ -177,22 +165,23 @@
             <div>
               <div>
                 <div class="card-db card-1 card-md">
-                  <h5 class="card-header">Reminders</h5>
+                  <h5 class="card-header">Tardiness Notice</h5>
                   <hr />
-                  <div>
-                    <label class="label-6">Payroll Approvals: </label>
-                    <p id="lblPPA" class="bg-circle">0</p>
-                    <label class="label-6">Leaves Approvals: </label>
-                    <p id="lblPLA" class="bg-circle">0</p>
-                    <label class="label-6">Overtime Approvals: </label>
-                    <p id="lblPOA" class="bg-circle">0</p>
-                    <label class="label-6">Time Alterations Approvals: </label>
-                    <p id="lblPTAA" class="bg-circle">0</p>
-                    <label class="label-6">Expense Approvals: </label>
-                    <p id="lblEA" class="bg-circle">0</p>
-                    <label class="label-6">Undertime Approvals: </label>
-                    <p id="lblUA" class="bg-circle">0</p>
-                  </div>
+                  <!-- <label class="norecords">No Records Found</label> -->
+                  <table class="tableLayout-md">
+                    <tbody>
+                      <tr>
+                        <td class="column1">Name</td>
+                        <td class="column2">Position</td>
+                        <td class="column3">Tardiness Count</td>
+                      </tr>
+                      <tr>
+                        <td class="column1">John Doe</td>
+                        <td class="column2">Web Developer</td>
+                        <td class="column3">2</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
 
                 <div class="card-db card-1 card-md">
@@ -289,119 +278,6 @@
               </div>
 
               <div>
-                <div class="card-db card card-2 card-lg">
-                  <h5>Today's Employee Time Record</h5>
-                  <hr />
-                  <div>
-                    <div>
-                      <label class="label-6">Date</label>
-                      <h3 id="lblDate"></h3>
-                    </div>
-                    <div>
-                      <label for="searchEmployee" class="label-6 block"
-                        >Search Employee ID/Name</label
-                      >
-                      <input type="" value="" id="searchEmployee" />
-                    </div>
-                  </div>
-                  <span id="lblNoDataTETR" class="norecords hidden"
-                    >No Records Available</span
-                  >
-                  <!-- Daily Time Record -->
-                  <table class="tableLayoutDB">
-                    <tbody>
-                      <tr>
-                        <td class="column1">Time In</td>
-                        <td class="column2">Time Out</td>
-                        <td class="column3">Employee Name</td>
-                        <td class="column4">Position</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">09:00 AM</td>
-                        <td class="column2">05:00 PM</td>
-                        <td class="column3">John Doe</td>
-                        <td class="column4">Programmer</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">09:00 AM</td>
-                        <td class="column2">05:00 PM</td>
-                        <td class="column3">John Doe</td>
-                        <td class="column4">Programmer</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">09:00 AM</td>
-                        <td class="column2">05:00 PM</td>
-                        <td class="column3">John Doe</td>
-                        <td class="column4">Programmer</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">09:00 AM</td>
-                        <td class="column2">05:00 PM</td>
-                        <td class="column3">John Doe</td>
-                        <td class="column4">Programmer</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">09:00 AM</td>
-                        <td class="column2">05:00 PM</td>
-                        <td class="column3">John Doe</td>
-                        <td class="column4">Programmer</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">09:00 AM</td>
-                        <td class="column2">05:00 PM</td>
-                        <td class="column3">John Doe</td>
-                        <td class="column4">Programmer</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">09:00 AM</td>
-                        <td class="column2">05:00 PM</td>
-                        <td class="column3">John Doe</td>
-                        <td class="column4">Programmer</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">09:00 AM</td>
-                        <td class="column2">05:00 PM</td>
-                        <td class="column3">John Doe</td>
-                        <td class="column3">Programmer</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">09:00 AM</td>
-                        <td class="column2">05:00 PM</td>
-                        <td class="column3">John Doe</td>
-                        <td class="column4">Programmer</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">09:00 AM</td>
-                        <td class="column2">05:00 PM</td>
-                        <td class="column3">John Doe</td>
-                        <td class="column4">Programmer</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                  <div class="pagination-container">
-                    <div class="showmore-container">
-                      <a class="btn-showmore" href="#"
-                        ><i class="fas fa-chevron-down"></i>More Results</a
-                      >
-                    </div>
-                    <div class="pagination">
-                      <a href="#"><span>«</span></a>
-                      <a href="#"><span class="active">1</span></a>
-                      <a href="#"><span>2</span></a>
-                      <a href="#"><span>3</span></a>
-                      <a href="#"><span>4</span></a>
-                      <a href="#"><span>5</span></a>
-                      <a href="#"><span>6</span></a>
-                      <a href="#"><span>7</span></a>
-                      <a href="#"><span>8</span></a>
-                      <a href="#"><span>9</span></a>
-                      <a href="#"><span>10</span></a>
-                      <a href="#"><span>»</span></a>
-                    </div>
-                  </div>
-                </div>
-
                 <div class="card-db card card-2 card-lg">
                   <h5>List of Regular Employees</h5>
                   <hr />

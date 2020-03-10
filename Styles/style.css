@@ -2353,7 +2353,8 @@ nav ul li a span.fa {
 #admin-dashboard .container > div > div .card-2 {
   display: flex !important;
   flex-direction: column !important;
-  width: 50%;
+  /* width: 50%; */
+  width: 100%;
   margin-right: 1rem;
   margin-bottom: 0;
 }
@@ -4320,21 +4321,24 @@ nav ul li a span.fa {
   margin-top: 0;
 }
 
+#payroll .modal-mass-payroll .tableLayout .column0 {
+  width: 5%;
+}
+
 #payroll .modal-mass-payroll .tableLayout .column1 {
   width: 20%;
 }
 #payroll .modal-mass-payroll .tableLayout .column2 {
-  width: 13%;
+  width: 20%;
 }
 
 #payroll .modal-mass-payroll .tableLayout .column3 {
-  width: 28%;
+  width: 18%;
 }
 
 #payroll .modal-mass-payroll .tableLayout .column4,
-#payroll .modal-mass-payroll .tableLayout .column5,
-#payroll .modal-mass-payroll .tableLayout .column6 {
-  width: 13%;
+#payroll .modal-mass-payroll .tableLayout .column5 {
+  width: 18%;
 }
 
 /* view payslip */

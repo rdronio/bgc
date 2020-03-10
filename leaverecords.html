@@ -20,7 +20,7 @@
     <script src="Scripts/jquery-3.4.1.min.js"></script>
     <script src="Scripts/jquery-ui.min.js"></script>
 
-    <title>HRIS, Payroll & Time Keeping System</title>
+    <title>HRIS & Payroll System</title>
   </head>
   <body>
     <form action="#" autocomplete="off">
@@ -31,7 +31,7 @@
           <div class="logo">
             <a href="home.html" class="logo-link">
               <h1>LOGO HERE</h1>
-              <p>HRIS, Payroll & Time Keeping System</p>
+              <p>HRIS & Payroll System</p>
             </a>
           </div>
 
@@ -47,7 +47,7 @@
             </div>
             <div class="profile_info">
               <span>Welcome</span>
-              <h2>Employee</h2>
+              <h2>HR Admin</h2>
               <p>&nbsp;</p>
             </div>
           </div>
@@ -55,23 +55,13 @@
           <!-- / menu -->
           <ul class="nav-list">
             <li>
-              <a href="dashboard.html"
-                ><i class="fas fa-tachometer-alt"></i>Dashboard</a
-              >
-            </li>
-            <li>
-              <a href="timerecords.html"
-                ><i class="fas fa-user-clock"></i>Time Records</a
-              >
-            </li>
-            <li>
-              <a href="profile.html"
-                ><i class="fas fa-address-card"></i>Profile</a
+              <a href="admindashboard.html"
+                ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
               >
             </li>
             <li>
               <a href="#"
-                ><i class="fas fa-history"></i>Application<span
+                ><i class="fas fa-tasks"> </i>Approvals<span
                   class="fa fa-chevron-down"
                 ></span
               ></a>
@@ -79,40 +69,64 @@
                 <li class="current-page">
                   <a href="leaverecords.html">Leave Records</a>
                 </li>
-                <li>
-                  <a href="overtimerecords.html">Overtime Records</a>
-                </li>
-                <li>
-                  <a href="expense.html">Expense Records</a>
-                </li>
+                <li><a href="overtimerecords.html">Overtime Records</a></li>
                 <li>
                   <a href="undertime.html">Undertime Records</a>
                 </li>
               </ul>
             </li>
-
-            <li>
-              <!-- <a href="team.html"><i class="fas fa-users"></i>Team</a> -->
-              <a href="underconstruction.html"
-                ><i class="fas fa-users"></i>Team</a
-              >
-            </li>
-            <li>
-              <a href="projecttask.html"
-                ><i class="fas fa-tasks"></i>Project/Task</a
-              >
-            </li>
             <li>
               <a href="#"
-                ><i class="fas fa-chart-area"></i>Report<span
+                ><i class="fas fa-file-alt"></i> Employee Records<span
                   class="fa fa-chevron-down"
                 ></span
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="payslip.html">Payslip</a>
+                  <a href="employeemasterlist.html">Employee Masterlist</a>
+                </li>
+                <li>
+                  <a href="adminleaverecords.html">Employee Leave Records</a>
                 </li>
               </ul>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-bullhorn"></i>Memo / Notice<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu hidden">
+                <li>
+                  <a href="underconstruction.html">Bulk Email</a>
+                </li>
+                <li class="hidden">
+                  <a href="underconstruction.html">File Cabinet</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-chart-area"></i>Reports<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu hidden">
+                <li>
+                  <a href="generatedtrreport.html">Generate DTR</a>
+                </li>
+                <li class="hidden">
+                  <a href="underconstruction.html">Payroll Report</a>
+                </li>
+                <li class="hidden">
+                  <a href="underconstruction.html">Government Report</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="importtimerecords.html"
+                ><i class="fas fa-download"></i>Import Time Records</a
+              >
             </li>
             <li>
               <a href="index.html"
@@ -144,7 +158,8 @@
           </div>
 
           <div class="container">
-            <div id="tab">
+            <h2>Leave Records</h2>
+            <!-- <div id="tab">
               <ul class="tab-list" onclick="selectTab();">
                 <li class="current-tab">
                   <a onclick="showLR();">Leave Records</a>
@@ -153,7 +168,7 @@
                   <a onclick="showPLA();">Pending Leaves</a>
                 </li>
               </ul>
-            </div>
+            </div> -->
             <div class="card card-1">
               <div class="card-subhead-container">
                 <div class="card-subhead">
@@ -400,6 +415,25 @@
                 <p class="note">
                   Vacation/Emergency has only # remaining days available.
                 </p>
+
+                <label for="txtDepartment" class="label-6">Department </label>
+                <select
+                  name="txtDepartment"
+                  id="txtDepartment"
+                  class="select"
+                  onchange=""
+                >
+                </select>
+
+                <label for="txtEmployee" class="label-6">Employee </label>
+                <select
+                  name="txtEmployee"
+                  id="txtEmployee"
+                  class="select"
+                  onchange=""
+                >
+                </select>
+
                 <label class="label-6">Type</label>
                 <div class="modal-rd-container">
                   <label for="rdVacation" class="radio">
@@ -421,18 +455,27 @@
                     />
                     <span class="label"></span>Sick
                   </label>
-                  <label for="rdEmergency" class="radio">
+                  <label for="rdBirthday" class="radio">
                     <input
                       type="radio"
                       name="rdType"
-                      id="rdEmergency"
+                      id="rdBirthday"
                       class="hidden"
                     />
-                    <span class="label"></span>Emergency
+                    <span class="label"></span>Birthday
+                  </label>
+                  <label for="rdMaternity" class="radio">
+                    <input
+                      type="radio"
+                      name="rdType"
+                      id="rdMaternity"
+                      class="hidden"
+                    />
+                    <span class="label"></span>Maternity
                   </label>
                 </div>
 
-                <label for="txtDateFrom" class="label-6">From: </label>
+                <label for="txtDateFrom" class="label-6">From </label>
                 <input
                   name="txtDateFrom"
                   type="text"
@@ -440,7 +483,7 @@
                   class="leavePicker"
                   onchange="calc();"
                 />
-                <label for="txtDateTo" class="label-6">To: </label>
+                <label for="txtDateTo" class="label-6">To </label>
                 <input
                   name="txtDateTo"
                   type="text"
@@ -455,7 +498,7 @@
                 <textarea name="txtAreaReason" id="txtAreaReason"></textarea>
               </div>
               <div class="modal-btn-container">
-                <a class="btn-sm btn-primary mx-3">Request Leave</a>
+                <a class="btn-sm btn-primary mx-3">Approve Leave</a>
                 <a
                   class="btn-sm btn-secondary mx-3"
                   onclick="closeModal(`#btnCloseFileLeave`);"

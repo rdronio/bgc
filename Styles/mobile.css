@@ -2925,20 +2925,23 @@
   }
 
   #payroll .modal-mass-payroll .tableLayout tbody tr td:nth-child(1):before {
-    content: "Employee";
+    content: "Action";
   }
   #payroll .modal-mass-payroll .tableLayout tbody tr td:nth-child(2):before {
-    content: "Department";
+    content: "Employee";
   }
 
   #payroll .modal-mass-payroll .tableLayout tbody tr td:nth-child(3):before {
-    content: "Total Earnings";
+    content: "Department";
   }
 
   #payroll .modal-mass-payroll .tableLayout tbody tr td:nth-child(4):before {
-    content: "Total Deductions";
+    content: "Total Earnings";
   }
   #payroll .modal-mass-payroll .tableLayout tbody tr td:nth-child(5):before {
+    content: "Total Deductions";
+  }
+  #payroll .modal-mass-payroll .tableLayout tbody tr td:nth-child(6):before {
     content: "Net Pay";
   }
 

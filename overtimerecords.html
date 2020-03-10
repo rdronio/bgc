@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="Styles/jquery/jquery-ui-custom.css" />
 
-    <title>HRIS, Payroll & Time Keeping System</title>
+    <title>HRIS & Payroll System</title>
   </head>
   <body>
     <form action="#" autocomplete="off">
@@ -27,7 +27,7 @@
           <div class="logo">
             <a href="home.html" class="logo-link">
               <h1>LOGO HERE</h1>
-              <p>HRIS, Payroll & Time Keeping System</p>
+              <p>HRIS & Payroll System</p>
             </a>
           </div>
 
@@ -43,7 +43,7 @@
             </div>
             <div class="profile_info">
               <span>Welcome</span>
-              <h2>John Doe</h2>
+              <h2>HR Admin</h2>
               <p>&nbsp;</p>
             </div>
           </div>
@@ -51,23 +51,13 @@
           <!-- / menu -->
           <ul class="nav-list">
             <li>
-              <a href="dashboard.html"
-                ><i class="fas fa-tachometer-alt"></i>Dashboard</a
-              >
-            </li>
-            <li>
-              <a href="timerecords.html"
-                ><i class="fas fa-user-clock"></i>Time Records</a
-              >
-            </li>
-            <li>
-              <a href="profile.html"
-                ><i class="fas fa-address-card"></i>Profile</a
+              <a href="admindashboard.html"
+                ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
               >
             </li>
             <li>
               <a href="#"
-                ><i class="fas fa-history"></i>Application<span
+                ><i class="fas fa-tasks"> </i>Approvals<span
                   class="fa fa-chevron-down"
                 ></span
               ></a>
@@ -79,36 +69,62 @@
                   <a href="overtimerecords.html">Overtime Records</a>
                 </li>
                 <li>
-                  <a href="expense.html">Expense Records</a>
-                </li>
-                <li>
                   <a href="undertime.html">Undertime Records</a>
                 </li>
               </ul>
             </li>
-
-            <li>
-              <!-- <a href="team.html"><i class="fas fa-users"></i>Team</a> -->
-              <a href="underconstruction.html"
-                ><i class="fas fa-users"></i>Team</a
-              >
-            </li>
-            <li>
-              <a href="projecttask.html"
-                ><i class="fas fa-tasks"></i>Project/Task</a
-              >
-            </li>
             <li>
               <a href="#"
-                ><i class="fas fa-chart-area"></i>Report<span
+                ><i class="fas fa-file-alt"></i> Employee Records<span
                   class="fa fa-chevron-down"
                 ></span
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="payslip.html">Payslip</a>
+                  <a href="employeemasterlist.html">Employee Masterlist</a>
+                </li>
+                <li>
+                  <a href="adminleaverecords.html">Employee Leave Records</a>
                 </li>
               </ul>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-bullhorn"></i>Memo / Notice<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu hidden">
+                <li>
+                  <a href="underconstruction.html">Bulk Email</a>
+                </li>
+                <li class="hidden">
+                  <a href="underconstruction.html">File Cabinet</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-chart-area"></i>Reports<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu hidden">
+                <li>
+                  <a href="generatedtrreport.html">Generate DTR</a>
+                </li>
+                <li class="hidden">
+                  <a href="underconstruction.html">Payroll Report</a>
+                </li>
+                <li class="hidden">
+                  <a href="underconstruction.html">Government Report</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="importtimerecords.html"
+                ><i class="fas fa-download"></i>Import Time Records</a
+              >
             </li>
             <li>
               <a href="index.html"
@@ -140,7 +156,8 @@
           </div>
 
           <div class="container">
-            <div id="tab">
+            <h2>Overtime Records</h2>
+            <!-- <div id="tab">
               <ul class="tab-list" onclick="selectTab();">
                 <li class="current-tab">
                   <a onclick="showOR()">Overtime Records</a>
@@ -149,7 +166,7 @@
                   <a onclick="showPOA()">Pending Overtime</a>
                 </li>
               </ul>
-            </div>
+            </div> -->
             <div class="card card-1">
               <div>
                 <a
@@ -311,6 +328,24 @@
               <h5>Overtime Application Form</h5>
               <hr />
               <div class="">
+                <label for="txtDepartment" class="label-6">Department </label>
+                <select
+                  name="txtDepartment"
+                  id="txtDepartment"
+                  class="select"
+                  onchange=""
+                >
+                </select>
+
+                <label for="txtEmployee" class="label-6">Employee </label>
+                <select
+                  name="txtEmployee"
+                  id="txtEmployee"
+                  class="select"
+                  onchange=""
+                >
+                </select>
+
                 <label for="txtDateOT" class="label-6">Date: </label>
                 <input
                   name="txtDateOT"
@@ -330,7 +365,7 @@
               </div>
               <div class="modal-btn-container">
                 <a class="btn-sm btn-primary mx-3" id="btnRequestOvertime"
-                  >Request Overtime</a
+                  >Approve Overtime</a
                 >
                 <a
                   class="btn-sm btn-secondary mx-3"

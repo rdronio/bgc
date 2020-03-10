@@ -111,7 +111,7 @@ function selectTab() {
 
 function selectTabEI() {
   try {
-    $(".tabIE").on("click", "li", function() {
+    $("#tabIE").on("click", "li", function() {
       $(".modal-tab-list li.current-tab").removeClass("current-tab");
       $(this).addClass("current-tab");
     });
@@ -738,6 +738,41 @@ function openTabHrInfo() {
     modalAddEmployee.style.display = "flex";
     modalAddEmployeeBtn.classList.remove("hidden");
     modalUpdateEmployeeBtn.classList.add("hidden");
+
+    const x = document.getElementsByClassName("tabNameHrModal");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    document.getElementById("hr-info").style.display = "flex";
+
+    $(".modal-tab-list li.current-tab").removeClass("current-tab");
+    $(".modal-tab-list li:nth-child(2)").addClass("current-tab");
+
+    scrollTopModal();
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function openTabHrInfoUpdate() {
+  try {
+    const modalAddEmployee = document.querySelector(".modal-add-employee");
+    const modalAddEmployeeHeader = document.querySelector(
+      "#add-employee-header"
+    );
+    const modalAddEmployeeBtn = document.querySelector("#btnModalAddEmployee");
+    const modalUpdateEmployeeBtn = document.querySelector(
+      "#btnModalUpdateEmployee"
+    );
+    const selectDept = document.querySelector("#drpDepartment");
+    const selectDeptUpdate = document.querySelector("#drpDepartmentUpdate");
+
+    modalAddEmployee.style.display = "flex";
+    modalAddEmployeeHeader.innerHTML = "Update Employment Information";
+    modalAddEmployeeBtn.classList.add("hidden");
+    modalUpdateEmployeeBtn.classList.remove("hidden");
+    selectDept.classList.add("hidden");
+    selectDeptUpdate.classList.remove("hidden");
 
     const x = document.getElementsByClassName("tabNameHrModal");
     for (i = 0; i < x.length; i++) {
