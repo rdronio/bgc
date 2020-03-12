@@ -40,6 +40,31 @@ $(document).ready(function() {
 
     $(document).click(function(e) {
       e.stopPropagation();
+      let container = $(".search-main-container");
+      let showSearchOptions = document.querySelector(".showSearchOptions");
+
+      //check if the clicked area is dropDown or not
+      if (container.has(e.target).length === 0) {
+        $(".search-filter-container").addClass("hidden");
+        showSearchOptions.classList.remove("rotate");
+        hideDataList();
+      }
+    });
+
+    $(".datalist-data").on("click", "li", function() {
+      $(".datalist-data li").removeClass("selected-datalist");
+      $(this).addClass("selected-datalist");
+
+      let selectedOption = document.querySelector(".selected-datalist div span")
+        .innerHTML;
+      let txtSearch = document.querySelector("#txtSearch");
+
+      txtSearch.value = selectedOption;
+      hideDataList();
+    });
+
+    $(document).click(function(e) {
+      e.stopPropagation();
       let container = $(".btn-tools-container");
 
       //check if the clicked area is dropDown or not
@@ -59,19 +84,6 @@ $(document).ready(function() {
       if (containerRec.has(e.target).length === 0) {
         $(".searchRec-filter-container").addClass("hidden");
         showSearchRecOptions.classList.remove("rotate");
-        hideDataList();
-      }
-    });
-
-    $(document).click(function(e) {
-      e.stopPropagation();
-      let container = $(".search-main-container");
-      const showSearchOptions = document.querySelector(".showSearchOptions");
-
-      //check if the clicked area is dropDown or not
-      if (container.has(e.target).length === 0) {
-        $(".search-filter-container").addClass("hidden");
-        showSearchOptions.classList.remove("rotate");
         hideDataList();
       }
     });
@@ -173,7 +185,20 @@ $(".bdayPicker").each(function() {
       changeMonth: true,
       changeYear: true,
       defaultDate: "-18Y",
-      yearRange: "-80:-18"
+      yearRange: "-80:-18",
+      onChangeMonthYear: function(year, month) {
+        var $datepicker = jQuery(this);
+        var date = new Date($datepicker.datepicker("getDate"));
+        var lastDayOfMonth = new Date(year, month, 0).getDate();
+        var preservedDay = Math.min(
+          lastDayOfMonth,
+          Math.max(1, date.getDate())
+        );
+        $datepicker.datepicker(
+          "setDate",
+          month + "/" + preservedDay + "/" + year
+        );
+      }
     });
   } catch (e) {
     console.log(e);
@@ -187,7 +212,20 @@ $(".expDatePicker").each(function() {
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
-      yearRange: "-10:+10"
+      yearRange: "-10:+10",
+      onChangeMonthYear: function(year, month) {
+        var $datepicker = jQuery(this);
+        var date = new Date($datepicker.datepicker("getDate"));
+        var lastDayOfMonth = new Date(year, month, 0).getDate();
+        var preservedDay = Math.min(
+          lastDayOfMonth,
+          Math.max(1, date.getDate())
+        );
+        $datepicker.datepicker(
+          "setDate",
+          month + "/" + preservedDay + "/" + year
+        );
+      }
     });
   } catch (e) {
     console.log(e);
@@ -212,7 +250,20 @@ $(".datePicker").each(function() {
       changeMonth: true,
       changeYear: true,
       yearRange: "-10:+10",
-      beforeShowDay: $.datepicker.noWeekends
+      beforeShowDay: $.datepicker.noWeekends,
+      onChangeMonthYear: function(year, month) {
+        var $datepicker = jQuery(this);
+        var date = new Date($datepicker.datepicker("getDate"));
+        var lastDayOfMonth = new Date(year, month, 0).getDate();
+        var preservedDay = Math.min(
+          lastDayOfMonth,
+          Math.max(1, date.getDate())
+        );
+        $datepicker.datepicker(
+          "setDate",
+          month + "/" + preservedDay + "/" + year
+        );
+      }
     });
   } catch (e) {
     console.log(e);
@@ -227,7 +278,20 @@ $(".leavePicker").each(function() {
       changeMonth: true,
       changeYear: true,
       yearRange: "-10:+10",
-      beforeShowDay: $.datepicker.noWeekends
+      beforeShowDay: $.datepicker.noWeekends,
+      onChangeMonthYear: function(year, month) {
+        var $datepicker = jQuery(this);
+        var date = new Date($datepicker.datepicker("getDate"));
+        var lastDayOfMonth = new Date(year, month, 0).getDate();
+        var preservedDay = Math.min(
+          lastDayOfMonth,
+          Math.max(1, date.getDate())
+        );
+        $datepicker.datepicker(
+          "setDate",
+          month + "/" + preservedDay + "/" + year
+        );
+      }
     });
   } catch (e) {
     console.log(e);
@@ -242,7 +306,48 @@ $(".otPicker").each(function() {
       changeMonth: true,
       changeYear: true,
       yearRange: "-10:+10",
-      beforeShowDay: $.datepicker.noWeekends
+      beforeShowDay: $.datepicker.noWeekends,
+      onChangeMonthYear: function(year, month) {
+        var $datepicker = jQuery(this);
+        var date = new Date($datepicker.datepicker("getDate"));
+        var lastDayOfMonth = new Date(year, month, 0).getDate();
+        var preservedDay = Math.min(
+          lastDayOfMonth,
+          Math.max(1, date.getDate())
+        );
+        $datepicker.datepicker(
+          "setDate",
+          month + "/" + preservedDay + "/" + year
+        );
+      }
+    });
+  } catch (e) {
+    console.log(e);
+  }
+});
+
+// Undertime Picker
+$(".utPicker").each(function() {
+  try {
+    //Create jQueryUI datepicker
+    $(this).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      yearRange: "-10:+10",
+      beforeShowDay: $.datepicker.noWeekends,
+      onChangeMonthYear: function(year, month) {
+        var $datepicker = jQuery(this);
+        var date = new Date($datepicker.datepicker("getDate"));
+        var lastDayOfMonth = new Date(year, month, 0).getDate();
+        var preservedDay = Math.min(
+          lastDayOfMonth,
+          Math.max(1, date.getDate())
+        );
+        $datepicker.datepicker(
+          "setDate",
+          month + "/" + preservedDay + "/" + year
+        );
+      }
     });
   } catch (e) {
     console.log(e);
@@ -256,7 +361,20 @@ $(".terminationDatePicker").each(function() {
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
-      yearRange: "-10:+10"
+      yearRange: "-10:+10",
+      onChangeMonthYear: function(year, month) {
+        var $datepicker = jQuery(this);
+        var date = new Date($datepicker.datepicker("getDate"));
+        var lastDayOfMonth = new Date(year, month, 0).getDate();
+        var preservedDay = Math.min(
+          lastDayOfMonth,
+          Math.max(1, date.getDate())
+        );
+        $datepicker.datepicker(
+          "setDate",
+          month + "/" + preservedDay + "/" + year
+        );
+      }
     });
   } catch (e) {
     console.log(e);
@@ -268,7 +386,20 @@ $(".startDatePicker").each(function() {
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
-      yearRange: "-10:+10"
+      yearRange: "-10:+10",
+      onChangeMonthYear: function(year, month) {
+        var $datepicker = jQuery(this);
+        var date = new Date($datepicker.datepicker("getDate"));
+        var lastDayOfMonth = new Date(year, month, 0).getDate();
+        var preservedDay = Math.min(
+          lastDayOfMonth,
+          Math.max(1, date.getDate())
+        );
+        $datepicker.datepicker(
+          "setDate",
+          month + "/" + preservedDay + "/" + year
+        );
+      }
 
       // onSelect: function(date) {
       //   let selectedDate = new Date(date);
@@ -543,6 +674,14 @@ function scrollTop() {
 function scrollTopModal() {
   try {
     document.querySelector(".modal-content").scrollTop = 0;
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function scrollTopDataList() {
+  try {
+    document.querySelector(".datalist-data").scrollTop = 0;
   } catch (e) {
     console.log(e);
   }
@@ -1607,6 +1746,7 @@ function checkSearchInput() {
     } else {
       btnClearSearch.classList.remove("hidden");
       showDataList();
+      scrollTopDataList();
     }
   } catch (e) {
     console.log(e);
@@ -1703,7 +1843,7 @@ function toggleSearchRecFilter3() {
 function showDataList() {
   try {
     const datalist = document.querySelector(".datalist-data");
-
+    scrollTopDataList();
     datalist.classList.remove("hidden");
   } catch (e) {
     console.log(e);

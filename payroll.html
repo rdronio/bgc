@@ -168,6 +168,7 @@
                   </a>
                   <div>
                     <input
+                      id="txtSearch"
                       class="txtSearch"
                       type="text"
                       list="txtSearch"
@@ -176,11 +177,25 @@
                       onkeypress="checkSearchInput();"
                       onchange="checkSearchInput();"
                     />
-                    <datalist id="txtSearch">
-                      <option>John Doe</option>
-                      <option>John Doe Daddy</option>
-                      <option>John Doe Mommy</option>
-                    </datalist>
+                    <ul class="datalist-data">
+                      <li>
+                        <div><i class="fas fa-search"></i></div>
+                        <div>
+                          <span>John Doe</span>
+                        </div>
+                        <div></div>
+                      </li>
+                      <li class="selected-datalist hidden">
+                        <div><i class="fas fa-search"></i></div>
+                        <div><span>John Doe1</span></div>
+                        <div></div>
+                      </li>
+                      <li>
+                        <div><i class="fas fa-search"></i></div>
+                        <div><span>John Doe2</span></div>
+                        <div></div>
+                      </li>
+                    </ul>
                   </div>
                   <a
                     aria-label="Clear search"
@@ -906,6 +921,26 @@
                   <option value="all">HR Department</option>
                 </select>
               </div>
+
+              <label for="selectDepartment" class="label-6 block"
+                >Select Department</label
+              >
+              <select
+                name="selectDepartment"
+                id="selectDepartment"
+                class="select"
+              >
+              </select>
+
+              <label for="selectEmployeeName" class="label-6 block"
+                >Employee Name</label
+              >
+              <select
+                name="selectEmployeeName"
+                id="selectEmployeeName"
+                class="select"
+              >
+              </select>
 
               <div></div>
 
