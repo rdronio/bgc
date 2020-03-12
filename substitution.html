@@ -25,7 +25,7 @@
     <title>HRIS & Payroll System.</title>
   </head>
   <body>
-    <form id="time-records" action="#" autocomplete="off">
+    <form id="substitution" action="#" autocomplete="off">
       <!-- main -->
       <div class="main">
         <!-- nav -->
@@ -57,67 +57,92 @@
           <!-- / menu -->
           <ul class="nav-list">
             <li>
-              <a href="dashboard.html"
-                ><i class="fas fa-tachometer-alt"></i>Dashboard</a
-              >
-            </li>
-            <li class="current-page">
-              <a href="timerecords.html"
-                ><i class="fas fa-user-clock"></i>Time Records</a
-              >
-            </li>
-            <li>
-              <a href="profile.html"
-                ><i class="fas fa-address-card"></i>Profile</a
+              <a href="DashboardAdmin.aspx"
+                ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
               >
             </li>
             <li>
               <a href="#"
-                ><i class="fas fa-history"></i>Application<span
+                ><i class="fas fa-tasks"> </i>Approvals<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu ">
+                <li>
+                  <a href="PayrollApproval.aspx">Payroll Approval</a>
+                </li>
+                <li>
+                  <a href="LeaveRecords.aspx">Leave Records</a>
+                </li>
+                <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
+                <li>
+                  <a href="UndertimeRecords.aspx">Undertime Records</a>
+                </li>
+                <li class="current-page">
+                  <a href="substitution.html">Employee Substitution</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-file-alt"></i> Employee Records<span
                   class="fa fa-chevron-down"
                 ></span
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="leaverecords.html">Leave Records</a>
+                  <a href="ManageEmployees.aspx">Employee Masterlist</a>
                 </li>
                 <li>
-                  <a href="overtimerecords.html">Overtime Records</a>
+                  <a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a>
                 </li>
-                <li>
-                  <a href="expense.html">Expense Records</a>
-                </li>
-                <li>
-                  <a href="undertime.html">Undertime Records</a>
-                </li>
+                <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
               </ul>
             </li>
 
             <li>
-              <!-- <a href="team.html"><i class="fas fa-users"></i>Team</a> -->
-              <a href="underconstruction.html"
-                ><i class="fas fa-users"></i>Team</a
-              >
-            </li>
-            <li>
-              <a href="projecttask.html"
-                ><i class="fas fa-tasks"></i>Project/Task</a
-              >
-            </li>
-            <li>
               <a href="#"
-                ><i class="fas fa-chart-area"></i>Report<span
+                ><i class="fas fa-bullhorn"></i>Memo/Notice<span
                   class="fa fa-chevron-down"
                 ></span
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="payslip.html">Payslip</a>
+                  <a href="UnderConstructionAdmin.aspx">Bulk Email</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="index.html"
+              <a href="#"
+                ><i class="fas fa-chart-area"></i>Reports<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu hidden">
+                <li>
+                  <a href="GenerateDtrReport.aspx">Generate DTR</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="EmployeeMasterlist.aspx"
+                ><i class="fas fa-download"></i>Import Time Records</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-cog"></i>System Preferences<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu hidden">
+                <li>
+                  <a href="HolidayList.aspx">Holiday Notice</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="LoginPage.aspx"
                 ><i class="fas fa-sign-out-alt"></i>Sign Out</a
               >
             </li>
@@ -131,7 +156,7 @@
         </nav>
 
         <!-- Time Records -->
-        <section id="time-records" class="content">
+        <section id="substitution" class="content">
           <!-- TOP NAV  -->
           <div class="top-nav">
             <span class="menu-btn">
@@ -146,7 +171,8 @@
           </div>
 
           <div class="container">
-            <div id="tab">
+            <h2>Employee Substitution</h2>
+            <!-- <div id="tab">
               <ul class="tab-list" onclick="selectTab();">
                 <li class="current-tab">
                   <a onclick="showTR()">Time Records</a>
@@ -155,14 +181,14 @@
                   <a onclick="showPTA()">Time Alteration</a>
                 </li>
               </ul>
-            </div>
+            </div> -->
             <div class="card card-1">
               <div>
-                <!-- <a
+                <a
                   class="btn-sm btn-primary"
-                  onclick="openModal(`#btnTimeAlteration`);"
-                  >Time Alteration
-                </a> -->
+                  onclick="openModal(`#btnFileSubstitution`);"
+                  >File Substitution
+                </a>
               </div>
               <div>
                 <!-- <label class="label-6">Filter Date</label>
@@ -241,7 +267,7 @@
                     aria-label="Clear search"
                     type="button"
                     data-tooltip="Clear search"
-                    onclick="clearSearch(`time-records`);"
+                    onclick="clearSearch(`substitution`);"
                     class="btn-clear-search tooltip hidden"
                   >
                     <span class="tooltiptext">Clear search</span>
@@ -261,10 +287,11 @@
                   <a
                     type="button"
                     data-tooltip="Show search options"
-                    aria-label="Advanced search options"
-                    class="showSearchOptions"
+                    aria-label="Show search options"
+                    class="showSearchOptions tooltip"
                     onclick="toggleSearchFilter();"
                   >
+                    <span class="tooltiptext">Show search options</span>
                     <svg
                       focusable="false"
                       height="24px"
@@ -336,107 +363,20 @@
                 </div>
               </div>
 
-              <!-- Time Records -->
+              <!-- Substitutions -->
               <table class="tableLayout">
                 <tbody>
                   <tr>
-                    <td class="column1">Date</td>
-                    <td class="column2">Time In</td>
-                    <td class="column3">Time Out</td>
-                    <td class="column4">Total (hour/s)</td>
-                    <td class="column5">Overtime (hour/s)</td>
-                    <td class="column6">Tardiness (min/s)</td>
-                    <td class="column7">Action</td>
+                    <td class="column1">Original Employee</td>
+                    <td class="column2">Employment Status</td>
+                    <td class="column3">Substitute Employee</td>
+                    <td class="column4">Date</td>
                   </tr>
                   <tr>
-                    <td class="column1">November 20, 2019</td>
-                    <td class="column2">09:00 AM</td>
-                    <td class="column3">05:00 PM</td>
-                    <td class="column4">8.00</td>
-                    <td class="column5">0.00</td>
-                    <td class="column6">0.00</td>
-                    <td class="column7">
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnTimeAlteration`);"
-                        >Alter Time</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="column1">November 20, 2019</td>
-                    <td class="column2">09:00 AM</td>
-                    <td class="column3">05:00 PM</td>
-                    <td class="column4">8.00</td>
-                    <td class="column5">0.00</td>
-                    <td class="column6">0.00</td>
-                    <td class="column7">
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnTimeAlteration`);"
-                        >Alter Time</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="column1">November 20, 2019</td>
-                    <td class="column2">09:00 AM</td>
-                    <td class="column3">05:00 PM</td>
-                    <td class="column4">8.00</td>
-                    <td class="column5">0.00</td>
-                    <td class="column6">0.00</td>
-                    <td class="column7">
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnTimeAlteration`);"
-                        >Alter Time</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="column1">November 20, 2019</td>
-                    <td class="column2">09:00 AM</td>
-                    <td class="column3">05:00 PM</td>
-                    <td class="column4">8.00</td>
-                    <td class="column5">0.00</td>
-                    <td class="column6">0.00</td>
-                    <td class="column7">
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnTimeAlteration`);"
-                        >Alter Time</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="column1">November 20, 2019</td>
-                    <td class="column2">09:00 AM</td>
-                    <td class="column3">05:00 PM</td>
-                    <td class="column4">8.00</td>
-                    <td class="column5">0.00</td>
-                    <td class="column6">0.00</td>
-                    <td class="column7">
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnTimeAlteration`);"
-                        >Alter Time</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="column1">November 20, 2019</td>
-                    <td class="column2">09:00 AM</td>
-                    <td class="column3">05:00 PM</td>
-                    <td class="column4">8.00</td>
-                    <td class="column5">0.00</td>
-                    <td class="column6">0.00</td>
-                    <td class="column7">
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnTimeAlteration`);"
-                        >Alter Time</a
-                      >
-                    </td>
+                    <td class="column1">John Doe</td>
+                    <td class="column2">Regular</td>
+                    <td class="column3">John the substitute</td>
+                    <td class="column4">March 14, 2020</td>
                   </tr>
                 </tbody>
               </table>
@@ -463,78 +403,37 @@
                 </div>
               </div>
             </div>
-
-            <div class="card card-2 hidden">
-              <div class="container-sm">
-                <!-- Pending Time Alteration -->
-                <div>
-                  <label class="label-6 block">Show record status</label>
-                  <select
-                    name="showEmployeeBy"
-                    id="showEmployeeBy"
-                    class="select"
-                    onchange=""
-                  >
-                    <option value="all">All</option>
-                    <option value="pending">Pending</option>
-                    <option value="approved">Approved</option>
-                    <option value="rejected">Rejected</option>
-                  </select>
-                </div>
-                <table class="tableLayout">
-                  <tbody>
-                    <tr>
-                      <td class="column1">Date</td>
-                      <td class="column2">Type</td>
-                      <td class="column3">Time</td>
-                      <td class="column4">Reason</td>
-                    </tr>
-                    <tr>
-                      <td class="column1">November 18, 2019</td>
-                      <td class="column2">Time-in</td>
-                      <td class="column3">08:20:00</td>
-                      <td class="column4">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit.
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="pagination-container">
-                  <div class="showmore-container">
-                    <a class="btn-showmore" href="#"
-                      ><i class="fas fa-chevron-down"></i>More Results</a
-                    >
-                  </div>
-                  <div class="pagination">
-                    <a href="#"><span>«</span></a>
-                    <a href="#"><span class="active">1</span></a>
-                    <a href="#"><span>2</span></a>
-                    <a href="#"><span>3</span></a>
-                    <a href="#"><span>4</span></a>
-                    <a href="#"><span>5</span></a>
-                    <a href="#"><span>6</span></a>
-                    <a href="#"><span>7</span></a>
-                    <a href="#"><span>8</span></a>
-                    <a href="#"><span>9</span></a>
-                    <a href="#"><span>10</span></a>
-                    <a href="#"><span>»</span></a>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           <!-- Modal Section -->
-          <!-- btnTimeAlteration -->
-          <div class="modal modal-time-alteration">
+          <!-- btnFileSubstitution -->
+          <div class="modal modal-file-substitution">
             <div class="modal-content">
-              <!-- <span class="modal-close-btn" onclick="closeModal();"
-                >&times;</span
-              > -->
-              <h5>Time Alteration Form</h5>
+              <h5>Employee Substitution Form</h5>
               <hr />
               <div class="">
+                <label for="txtOrginalEmp" class="label-6"
+                  >Original Employee:
+                </label>
+                <input type="text" name="txtOrginalEmp" id="txtOrginalEmp" />
+
+                <label for="selectEmpStatus" class="label-6"
+                  >Employment Status:
+                </label>
+                <select
+                  name="selectEmpStatus"
+                  id="selectEmpStatus"
+                  class="select"
+                >
+                  <option value="probationary">Probationary</option>
+                  <option value="regular">Regular</option>
+                </select>
+
+                <label for="txtDate" class="label-6"
+                  >Substitute Employee/Reliever:
+                </label>
+                <input type="text" name="txtOrginalEmp" id="txtOrginalEmp" />
+
                 <label for="txtDate" class="label-6">Date: </label>
                 <input
                   name="txtDate"
@@ -542,50 +441,12 @@
                   id="txtDate"
                   class="datePicker"
                 />
-
-                <div class="modal-chk-container">
-                  <label for="chkIn" class="label-6">
-                    <input type="checkbox" name="chkInOut" id="chkIn" />In
-                  </label>
-
-                  <label for="chkOut" class="label-6">
-                    <input type="checkbox" name="chkInOut" id="chkOut" />Out
-                  </label>
-                </div>
-                <!-- <label class="label-6">Time In</label>
-                <input name="txtTimeIn" type="checkbox" id="txtTimeInNew"  class=""/>
-                <label class="label-6">Time Out</label>
-                <input name="txtTimeOut" type="checkbox" id="txtTimeOutNew"  class=""/> -->
-
-                <label for="txtTime" class="label-6">Time</label>
-                <input
-                  type="time"
-                  id="txtTime"
-                  name="txtTime"
-                  min="09:00"
-                  max="18:00"
-                  required
-                />
-                <!-- <input
-                  type="text"
-                  id="txtTime"
-                  name="txtTime"
-                  class="timepicker"
-                /> -->
-
-                <label for="txtAreaReasonTA" class="label-6">Reason</label>
-                <textarea
-                  name="txtAreaReasonTA"
-                  id="txtAreaReasonTA"
-                ></textarea>
               </div>
               <div class="modal-btn-container">
-                <a class="btn-sm btn-primary mx-3" id="btnAlterTime"
-                  >Alter Time</a
-                >
+                <a class="btn-sm btn-primary mx-3" id="btnFile">File</a>
                 <a
                   class="btn-sm btn-secondary mx-3"
-                  onclick="closeModal(`#btnCloseTimeAlteration`);"
+                  onclick="closeModal(`#btnCloseFileSubstitution`);"
                   >Cancel</a
                 >
               </div>

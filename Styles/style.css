@@ -579,7 +579,7 @@ iframe {
   z-index: 3;
   -webkit-user-select: none;
 
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .datalist-data li {
@@ -609,6 +609,12 @@ iframe {
   border-radius: 50%;
   color: #333;
   padding: 5px;
+}
+.datalist-data li div:nth-child(2) {
+  width: 100%;
+}
+.datalist-data li div:nth-child(3) {
+  width: 0%;
 }
 
 .datalist-data li div:nth-child(2) span {
@@ -2585,6 +2591,18 @@ nav ul li a span.fa {
 
 #undertime-records .container .card-1 div:nth-child(3) button {
   margin-right: 0.5rem;
+}
+
+/* ========[ Substitution ]======== */
+#substitution .container .card-1 > div:first-child {
+  position: relative;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+#substitution .container .card-1 > div:first-child a {
+  margin-left: 0.5rem;
+  height: 100%;
 }
 
 /* ========[ Expense Records ]======== */

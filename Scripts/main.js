@@ -41,12 +41,11 @@ $(document).ready(function() {
     $(document).click(function(e) {
       e.stopPropagation();
       let container = $(".search-main-container");
-      let showSearchOptions = document.querySelector(".showSearchOptions");
 
       //check if the clicked area is dropDown or not
       if (container.has(e.target).length === 0) {
         $(".search-filter-container").addClass("hidden");
-        showSearchOptions.classList.remove("rotate");
+        $(".showSearchOptions svg").removeClass("rotate");
         hideDataList();
       }
     });
@@ -83,7 +82,8 @@ $(document).ready(function() {
       //check if the clicked area is dropDown or not
       if (containerRec.has(e.target).length === 0) {
         $(".searchRec-filter-container").addClass("hidden");
-        showSearchRecOptions.classList.remove("rotate");
+        // showSearchRecOptions.classList.remove("rotate");
+        $(".showSearchRecOptions svg").removeClass("rotate");
         hideDataList();
       }
     });
@@ -690,6 +690,9 @@ function scrollTopDataList() {
 function openModal(btn_id) {
   try {
     // List modal
+    const modalFileSubstitution = document.querySelector(
+      ".modal-file-substitution"
+    );
     const modalTimeAlteration = document.querySelector(
       ".modal-time-alteration"
     );
@@ -737,6 +740,8 @@ function openModal(btn_id) {
       modalOvertimeRecord.style.display = "flex";
     } else if (modalBtn === "#btnUndertimeApplication") {
       modalUndertimeRecord.style.display = "flex";
+    } else if (modalBtn === "#btnFileSubstitution") {
+      modalFileSubstitution.style.display = "flex";
     } else if (modalBtn === "#btnFileLeave") {
       modalFileLeave.style.display = "flex";
     } else if (modalBtn === "#btnAddExpense") {
@@ -788,6 +793,9 @@ function openModal(btn_id) {
 function closeModal(btn_id) {
   try {
     // List modal
+    const modalFileSubstitution = document.querySelector(
+      ".modal-file-substitution"
+    );
     const modalTimeAlteration = document.querySelector(
       ".modal-time-alteration"
     );
@@ -824,6 +832,8 @@ function closeModal(btn_id) {
       modalOvertimeRecord.style.display = "none";
     } else if (modalBtn === "#btnCloseUndertimeApplication") {
       modalUndertimeRecord.style.display = "none";
+    } else if (modalBtn === "#btnCloseFileSubstitution") {
+      modalFileSubstitution.style.display = "none";
     } else if (modalBtn === "#btnCloseFileLeave") {
       modalFileLeave.style.display = "none";
     } else if (modalBtn === "#btnCloseAddExpense") {

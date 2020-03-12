@@ -130,6 +130,10 @@
     left: 0;
   }
 
+  .datalist-data {
+    width: 100%;
+  }
+
   .datePeriod {
     display: grid !important;
     grid-template-columns: 1fr;
@@ -194,6 +198,12 @@
   .search-filter-container {
     min-width: 256px;
     width: 80%;
+  }
+
+  .search-container a svg {
+    height: 28px;
+    width: 28px;
+    padding: 5px 0;
   }
 
   .search-filter-container .datePeriod {
@@ -1230,6 +1240,54 @@
     tr
     td:nth-child(8):before {
     content: "Action";
+  }
+
+  /* ========[ Employee Substitution ]======== */
+  #substitution .container .card-1 input {
+    width: 100%;
+  }
+
+  #substitution .container .card-1 > div:first-child a {
+    margin-left: 0;
+    display: block;
+  }
+
+  /* card-1 table */
+  #substitution
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(1):before {
+    content: "Original Employee";
+  }
+  #substitution
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(2):before {
+    content: "Employment Status";
+  }
+  #substitution
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(3):before {
+    content: "Substitute Employee";
+  }
+  #substitution
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(4):before {
+    content: "Date";
   }
 
   /* ========[ System Preferences ]======== */
