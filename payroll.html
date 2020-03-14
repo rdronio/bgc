@@ -878,11 +878,24 @@
                   onchange="generatePayPeriod(`#drpDownPayFreqModal2`,`#txtDateFromModal2`,`#txtDateToModal2`,`payroll`);"
                 >
                   <option value="">--Please choose an option--</option>
-                  <option value="weekly">Weekly</option>
-                  <option value="twoWeeks">Every 2 weeks</option>
-                  <option value="monthly">Monthly</option>
+                  <option value="twoWeeksAdmin">Every 2 weeks (Admin)</option>
+                  <option value="twoWeeksOthers">Every 2 weeks (Others)</option>
                   <option value="custom">Custom</option>
                 </select>
+              </div>
+
+              <div>
+                <!-- <label for="selectEmpType" class="label-6 block">Employee Type</label>
+                <select
+                  name="selectEmpType"
+                  id="selectEmpType"
+                  class="select block"
+                  onchange=""
+                >
+                  <option value="">--Please choose an option--</option>
+                  <option value="admin">Admin</option>
+                  <option value="others">Others</option>
+                </select> -->
               </div>
 
               <div>
@@ -892,7 +905,7 @@
                   name="txtDateFromModal2"
                   type="text"
                   id="txtDateFromModal2"
-                  class="startDatePicker"
+                  class="startDatePicker disabled"
                   onchange="generatePayPeriod(`#drpDownPayFreqModal2`,`#txtDateFromModal2`,`#txtDateToModal2`,`payroll`);"
                 />
                 <label for="txtDateToModal2" class="label-6">To: </label>
@@ -905,44 +918,6 @@
                 />
               </div>
 
-              <div>
-                <label for="showEmployeeByCategoryModal2" class="label-6 block"
-                  >Select Department</label
-                >
-                <select
-                  name="showEmployeeByCategoryModal2"
-                  id="showEmployeeByCategoryModal2"
-                  class="select"
-                >
-                  <option value="all">All</option>
-                  <option value="all">IT Department</option>
-                  <option value="all">Marketing Department</option>
-                  <option value="all">Sales Department</option>
-                  <option value="all">HR Department</option>
-                </select>
-              </div>
-
-              <label for="selectDepartment" class="label-6 block"
-                >Select Department</label
-              >
-              <select
-                name="selectDepartment"
-                id="selectDepartment"
-                class="select"
-              >
-              </select>
-
-              <label for="selectEmployeeName" class="label-6 block"
-                >Employee Name</label
-              >
-              <select
-                name="selectEmployeeName"
-                id="selectEmployeeName"
-                class="select"
-              >
-              </select>
-
-              <div></div>
 
               <div class="modal-btn-container">
                 <a class="btn-sm btn-green mx-3" id="btnComputeModal"

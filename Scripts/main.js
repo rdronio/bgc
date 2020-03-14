@@ -443,24 +443,28 @@ function generatePayPeriod(
 ) {
   try {
     let payFreq = document.querySelector(drpDownPayFreqID).value;
-    let startDatePicker = document.querySelector(startDatePickerID).value;
+    let startDatePickerValue = document.querySelector(startDatePickerID).value;
+    let startDatePicker = document.querySelector(startDatePickerID);
     let endDatePicker = document.querySelector(endDatePickerID);
 
-    let selectedDate = new Date(startDatePicker);
-    let endDate = new Date(startDatePicker);
+    let selectedDate = new Date(startDatePickerValue);
+    let endDate = new Date(startDatePickerValue);
 
-    if (startDatePicker != '') {
+    if (startDatePickerValue != '') {
+      startDatePicker.classList.add('disabled');
       endDatePicker.classList.add('disabled');
-      if (payFreq === 'weekly') {
-        endDate.setDate(selectedDate.getDate() + 7);
-        $(endDatePicker).datepicker('setDate', endDate);
-      } else if (payFreq === 'twoWeeks') {
+      alert('got pass    ' + payFreq);
+
+      if (payFreq === 'twoWeeksAdmin') {
+        startDatePicker.classList.remove('disabled');
+        endDatePicker.classList.remove('disabled');
         endDate.setDate(selectedDate.getDate() + 14);
         $(endDatePicker).datepicker('setDate', endDate);
-      } else if (payFreq === 'monthly') {
-        endDate.setMonth(selectedDate.getMonth() + 1);
+      } else if (payFreq === 'twoWeeksOthers') {
+        endDate.setDate(selectedDate.getDate() + 14);
         $(endDatePicker).datepicker('setDate', endDate);
       } else if (payFreq === 'custom') {
+        startDatePicker.classList.remove('disabled');
         endDatePicker.classList.remove('disabled');
         endDate.setDate(selectedDate.getDate());
         $(endDatePicker).datepicker('option', 'minDate', selectedDate);
