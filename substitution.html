@@ -368,15 +368,17 @@
                 <tbody>
                   <tr>
                     <td class="column1">Original Employee</td>
-                    <td class="column2">Employment Status</td>
-                    <td class="column3">Substitute Employee</td>
-                    <td class="column4">Date</td>
+                    <td class="column2">Department</td>
+                    <td class="column3">Position</td>
+                    <td class="column4">Substitute Employee</td>
+                    <td class="column5">Date</td>
                   </tr>
                   <tr>
                     <td class="column1">John Doe</td>
-                    <td class="column2">Regular</td>
-                    <td class="column3">John the substitute</td>
-                    <td class="column4">March 14, 2020</td>
+                    <td class="column2">IT Department</td>
+                    <td class="column3">Web Developer</td>
+                    <td class="column4">John the substitute</td>
+                    <td class="column5">March 14, 2020</td>
                   </tr>
                 </tbody>
               </table>
@@ -412,22 +414,41 @@
               <h5>Employee Substitution Form</h5>
               <hr />
               <div class="">
-                <label for="txtOrginalEmp" class="label-6"
-                  >Original Employee:
-                </label>
-                <input type="text" name="txtOrginalEmp" id="txtOrginalEmp" />
-
-                <label for="selectEmpStatus" class="label-6"
-                  >Employment Status:
+                <label for="selectDepartment" class="label-6"
+                  >Department:
                 </label>
                 <select
-                  name="selectEmpStatus"
-                  id="selectEmpStatus"
+                  name="selectDepartment"
+                  id="selectDepartment"
                   class="select"
                 >
-                  <option value="probationary">Probationary</option>
-                  <option value="regular">Regular</option>
+                  <option value="">Human Resource</option>
+                  <option value="">Finance</option>
+                  <option value="">Purchasing</option>
+                  <option value="">Marketing</option>
+                  <option value="">Engineering</option>
+                  <option value="">Operation</option>
                 </select>
+                <label for="selectPosition" class="label-6"
+                  >Position:
+                </label>
+                <select
+                  name="selectPosition"
+                  id="selectPosition"
+                  class="select"
+                >
+                  <option value=""></option>
+                </select>
+                <label for="selectOrginalEmp" class="label-6"
+                  >Original Employee:
+                </label>
+                <select
+                name="selectOrginalEmp"
+                id="selectOrginalEmp"
+                class="select"
+              >
+                <option value=""></option>
+              </select>
 
                 <label for="txtDate" class="label-6"
                   >Substitute Employee/Reliever:

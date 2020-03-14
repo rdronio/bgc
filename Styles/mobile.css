@@ -473,7 +473,7 @@
     min-height: 100%;
     min-width: 100%;
     left: 0;
-    background: url("../Images/bg.jpg") no-repeat center center/cover;
+    background: url('../Images/bg.jpg') no-repeat center center/cover;
   }
 
   #login .right-container {
@@ -571,7 +571,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Time In";
+    content: 'Time In';
   }
   #admin-dashboard
     .container
@@ -582,7 +582,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Time Out";
+    content: 'Time Out';
   }
   #admin-dashboard
     .container
@@ -593,7 +593,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Employee";
+    content: 'Employee';
   }
   #admin-dashboard
     .container
@@ -604,7 +604,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Position";
+    content: 'Position';
   }
 
   /* ========[ Payroll Dashboard ]======== */
@@ -671,7 +671,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Pay Period";
+    content: 'Pay Period';
   }
   #payroll-dashboard
     .container
@@ -682,7 +682,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Employee";
+    content: 'Employee';
   }
   #payroll-dashboard
     .container
@@ -693,7 +693,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Position";
+    content: 'Position';
   }
   #payroll-dashboard
     .container
@@ -704,7 +704,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Net Pay";
+    content: 'Net Pay';
   }
 
   #payroll-dashboard
@@ -716,7 +716,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Status";
+    content: 'Status';
   }
 
   #payroll-dashboard
@@ -728,7 +728,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Name";
+    content: 'Name';
   }
 
   #payroll-dashboard
@@ -740,7 +740,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Tardiness Count";
+    content: 'Tardiness Count';
   }
 
   #payroll-dashboard
@@ -752,7 +752,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Position";
+    content: 'Position';
   }
 
   /* ========[ Time Records ]======== */
@@ -790,7 +790,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #time-records
     .container
@@ -799,7 +799,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Time In";
+    content: 'Time In';
   }
   #time-records
     .container
@@ -808,7 +808,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Time Out";
+    content: 'Time Out';
   }
   #time-records
     .container
@@ -817,7 +817,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Total (hour/s)";
+    content: 'Total (hour/s)';
   }
   #time-records
     .container
@@ -826,7 +826,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Overtime (hour/s)";
+    content: 'Overtime (hour/s)';
   }
 
   #time-records
@@ -836,7 +836,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "Tardiness (min/s)";
+    content: 'Tardiness (min/s)';
   }
 
   /* card-2 table */
@@ -847,7 +847,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #time-records
     .container
@@ -856,7 +856,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Type";
+    content: 'Type';
   }
   #time-records
     .container
@@ -865,7 +865,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Time";
+    content: 'Time';
   }
   #time-records
     .container
@@ -874,7 +874,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Reports";
+    content: 'Reports';
   }
 
   /* ========[ Holiday Notice ]======== */
@@ -912,7 +912,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #holiday-notice
     .container
@@ -921,7 +921,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Description";
+    content: 'Description';
   }
   #holiday-notice
     .container
@@ -930,7 +930,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Action";
+    content: 'Action';
   }
 
   /* ========[ Overtime Records ]======== */
@@ -959,7 +959,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #overtime-records
     .container
@@ -968,7 +968,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Start Time";
+    content: 'Start Time';
   }
   #overtime-records
     .container
@@ -977,7 +977,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "End Time";
+    content: 'End Time';
   }
   #overtime-records
     .container
@@ -986,7 +986,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Total";
+    content: 'Total';
   }
   #overtime-records
     .container
@@ -995,7 +995,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Reason";
+    content: 'Reason';
   }
 
   #overtime-records
@@ -1005,7 +1005,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "Status";
+    content: 'Status';
   }
 
   #overtime-records
@@ -1015,7 +1015,7 @@
     tbody
     tr
     td:nth-child(7):before {
-    content: "Remarks";
+    content: 'Remarks';
   }
 
   /* card-2 table */
@@ -1026,7 +1026,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #overtime-records
     .container
@@ -1035,7 +1035,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Start Time";
+    content: 'Start Time';
   }
   #overtime-records
     .container
@@ -1044,7 +1044,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "End Time";
+    content: 'End Time';
   }
   #overtime-records
     .container
@@ -1053,7 +1053,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Overtime";
+    content: 'Overtime';
   }
   #overtime-records
     .container
@@ -1062,7 +1062,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Reason";
+    content: 'Reason';
   }
   #overtime-records
     .container
@@ -1071,7 +1071,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "Action";
+    content: 'Action';
   }
 
   /* ========[ Leave Records ]======== */
@@ -1098,7 +1098,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #leaverecords
     .container
@@ -1107,10 +1107,10 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Type";
+    content: 'Type';
   }
   #leaverecords .tableLayout tbody tr td:nth-child(3):before {
-    content: "From";
+    content: 'From';
   }
   #leaverecords
     .container
@@ -1119,7 +1119,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "To";
+    content: 'To';
   }
   #leaverecords
     .container
@@ -1128,7 +1128,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "No. of Days";
+    content: 'No. of Days';
   }
 
   #leaverecords
@@ -1138,7 +1138,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "With Pay";
+    content: 'With Pay';
   }
   #leaverecords
     .container
@@ -1147,7 +1147,7 @@
     tbody
     tr
     td:nth-child(7):before {
-    content: "Reason";
+    content: 'Reason';
   }
   #leaverecords
     .container
@@ -1156,7 +1156,7 @@
     tbody
     tr
     td:nth-child(8):before {
-    content: "Status";
+    content: 'Status';
   }
   #leaverecords
     .container
@@ -1165,7 +1165,7 @@
     tbody
     tr
     td:nth-child(9):before {
-    content: "Remarks";
+    content: 'Remarks';
   }
 
   /* table */
@@ -1176,7 +1176,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #leaverecords
     .container
@@ -1185,7 +1185,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Type";
+    content: 'Type';
   }
   #leaverecords
     .container
@@ -1194,7 +1194,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "From";
+    content: 'From';
   }
   #leaverecords
     .container
@@ -1203,7 +1203,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "To";
+    content: 'To';
   }
   #leaverecords
     .container
@@ -1212,7 +1212,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "No. of Days";
+    content: 'No. of Days';
   }
   #leaverecords
     .container
@@ -1221,7 +1221,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "With pay";
+    content: 'With pay';
   }
   #leaverecords
     .container
@@ -1230,7 +1230,7 @@
     tbody
     tr
     td:nth-child(7):before {
-    content: "Reason";
+    content: 'Reason';
   }
   #leaverecords
     .container
@@ -1239,7 +1239,7 @@
     tbody
     tr
     td:nth-child(8):before {
-    content: "Action";
+    content: 'Action';
   }
 
   /* ========[ Employee Substitution ]======== */
@@ -1260,7 +1260,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Original Employee";
+    content: 'Original Employee';
   }
   #substitution
     .container
@@ -1269,7 +1269,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Employment Status";
+    content: 'Deparment';
   }
   #substitution
     .container
@@ -1278,7 +1278,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Substitute Employee";
+    content: 'Position';
   }
   #substitution
     .container
@@ -1287,7 +1287,16 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Date";
+    content: 'Subtitute Employee';
+  }
+  #substitution
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(5):before {
+    content: 'Date';
   }
 
   /* ========[ System Preferences ]======== */
@@ -1333,7 +1342,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #undertime-records
     .container
@@ -1342,7 +1351,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Start Time";
+    content: 'Start Time';
   }
   #undertime-records
     .container
@@ -1351,7 +1360,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "End Time";
+    content: 'End Time';
   }
   #undertime-records
     .container
@@ -1360,7 +1369,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Total";
+    content: 'Total';
   }
   #undertime-records
     .container
@@ -1369,7 +1378,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Reason";
+    content: 'Reason';
   }
 
   #undertime-records
@@ -1379,7 +1388,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "Status";
+    content: 'Status';
   }
 
   #undertime-records
@@ -1389,7 +1398,7 @@
     tbody
     tr
     td:nth-child(7):before {
-    content: "Remarks";
+    content: 'Remarks';
   }
 
   /* card-2 table */
@@ -1400,7 +1409,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #undertime-records
     .container
@@ -1409,7 +1418,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Start Time";
+    content: 'Start Time';
   }
   #undertime-records
     .container
@@ -1418,7 +1427,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "End Time";
+    content: 'End Time';
   }
   #undertime-records
     .container
@@ -1427,7 +1436,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Undertime";
+    content: 'Undertime';
   }
   #undertime-records
     .container
@@ -1436,7 +1445,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Reason";
+    content: 'Reason';
   }
   #undertime-records
     .container
@@ -1445,7 +1454,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "Status";
+    content: 'Status';
   }
 
   /* ========[ Project / Task Records ]======== */
@@ -1472,7 +1481,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Project";
+    content: 'Project';
   }
   #project-task
     .container
@@ -1481,7 +1490,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Task";
+    content: 'Task';
   }
   #project-task
     .container
@@ -1490,7 +1499,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Team Members";
+    content: 'Team Members';
   }
   #project-task
     .container
@@ -1499,7 +1508,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Est. Completion Date";
+    content: 'Est. Completion Date';
   }
   #project-task
     .container
@@ -1508,7 +1517,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Notes";
+    content: 'Notes';
   }
   #project-task
     .container
@@ -1517,7 +1526,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "Action";
+    content: 'Action';
   }
 
   /* Completed Task */
@@ -1542,7 +1551,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #project-task
     .container
@@ -1551,7 +1560,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Time In";
+    content: 'Time In';
   }
   #project-task
     .container
@@ -1560,7 +1569,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Time Out";
+    content: 'Time Out';
   }
   #project-task
     .container
@@ -1569,7 +1578,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Total (Hour/s)";
+    content: 'Total (Hour/s)';
   }
   #project-task
     .container
@@ -1578,7 +1587,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "completedtask (Hour/s)";
+    content: 'completedtask (Hour/s)';
   }
 
   /* ========[ Expense Records ]======== */
@@ -1612,7 +1621,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #expense-records
     .container
@@ -1621,7 +1630,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Description";
+    content: 'Description';
   }
   #expense-records
     .container
@@ -1630,7 +1639,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Reason";
+    content: 'Reason';
   }
   #expense-records
     .container
@@ -1639,7 +1648,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Rate";
+    content: 'Rate';
   }
   #expense-records
     .container
@@ -1648,7 +1657,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Status";
+    content: 'Status';
   }
   #expense-records
     .container
@@ -1657,7 +1666,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "Remarks";
+    content: 'Remarks';
   }
 
   /* card-2 table */
@@ -1668,7 +1677,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #expense-records
     .container
@@ -1677,7 +1686,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Description";
+    content: 'Description';
   }
   #expense-records
     .container
@@ -1686,7 +1695,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Reason";
+    content: 'Reason';
   }
   #expense-records
     .container
@@ -1695,7 +1704,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Rate";
+    content: 'Rate';
   }
   #expense-records
     .container
@@ -1704,7 +1713,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Status";
+    content: 'Status';
   }
   #expense-records
     .container
@@ -1713,7 +1722,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "Action";
+    content: 'Action';
   }
   /* ========[ Leave Modal ]======== */
   #leaverecords .modal .modal-content {
@@ -1746,7 +1755,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #time-alteration-approval
     .container
@@ -1755,7 +1764,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Employee";
+    content: 'Employee';
   }
   #time-alteration-approval
     .container
@@ -1764,7 +1773,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Time In";
+    content: 'Time In';
   }
   #time-alteration-approval
     .container
@@ -1773,7 +1782,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Time Out";
+    content: 'Time Out';
   }
   #time-alteration-approval
     .container
@@ -1782,7 +1791,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "New Time In";
+    content: 'New Time In';
   }
   #time-alteration-approval
     .container
@@ -1791,7 +1800,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "New Time Out";
+    content: 'New Time Out';
   }
   #time-alteration-approval
     .container
@@ -1800,7 +1809,7 @@
     tbody
     tr
     td:nth-child(7):before {
-    content: "Reason";
+    content: 'Reason';
   }
   #time-alteration-approval
     .container
@@ -1809,7 +1818,7 @@
     tbody
     tr
     td:nth-child(8):before {
-    content: "Action";
+    content: 'Action';
   }
 
   #time-alteration-approval
@@ -1845,7 +1854,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #overtime-approval
     .container
@@ -1854,7 +1863,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Employee";
+    content: 'Employee';
   }
   #overtime-approval
     .container
@@ -1863,7 +1872,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Time In";
+    content: 'Time In';
   }
   #overtime-approval
     .container
@@ -1872,7 +1881,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Time Out";
+    content: 'Time Out';
   }
   #overtime-approval
     .container
@@ -1881,7 +1890,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Overtime";
+    content: 'Overtime';
   }
 
   #overtime-approval
@@ -1891,7 +1900,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "Reason";
+    content: 'Reason';
   }
   #overtime-approval
     .container
@@ -1900,7 +1909,7 @@
     tbody
     tr
     td:nth-child(7):before {
-    content: "Action";
+    content: 'Action';
   }
 
   #overtime-approval table.tableLayout tbody tr:not(:first-child) .column7 {
@@ -1933,7 +1942,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Pay Period";
+    content: 'Pay Period';
   }
   #payroll-approval
     .container
@@ -1942,7 +1951,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Employee";
+    content: 'Employee';
   }
   #payroll-approval
     .container
@@ -1951,7 +1960,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Position";
+    content: 'Position';
   }
 
   #payroll-approval
@@ -1961,7 +1970,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Net Pay";
+    content: 'Net Pay';
   }
 
   #payroll-approval
@@ -1971,7 +1980,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Action";
+    content: 'Action';
   }
 
   #payroll-approval table.tableLayout tbody tr:not(:first-child) .column5 {
@@ -2004,7 +2013,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #leave-approval
     .container
@@ -2013,7 +2022,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Employee";
+    content: 'Employee';
   }
   #leave-approval
     .container
@@ -2022,7 +2031,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Type";
+    content: 'Type';
   }
 
   #leave-approval
@@ -2032,7 +2041,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "From";
+    content: 'From';
   }
 
   #leave-approval
@@ -2042,7 +2051,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "To";
+    content: 'To';
   }
 
   #leave-approval
@@ -2052,7 +2061,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "No. of days";
+    content: 'No. of days';
   }
 
   #leave-approval
@@ -2062,7 +2071,7 @@
     tbody
     tr
     td:nth-child(7):before {
-    content: "With Pay";
+    content: 'With Pay';
   }
 
   #leave-approval
@@ -2072,7 +2081,7 @@
     tbody
     tr
     td:nth-child(8):before {
-    content: "Reason";
+    content: 'Reason';
   }
 
   #leave-approval
@@ -2082,7 +2091,7 @@
     tbody
     tr
     td:nth-child(9):before {
-    content: "Action";
+    content: 'Action';
   }
 
   #leave-approval table.tableLayout tbody tr:not(:first-child) .column9 {
@@ -2120,7 +2129,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #expense-approval
     .container
@@ -2129,7 +2138,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Description";
+    content: 'Description';
   }
   #expense-approval
     .container
@@ -2138,7 +2147,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Reason";
+    content: 'Reason';
   }
   #expense-approval
     .container
@@ -2147,7 +2156,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Rate";
+    content: 'Rate';
   }
   #expense-approval
     .container
@@ -2156,7 +2165,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Action";
+    content: 'Action';
   }
 
   #expense-approval table.tableLayout tbody tr:not(:first-child) .column5 {
@@ -2188,7 +2197,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #undertime-approval
     .container
@@ -2197,7 +2206,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Start Time";
+    content: 'Start Time';
   }
   #undertime-approval
     .container
@@ -2206,7 +2215,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "End Time";
+    content: 'End Time';
   }
   #undertime-approval
     .container
@@ -2215,7 +2224,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Undertime (hour/s)";
+    content: 'Undertime (hour/s)';
   }
   #undertime-approval
     .container
@@ -2224,7 +2233,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Reason";
+    content: 'Reason';
   }
   #undertime-approval
     .container
@@ -2233,7 +2242,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "Action";
+    content: 'Action';
   }
 
   #undertime-approval table.tableLayout tbody tr:not(:first-child) .column6 {
@@ -2314,7 +2323,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Action";
+    content: 'Action';
   }
   #employee-masterlist
     .container
@@ -2323,7 +2332,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Employee ID";
+    content: 'Employee ID';
   }
   #employee-masterlist
     .container
@@ -2332,7 +2341,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Employee Name";
+    content: 'Employee Name';
   }
 
   #employee-masterlist
@@ -2342,7 +2351,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Department";
+    content: 'Department';
   }
   #employee-masterlist
     .container
@@ -2351,7 +2360,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Position";
+    content: 'Position';
   }
   #employee-masterlist
     .container
@@ -2360,7 +2369,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "Employment Status";
+    content: 'Employment Status';
   }
 
   #employee-masterlist
@@ -2370,7 +2379,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Employee ID";
+    content: 'Employee ID';
   }
   #employee-masterlist
     .container
@@ -2379,7 +2388,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Employee Name";
+    content: 'Employee Name';
   }
 
   #employee-masterlist
@@ -2389,7 +2398,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Department";
+    content: 'Department';
   }
   #employee-masterlist
     .container
@@ -2398,7 +2407,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Position";
+    content: 'Position';
   }
   #employee-masterlist
     .container
@@ -2407,7 +2416,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Employment Status";
+    content: 'Employment Status';
   }
 
   #employee-masterlist .modal-content {
@@ -2521,7 +2530,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Employee Name";
+    content: 'Employee Name';
   }
   #employee-leave-records
     .container
@@ -2530,7 +2539,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Available Sick Leave";
+    content: 'Available Sick Leave';
   }
   #employee-leave-records
     .container
@@ -2539,7 +2548,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Used Sick Leave";
+    content: 'Used Sick Leave';
   }
 
   #employee-leave-records
@@ -2549,7 +2558,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Available V/E Leave";
+    content: 'Available V/E Leave';
   }
 
   #employee-leave-records
@@ -2559,7 +2568,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Used V/E Leave";
+    content: 'Used V/E Leave';
   }
 
   /* ========[ Generate DTR Report ]======== */
@@ -2599,19 +2608,19 @@
   }
 
   #dtr-report .container .card-1 .tableLayout tbody tr td:nth-child(1):before {
-    content: "Employee ID";
+    content: 'Employee ID';
   }
   #dtr-report .container .card-1 .tableLayout tbody tr td:nth-child(2):before {
-    content: "Employee Name";
+    content: 'Employee Name';
   }
   #dtr-report .container .card-1 .tableLayout tbody tr td:nth-child(3):before {
-    content: "Department";
+    content: 'Department';
   }
   #dtr-report .container .card-1 .tableLayout tbody tr td:nth-child(4):before {
-    content: "Position";
+    content: 'Position';
   }
   #dtr-report .container .card-1 .tableLayout tbody tr td:nth-child(5):before {
-    content: "Action";
+    content: 'Action';
   }
 
   #dtr-report .modal-content label {
@@ -2743,14 +2752,14 @@
   }
 
   #dtr-report .modal-view-dtr .tableLayout tbody tr td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #dtr-report .modal-view-dtr .tableLayout tbody tr td:nth-child(2):before {
-    content: "Time In";
+    content: 'Time In';
   }
 
   #dtr-report .modal-view-dtr .tableLayout tbody tr td:nth-child(3):before {
-    content: "Time Out";
+    content: 'Time Out';
   }
 
   /* ========[ Import Time Record ]======== */
@@ -2769,7 +2778,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Employee ID";
+    content: 'Employee ID';
   }
   #import-time-records
     .container
@@ -2778,7 +2787,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Employee Name";
+    content: 'Employee Name';
   }
   #import-time-records
     .container
@@ -2787,7 +2796,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Date";
+    content: 'Date';
   }
   #import-time-records
     .container
@@ -2796,7 +2805,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Timekeeping";
+    content: 'Timekeeping';
   }
   #import-time-records
     .container
@@ -2805,7 +2814,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Type";
+    content: 'Type';
   }
 
   /* ========[ Payroll ]======== */
@@ -2833,41 +2842,41 @@
   }
 
   #payroll .container .card-1 .tableLayout tbody tr td:nth-child(1):before {
-    content: "Pay Period";
+    content: 'Pay Period';
   }
   #payroll .container .card-1 .tableLayout tbody tr td:nth-child(2):before {
-    content: "Employee";
+    content: 'Employee';
   }
 
   #payroll .container .card-1 .tableLayout tbody tr td:nth-child(3):before {
-    content: "Position";
+    content: 'Position';
   }
 
   #payroll .container .card-1 .tableLayout tbody tr td:nth-child(4):before {
-    content: "Net Pay";
+    content: 'Net Pay';
   }
 
   #payroll .container .card-1 .tableLayout tbody tr td:nth-child(5):before {
-    content: "Action";
+    content: 'Action';
   }
 
   #payroll .container .card-2 .tableLayout tbody tr td:nth-child(1):before {
-    content: "Pay Period";
+    content: 'Pay Period';
   }
   #payroll .container .card-2 .tableLayout tbody tr td:nth-child(2):before {
-    content: "Employee";
+    content: 'Employee';
   }
 
   #payroll .container .card-2 .tableLayout tbody tr td:nth-child(3):before {
-    content: "Position";
+    content: 'Position';
   }
 
   #payroll .container .card-2 .tableLayout tbody tr td:nth-child(4):before {
-    content: "Net Pay";
+    content: 'Net Pay';
   }
 
   #payroll .container .card-2 .tableLayout tbody tr td:nth-child(5):before {
-    content: "Action";
+    content: 'Action';
   }
 
   #payroll .modal-content {
@@ -2983,24 +2992,24 @@
   }
 
   #payroll .modal-mass-payroll .tableLayout tbody tr td:nth-child(1):before {
-    content: "Action";
+    content: 'Action';
   }
   #payroll .modal-mass-payroll .tableLayout tbody tr td:nth-child(2):before {
-    content: "Employee";
+    content: 'Employee';
   }
 
   #payroll .modal-mass-payroll .tableLayout tbody tr td:nth-child(3):before {
-    content: "Department";
+    content: 'Department';
   }
 
   #payroll .modal-mass-payroll .tableLayout tbody tr td:nth-child(4):before {
-    content: "Total Earnings";
+    content: 'Total Earnings';
   }
   #payroll .modal-mass-payroll .tableLayout tbody tr td:nth-child(5):before {
-    content: "Total Deductions";
+    content: 'Total Deductions';
   }
   #payroll .modal-mass-payroll .tableLayout tbody tr td:nth-child(6):before {
-    content: "Net Pay";
+    content: 'Net Pay';
   }
 
   #payroll .showmore-container {
@@ -3053,18 +3062,18 @@
   }
 
   #memonotice .container .card-1 .tableLayout tbody tr td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #memonotice .container .card-1 .tableLayout tbody tr td:nth-child(2):before {
-    content: "Subject";
+    content: 'Subject';
   }
 
   #memonotice .container .card-1 .tableLayout tbody tr td:nth-child(3):before {
-    content: "Type";
+    content: 'Type';
   }
 
   #memonotice .container .card-1 .tableLayout tbody tr td:nth-child(4):before {
-    content: "Action";
+    content: 'Action';
   }
 
   /* #memonotice .modal-content > div:first-of-type *:not(.label) {
@@ -3077,7 +3086,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Employee ID";
+    content: 'Employee ID';
   }
 
   .modal-payrollmemo
@@ -3086,7 +3095,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Employee Name";
+    content: 'Employee Name';
   }
 
   .modal-payrollmemo
@@ -3095,7 +3104,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Department";
+    content: 'Department';
   }
 
   .modal-payrollmemo
@@ -3104,7 +3113,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Position";
+    content: 'Position';
   }
 
   .modal-payrollmemo
@@ -3113,7 +3122,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "E-mail";
+    content: 'E-mail';
   }
 
   .modal-payrollmemo
@@ -3122,7 +3131,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "Action";
+    content: 'Action';
   }
 
   .modal-viewpayrollmemo
@@ -3131,7 +3140,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Employee ID";
+    content: 'Employee ID';
   }
   .modal-viewpayrollmemo
     > .modal-content
@@ -3139,7 +3148,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Employee Name";
+    content: 'Employee Name';
   }
   .modal-viewpayrollmemo
     > .modal-content
@@ -3147,7 +3156,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Department";
+    content: 'Department';
   }
   .modal-viewpayrollmemo
     > .modal-content
@@ -3155,7 +3164,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Position";
+    content: 'Position';
   }
   .modal-viewpayrollmemo
     > .modal-content
@@ -3163,7 +3172,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "E-mail";
+    content: 'E-mail';
   }
 
   /* ========[ Payslip ]======== */
@@ -3237,7 +3246,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Employee";
+    content: 'Employee';
   }
   #payslip-approval
     .container
@@ -3246,7 +3255,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Position";
+    content: 'Position';
   }
 
   #payslip-approval
@@ -3256,7 +3265,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Basic Pay";
+    content: 'Basic Pay';
   }
 
   #payslip-approval
@@ -3266,7 +3275,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Absent";
+    content: 'Absent';
   }
 
   #payslip-approval
@@ -3276,7 +3285,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Late";
+    content: 'Late';
   }
 
   #payslip-approval
@@ -3286,7 +3295,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "Gross Pay";
+    content: 'Gross Pay';
   }
 
   #payslip-approval
@@ -3296,7 +3305,7 @@
     tbody
     tr
     td:nth-child(7):before {
-    content: "OT";
+    content: 'OT';
   }
 
   #payslip-approval
@@ -3306,7 +3315,7 @@
     tbody
     tr
     td:nth-child(8):before {
-    content: "Withholding Tax";
+    content: 'Withholding Tax';
   }
   #payslip-approval
     .container
@@ -3315,7 +3324,7 @@
     tbody
     tr
     td:nth-child(9):before {
-    content: "SSS/GSIS";
+    content: 'SSS/GSIS';
   }
   #payslip-approval
     .container
@@ -3324,7 +3333,7 @@
     tbody
     tr
     td:nth-child(10):before {
-    content: "Philhealth";
+    content: 'Philhealth';
   }
   #payslip-approval
     .container
@@ -3333,7 +3342,7 @@
     tbody
     tr
     td:nth-child(11):before {
-    content: "Pag-ibig";
+    content: 'Pag-ibig';
   }
   #payslip-approval
     .container
@@ -3342,7 +3351,7 @@
     tbody
     tr
     td:nth-child(12):before {
-    content: "Other Deductions";
+    content: 'Other Deductions';
   }
   #payslip-approval
     .container
@@ -3351,7 +3360,7 @@
     tbody
     tr
     td:nth-child(13):before {
-    content: "Net Pay";
+    content: 'Net Pay';
   }
   #payslip-approval
     .container
@@ -3360,7 +3369,7 @@
     tbody
     tr
     td:nth-child(14):before {
-    content: "Action";
+    content: 'Action';
   }
 
   /* ========[ Payroll Employee Masterlist ]======== */
@@ -3386,7 +3395,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Action";
+    content: 'Action';
   }
   #payroll-add-employee
     .container
@@ -3395,7 +3404,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Employee ID";
+    content: 'Employee ID';
   }
   #payroll-add-employee
     .container
@@ -3404,7 +3413,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Employee Name";
+    content: 'Employee Name';
   }
 
   #payroll-add-employee
@@ -3414,7 +3423,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Department";
+    content: 'Department';
   }
   #payroll-add-employee
     .container
@@ -3423,7 +3432,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Position";
+    content: 'Position';
   }
   #payroll-add-employee
     .container
@@ -3432,7 +3441,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "Employment Status";
+    content: 'Employment Status';
   }
 
   #payroll-add-employee
@@ -3442,7 +3451,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Employee ID";
+    content: 'Employee ID';
   }
   #payroll-add-employee
     .container
@@ -3451,7 +3460,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Employee Name";
+    content: 'Employee Name';
   }
 
   #payroll-add-employee
@@ -3461,7 +3470,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Department";
+    content: 'Department';
   }
   #payroll-add-employee
     .container
@@ -3470,7 +3479,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Position";
+    content: 'Position';
   }
   #payroll-add-employee
     .container
@@ -3479,7 +3488,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Employment Status";
+    content: 'Employment Status';
   }
   #payroll-add-employee
     .container
@@ -3488,7 +3497,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "Birthday";
+    content: 'Birthday';
   }
   #payroll-add-employee
     .container
@@ -3497,7 +3506,7 @@
     tbody
     tr
     td:nth-child(7):before {
-    content: "Gender";
+    content: 'Gender';
   }
   #payroll-add-employee
     .container
@@ -3506,7 +3515,7 @@
     tbody
     tr
     td:nth-child(8):before {
-    content: "Civil Status";
+    content: 'Civil Status';
   }
   #payroll-add-employee
     .container
@@ -3515,7 +3524,7 @@
     tbody
     tr
     td:nth-child(9):before {
-    content: "Email";
+    content: 'Email';
   }
   #payroll-add-employee
     .container
@@ -3524,7 +3533,7 @@
     tbody
     tr
     td:nth-child(10):before {
-    content: "Phone";
+    content: 'Phone';
   }
   #payroll-add-employee
     .container
@@ -3533,7 +3542,7 @@
     tbody
     tr
     td:nth-child(11):before {
-    content: "Emerg. Contact";
+    content: 'Emerg. Contact';
   }
   #payroll-add-employee
     .container
@@ -3542,7 +3551,7 @@
     tbody
     tr
     td:nth-child(12):before {
-    content: "Emerg. Contact No.";
+    content: 'Emerg. Contact No.';
   }
 
   #payroll-add-employee .modal-content {
@@ -3680,7 +3689,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: 'Date';
   }
   #payroll-add-employee
     .modal-view-employee
@@ -3690,7 +3699,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Time In";
+    content: 'Time In';
   }
 
   #payroll-add-employee
@@ -3701,7 +3710,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Time Out";
+    content: 'Time Out';
   }
   #payroll-add-employee
     .modal-view-employee
@@ -3711,7 +3720,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Total (hour/s)";
+    content: 'Total (hour/s)';
   }
   #payroll-add-employee
     .modal-view-employee
@@ -3721,7 +3730,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Overtime (Hour/s)";
+    content: 'Overtime (Hour/s)';
   }
   #payroll-add-employee
     .modal-view-employee
@@ -3731,7 +3740,7 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "Tardiness (min/s)";
+    content: 'Tardiness (min/s)';
   }
 
   /* ========[ Payslip Template ]======== */
