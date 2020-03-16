@@ -2644,19 +2644,22 @@
   }
 
   #dtr-report .container .card-1 .tableLayout tbody tr td:nth-child(1):before {
-    content: "Employee ID";
-  }
-  #dtr-report .container .card-1 .tableLayout tbody tr td:nth-child(2):before {
     content: "Employee Name";
   }
+  #dtr-report .container .card-1 .tableLayout tbody tr td:nth-child(2):before {
+    content: "Date";
+  }
   #dtr-report .container .card-1 .tableLayout tbody tr td:nth-child(3):before {
-    content: "Department";
+    content: "Time In";
   }
   #dtr-report .container .card-1 .tableLayout tbody tr td:nth-child(4):before {
-    content: "Position";
+    content: "Time Out";
   }
   #dtr-report .container .card-1 .tableLayout tbody tr td:nth-child(5):before {
-    content: "Action";
+    content: "Total (hour/s)";
+  }
+  #dtr-report .container .card-1 .tableLayout tbody tr td:nth-child(6):before {
+    content: "Tardiness (min/s)";
   }
 
   #dtr-report .modal-content label {

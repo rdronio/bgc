@@ -208,6 +208,7 @@
                   </a>
                   <div>
                     <input
+                      id="txtSearch"
                       class="txtSearch"
                       type="text"
                       list="txtSearch"
@@ -216,11 +217,25 @@
                       onkeypress="checkSearchInput();"
                       onchange="checkSearchInput();"
                     />
-                    <datalist id="txtSearch">
-                      <option>John Doe</option>
-                      <option>John Doe Daddy</option>
-                      <option>John Doe Mommy</option>
-                    </datalist>
+                    <ul class="datalist-data hidden">
+                      <li>
+                        <div><i class="fas fa-search"></i></div>
+                        <div>
+                          <span>John Doe</span>
+                        </div>
+                        <div></div>
+                      </li>
+                      <li class="selected-datalist">
+                        <div><i class="fas fa-search"></i></div>
+                        <div><span>John Doe1</span></div>
+                        <div></div>
+                      </li>
+                      <li>
+                        <div><i class="fas fa-search"></i></div>
+                        <div><span>John Doe2</span></div>
+                        <div></div>
+                      </li>
+                    </ul>
                   </div>
                   <a
                     aria-label="Clear search"
@@ -247,10 +262,9 @@
                     type="button"
                     data-tooltip="Show search options"
                     aria-label="Advanced search options"
-                    class="showSearchOptions tooltip"
+                    class="showSearchOptions"
                     onclick="toggleSearchFilter();"
                   >
-                    <span class="tooltiptext">Show search options</span>
                     <svg
                       focusable="false"
                       height="24px"
@@ -264,26 +278,6 @@
                   </a>
                 </div>
                 <div class="search-filter-container hidden">
-                  <!-- <div >
-                    <label class="block">Pay Period</label>
-                    <div class="datePeriod">
-                      <label for="txtDateFrom">From: </label>
-                      <input
-                        name="txtDateFrom"
-                        type="text"
-                        id="txtDateFrom"
-                        class="startDatePicker"
-                      />
-                      <label for="txtDateTo">To: </label>
-                      <input
-                        name="txtDateTo"
-                        type="text"
-                        id="txtDateTo"
-                        class="endDatePicker"
-                      />
-                    </div>
-                  </div> -->
-
                   <div class="showEmployeeBy">
                     <label for="showEmployeeBy" class="label-6 block"
                       >Show Employee by</label
@@ -321,6 +315,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="hidden">
                 <label class="label-6">DTR Period</label>
                 <div class="datePeriod">
