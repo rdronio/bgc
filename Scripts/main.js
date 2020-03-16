@@ -41,12 +41,11 @@ $(document).ready(function() {
     $(document).click(function(e) {
       e.stopPropagation();
       let container = $(".search-main-container");
-      let showSearchOptions = document.querySelector(".showSearchOptions");
 
       //check if the clicked area is dropDown or not
       if (container.has(e.target).length === 0) {
-        $(".search-filter-container").addClass("hidden");
-        showSearchOptions.classList.remove("rotate");
+        // $(".search-filter-container").addClass("hidden");
+        // $(".showSearchOptions svg").removeClass("rotate");
         hideDataList();
       }
     });
@@ -271,6 +270,33 @@ $(".datePicker").each(function() {
   }
 });
 
+// Date Picker with weekends
+$(".datePicker2").each(function() {
+  try {
+    //Create jQueryUI datepicker
+    $(this).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      yearRange: "-10:+10",
+      onChangeMonthYear: function(year, month) {
+        var $datepicker = jQuery(this);
+        var date = new Date($datepicker.datepicker("getDate"));
+        var lastDayOfMonth = new Date(year, month, 0).getDate();
+        var preservedDay = Math.min(
+          lastDayOfMonth,
+          Math.max(1, date.getDate())
+        );
+        $datepicker.datepicker(
+          "setDate",
+          month + "/" + preservedDay + "/" + year
+        );
+      }
+    });
+  } catch (e) {
+    console.log(e);
+  }
+});
+
 // Leave Picker
 $(".leavePicker").each(function() {
   try {
@@ -444,24 +470,28 @@ function generatePayPeriod(
 ) {
   try {
     let payFreq = document.querySelector(drpDownPayFreqID).value;
-    let startDatePicker = document.querySelector(startDatePickerID).value;
+    let startDatePickerValue = document.querySelector(startDatePickerID).value;
+    let startDatePicker = document.querySelector(startDatePickerID);
     let endDatePicker = document.querySelector(endDatePickerID);
 
-    let selectedDate = new Date(startDatePicker);
-    let endDate = new Date(startDatePicker);
+    let selectedDate = new Date(startDatePickerValue);
+    let endDate = new Date(startDatePickerValue);
 
-    if (startDatePicker != "") {
+    if (startDatePickerValue != "") {
+      startDatePicker.classList.add("disabled");
       endDatePicker.classList.add("disabled");
-      if (payFreq === "weekly") {
-        endDate.setDate(selectedDate.getDate() + 7);
-        $(endDatePicker).datepicker("setDate", endDate);
-      } else if (payFreq === "twoWeeks") {
+      alert("got pass    " + payFreq);
+
+      if (payFreq === "twoWeeksAdmin") {
+        startDatePicker.classList.remove("disabled");
+        endDatePicker.classList.remove("disabled");
         endDate.setDate(selectedDate.getDate() + 14);
         $(endDatePicker).datepicker("setDate", endDate);
-      } else if (payFreq === "monthly") {
-        endDate.setMonth(selectedDate.getMonth() + 1);
+      } else if (payFreq === "twoWeeksOthers") {
+        endDate.setDate(selectedDate.getDate() + 14);
         $(endDatePicker).datepicker("setDate", endDate);
       } else if (payFreq === "custom") {
+        startDatePicker.classList.remove("disabled");
         endDatePicker.classList.remove("disabled");
         endDate.setDate(selectedDate.getDate());
         $(endDatePicker).datepicker("option", "minDate", selectedDate);
@@ -691,7 +721,9 @@ function scrollTopDataList() {
 function openModal(btn_id) {
   try {
     // List modal
-    const modalTimeAlteration = document.querySelector(".modal-substitution");
+    const modalFileSubstitution = document.querySelector(
+      ".modal-file-substitution"
+    );
     const modalTimeAlteration = document.querySelector(
       ".modal-time-alteration"
     );
@@ -739,6 +771,8 @@ function openModal(btn_id) {
       modalOvertimeRecord.style.display = "flex";
     } else if (modalBtn === "#btnUndertimeApplication") {
       modalUndertimeRecord.style.display = "flex";
+    } else if (modalBtn === "#btnFileSubstitution") {
+      modalFileSubstitution.style.display = "flex";
     } else if (modalBtn === "#btnFileLeave") {
       modalFileLeave.style.display = "flex";
     } else if (modalBtn === "#btnAddExpense") {
@@ -790,6 +824,9 @@ function openModal(btn_id) {
 function closeModal(btn_id) {
   try {
     // List modal
+    const modalFileSubstitution = document.querySelector(
+      ".modal-file-substitution"
+    );
     const modalTimeAlteration = document.querySelector(
       ".modal-time-alteration"
     );
@@ -826,6 +863,8 @@ function closeModal(btn_id) {
       modalOvertimeRecord.style.display = "none";
     } else if (modalBtn === "#btnCloseUndertimeApplication") {
       modalUndertimeRecord.style.display = "none";
+    } else if (modalBtn === "#btnCloseFileSubstitution") {
+      modalFileSubstitution.style.display = "none";
     } else if (modalBtn === "#btnCloseFileLeave") {
       modalFileLeave.style.display = "none";
     } else if (modalBtn === "#btnCloseAddExpense") {
@@ -1795,7 +1834,7 @@ function clearSearch2(formID) {
 function toggleSearchFilter() {
   try {
     const container = document.querySelector(".search-filter-container");
-    const showSearchOptions = document.querySelector(".showSearchOptions");
+    const showSearchOptions = document.querySelector(".showSearchOptions svg");
 
     container.classList.toggle("hidden");
     showSearchOptions.classList.toggle("rotate");
@@ -1807,7 +1846,7 @@ function toggleSearchFilter() {
 function toggleSearchFilter2() {
   try {
     const container = document.querySelector(".sr-f-2");
-    const showSearchOptions = document.querySelector(".showSearchOptions2");
+    const showSearchOptions = document.querySelector(".showSearchOptions2 svg");
 
     container.classList.toggle("hidden");
     showSearchOptions.classList.toggle("rotate");
