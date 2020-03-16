@@ -173,18 +173,20 @@
                 </select>
               </div>
 
-              <!-- Time Records -->
+              <!-- Holiday Records -->
               <table class="tableLayout">
                 <tbody>
                   <tr>
-                    <td class="column1">Date</td>
-                    <td class="column2">Description</td>
-                    <td class="column3">Action</td>
+                    <td class="column1">Start Date</td>
+                    <td class="column2">End Date</td>
+                    <td class="column3">Description</td>
+                    <td class="column4">Action</td>
                   </tr>
                   <tr>
                     <td class="column1">January 1, 2020</td>
-                    <td class="column2">New Year</td>
-                    <td class="column3"><a onclick="openModal('#btnEditHoliday')" class="btn-table btn-secondary">Edit</a><a class="btn-table btn-secondary">Delete </a></td>
+                    <td class="column2">January 1, 2020</td>
+                    <td class="column3">New Year</td>
+                    <td class="column4"><a onclick="openModal('#btnEditHoliday')" class="btn-table btn-secondary">Edit</a><a class="btn-table btn-secondary">Delete </a></td>
                   </tr>
                 </tbody>
               </table>
@@ -195,19 +197,19 @@
                     ><i class="fas fa-chevron-down"></i>More Results</a
                   >
                 </div>
-                <div class="pagination" onclick="selectPage()">
-                  <a href="#">«</a>
-                  <a class="active" href="#">1</a>
-                  <a href="#">2</a>
-                  <a href="#">3</a>
-                  <a href="#">4</a>
-                  <a href="#">5</a>
-                  <a href="#">6</a>
-                  <a href="#">7</a>
-                  <a href="#">8</a>
-                  <a href="#">9</a>
-                  <a href="#">10</a>
-                  <a href="#">»</a>
+                <div class="pagination">
+                  <a href="#"><span>«</span></a>
+                  <a href="#"><span class="active">1</span></a>
+                  <a href="#"><span>2</span></a>
+                  <a href="#"><span>3</span></a>
+                  <a href="#"><span>4</span></a>
+                  <a href="#"><span>5</span></a>
+                  <a href="#"><span>6</span></a>
+                  <a href="#"><span>7</span></a>
+                  <a href="#"><span>8</span></a>
+                  <a href="#"><span>9</span></a>
+                  <a href="#"><span>10</span></a>
+                  <a href="#"><span>»</span></a>
                 </div>
               </div>
             </div>
@@ -222,11 +224,18 @@
               <h5>Add Holiday Form</h5>
               <hr />
               <div class="">
-                <label for="txtDate" class="label-6">Date: </label>
+                <label for="txtStartDate" class="label-6">Start Date: </label>
                 <input
-                  name="txtDate"
+                  name="txtStartDate"
                   type="text"
-                  id="txtDate"
+                  id="txtStartDate"
+                  class="datePicker"
+                />
+                <label for="txtEndDate" class="label-6">End Date: </label>
+                <input
+                  name="txtEndDate"
+                  type="text"
+                  id="txtEndDate"
                   class="datePicker"
                 />
 
@@ -258,11 +267,18 @@
               <h5>Edit Holiday Form</h5>
               <hr />
               <div class="">
-                <label for="txtDate" class="label-6">Date: </label>
+                <label for="txtStartDate" class="label-6">Start Date: </label>
                 <input
-                  name="txtDate"
+                  name="txtStartDate"
                   type="text"
-                  id="txtDate"
+                  id="txtStartDate"
+                  class="datePicker"
+                />
+                <label for="txtEndDate" class="label-6">End Date: </label>
+                <input
+                  name="txtEndDate"
+                  type="text"
+                  id="txtEndDate"
                   class="datePicker"
                 />
 

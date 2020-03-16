@@ -371,7 +371,8 @@
   }
 
   .container {
-    margin: 0.5rem 0.5rem;
+    /* margin: 0.5rem 0.5rem; */
+    margin: 0.5rem 0;
   }
 
   .card {
@@ -790,7 +791,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: "Bio Number";
   }
   #time-records
     .container
@@ -799,7 +800,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Time In";
+    content: "Employee Name";
   }
   #time-records
     .container
@@ -808,7 +809,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Time Out";
+    content: "Date";
   }
   #time-records
     .container
@@ -817,7 +818,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Total (hour/s)";
+    content: "Time In";
   }
   #time-records
     .container
@@ -826,7 +827,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Overtime (hour/s)";
+    content: "Time Out";
   }
 
   #time-records
@@ -836,45 +837,27 @@
     tbody
     tr
     td:nth-child(6):before {
+    content: "Total (hour/s)";
+  }
+
+  #time-records
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(7):before {
     content: "Tardiness (min/s)";
   }
 
-  /* card-2 table */
   #time-records
     .container
-    .card-2
+    .card-1
     .tableLayout
     tbody
     tr
-    td:nth-child(1):before {
-    content: "Date";
-  }
-  #time-records
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(2):before {
-    content: "Type";
-  }
-  #time-records
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(3):before {
-    content: "Time";
-  }
-  #time-records
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(4):before {
-    content: "Reports";
+    td:nth-child(8):before {
+    content: "Tardiness (hour/s)";
   }
 
   /* ========[ Holiday Notice ]======== */
@@ -912,7 +895,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: "Start Date";
   }
   #holiday-notice
     .container
@@ -921,7 +904,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Description";
+    content: "End Date";
   }
   #holiday-notice
     .container
@@ -930,6 +913,15 @@
     tbody
     tr
     td:nth-child(3):before {
+    content: "Description";
+  }
+  #holiday-notice
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(4):before {
     content: "Action";
   }
 
@@ -1129,117 +1121,6 @@
     tr
     td:nth-child(5):before {
     content: "No. of Days";
-  }
-
-  #leaverecords
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(6):before {
-    content: "With Pay";
-  }
-  #leaverecords
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(7):before {
-    content: "Reason";
-  }
-  #leaverecords
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(8):before {
-    content: "Status";
-  }
-  #leaverecords
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(9):before {
-    content: "Remarks";
-  }
-
-  /* table */
-  #leaverecords
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(1):before {
-    content: "Date";
-  }
-  #leaverecords
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(2):before {
-    content: "Type";
-  }
-  #leaverecords
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(3):before {
-    content: "From";
-  }
-  #leaverecords
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(4):before {
-    content: "To";
-  }
-  #leaverecords
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(5):before {
-    content: "No. of Days";
-  }
-  #leaverecords
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(6):before {
-    content: "With pay";
-  }
-  #leaverecords
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(7):before {
-    content: "Reason";
-  }
-  #leaverecords
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(8):before {
-    content: "Action";
   }
 
   /* ========[ Employee Substitution ]======== */
@@ -2368,7 +2249,7 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Employee ID";
+    content: "Bio Number";
   }
   #employee-masterlist
     .container
@@ -2377,7 +2258,7 @@
     tbody
     tr
     td:nth-child(3):before {
-    content: "Employee Name";
+    content: "Employee ID";
   }
 
   #employee-masterlist
@@ -2387,7 +2268,7 @@
     tbody
     tr
     td:nth-child(4):before {
-    content: "Department";
+    content: "Employee Name";
   }
   #employee-masterlist
     .container
@@ -2396,7 +2277,7 @@
     tbody
     tr
     td:nth-child(5):before {
-    content: "Position";
+    content: "Department";
   }
   #employee-masterlist
     .container
@@ -2405,53 +2286,15 @@
     tbody
     tr
     td:nth-child(6):before {
-    content: "Employment Status";
-  }
-
-  #employee-masterlist
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(1):before {
-    content: "Employee ID";
-  }
-  #employee-masterlist
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(2):before {
-    content: "Employee Name";
-  }
-
-  #employee-masterlist
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(3):before {
-    content: "Department";
-  }
-  #employee-masterlist
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(4):before {
     content: "Position";
   }
   #employee-masterlist
     .container
-    .card-2
+    .card-1
     .tableLayout
     tbody
     tr
-    td:nth-child(5):before {
+    td:nth-child(7):before {
     content: "Employment Status";
   }
 

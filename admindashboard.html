@@ -58,7 +58,7 @@
           <!-- / menu -->
           <ul class="nav-list">
             <li class="current-page">
-              <a href="admindashboard.html"
+              <a href="admindashboard.html.html"
                 ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
               >
             </li>
@@ -70,11 +70,14 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="leaverecords.html">Leave Records</a>
+                  <a href="PayrollApproval.html">Payroll Approval</a>
                 </li>
-                <li><a href="overtimerecords.html">Overtime Records</a></li>
                 <li>
-                  <a href="undertime.html">Undertime Records</a>
+                  <a href="LeaveRecords.html">Leave Records</a>
+                </li>
+                <li><a href="OvertimeRecords.html">Overtime Records</a></li>
+                <li>
+                  <a href="Undertime.html">Undertime Records</a>
                 </li>
               </ul>
             </li>
@@ -89,22 +92,21 @@
                   <a href="employeemasterlist.html">Employee Masterlist</a>
                 </li>
                 <li>
-                  <a href="adminleaverecords.html">Employee Leave Records</a>
+                  <a href="LeaveRecords.html">Employee Leave Records</a>
                 </li>
+                <li><a href="TimeRecords.html">Employee Time Records</a></li>
               </ul>
             </li>
+
             <li>
               <a href="#"
-                ><i class="fas fa-bullhorn"></i>Memo / Notice<span
+                ><i class="fas fa-bullhorn"></i>Memo/Notice<span
                   class="fa fa-chevron-down"
                 ></span
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="underconstruction.html">Bulk Email</a>
-                </li>
-                <li class="hidden">
-                  <a href="underconstruction.html">File Cabinet</a>
+                  <a href="memonotice.html">Bulk Email</a>
                 </li>
               </ul>
             </li>
@@ -116,23 +118,29 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="generatedtrreport.html">Generate DTR</a>
-                </li>
-                <li class="hidden">
-                  <a href="underconstruction.html">Payroll Report</a>
-                </li>
-                <li class="hidden">
-                  <a href="underconstruction.html">Government Report</a>
+                  <a href="GenerateDtrReport.html">Generate DTR</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="importtimerecords.html"
+              <a href="EmployeeMasterlist.html"
                 ><i class="fas fa-download"></i>Import Time Records</a
               >
             </li>
             <li>
-              <a href="index.html"
+              <a href="#"
+                ><i class="fas fa-cog"></i>System Preferences<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu hidden">
+                <li>
+                  <a href="holidaynotice.html">Holiday Notice</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="LoginPage.html"
                 ><i class="fas fa-sign-out-alt"></i>Sign Out</a
               >
             </li>
@@ -165,26 +173,6 @@
             <div>
               <div>
                 <div class="card-db card-1 card-md">
-                  <h5 class="card-header">Tardiness Notice</h5>
-                  <hr />
-                  <!-- <label class="norecords">No Records Found</label> -->
-                  <table class="tableLayout-md">
-                    <tbody>
-                      <tr>
-                        <td class="column1">Name</td>
-                        <td class="column2">Position</td>
-                        <td class="column3">Tardiness Count</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">John Doe</td>
-                        <td class="column2">Web Developer</td>
-                        <td class="column3">2</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <div class="card-db card-1 card-md">
                   <h5 class="card-header">Holiday Notice</h5>
                   <hr />
                   <span id="lblNoDataLT" class="norecords hidden"
@@ -207,6 +195,26 @@
                       <tr>
                         <td class="column1">January 1, 2020</td>
                         <td class="column2">New Year</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="card-db card-1 card-md">
+                  <h5 class="card-header">Tardiness Notice</h5>
+                  <hr />
+                  <!-- <label class="norecords">No Records Found</label> -->
+                  <table class="tableLayout-md">
+                    <tbody>
+                      <tr>
+                        <td class="column1">Name</td>
+                        <td class="column2">Position</td>
+                        <td class="column3">Tardiness Count</td>
+                      </tr>
+                      <tr>
+                        <td class="column1">John Doe</td>
+                        <td class="column2">Web Developer</td>
+                        <td class="column3">2</td>
                       </tr>
                     </tbody>
                   </table>
