@@ -72,19 +72,11 @@
                   <a href="payrollapproval.html">Payroll Approval</a>
                 </li>
                 <li>
-                  <a href="leaveapproval.html">Leave Approval</a>
+                  <a href="leaverecords.html">Leave Records</a>
                 </li>
-                <li><a href="overtimeapproval.html">Overtime Approval</a></li>
+                <li><a href="overtimerecords.html">Overtime Records</a></li>
                 <li>
-                  <a href="timealterationapproval.html"
-                    >Time Alteration Approval</a
-                  >
-                </li>
-                <li>
-                  <a href="expenseapproval.html">Expense Approval</a>
-                </li>
-                <li>
-                  <a href="undertimeapproval.html">Undertime Approval</a>
+                  <a href="undertime.html">Undertime Records</a>
                 </li>
               </ul>
             </li>
@@ -104,11 +96,6 @@
               </ul>
             </li>
             <li>
-              <a href="underconstruction.html"
-                ><i class="fas fa-list"></i>Employee Assignment</a
-              >
-            </li>
-            <li>
               <a href="#"
                 ><i class="fas fa-bullhorn"></i>Memo / Notice<span
                   class="fa fa-chevron-down"
@@ -118,7 +105,9 @@
                 <li>
                   <a href="underconstruction.html">Bulk Email</a>
                 </li>
-                <li><a href="underconstruction.html">File Cabinet</a></li>
+                <li class="hidden">
+                  <a href="underconstruction.html">File Cabinet</a>
+                </li>
               </ul>
             </li>
             <li>
@@ -131,10 +120,12 @@
                 <li>
                   <a href="generatedtrreport.html">Generate DTR</a>
                 </li>
-                <li>
+                <li class="hidden">
                   <a href="underconstruction.html">Payroll Report</a>
                 </li>
-                <li><a href="underconstruction.html">Government Report</a></li>
+                <li class="hidden">
+                  <a href="underconstruction.html">Government Report</a>
+                </li>
               </ul>
             </li>
             <li>
@@ -174,93 +165,173 @@
           <div class="container">
             <h2>Payroll Approval</h2>
             <div class="card card-1">
-              <div class="">
-                <label class="label-6 block">Filter Date</label>
-                <label for="txtDateFrom" class="label-6">From: </label>
-                <input
-                  name="txtDateFrom"
-                  type="text"
-                  id="txtDateFrom"
-                  class="datePicker"
-                />
-                <label for="txtDateTo" class="label-6">To: </label>
-                <input
-                  name="txtDateTo"
-                  type="text"
-                  id="txtDateTo"
-                  class="datePicker"
-                />
-              </div>
-
-              <div>
-                <a class="btn-sm btn-secondary">Clear</a>
-              </div>
-
-              <!-- Payroll Approval -->
-              <table class="tableLayout">
-                <tbody>
-                  <tr>
-                    <td class="column1">Pay Period</td>
-                    <td class="column2">Employee</td>
-                    <td class="column3">Position</td>
-                    <td class="column4">Net Pay</td>
-                    <td class="column5">Action</td>
-                  </tr>
-                  <tr>
-                    <td class="column1">
-                      December 1, 2019 - December 15, 2019
-                    </td>
-                    <td class="column2">John Doe</td>
-                    <td class="column3">Web Developer</td>
-                    <td class="column4">20,000.00</td>
-                    <td class="column5">
-                      <i class="fas fa-check btn-circle btn-green"></i>
-                      <i class="fas fa-times btn-circle btn-red"></i>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <div class="pagination-container">
-                <div class="showmore-container">
-                  <a class="btn-showmore" href="#"
-                    ><i class="fas fa-chevron-down"></i>More Results</a
-                  >
+              <div class="container-sm">
+                <div>
+                  <label class="label-6 block">Pay Period</label>
+                  <label for="txtDateFrom" class="label-6">From: </label>
+                  <input
+                    name="txtDateFrom"
+                    type="text"
+                    id="txtDateFrom"
+                    class="datePickerPayroll"
+                  />
+                  <label for="txtDateTo" class="label-6">To: </label>
+                  <input
+                    name="txtDateTo"
+                    type="text"
+                    id="txtDateTo"
+                    class="datePickerPayroll"
+                  />
+                  <a class="btn-sm btn-secondary">Clear</a>
                 </div>
-                <div class="pagination">
-                  <a href="#"><span>«</span></a>
-                  <a href="#"><span class="active">1</span></a>
-                  <a href="#"><span>2</span></a>
-                  <a href="#"><span>3</span></a>
-                  <a href="#"><span>4</span></a>
-                  <a href="#"><span>5</span></a>
-                  <a href="#"><span>6</span></a>
-                  <a href="#"><span>7</span></a>
-                  <a href="#"><span>8</span></a>
-                  <a href="#"><span>9</span></a>
-                  <a href="#"><span>10</span></a>
-                  <a href="#"><span>»</span></a>
+                <!-- Payslip -->
+                <table class="tableLayout">
+                  <tbody>
+                    <tr>
+                      <td class="column1">Pay Period</td>
+                      <td class="column2">Payroll Date</td>
+                      <td class="column3">Employee</td>
+                      <td class="column4">Department</td>
+                      <td class="column5">Position</td>
+                      <td class="column6">Total Earnings</td>
+                      <td class="column7">Total Deductions</td>
+                      <td class="column8">Net Pay</td>
+                      <td class="column9">Action</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">
+                        Dec. 01, 2019 - Dec. 15, 2019
+                      </td>
+                      <td class="column2">
+                        Dec. 14, 2019
+                      </td>
+                      <td class="column3">John Doe</td>
+                      <td class="column4">IT Department</td>
+                      <td class="column5">Programmer</td>
+                      <td class="column6">20,000.00</td>
+                      <td class="column7">1,100.00</td>
+                      <td class="column8">18,900.00</td>
+                      <td class="column9">
+                        <a
+                          class="btn-table btn-secondary"
+                          onclick="openModal(`#btnViewPayslip`);"
+                          >View</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="pagination-container">
+                  <div class="pagination-container">
+                    <div class="showmore-container">
+                      <a class="btn-showmore" href="#"
+                        ><i class="fas fa-chevron-down"></i>More Results</a
+                      >
+                    </div>
+                    <div class="pagination">
+                      <a href="#"><span>«</span></a>
+                      <a href="#"><span class="active">1</span></a>
+                      <a href="#"><span>2</span></a>
+                      <a href="#"><span>3</span></a>
+                      <a href="#"><span>4</span></a>
+                      <a href="#"><span>5</span></a>
+                      <a href="#"><span>6</span></a>
+                      <a href="#"><span>7</span></a>
+                      <a href="#"><span>8</span></a>
+                      <a href="#"><span>9</span></a>
+                      <a href="#"><span>10</span></a>
+                      <a href="#"><span>»</span></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Modal Section -->
-          <!-- WithPay -->
-          <div class="modal modal-with-pay">
+          <!-- btnViewPayslip -->
+          <div class="modal modal-view-payslip">
             <div class="modal-content">
-              <h4>Approval Confirmation</h4>
+              <h5>Payslip</h5>
               <hr />
-              <input type="checkbox" id="chkWithPay" />
-              <label class="label-5" for="chkWithPay">With Pay</label>
+              <div>
+                <div>
+                  <label class="label-6">Pay Period</label>
+                  <p id="lblPayPeriod">Dec. 01, 2019 - Dec. 15, 2019</p>
+                  <label class="label-6">Payroll Date</label>
+                  <p id="lblPayrollDate">Dec. 14, 2019</p>
+                  <label class="label-6">Name</label>
+                  <p id="lblName">John Doe</p>
+                  <label class="label-6">Position</label>
+                  <p id="lblPosition">Programmer</p>
+                  <label class="label-6">Department</label>
+                  <p id="lblDepartment">IT Department</p>
+                </div>
+                <div>
+                  <label class="label-6">TIN Number</label>
+                  <p id="lblTinNo">000-000-000-000</p>
+                  <label class="label-6">Philhealth Number</label>
+                  <p id="lblPhilHealth">00-000000000-0</p>
+                  <label class="label-6">HDMF Number</label>
+                  <p id="lblHDMF">0000-0000-0000</p>
+                  <label class="label-6">SSS/GSIS Number</label>
+                  <p id="lblSssGsis">00-0000000-0</p>
+                </div>
+              </div>
+              <hr />
+              <div>
+                <label class="label-6">Basic Salary</label>
+                <p id="lblBasicSalary">0.00</p>
+              </div>
+              <hr />
+
+              <div>
+                <div>
+                  <label class="label-6">Total Hours</label>
+                  <p id="lblTotalHours">0.00</p>
+                  <label class="label-6">Absent</label>
+                  <p id="lblAbsent">0.00</p>
+                  <label class="label-6">Tardiness</label>
+                  <p id="lblTardiness">0.00</p>
+                  <label class="label-6">Overtime</label>
+                  <p id="lblOvertime">0.00</p>
+                  <label class="label-6">Leave</label>
+                  <p id="lblLeave">0</p>
+                </div>
+
+                <div>
+                  <label class="label-6">SSS/GSIS</label>
+                  <p id="lblSssGsis">400</p>
+                  <label class="label-6">Pag-ibig</label>
+                  <p id="lblPagibig">400</p>
+                  <label class="label-6">Philhealth</label>
+                  <p id="lblPhilhealth">400</p>
+                  <label class="label-6">Other Deductions</label>
+                  <p id="lblOtherDeduction">400</p>
+                  <label class="label-6">&nbsp;</label>
+                  <p>&nbsp;</p>
+                </div>
+              </div>
+
+              <hr />
+              <div>
+                <label class="label-6">Gross Pay</label>
+                <p id="lblGrossPay">20,000</p>
+                <label class="label-6">Net Pay</label>
+                <p id="lblNetPay">20,000</p>
+              </div>
+              <hr />
 
               <div class="modal-btn-container">
-                <a class="btn-sm btn-primary mx-3">Approve</a>
+                <a class="btn-sm btn-primary mx-3" id="btnPrintPayslip">
+                  Print
+                </a>
                 <a
                   class="btn-sm btn-secondary mx-3"
-                  onclick="closeModalWithPay();"
-                  >Cancel</a
+                  onclick="closeModal(`#btnCloseViewPayslip`);"
                 >
+                  Close
+                </a>
               </div>
             </div>
           </div>
