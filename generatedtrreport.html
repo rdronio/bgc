@@ -162,7 +162,7 @@
           <div class="container">
             <h2>Generate DTR Report</h2>
             <div class="card card-1">
-              <div class="btn-tools-container">
+              <div class="btn-tools-container hidden">
                 <div>
                   <a
                     class="btn-table btn-tools"
@@ -321,7 +321,7 @@
                   </div>
                 </div>
               </div>
-              <div>
+              <div class="hidden">
                 <label class="label-6">DTR Period</label>
                 <div class="datePeriod">
                   <label for="txtDateFrom" class="label-6 item-1">From: </label>
@@ -343,7 +343,7 @@
                 </div>
               </div>
 
-              <div>
+              <div class="hidden">
                 <label class="label-6 block">Employee Selection</label>
                 <div class="modal-rd-container">
                   <label
@@ -432,6 +432,92 @@
                 </datalist>
               </div>
 
+              <!-- DTR -->
+              <table class="tableLayout print">
+                <tbody>
+                  <tr>
+                    <td class="column1">Employee Name</td>
+                    <td class="column2">Date</td>
+                    <td class="column3">Time In</td>
+                    <td class="column4">Time Out</td>
+                    <td class="column5">Total (hour/s)</td>
+                    <td class="column6">Tardiness (min/s)</td>
+                  </tr>
+                  <tr>
+                    <td class="column1">John Doe</td>
+                    <td class="column2">Feb. 09, 2019</td>
+                    <td class="column3">8:07AM</td>
+                    <td class="column4">5:02PM</td>
+                    <td class="column5">7.93</td>
+                    <td class="column6">7.00</td>
+                  </tr>
+                  <tr>
+                    <td class="column1">John Doe</td>
+                    <td class="column2">Feb. 09, 2019</td>
+                    <td class="column3">8:07AM</td>
+                    <td class="column4">5:02PM</td>
+                    <td class="column5">7.93</td>
+                    <td class="column6">7.00</td>
+                  </tr>
+                  <tr>
+                    <td class="column1">John Doe</td>
+                    <td class="column2">Feb. 09, 2019</td>
+                    <td class="column3">8:07AM</td>
+                    <td class="column4">5:02PM</td>
+                    <td class="column5">7.93</td>
+                    <td class="column6">7.00</td>
+                  </tr>
+                  <tr>
+                    <td class="column1">John Doe</td>
+                    <td class="column2">Feb. 09, 2019</td>
+                    <td class="column3">8:07AM</td>
+                    <td class="column4">5:02PM</td>
+                    <td class="column5">7.93</td>
+                    <td class="column6">7.00</td>
+                  </tr>
+                  <tr>
+                    <td class="column1">John Doe</td>
+                    <td class="column2">Feb. 09, 2019</td>
+                    <td class="column3">8:07AM</td>
+                    <td class="column4">5:02PM</td>
+                    <td class="column5">7.93</td>
+                    <td class="column6">7.00</td>
+                  </tr>
+                  <tr>
+                    <td class="column1">John Doe</td>
+                    <td class="column2">Feb. 09, 2019</td>
+                    <td class="column3">8:07AM</td>
+                    <td class="column4">5:02PM</td>
+                    <td class="column5">7.93</td>
+                    <td class="column6">7.00</td>
+                  </tr>
+                  <tr>
+                    <td class="column1">John Doe</td>
+                    <td class="column2">Feb. 09, 2019</td>
+                    <td class="column3">8:07AM</td>
+                    <td class="column4">5:02PM</td>
+                    <td class="column5">7.93</td>
+                    <td class="column6">7.00</td>
+                  </tr>
+                  <tr>
+                    <td class="column1">John Doe</td>
+                    <td class="column2">Feb. 09, 2019</td>
+                    <td class="column3">8:07AM</td>
+                    <td class="column4">5:02PM</td>
+                    <td class="column5">7.93</td>
+                    <td class="column6">7.00</td>
+                  </tr>
+                  <tr>
+                    <td class="column1">John Doe</td>
+                    <td class="column2">Feb. 09, 2019</td>
+                    <td class="column3">8:07AM</td>
+                    <td class="column4">5:02PM</td>
+                    <td class="column5">7.93</td>
+                    <td class="column6">7.00</td>
+                  </tr>
+                </tbody>
+              </table>
+
               <div class="btn-container">
                 <a class="btn-sm btn-primary mx-3" id="btnGenerateDTR">
                   Generate DTR
@@ -440,53 +526,6 @@
                 <a class="btn-sm btn-secondary mx-3" id="btnClearDTR">
                   Clear
                 </a>
-              </div>
-
-              <!-- DTR -->
-              <table class="tableLayout print">
-                <tbody>
-                  <tr>
-                    <td class="column1">Employee Id</td>
-                    <td class="column2">Employee Name</td>
-                    <td class="column3">Department</td>
-                    <td class="column4">Position</td>
-                    <td class="column5">Action</td>
-                  </tr>
-                  <tr>
-                    <td class="column1">000001</td>
-                    <td class="column2">John Doe</td>
-                    <td class="column3">IT Department</td>
-                    <td class="column4">Programmer</td>
-                    <td class="column5">
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModalViewDTR();"
-                        >View</a
-                      >
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="pagination-container">
-                <div class="showmore-container">
-                  <a class="btn-showmore" href="#"
-                    ><i class="fas fa-chevron-down"></i>More Results</a
-                  >
-                </div>
-                <div class="pagination">
-                  <a href="#"><span>«</span></a>
-                  <a href="#"><span class="active">1</span></a>
-                  <a href="#"><span>2</span></a>
-                  <a href="#"><span>3</span></a>
-                  <a href="#"><span>4</span></a>
-                  <a href="#"><span>5</span></a>
-                  <a href="#"><span>6</span></a>
-                  <a href="#"><span>7</span></a>
-                  <a href="#"><span>8</span></a>
-                  <a href="#"><span>9</span></a>
-                  <a href="#"><span>10</span></a>
-                  <a href="#"><span>»</span></a>
-                </div>
               </div>
             </div>
           </div>

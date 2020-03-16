@@ -3257,6 +3257,13 @@ nav ul li a span.fa {
   margin-right: 0.5rem;
 }
 
+#dtr-report .tableLayout {
+  /* display: block; */
+  overflow-y: auto;
+  height: 289px;
+  /* white-space: nowrap; */
+}
+
 #dtr-report .modal-content {
   width: 60%;
 }
