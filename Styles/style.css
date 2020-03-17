@@ -1840,9 +1840,9 @@ table.tableLayoutDB {
   margin: 1rem 0;
   position: relative;
 
-  /* display: block; */
+  display: block;
   overflow-y: auto;
-  /* white-space: nowrap; */
+  white-space: nowrap;
 }
 
 .tableLayoutDB::-webkit-scrollbar {
@@ -3258,7 +3258,7 @@ nav ul li a span.fa {
 }
 
 #dtr-report .tableLayout {
-  /* display: block; */
+  display: block;
   overflow-y: auto;
   height: 289px;
   /* white-space: nowrap; */
