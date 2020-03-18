@@ -1386,6 +1386,21 @@ function showEM() {
     console.log(e);
   }
 }
+function showSM() {
+  try {
+    const card1 = document.querySelector(
+      "#employee-masterlist .container .card-1"
+    );
+    const card2 = document.querySelector(
+      "#employee-masterlist .container .card-2"
+    );
+
+    card2.classList.remove("hidden");
+    card1.classList.add("hidden");
+  } catch (e) {
+    console.log(e);
+  }
+}
 
 function showPayrollIM() {
   try {

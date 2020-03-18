@@ -160,14 +160,16 @@
           </div>
 
           <div class="container">
-            <h2>Employee Masterlist</h2>
-            <!-- <div id="tab">
+            <div id="tab">
               <ul class="tab-list" onclick="selectTab();">
                 <li class="current-tab">
                   <a onclick="showEM()">Employee Masterlist</a>
                 </li>
+                <li>
+                  <a onclick="showSM()">Sample</a>
+                </li>
               </ul>
-            </div> -->
+            </div>
 
             <div class="card card-1">
               <div>
@@ -620,54 +622,7 @@
             </div>
 
             <div class="card card-2 hidden">
-              <label for="csvFileInput" class="label-6 block">Upload CSV</label>
-              <input
-                type="file"
-                name="csvFileInput"
-                id="csvFileInput"
-                accept=".csv"
-              />
-
-              <a
-                class="btn-sm btn-primary "
-                id="btnUploadMasterlist"
-                onclick=""
-              >
-                Upload
-              </a>
-
-              <!-- <div>
-                      <label for="showEmployeeBy" class="label-6 block"
-                        >Search Employee by</label
-                      >
-                      <select
-                        name="showEmployeeBy"
-                        id="showEmployeeBy"
-                        class="select"
-                        onchange="getEmployeeBy()"
-                      >
-                        <option value="">--Please choose an option--</option>
-                        <option value="department">Department</option>
-                        <option value="position">Position</option>
-                      </select>
-                      <select
-                        name="showEmployeeByCategory"
-                        id="showEmployeeByCategory"
-                        class="select"
-                      >
-                      </select>
-                    </div>
-                    <div>
-                      <label for="searchEmployee" class="label-6 block"
-                        >Search Employee ID/Name</label
-                      >
-                      <div style="display: block;">
-                        <input type="" value="" id="searchEmployee" />
-                        <a class="search"><i class="fa fa-search"></i></a>
-                      </div>
-                    </div> -->
-
-              <!-- import employee -->
+              <!--  employee -->
               <table class="tableLayout ">
                 <tbody>
                   <tr>
@@ -676,6 +631,11 @@
                     <td class="column3">Department</td>
                     <td class="column4">Position</td>
                     <td class="column5">Employment Status</td>
+                    <td class="column6">col6</td>
+                    <td class="column7">col7</td>
+                    <td class="column8">col8</td>
+                    <td class="column9">col9</td>
+                    <td class="column10">col10</td>
                   </tr>
                   <tr>
                     <td class="column1">00002</td>
@@ -683,6 +643,11 @@
                     <td class="column3">IT Department</td>
                     <td class="column4">Programmer</td>
                     <td class="column5">Regular</td>
+                    <td class="column6">col6</td>
+                    <td class="column7">col7</td>
+                    <td class="column8">col8</td>
+                    <td class="column9">col9</td>
+                    <td class="column10">col10</td>
                   </tr>
                   <tr>
                     <td class="column1">00002</td>
@@ -690,6 +655,11 @@
                     <td class="column3">IT Department</td>
                     <td class="column4">Programmer</td>
                     <td class="column5">Regular</td>
+                    <td class="column6">col6</td>
+                    <td class="column7">col7</td>
+                    <td class="column8">col8</td>
+                    <td class="column9">col9</td>
+                    <td class="column10">col10</td>
                   </tr>
                   <tr>
                     <td class="column1">00002</td>
@@ -697,6 +667,11 @@
                     <td class="column3">IT Department</td>
                     <td class="column4">Programmer</td>
                     <td class="column5">Regular</td>
+                    <td class="column6">col6</td>
+                    <td class="column7">col7</td>
+                    <td class="column8">col8</td>
+                    <td class="column9">col9</td>
+                    <td class="column10">col10</td>
                   </tr>
                   <tr>
                     <td class="column1">00002</td>
@@ -704,6 +679,11 @@
                     <td class="column3">IT Department</td>
                     <td class="column4">Programmer</td>
                     <td class="column5">Regular</td>
+                    <td class="column6">col6</td>
+                    <td class="column7">col7</td>
+                    <td class="column8">col8</td>
+                    <td class="column9">col9</td>
+                    <td class="column10">col10</td>
                   </tr>
                   <tr>
                     <td class="column1">00002</td>
@@ -711,6 +691,11 @@
                     <td class="column3">IT Department</td>
                     <td class="column4">Programmer</td>
                     <td class="column5">Regular</td>
+                    <td class="column6">col6</td>
+                    <td class="column7">col7</td>
+                    <td class="column8">col8</td>
+                    <td class="column9">col9</td>
+                    <td class="column10">col10</td>
                   </tr>
                   <tr>
                     <td class="column1">00002</td>
@@ -718,80 +703,14 @@
                     <td class="column3">IT Department</td>
                     <td class="column4">Programmer</td>
                     <td class="column5">Regular</td>
-                  </tr>
-                  <tr>
-                    <td class="column1">00002</td>
-                    <td class="column2">John Doe</td>
-                    <td class="column3">IT Department</td>
-                    <td class="column4">Programmer</td>
-                    <td class="column5">Regular</td>
-                  </tr>
-                  <tr>
-                    <td class="column1">00002</td>
-                    <td class="column2">John Doe</td>
-                    <td class="column3">IT Department</td>
-                    <td class="column4">Programmer</td>
-                    <td class="column5">Regular</td>
-                  </tr>
-                  <tr>
-                    <td class="column1">00002</td>
-                    <td class="column2">John Doe</td>
-                    <td class="column3">IT Department</td>
-                    <td class="column4">Programmer</td>
-                    <td class="column5">Regular</td>
-                  </tr>
-                  <tr>
-                    <td class="column1">00002</td>
-                    <td class="column2">John Doe</td>
-                    <td class="column3">IT Department</td>
-                    <td class="column4">Programmer</td>
-                    <td class="column5">Regular</td>
+                    <td class="column6">col6</td>
+                    <td class="column7">col7</td>
+                    <td class="column8">col8</td>
+                    <td class="column9">col9</td>
+                    <td class="column10">col10</td>
                   </tr>
                 </tbody>
               </table>
-
-              <div class="pagination-container">
-                <div class="showmore-container">
-                  <a class="btn-showmore" href="#"
-                    ><i class="fas fa-chevron-down"></i>More Results</a
-                  >
-                </div>
-                <div class="pagination">
-                  <a href="#"><span>«</span></a>
-                  <a href="#"><span class="active">1</span></a>
-                  <a href="#"><span>2</span></a>
-                  <a href="#"><span>3</span></a>
-                  <a href="#"><span>4</span></a>
-                  <a href="#"><span>5</span></a>
-                  <a href="#"><span>6</span></a>
-                  <a href="#"><span>7</span></a>
-                  <a href="#"><span>8</span></a>
-                  <a href="#"><span>9</span></a>
-                  <a href="#"><span>10</span></a>
-                  <a href="#"><span>»</span></a>
-                </div>
-              </div>
-
-              <div class="success">
-                <i class="far fa-check-circle"></i>
-                <h3>Successfully saved!</h3>
-              </div>
-
-              <div class="btn-container">
-                <button
-                  href=""
-                  class="btn-sm btn-primary mx-3"
-                  id="btnSaveMasterlist"
-                >
-                  Save
-                </button>
-                <button
-                  class="btn-sm btn-secondary mx-3"
-                  id="btnClearMasterlist"
-                >
-                  Clear
-                </button>
-              </div>
             </div>
           </div>
 

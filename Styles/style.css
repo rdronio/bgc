@@ -3037,7 +3037,7 @@ nav ul li a span.fa {
   margin-right: 0.5rem;
 }
 
-#manage-employees .tableLayout {
+#manage-employees .container .card-1 .tableLayout {
   display: block;
   overflow-x: auto;
   white-space: nowrap;
@@ -3413,11 +3413,19 @@ nav ul li a span.fa {
   margin-right: 0.5rem;
 }
 
-#employee-masterlist .tableLayout {
+#employee-masterlist .container .card-1 .tableLayout {
   display: block;
   overflow-x: auto;
   white-space: nowrap;
   width: auto;
+}
+
+#employee-masterlist .container .card-2 .tableLayout {
+  display: block;
+  overflow-x: auto;
+  overflow-y: auto;
+  white-space: nowrap;
+  max-height: 300px;
 }
 
 #employee-masterlist .modal-content {
