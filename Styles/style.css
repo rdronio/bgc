@@ -2412,19 +2412,6 @@ nav ul li a span.fa {
   white-space: nowrap;
 }
 
-.card-2 table.tableLayoutDB .column1 {
-  width: 20%;
-}
-.card-2 table.tableLayoutDB .column2 {
-  width: 30%;
-}
-.card-2 table.tableLayoutDB .column3 {
-  width: 25%;
-}
-.card-2 table.tableLayoutDB .column4 {
-  width: 25%;
-}
-
 /* ========[ Time Records ]======== */
 #time-records .container .card-1 > div:first-child {
   position: relative;
