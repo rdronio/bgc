@@ -3615,6 +3615,35 @@
     content: "Tardiness (min/s)";
   }
 
+  /* ========[ File Cabinet ]======== */
+  #file-cabinet
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(1):before {
+    content: "Title";
+  }
+  #file-cabinet
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(2):before {
+    content: "File Name";
+  }
+  #file-cabinet
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(3):before {
+    content: "Action";
+  }
+
   /* ========[ Payslip Template ]======== */
   #payslip-template .modal-content {
     padding: 2rem 2rem;

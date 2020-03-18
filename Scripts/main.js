@@ -721,6 +721,7 @@ function scrollTopDataList() {
 function openModal(btn_id) {
   try {
     // List modal
+    const modalFileUpload = document.querySelector(".modal-file-upload");
     const modalFileSubstitution = document.querySelector(
       ".modal-file-substitution"
     );
@@ -811,6 +812,8 @@ function openModal(btn_id) {
       modalPayrollMemo.style.display = "flex";
     } else if (modalBtn === "#btnViewMemoNotice") {
       modalViewMemo.style.display = "flex";
+    } else if (modalBtn === "#btnFileUpload") {
+      modalFileUpload.style.display = "flex";
     }
 
     //set tab back to primary-info
@@ -824,6 +827,7 @@ function openModal(btn_id) {
 function closeModal(btn_id) {
   try {
     // List modal
+    const modalFileUpload = document.querySelector(".modal-file-upload");
     const modalFileSubstitution = document.querySelector(
       ".modal-file-substitution"
     );
@@ -896,6 +900,8 @@ function closeModal(btn_id) {
       modalPayrollMemo.style.display = "none";
     } else if (modalBtn === "#btnCloseViewMemo") {
       modalViewMemo.style.display = "none";
+    } else if (modalBtn === "#btnCloseFileUpload") {
+      modalFileUpload.style.display = "none";
     }
 
     //set tab back to primary-info
