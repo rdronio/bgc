@@ -850,12 +850,16 @@
                   </div>
                   <div>
                     <label class="label-6 block">Attach Files</label>
-                    <input
-                      type="file"
-                      name="photo"
-                      id="photo"
-                      accept="image/*"
-                    />
+                    <select
+                      name="selectFiles"
+                      id="selectFiles"
+                      class="select"
+                      onchange="getEmployeeByModal()"
+                    >
+                      <option value="">--Please choose a file--</option>
+                      <option value="file01">File 01</option>
+                      <option value="file02">File 02</option>
+                    </select>
                   </div>
                 </div>
               </div>
