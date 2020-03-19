@@ -30,7 +30,7 @@ function togglePassword2() {
 $(document).ready(function() {
   try {
     //check admin dashboard
-    $(window).on("load", loadSavedValue(`searchRegularEmployee`));
+    $(window).on("load", loadSavedValue(`txtSeachRegular`));
     $(window).on("load", loadSavedValue(`txtSearch`));
 
     $(".nav-list").on("click", "li", function() {
