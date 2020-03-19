@@ -721,6 +721,7 @@ function scrollTopDataList() {
 function openModal(btn_id) {
   try {
     // List modal
+    const modal1 = document.querySelector(".modal");
     const modalFileUpload = document.querySelector(".modal-file-upload");
     const modalFileSubstitution = document.querySelector(
       ".modal-file-substitution"
@@ -814,6 +815,8 @@ function openModal(btn_id) {
       modalViewMemo.style.display = "flex";
     } else if (modalBtn === "#btnFileUpload") {
       modalFileUpload.style.display = "flex";
+    } else if (modalBtn === "#btnModal1") {
+      modal1.style.display = "flex";
     }
 
     //set tab back to primary-info
@@ -827,6 +830,7 @@ function openModal(btn_id) {
 function closeModal(btn_id) {
   try {
     // List modal
+    const modal1 = document.querySelector(".modal");
     const modalFileUpload = document.querySelector(".modal-file-upload");
     const modalFileSubstitution = document.querySelector(
       ".modal-file-substitution"
@@ -902,6 +906,8 @@ function closeModal(btn_id) {
       modalViewMemo.style.display = "none";
     } else if (modalBtn === "#btnCloseFileUpload") {
       modalFileUpload.style.display = "none";
+    } else if (modalBtn === "#btnCloseModal1") {
+      modal1.style.display = "none";
     }
 
     //set tab back to primary-info

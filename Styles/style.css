@@ -5129,6 +5129,18 @@ nav ul li a span.fa {
   margin-left: 0.5rem;
 }
 
+/* ========[ Skeletal Force ]======== */
+#skeletal-force .container .card-1 > div:nth-child(1) {
+  position: relative;
+  text-align: right;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+#skeletal-force .container .card-1 div:nth-child(1) a {
+  margin-left: 0.5rem;
+}
+
 /* ==========================[ MEDIA QUERIES ]====================== */
 
 /* TABLETS PORTRAIT */
