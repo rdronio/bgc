@@ -29,6 +29,10 @@ function togglePassword2() {
 // navigation
 $(document).ready(function() {
   try {
+    //check admin dashboard
+    $(window).on("load", loadSavedValue(`searchRegularEmployee`));
+    $(window).on("load", loadSavedValue(`txtSearch`));
+
     $(".nav-list").on("click", "li", function() {
       $(".nav-list li.current-page").removeClass("current-page");
       $(this).addClass("current-page");
@@ -1933,8 +1937,48 @@ function hideDataList() {
 function reloadOnEnter(txtID) {
   $(txtID).keypress(function(event) {
     var keycode = event.keyCode ? event.keyCode : event.which;
+
+    saveValue(this);
     if (keycode == "13") {
       location.reload();
     }
   });
+}
+
+function saveValue(e) {
+  try {
+    var id = e.id; // get the sender's id to save it .
+    var val = e.value; // get the value.
+    localStorage.setItem(id, val); // Every time user writing something, the localStorage's value will override .
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function getSavedValue(v) {
+  try {
+    if (!localStorage.getItem(v)) {
+      return ""; // You can change this to your defualt value.
+    }
+    return localStorage.getItem(v);
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function loadSavedValue(txtID) {
+  try {
+    document.getElementById(txtID).value = getSavedValue(txtID);
+    resetSaveValue(txtID);
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function resetSaveValue(id) {
+  try {
+    localStorage.removeItem(id);
+  } catch (e) {
+    console.log(e);
+  }
 }
