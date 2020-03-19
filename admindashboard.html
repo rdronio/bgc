@@ -296,7 +296,12 @@
                       <label for="searchEmployee" class="label-6 block"
                         >Search Employee ID/Name</label
                       >
-                      <input type="" value="" id="searchRegularEmployee" />
+                      <input
+                        type=""
+                        value=""
+                        onkeypress="reloadOnEnter(`#searchRegularEmployee`)"
+                        id="searchRegularEmployee"
+                      />
                     </div>
                   </div>
 

@@ -23,7 +23,7 @@
     <title>HRIS & Payroll System</title>
   </head>
   <body>
-    <form id="file-cabinet" action="#" autocomplete="off">
+    <form id="file-cabinet" autocomplete="off">
       <!-- main -->
       <div class="main">
         <!-- nav -->
@@ -221,7 +221,7 @@
                     aria-label="Clear search"
                     type="button"
                     data-tooltip="Clear search"
-                    onclick="clearSearch(`file-cabinet);"
+                    onclick="clearSearch(`file-cabinet`);"
                     class="btn-clear-search tooltip hidden"
                   >
                     <span class="tooltiptext">Clear search</span>
@@ -257,43 +257,6 @@
                     </svg>
                   </a>
                 </div>
-                <div class="search-filter-container hidden">
-                  <div class="showEmployeeBy">
-                    <label for="showEmployeeBy" class="label-6 block"
-                      >Show Employee by</label
-                    >
-
-                    <select
-                      name="showEmployeeBy"
-                      id="showEmployeeBy"
-                      class="select"
-                      onchange="getEmployeeBy()"
-                    >
-                      <option value="">--Please choose an option--</option>
-                      <option value="department">Department</option>
-                      <option value="position">Position</option>
-                    </select>
-                    <select
-                      name="showEmployeeByCategory"
-                      id="showEmployeeByCategory"
-                      class="select"
-                    >
-                    </select>
-                  </div>
-
-                  <div class="btn-filter-container">
-                    <a class="btn-sm btn-primary " id="btnSearchPayroll">
-                      Search
-                    </a>
-
-                    <a
-                      class="btn-sm btn-secondary hidden "
-                      id="btnClearMemoNotice"
-                    >
-                      Clear
-                    </a>
-                  </div>
-                </div>
               </div>
 
               <!--File Cabinet -->
@@ -312,7 +275,7 @@
                       File01.pdf
                     </td>
                     <td class="column3">
-                      <a class="btn-table btn-secondary">View</a>
+                      <a class="btn-table btn-secondary">Download</a>
                     </td>
                   </tr>
                 </tbody>
@@ -356,7 +319,7 @@
                   type="file"
                   name="fileBrowse"
                   id="fileBrowse"
-                  accept="files/*"
+                  accept=".pdf, .xlsx, .xls, .csv"
                 />
               </div>
               <div class="modal-btn-container">

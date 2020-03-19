@@ -1080,6 +1080,8 @@ iframe {
   border-radius: 5px;
   background-color: #00aedb;
   color: white;
+  pointer-events: none;
+  cursor: none !important;
 }
 
 .pagination a span:hover:not(.active) {

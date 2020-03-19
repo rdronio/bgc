@@ -1799,8 +1799,10 @@ function toggleEmployeeSelection3() {
 
 function checkSearchInput() {
   try {
-    const txtSearch = document.querySelector(".txtSearch").value;
+    const txtSearch = document.querySelector("#txtSearch").value;
     const btnClearSearch = document.querySelector(".btn-clear-search");
+
+    reloadOnEnter("#txtSearch");
 
     if (txtSearch === "") {
       btnClearSearch.classList.add("hidden");
@@ -1920,4 +1922,13 @@ function hideDataList() {
   } catch (e) {
     console.log(e);
   }
+}
+
+function reloadOnEnter(txtID) {
+  $(txtID).keypress(function(event) {
+    var keycode = event.keyCode ? event.keyCode : event.which;
+    if (keycode == "13") {
+      location.reload();
+    }
+  });
 }
