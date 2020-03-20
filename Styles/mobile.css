@@ -21,6 +21,7 @@
   }
   h2 {
     font-size: 1.25rem;
+    padding-left: 0.5rem;
   }
   h3 {
     font-size: 1rem;
@@ -912,6 +913,15 @@
     tbody
     tr
     td:nth-child(4):before {
+    content: "No. of day/s";
+  }
+  #holiday-notice
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(5):before {
     content: "Action";
   }
 
@@ -941,7 +951,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: "Employee Name";
   }
   #overtime-records
     .container
@@ -950,115 +960,30 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Start Time";
-  }
-  #overtime-records
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(3):before {
-    content: "End Time";
-  }
-  #overtime-records
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(4):before {
-    content: "Total";
-  }
-  #overtime-records
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(5):before {
-    content: "Reason";
-  }
-
-  #overtime-records
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(6):before {
-    content: "Status";
-  }
-
-  #overtime-records
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(7):before {
-    content: "Remarks";
-  }
-
-  /* card-2 table */
-  #overtime-records
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(1):before {
     content: "Date";
   }
   #overtime-records
     .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(2):before {
-    content: "Start Time";
-  }
-  #overtime-records
-    .container
-    .card-2
+    .card-1
     .tableLayout
     tbody
     tr
     td:nth-child(3):before {
-    content: "End Time";
+    content: "Total Hours";
   }
   #overtime-records
     .container
-    .card-2
+    .card-1
     .tableLayout
     tbody
     tr
     td:nth-child(4):before {
-    content: "Overtime";
-  }
-  #overtime-records
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(5):before {
     content: "Reason";
-  }
-  #overtime-records
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(6):before {
-    content: "Action";
   }
 
   /* ========[ Leave Records ]======== */
 
-  #leaverecords .container .card-1 .card-subhead-container {
+  /* #leaverecords .container .card-1 .card-subhead-container {
     display: grid;
     grid-template-rows: 0.5fr 1fr;
     grid-template-columns: none;
@@ -1066,7 +991,7 @@
   #leaverecords .container .card-1 .card-subhead-container div:nth-child(2) {
     order: -1;
     text-align: left;
-  }
+  } */
 
   #leaverecords table.tableLayout tbody tr td {
     padding-left: 35%;
@@ -1213,7 +1138,7 @@
     tbody
     tr
     td:nth-child(1):before {
-    content: "Date";
+    content: "Employee name";
   }
   #undertime-records
     .container
@@ -1222,110 +1147,25 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Start Time";
-  }
-  #undertime-records
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(3):before {
-    content: "End Time";
-  }
-  #undertime-records
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(4):before {
-    content: "Total";
-  }
-  #undertime-records
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(5):before {
-    content: "Reason";
-  }
-
-  #undertime-records
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(6):before {
-    content: "Status";
-  }
-
-  #undertime-records
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(7):before {
-    content: "Remarks";
-  }
-
-  /* card-2 table */
-  #undertime-records
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(1):before {
     content: "Date";
   }
   #undertime-records
     .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(2):before {
-    content: "Start Time";
-  }
-  #undertime-records
-    .container
-    .card-2
+    .card-1
     .tableLayout
     tbody
     tr
     td:nth-child(3):before {
-    content: "End Time";
+    content: "Undertime (Hour/s)";
   }
   #undertime-records
     .container
-    .card-2
+    .card-1
     .tableLayout
     tbody
     tr
     td:nth-child(4):before {
-    content: "Undertime";
-  }
-  #undertime-records
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(5):before {
     content: "Reason";
-  }
-  #undertime-records
-    .container
-    .card-2
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(6):before {
-    content: "Status";
   }
 
   /* ========[ Project / Task Records ]======== */
@@ -1822,15 +1662,6 @@
     tbody
     tr
     td:nth-child(2):before {
-    content: "Payroll Date";
-  }
-  #payroll-approval
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(3):before {
     content: "Employee";
   }
 
@@ -1840,17 +1671,7 @@
     .tableLayout
     tbody
     tr
-    td:nth-child(4):before {
-    content: "Department";
-  }
-
-  #payroll-approval
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(5):before {
+    td:nth-child(3):before {
     content: "Position";
   }
 
@@ -1860,27 +1681,7 @@
     .tableLayout
     tbody
     tr
-    td:nth-child(6):before {
-    content: "Total Earnings";
-  }
-
-  #payroll-approval
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(7):before {
-    content: "Total Deductions";
-  }
-
-  #payroll-approval
-    .container
-    .card-1
-    .tableLayout
-    tbody
-    tr
-    td:nth-child(8):before {
+    td:nth-child(4):before {
     content: "Net Pay";
   }
 
@@ -1890,7 +1691,7 @@
     .tableLayout
     tbody
     tr
-    td:nth-child(9):before {
+    td:nth-child(5):before {
     content: "Action";
   }
 

@@ -2286,7 +2286,7 @@ nav {
   box-shadow: 4px 4px 20px rgba(74, 74, 74, 0.1);
   height: 100%;
   /* for screenshot */
-  height: 2000px;
+  /* height: 2000px; */
   overflow-y: auto;
   z-index: 1;
   transition: all 0.4s ease-in;
@@ -2594,14 +2594,14 @@ nav ul li a span.fa {
   /* display: grid;
   grid-template-columns: 1fr 1.5fr; */
 }
-#leaverecords .container .card-1 .card-subhead-container .card-subhead {
+/* #leaverecords .container .card-1 .card-subhead-container .card-subhead {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 2rem 1rem 2rem 2rem 1rem 2rem;
-  /* gap: 1rem; */
-}
+  gap: 1rem;
+} */
 
-#leaverecords
+/* #leaverecords
   .container
   .card-1
   .card-subhead-container
@@ -2614,7 +2614,7 @@ nav ul li a span.fa {
   .card-subhead
   > *:nth-child(8) {
   grid-column: 1 / span 3;
-}
+} */
 
 #leaverecords .container .card-1 .card-subhead-container div:nth-child(2) {
   text-align: right;
@@ -2872,27 +2872,23 @@ nav ul li a span.fa {
 }
 
 /* ========[ Payroll Approval ]======== */
-#payroll-approval .container .card-1 > div:first-child {
+/* #payroll-approval .container .card-1 > div:first-child {
   display: inline-block;
   margin-bottom: 0.5rem;
   margin-right: 1rem;
-}
+} */
 
 #payroll-approval .container .card-1 div:first-child input {
   margin-right: 0.5rem;
 }
 
-#payroll-approval .container .card-1 div:nth-child(2) {
+/* #payroll-approval .container .card-1 div:nth-child(2) {
   display: inline-block;
 }
 
 #payroll-approval .container .card-1 div:nth-child(2) button {
   margin-right: 0.5rem;
-}
-
-#payroll-approval .tableLayout {
-  display: block;
-}
+} */
 
 #payroll-approval .tableLayout .column1 {
   width: 20%;
@@ -2900,12 +2896,8 @@ nav ul li a span.fa {
 #payroll-approval .tableLayout .column2,
 #payroll-approval .tableLayout .column3,
 #payroll-approval .tableLayout .column4,
-#payroll-approval .tableLayout .column5,
-#payroll-approval .tableLayout .column6,
-#payroll-approval .tableLayout .column7,
-#payroll-approval .tableLayout .column8,
-#payroll-approval .tableLayout .column9 {
-  width: 10%;
+#payroll-approval .tableLayout .column5 {
+  width: 20%;
 }
 
 #payroll-approval .modal-content {

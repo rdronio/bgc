@@ -57,67 +57,95 @@
           <!-- / menu -->
           <ul class="nav-list">
             <li>
-              <a href="dashboard.html"
-                ><i class="fas fa-tachometer-alt"></i>Dashboard</a
-              >
-            </li>
-            <li class="current-page">
-              <a href="timerecords.html"
-                ><i class="fas fa-user-clock"></i>Time Records</a
-              >
-            </li>
-            <li>
-              <a href="profile.html"
-                ><i class="fas fa-address-card"></i>Profile</a
+              <a href="admindashboard.html"
+                ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
               >
             </li>
             <li>
               <a href="#"
-                ><i class="fas fa-history"></i>Application<span
+                ><i class="fas fa-tasks"> </i>Approvals<span
                   class="fa fa-chevron-down"
                 ></span
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="leaverecords.html">Leave Records</a>
+                  <a href="PayrollApproval.html">Payroll Approval</a>
                 </li>
                 <li>
-                  <a href="overtimerecords.html">Overtime Records</a>
+                  <a href="Substitution.html">Subtitute Records</a>
                 </li>
                 <li>
-                  <a href="expense.html">Expense Records</a>
+                  <a href="LeaveRecords.html">Leave Records</a>
+                </li>
+                <li><a href="OvertimeRecords.html">Overtime Records</a></li>
+                <li>
+                  <a href="Undertime.html">Undertime Records</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-file-alt"></i> Employee Records<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu hidden">
+                <li>
+                  <a href="employeemasterlist.html">Employee Masterlist</a>
                 </li>
                 <li>
-                  <a href="undertime.html">Undertime Records</a>
+                  <a href="adminleaverecords.html">Employee Leave Records</a>
                 </li>
+                <li><a href="TimeRecords.html">Employee Time Records</a></li>
               </ul>
             </li>
 
             <li>
-              <!-- <a href="team.html"><i class="fas fa-users"></i>Team</a> -->
-              <a href="underconstruction.html"
-                ><i class="fas fa-users"></i>Team</a
-              >
-            </li>
-            <li>
-              <a href="projecttask.html"
-                ><i class="fas fa-tasks"></i>Project/Task</a
-              >
-            </li>
-            <li>
               <a href="#"
-                ><i class="fas fa-chart-area"></i>Report<span
+                ><i class="fas fa-bullhorn"></i>Memo/Notice<span
                   class="fa fa-chevron-down"
                 ></span
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="payslip.html">Payslip</a>
+                  <a href="memonotice.html">Bulk Email</a>
+                </li>
+                <li>
+                  <a href="filecabinet.html">File Cabinet</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="index.html"
+              <a href="#"
+                ><i class="fas fa-chart-area"></i>Reports<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu hidden">
+                <li>
+                  <a href="GenerateDtrReport.html">Generate DTR</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="importtimerecords.html"
+                ><i class="fas fa-download"></i>Import Time Records</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-cog"></i>System Preferences<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu">
+                <li class="current-page">
+                  <a href="holidaynotice.html">Holiday Notice</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="LoginPage.html"
                 ><i class="fas fa-sign-out-alt"></i>Sign Out</a
               >
             </li>
@@ -180,13 +208,15 @@
                     <td class="column1">Start Date</td>
                     <td class="column2">End Date</td>
                     <td class="column3">Description</td>
-                    <td class="column4">Action</td>
+                    <td class="column4">No. of Day/s</td>
+                    <td class="column5">Action</td>
                   </tr>
                   <tr>
                     <td class="column1">January 1, 2020</td>
                     <td class="column2">January 1, 2020</td>
                     <td class="column3">New Year</td>
-                    <td class="column4"><a onclick="openModal('#btnEditHoliday')" class="btn-table btn-secondary">Edit</a><a class="btn-table btn-secondary">Delete </a></td>
+                    <td class="column4">1</td>
+                    <td class="column5"><a onclick="openModal('#btnEditHoliday')" class="btn-table btn-secondary">Edit</a><a class="btn-table btn-secondary">Delete </a></td>
                   </tr>
                 </tbody>
               </table>

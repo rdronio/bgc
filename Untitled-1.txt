@@ -1,22 +1,16 @@
- This is JM and Roy Deliverables [03/19/2020]
+ This is JM and Roy Status Update [03/20/2020]
  
 
  For HRIS [Front End] 
  
- *style.css
- -updated the CSS of pagination, when the page number is active, the pointer is disabled .
+ *mobile.css [Employee Leave Records, holiday notice, overtime records, subsitution, undertime, timerecords]
+   -updated table head to match with the desktop view table head.
  
  *Admin Dashboard
-   -fix the search box once press (Enter), reload then fill the search with previous value  (using localStorage)
-      [problem still exist in backend find a new way to fix]
+   -fix the search box once press (Enter), (using localStorage) via vanilla js not jquery.
+      [merge to mau to see if the new approach will work at the back]
  
- *File Cabinet
-   -fix the search box once press (Enter), reload then fill the search with previous value (using localStorage) 
-     [problem still exist in backend find a new way to fix]
 
-   -filtered Browse file field to .pdf, .xlsx, .xls, .csv only in the File Upload Modal
-
- *Added Skeletal Force page with modal for data entry
 
 
 

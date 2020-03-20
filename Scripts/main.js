@@ -1812,8 +1812,6 @@ function checkSearchInput() {
     const txtSearch = document.querySelector("#txtSearch").value;
     const btnClearSearch = document.querySelector(".btn-clear-search");
 
-    reloadOnEnter("#txtSearch");
-
     if (txtSearch === "") {
       btnClearSearch.classList.add("hidden");
       hideDataList();

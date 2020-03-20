@@ -58,7 +58,7 @@
           <!-- / menu -->
           <ul class="nav-list">
             <li class="current-page">
-              <a href="admindashboard.html.html"
+              <a href="admindashboard.html"
                 ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
               >
             </li>
@@ -71,6 +71,9 @@
               <ul class="nav child_menu hidden">
                 <li>
                   <a href="PayrollApproval.html">Payroll Approval</a>
+                </li>
+                <li>
+                  <a href="Substitution.html">Subtitute Records</a>
                 </li>
                 <li>
                   <a href="LeaveRecords.html">Leave Records</a>
@@ -92,7 +95,7 @@
                   <a href="employeemasterlist.html">Employee Masterlist</a>
                 </li>
                 <li>
-                  <a href="LeaveRecords.html">Employee Leave Records</a>
+                  <a href="adminleaverecords.html">Employee Leave Records</a>
                 </li>
                 <li><a href="TimeRecords.html">Employee Time Records</a></li>
               </ul>
@@ -107,6 +110,9 @@
               <ul class="nav child_menu hidden">
                 <li>
                   <a href="memonotice.html">Bulk Email</a>
+                </li>
+                <li>
+                  <a href="filecabinet.html">File Cabinet</a>
                 </li>
               </ul>
             </li>
@@ -123,7 +129,7 @@
               </ul>
             </li>
             <li>
-              <a href="EmployeeMasterlist.html"
+              <a href="importtimerecords.html"
                 ><i class="fas fa-download"></i>Import Time Records</a
               >
             </li>
@@ -207,8 +213,8 @@
                   <table class="tableLayout-md">
                     <tbody>
                       <tr>
-                        <td class="column1">Name</td>
-                        <td class="column2">Tardiness Count</td>
+                        <td class="column1">Employee</td>
+                        <td class="column2">Total Memo Point/s</td>
                       </tr>
                       <tr>
                         <td class="column1">John Doe</td>
@@ -227,7 +233,7 @@
                   <table class="tableLayout-md">
                     <tbody>
                       <tr>
-                        <td class="column1">Name</td>
+                        <td class="column1">Employee</td>
                         <td class="column2">Position</td>
                       </tr>
                       <tr>
@@ -263,7 +269,7 @@
                   <table class="tableLayout-md">
                     <tbody>
                       <tr>
-                        <td class="column1">Name</td>
+                        <td class="column1">Employee</td>
                         <td class="column3">Position</td>
                       </tr>
                       <tr>
@@ -299,7 +305,7 @@
                       <input
                         type="text"
                         id="txtSeachRegular"
-                        onkeyup="reloadOnEnter(event, this)"
+                        onKeyPress="reloadOnEnter(event, this)"
                       />
                     </div>
                   </div>
@@ -315,36 +321,6 @@
                         <td class="column2">Employee Name</td>
                         <td class="column3">Department</td>
                         <td class="column4">Position</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">00001</td>
-                        <td class="column2">John Doe</td>
-                        <td class="column3">IT Department</td>
-                        <td class="column4">Programmer</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">00001</td>
-                        <td class="column2">John Doe</td>
-                        <td class="column3">IT Department</td>
-                        <td class="column4">Programmer</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">00001</td>
-                        <td class="column2">John Doe</td>
-                        <td class="column3">IT Department</td>
-                        <td class="column4">Programmer</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">00001</td>
-                        <td class="column2">John Doe</td>
-                        <td class="column3">IT Department</td>
-                        <td class="column4">Programmer</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">00001</td>
-                        <td class="column2">John Doe</td>
-                        <td class="column3">IT Department</td>
-                        <td class="column4">Programmer</td>
                       </tr>
                       <tr>
                         <td class="column1">00001</td>
@@ -415,7 +391,7 @@
                       <label for="searchEmployee" class="label-6 block"
                         >Search Employee ID/Name</label
                       >
-                      <input type="text" value="" id="searchRegularEmployee" />
+                      <input type="text" id="searchRegularEmployee" />
                     </div>
                   </div>
 
@@ -430,36 +406,6 @@
                         <td class="column2">Employee Name</td>
                         <td class="column3">Employment Status</td>
                         <td class="column4">Time</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">00001</td>
-                        <td class="column2">John Doe</td>
-                        <td class="column3">Regular</td>
-                        <td class="column4">09:00AM - 10:00PM</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">00001</td>
-                        <td class="column2">John Doe</td>
-                        <td class="column3">Regular</td>
-                        <td class="column4">09:00AM - 10:00PM</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">00001</td>
-                        <td class="column2">John Doe</td>
-                        <td class="column3">Regular</td>
-                        <td class="column4">09:00AM - 10:00PM</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">00001</td>
-                        <td class="column2">John Doe</td>
-                        <td class="column3">Regular</td>
-                        <td class="column4">09:00AM - 10:00PM</td>
-                      </tr>
-                      <tr>
-                        <td class="column1">00001</td>
-                        <td class="column2">John Doe</td>
-                        <td class="column3">Regular</td>
-                        <td class="column4">09:00AM - 10:00PM</td>
                       </tr>
                       <tr>
                         <td class="column1">00001</td>

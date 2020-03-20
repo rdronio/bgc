@@ -63,13 +63,19 @@
               ></a>
               <ul class="nav child_menu">
                 <li>
-                  <a href="leaverecords.html">Leave Records</a>
-                </li>
-                <li class="current-page">
-                  <a href="overtimerecords.html">Overtime Records</a>
+                  <a href="PayrollApproval.html">Payroll Approval</a>
                 </li>
                 <li>
-                  <a href="undertime.html">Undertime Records</a>
+                  <a href="Substitution.html">Subtitute Records</a>
+                </li>
+                <li>
+                  <a href="LeaveRecords.html">Leave Records</a>
+                </li>
+                <li class="current-page">
+                  <a href="OvertimeRecords.html">Overtime Records</a>
+                </li>
+                <li>
+                  <a href="Undertime.html">Undertime Records</a>
                 </li>
               </ul>
             </li>
@@ -86,20 +92,22 @@
                 <li>
                   <a href="adminleaverecords.html">Employee Leave Records</a>
                 </li>
+                <li><a href="TimeRecords.html">Employee Time Records</a></li>
               </ul>
             </li>
+
             <li>
               <a href="#"
-                ><i class="fas fa-bullhorn"></i>Memo / Notice<span
+                ><i class="fas fa-bullhorn"></i>Memo/Notice<span
                   class="fa fa-chevron-down"
                 ></span
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="underconstruction.html">Bulk Email</a>
+                  <a href="memonotice.html">Bulk Email</a>
                 </li>
-                <li class="hidden">
-                  <a href="underconstruction.html">File Cabinet</a>
+                <li>
+                  <a href="filecabinet.html">File Cabinet</a>
                 </li>
               </ul>
             </li>
@@ -111,13 +119,7 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="generatedtrreport.html">Generate DTR</a>
-                </li>
-                <li class="hidden">
-                  <a href="underconstruction.html">Payroll Report</a>
-                </li>
-                <li class="hidden">
-                  <a href="underconstruction.html">Government Report</a>
+                  <a href="GenerateDtrReport.html">Generate DTR</a>
                 </li>
               </ul>
             </li>
@@ -127,7 +129,19 @@
               >
             </li>
             <li>
-              <a href="index.html"
+              <a href="#"
+                ><i class="fas fa-cog"></i>System Preferences<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu hidden">
+                <li>
+                  <a href="holidaynotice.html">Holiday Notice</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="LoginPage.html"
                 ><i class="fas fa-sign-out-alt"></i>Sign Out</a
               >
             </li>
@@ -204,42 +218,18 @@
               <table class="tableLayout">
                 <tbody>
                   <tr>
-                    <td class="column1">Date</td>
-                    <td class="column2">Start Time</td>
-                    <td class="column3">End Time</td>
-                    <td class="column4">Overtime (hour/s)</td>
-                    <td class="column5">Reason</td>
-                    <td class="column6">Status</td>
-                    <td class="column7">Remarks</td>
+                    <td class="column1">Employee Name</td>
+                    <td class="column2">Date</td>
+                    <td class="column3">Total Hours</td>
+                    <td class="column4">Reason</td>
                   </tr>
                   <tr>
-                    <td class="column1">November 20, 2019</td>
-                    <td class="column2">09:00 AM</td>
-                    <td class="column3">05:00 PM</td>
-                    <td class="column4">8.00</td>
-                    <td class="column5">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </td>
-                    <td class="column6">
-                      Approved
-                    </td>
-                    <td class="column7">
-                      Not Applicable
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="column1">November 20, 2019</td>
-                    <td class="column2">09:00 AM</td>
-                    <td class="column3">05:00 PM</td>
-                    <td class="column4">8.00</td>
-                    <td class="column5">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    </td>
-                    <td class="column6">
-                      Rejected
-                    </td>
-                    <td class="column7">
+                    <td class="column1">John Doe</td>
+                    <td class="column2">Mar 12, 2020</td>
+                    <td class="column3">6</td>
+                    <td class="column4">
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Nobis, illo?
                     </td>
                   </tr>
                 </tbody>
@@ -267,58 +257,6 @@
                 </div>
               </div>
             </div>
-
-            <div class="card card-2 hidden">
-              <div class="container-sm">
-                <!-- Pending Time Alteration -->
-                <table class="tableLayout">
-                  <tbody>
-                    <tr>
-                      <td class="column1">Date</td>
-                      <td class="column2">Start Time</td>
-                      <td class="column3">End Time</td>
-                      <td class="column4">Overtime (hour/s)</td>
-                      <td class="column5">Reason</td>
-                      <td class="column6">Action</td>
-                    </tr>
-                    <tr>
-                      <td class="column1">November 20, 2019</td>
-                      <td class="column2">09:00 AM</td>
-                      <td class="column3">05:00 PM</td>
-                      <td class="column4">8.00</td>
-                      <td class="column4">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit.
-                      </td>
-                      <td class="column6">
-                        <a class="btn-table btn-secondary">Cancel</a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="pagination-container">
-                  <div class="showmore-container">
-                    <a class="btn-showmore" href="#"
-                      ><i class="fas fa-chevron-down"></i>More Results</a
-                    >
-                  </div>
-                  <div class="pagination">
-                    <a href="#"><span>«</span></a>
-                    <a href="#"><span class="active">1</span></a>
-                    <a href="#"><span>2</span></a>
-                    <a href="#"><span>3</span></a>
-                    <a href="#"><span>4</span></a>
-                    <a href="#"><span>5</span></a>
-                    <a href="#"><span>6</span></a>
-                    <a href="#"><span>7</span></a>
-                    <a href="#"><span>8</span></a>
-                    <a href="#"><span>9</span></a>
-                    <a href="#"><span>10</span></a>
-                    <a href="#"><span>»</span></a>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           <!-- Modal Section -->
@@ -328,7 +266,7 @@
               <h5>Overtime Application Form</h5>
               <hr />
               <div class="">
-                <label for="txtDepartment" class="label-6">Department </label>
+                <label for="txtDepartment" class="label-6">Department</label>
                 <select
                   name="txtDepartment"
                   id="txtDepartment"
@@ -337,7 +275,7 @@
                 >
                 </select>
 
-                <label for="txtEmployee" class="label-6">Employee </label>
+                <label for="txtEmployee" class="label-6">Employee</label>
                 <select
                   name="txtEmployee"
                   id="txtEmployee"
@@ -346,17 +284,15 @@
                 >
                 </select>
 
-                <label for="txtDateOT" class="label-6">Date: </label>
+                <label for="txtDateOT" class="label-6">Date</label>
                 <input
                   name="txtDateOT"
                   type="text"
                   id="txtDateOT"
                   class="otPicker"
                 />
-                <label for="txtHours" class="label-6">Hours</label>
-                <p class="text" id="txtHours">0.00</p>
-                <label for="txtOvertime" class="label-6">Overtime</label>
-                <p class="text" id="txtOvertime">0.00</p>
+                <label for="txtHours" class="label-6">No. of Hour/s</label>
+                <input name="txtHours" type="text" id="txtHours" />
                 <label for="txtAreaReasonOT" class="label-6">Reason</label>
                 <textarea
                   name="txtAreaReasonOT"
@@ -365,7 +301,7 @@
               </div>
               <div class="modal-btn-container">
                 <a class="btn-sm btn-primary mx-3" id="btnRequestOvertime"
-                  >Approve Overtime</a
+                  >Request Overtime</a
                 >
                 <a
                   class="btn-sm btn-secondary mx-3"
