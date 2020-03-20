@@ -1,0 +1,35 @@
+ This is JM and Roy Deliverables [03/19/2020]
+ 
+
+ For HRIS [Front End] 
+ 
+ *style.css
+ -updated the CSS of pagination, when the page number is active, the pointer is disabled .
+ 
+ *Admin Dashboard
+   -fix the search box once press (Enter), reload then fill the search with previous value  (using localStorage)
+      [problem still exist in backend find a new way to fix]
+ 
+ *File Cabinet
+   -fix the search box once press (Enter), reload then fill the search with previous value (using localStorage) 
+     [problem still exist in backend find a new way to fix]
+
+   -filtered Browse file field to .pdf, .xlsx, .xls, .csv only in the File Upload Modal
+
+ *Added Skeletal Force page with modal for data entry
+
+
+
+ For Systemoph website redesign
+
+  *Landing page 
+   -mockup (done 3/18/2020)
+   -dev (in progress 50%)
+
+  *Services
+   -mockup (backlog)
+   -dev (backlog)
+
+  *About
+   -mockup (backlog)
+   -dev (backlog)

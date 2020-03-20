@@ -296,7 +296,11 @@
                       <label for="searchEmployee" class="label-6 block"
                         >Search Employee ID/Name</label
                       >
-                      <input type="text" id="searchRegularEmployee" />
+                      <input
+                        type="text"
+                        id="txtSeachRegular"
+                        onkeyup="reloadOnEnter(event, this)"
+                      />
                     </div>
                   </div>
 
@@ -411,7 +415,7 @@
                       <label for="searchEmployee" class="label-6 block"
                         >Search Employee ID/Name</label
                       >
-                      <input type="" value="" id="searchRegularEmployee" />
+                      <input type="text" value="" id="searchRegularEmployee" />
                     </div>
                   </div>
 
@@ -633,6 +637,6 @@
       </div>
     </form>
     <script src="Scripts/main.js"></script>
-    <!-- <script src="Scripts/datetime.js"></script> -->
+    <script src="Scripts/datetime.js"></script>
   </body>
 </html>

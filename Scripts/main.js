@@ -1934,15 +1934,13 @@ function hideDataList() {
   }
 }
 
-function reloadOnEnter(txtID) {
-  $(txtID).keypress(function(event) {
-    var keycode = event.keyCode ? event.keyCode : event.which;
+function reloadOnEnter(e, txtID) {
+  var keycode = event.keyCode ? event.keyCode : event.which;
 
-    saveValue(this);
-    if (keycode == "13") {
-      location.reload();
-    }
-  });
+  saveValue(txtID);
+  if (keycode == "13") {
+    location.reload();
+  }
 }
 
 function saveValue(e) {
