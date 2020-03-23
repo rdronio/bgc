@@ -3,16 +3,17 @@
 
  For HRIS [Front End] 
  
- *mobile.css [Employee Leave Records, holiday notice, overtime records, subsitution, undertime, timerecords]
-   -updated table head to match with the desktop view table head.
-   -added margin on heading  
-
- *all pages
-  -updated navigation
+ *Saturday Schedule (Skeletal Force)
+   -updated table columns for both desktop & mobile view.
+   -updated modal list of employees design from table to ul li
 
  *Admin Dashboard
-   -fix the search box once press (Enter), (using localStorage) via vanilla js not jquery.
-      [merge to mau to see if the new approach will work at the back]
+   -updated Saturday Schedule card content
+   -updated mobile cards spacing
+
+  *Payroll
+   - 
+
  
 
  For Systemoph website redesign

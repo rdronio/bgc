@@ -511,11 +511,25 @@
                         onkeypress="checkSearchInput2();"
                         onchange="checkSearchInput2();"
                       />
-                      <datalist id="txtSearch2">
-                        <option>John Doe</option>
-                        <option>John Doe Daddy</option>
-                        <option>John Doe Mommy</option>
-                      </datalist>
+                      <ul class="datalist-data hidden">
+                        <li>
+                          <div><i class="fas fa-search"></i></div>
+                          <div>
+                            <span>John Doe</span>
+                          </div>
+                          <div></div>
+                        </li>
+                        <li class="">
+                          <div><i class="fas fa-search"></i></div>
+                          <div><span>John Doe1</span></div>
+                          <div></div>
+                        </li>
+                        <li class="selected-datalist">
+                          <div><i class="fas fa-search"></i></div>
+                          <div><span>John Doe2</span></div>
+                          <div></div>
+                        </li>
+                      </ul>
                     </div>
                     <a
                       aria-label="Clear search"
@@ -867,7 +881,7 @@
           <!-- btnMassGeneratePayroll -->
           <div class="modal modal-mass-payroll">
             <div class="modal-content">
-              <h5>Generate Payroll</h5>
+              <h5>Mass Generate Payroll</h5>
               <hr />
               <div>
                 <label class="label-6 block">Pay Frequency</label>
@@ -875,7 +889,7 @@
                   name="drpDownPayFreqModal2"
                   id="drpDownPayFreqModal2"
                   class="select block drpDownPayFreq"
-                  onchange="generatePayPeriod(`#drpDownPayFreqModal2`,`#txtDateFromModal2`,`#txtDateToModal2`,`payroll`);"
+                  onchange="generatePayPeriodBgc(`#drpDownPayFreqModal2`,`#txtDateFromModal2`,`#txtDateToModal2`,`payroll`);"
                 >
                   <option value="">--Please choose an option--</option>
                   <option value="twoWeeksAdmin">Every 2 weeks (Admin)</option>
@@ -900,13 +914,15 @@
 
               <div>
                 <label class="label-6 block">Pay Period</label>
-                <label for="txtDateFromModal2" class="label-6">From: </label>
+                <label for="txtDateFromModal2" class="label-6 pt-0"
+                  >From:
+                </label>
                 <input
                   name="txtDateFromModal2"
                   type="text"
                   id="txtDateFromModal2"
                   class="startDatePicker disabled"
-                  onchange="generatePayPeriod(`#drpDownPayFreqModal2`,`#txtDateFromModal2`,`#txtDateToModal2`,`payroll`);"
+                  onchange="generatePayPeriodBgc(`#drpDownPayFreqModal2`,`#txtDateFromModal2`,`#txtDateToModal2`,`payroll`);"
                 />
                 <label for="txtDateToModal2" class="label-6">To: </label>
                 <input
@@ -914,10 +930,9 @@
                   type="text"
                   id="txtDateToModal2"
                   class="endDatePicker disabled"
-                  onchange="generatePayPeriod(`#drpDownPayFreqModal2`,`#txtDateFromModal2`,`#txtDateToModal2`,`payroll`);"
+                  onchange="generatePayPeriodBgc(`#drpDownPayFreqModal2`,`#txtDateFromModal2`,`#txtDateToModal2`,`payroll`);"
                 />
               </div>
-
 
               <div class="modal-btn-container">
                 <a class="btn-sm btn-green mx-3" id="btnComputeModal"
@@ -939,89 +954,24 @@
               </div>
 
               <!-- <label class="norecords">No Records Found</label> -->
-              <table class="tableLayout">
-                <tbody>
-                  <tr>
-                    <td class="column0">Action</td>
-                    <td class="column1">Employee</td>
-                    <td class="column2">Department</td>
-                    <td class="column3">Total Earnings</td>
-                    <td class="column4">Total Deductions</td>
-                    <td class="column5">Net Pay</td>
-                  </tr>
-                  <tr>
-                    <td class="column0">
-                      <input type="checkbox" name="" id="" />
-                    </td>
-                    <td class="column1">Employee</td>
-                    <td class="column2">IT Department</td>
-                    <td class="column3">20,000.00</td>
-                    <td class="column4">1,100.00</td>
-                    <td class="column5">18,900.00</td>
-                  </tr>
-                  <tr>
-                    <td class="column0">
-                      <input type="checkbox" name="" id="" />
-                    </td>
-                    <td class="column1">Employee</td>
-                    <td class="column2">IT Department</td>
-                    <td class="column3">20,000.00</td>
-                    <td class="column4">1,100.00</td>
-                    <td class="column5">18,900.00</td>
-                  </tr>
-                  <tr>
-                    <td class="column0">
-                      <input type="checkbox" name="" id="" />
-                    </td>
-                    <td class="column1">Employee</td>
-                    <td class="column2">IT Department</td>
-                    <td class="column3">20,000.00</td>
-                    <td class="column4">1,100.00</td>
-                    <td class="column5">18,900.00</td>
-                  </tr>
-                  <tr>
-                    <td class="column0">
-                      <input type="checkbox" name="" id="" />
-                    </td>
-                    <td class="column1">Employee</td>
-                    <td class="column2">IT Department</td>
-                    <td class="column3">20,000.00</td>
-                    <td class="column4">1,100.00</td>
-                    <td class="column5">18,900.00</td>
-                  </tr>
-                  <tr>
-                    <td class="column0">
-                      <input type="checkbox" name="" id="" />
-                    </td>
-                    <td class="column1">Employee</td>
-                    <td class="column2">IT Department</td>
-                    <td class="column3">20,000.00</td>
-                    <td class="column4">1,100.00</td>
-                    <td class="column5">18,900.00</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="pagination-container">
-                <div class="showmore-container">
-                  <a class="btn-showmore" href="#"
-                    ><i class="fas fa-chevron-down"></i>More Results</a
-                  >
-                </div>
-                <div class="pagination">
-                  <a href="#"><span>«</span></a>
-                  <a href="#"><span class="active">1</span></a>
-                  <a href="#"><span>2</span></a>
-                  <a href="#"><span>3</span></a>
-                  <a href="#"><span>4</span></a>
-                  <a href="#"><span>5</span></a>
-                  <a href="#"><span>6</span></a>
-                  <a href="#"><span>7</span></a>
-                  <a href="#"><span>8</span></a>
-                  <a href="#"><span>9</span></a>
-                  <a href="#"><span>10</span></a>
-                  <a href="#"><span>»</span></a>
-                </div>
-              </div>
+              <ul class="LI-Layout">
+                <li>
+                  <input name="chkEmp01" id="chkEmp01" type="checkbox" />
+                  John Doe
+                </li>
+                <li>
+                  <input name="chkEmp01" id="chkEmp01" type="checkbox" />
+                  John Doe
+                </li>
+                <li>
+                  <input name="chkEmp01" id="chkEmp01" type="checkbox" />
+                  John Doe
+                </li>
+                <li>
+                  <input name="chkEmp01" id="chkEmp01" type="checkbox" />
+                  John Doe
+                </li>
+              </ul>
 
               <div class="modal-btn-container">
                 <a class="btn-sm btn-primary mx-3" id="btnCreatePayrollModal">

@@ -65,13 +65,22 @@
                   class="fa fa-chevron-down"
                 ></span
               ></a>
-              <ul class="nav child_menu hidden">
+              <ul class="nav child_menu">
                 <li>
-                  <a href="leaverecords.html">Leave Records</a>
+                  <a href="PayrollApproval.html">Payroll Approval</a>
                 </li>
-                <li><a href="overtimerecords.html">Overtime Records</a></li>
                 <li>
-                  <a href="undertime.html">Undertime Records</a>
+                  <a href="Substitution.html">Subtitute Records</a>
+                </li>
+                <li>
+                  <a href="LeaveRecords.html">Leave Records</a>
+                </li>
+                <li><a href="OvertimeRecords.html">Overtime Records</a></li>
+                <li>
+                  <a href="Undertime.html">Undertime Records</a>
+                </li>
+                <li class="current-page">
+                  <a href="skeletalforce.html">Saturday Schedule</a>
                 </li>
               </ul>
             </li>
@@ -88,20 +97,22 @@
                 <li>
                   <a href="adminleaverecords.html">Employee Leave Records</a>
                 </li>
+                <li><a href="TimeRecords.html">Employee Time Records</a></li>
               </ul>
             </li>
+
             <li>
               <a href="#"
-                ><i class="fas fa-bullhorn"></i>Memo / Notice<span
+                ><i class="fas fa-bullhorn"></i>Memo/Notice<span
                   class="fa fa-chevron-down"
                 ></span
               ></a>
-              <ul class="nav child_menu">
-                <li class="current-page">
+              <ul class="nav child_menu hidden">
+                <li>
                   <a href="memonotice.html">Bulk Email</a>
                 </li>
-                <li class="hidden">
-                  <a href="underconstruction.html">File Cabinet</a>
+                <li>
+                  <a href="filecabinet.html">File Cabinet</a>
                 </li>
               </ul>
             </li>
@@ -113,13 +124,7 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="generatedtrreport.html">Generate DTR</a>
-                </li>
-                <li class="hidden">
-                  <a href="underconstruction.html">Payroll Report</a>
-                </li>
-                <li class="hidden">
-                  <a href="underconstruction.html">Government Report</a>
+                  <a href="GenerateDtrReport.html">Generate DTR</a>
                 </li>
               </ul>
             </li>
@@ -127,6 +132,18 @@
               <a href="importtimerecords.html"
                 ><i class="fas fa-download"></i>Import Time Records</a
               >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-cog"></i>System Preferences<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu hidden">
+                <li>
+                  <a href="holidaynotice.html">Holiday Notice</a>
+                </li>
+              </ul>
             </li>
             <li>
               <a href="index.html"
@@ -158,7 +175,7 @@
           </div>
 
           <div class="container">
-            <h2>Skeletal Force</h2>
+            <h2>Saturday Schedule</h2>
             <div class="card card-1">
               <div class="">
                 <a
@@ -166,7 +183,7 @@
                   id="btnFileUpload"
                   onclick="openModal(`#btnModal1`)"
                 >
-                  Add Skeletal
+                  Schedule Employee
                 </a>
               </div>
               <div class="search-main-container">
@@ -259,27 +276,27 @@
                 </div>
               </div>
 
-              <!--Skeletal Force -->
+              <!-- Saturday Schedule Force -->
               <table class="tableLayout">
                 <tbody>
                   <tr>
-                    <td class="column1">Employee Id</td>
-                    <td class="column2">Employee Name</td>
-                    <td class="column3">Employment Status</td>
-                    <td class="column4">Time</td>
+                    <td class="column1">Employee Name</td>
+                    <td class="column2">Date</td>
+                    <td class="column3">Start Time</td>
+                    <td class="column4">End Time</td>
                   </tr>
                   <tr>
                     <td class="column1">
-                      0000-0000
-                    </td>
-                    <td class="column2">
                       John Doe
                     </td>
+                    <td class="column2">
+                      03/28/2020
+                    </td>
                     <td class="column3">
-                      Regular
+                      09:00AM
                     </td>
                     <td class="column4">
-                      09:00AM - 10:00PM
+                      10:00PM
                     </td>
                   </tr>
                 </tbody>
@@ -312,11 +329,11 @@
           <!-- btnSkeletalForce -->
           <div class="modal modal-file-upload">
             <div class="modal-content">
-              <h5>Add Skeletal Form</h5>
+              <h5>Saturday Schedule Form</h5>
               <hr />
               <div class="">
                 <label class="label-6">Employee </label>
-                <ul class="tableLayout-sm">
+                <ul class="LI-Layout-sm">
                   <li>
                     <input name="chkEmp01" id="chkEmp01" type="checkbox" />John
                     Doe
@@ -370,7 +387,7 @@
               </div>
               <div class="modal-btn-container">
                 <a class="btn-sm btn-primary mx-3" id="btnSubmitAddHoliday"
-                  >Add Employee</a
+                  >Schedule Employee</a
                 >
                 <a
                   class="btn-sm btn-secondary mx-3"

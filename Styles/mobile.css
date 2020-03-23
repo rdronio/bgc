@@ -22,6 +22,7 @@
   h2 {
     font-size: 1.25rem;
     padding-left: 0.5rem;
+    padding-top: 0.5rem;
   }
   h3 {
     font-size: 1rem;
@@ -377,8 +378,12 @@
   }
 
   .card {
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
     padding: 1rem 1rem;
+  }
+
+  .card-db {
+    border-radius: 0;
   }
 
   /* ========[ Table ]======== */
@@ -507,6 +512,9 @@
   }
 
   /* ========[ Admin Dashboard ]======== */
+  #admin-dashboard .container > div > div .card-1:not(:first-child) {
+    margin: 0.5rem 0 0 0 !important;
+  }
   #admin-dashboard .container > div {
     flex-direction: column;
   }
@@ -3414,6 +3422,48 @@
     tr
     td:nth-child(6):before {
     content: "Tardiness (min/s)";
+  }
+
+  /* ========[ Skeletal Force ]======== */
+  #skeletal-force .container .card-1 > div:nth-child(1) {
+    margin-bottom: 2rem;
+  }
+
+  #skeletal-force
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(1):before {
+    content: "Employee Name";
+  }
+  #skeletal-force
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(2):before {
+    content: "Date";
+  }
+  #skeletal-force
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(3):before {
+    content: "Start Time";
+  }
+  #skeletal-force
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(4):before {
+    content: "End Time";
   }
 
   /* ========[ File Cabinet ]======== */

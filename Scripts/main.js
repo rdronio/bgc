@@ -508,6 +508,55 @@ function generatePayPeriod(
   }
 }
 
+function generatePayPeriodBgc(
+  drpDownPayFreqID,
+  startDatePickerID,
+  endDatePickerID,
+  formID
+) {
+  try {
+    let payFreq = document.querySelector(drpDownPayFreqID).value;
+    let startDatePickerValue = document.querySelector(startDatePickerID).value;
+    let startDatePicker = document.querySelector(startDatePickerID);
+    let endDatePicker = document.querySelector(endDatePickerID);
+
+    let selectedDate = new Date(startDatePickerValue);
+    let endDate = new Date(startDatePickerValue);
+
+    let date = new Date(),
+      y = date.getFullYear(),
+      m = date.getMonth();
+    let fifteen = new Date(y, m, 15);
+    let thirty = new Date(y, m, 30);
+    let ten = new Date(y, m, 10);
+    let twentysix = new Date(y, m, 26);
+
+    if (payFreq != "") {
+      startDatePicker.classList.add("disabled");
+      endDatePicker.classList.add("disabled");
+
+      if (payFreq === "twoWeeksAdmin") {
+        $(startDatePicker).datepicker("setDate", fifteen);
+        $(startDatePicker).datepicker("setDate", fifteen);
+        $(endDatePicker).datepicker("setDate", thirty);
+      } else if (payFreq === "twoWeeksOthers") {
+        $(startDatePicker).datepicker("setDate", ten);
+        $(startDatePicker).datepicker("setDate", ten);
+        $(endDatePicker).datepicker("setDate", twentysix);
+      } else if (payFreq === "custom") {
+        startDatePicker.classList.remove("disabled");
+        endDatePicker.classList.remove("disabled");
+        endDate.setDate(selectedDate.getDate());
+        $(endDatePicker).datepicker("option", "minDate", selectedDate);
+      } else {
+        reset(formID);
+      }
+    }
+  } catch (e) {
+    console.log(e);
+  }
+}
+
 function hidePayslipInfo() {
   try {
     const drpEmployee = document.querySelector("#drpDownEmployee");

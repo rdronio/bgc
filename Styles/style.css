@@ -689,7 +689,7 @@ iframe {
 
 .card {
   background: #ffffff;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   margin: 2rem 0;
   padding: 2rem 4rem;
@@ -697,7 +697,7 @@ iframe {
 
 .card-db {
   background: #ffffff;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   margin: 0.5rem 0;
   padding: 1rem 1.5rem;
@@ -1561,6 +1561,10 @@ iframe {
   padding: 0 1rem;
 }
 
+.pt-0 {
+  padding-top: 0 !important;
+}
+
 .my-1 {
   margin: 3rem 0;
 }
@@ -2070,9 +2074,9 @@ table.tableLayoutRec td {
   cursor: pointer;
 }
 
-/* ======[ tableLayoutHoliday ] ======= */
+/* ======[ LI-Layout ] ======= */
 
-.tableLayout-sm {
+.LI-Layout {
   border-spacing: 1;
   border-collapse: collapse;
   border-radius: 5px;
@@ -2085,24 +2089,23 @@ table.tableLayoutRec td {
   /* white-space: nowrap; */
 
   border: 1px solid #aaa;
+  height: 150px;
+  width: 100%;
 }
 
-.tableLayout-sm::-webkit-scrollbar {
+.LI-Layout::-webkit-scrollbar {
   background: #e0e0e0 !important;
   width: 3px !important;
   height: 3px !important ;
   padding: 0 2px;
 }
 
-.tableLayout-sm::-webkit-scrollbar-thumb {
+.LI-Layout::-webkit-scrollbar-thumb {
   background: #333 !important;
   border-radius: 3px 3px !important;
 }
 
-.tableLayout-sm * {
-  position: relative;
-}
-.tableLayout-sm li {
+.LI-Layout li {
   border: none;
 
   text-align: left;
@@ -2115,7 +2118,56 @@ table.tableLayoutRec td {
   /* pointer-events: none !important; */
   /* margin: 0.25rem 0 0.25rem 0.25rem; */
 }
-.tableLayout-sm input {
+.LI-Layout input {
+  margin-right: 5px !important;
+  cursor: default !important;
+}
+
+/* ======[ LI-Layout-sm ] ======= */
+
+.LI-Layout-sm {
+  border-spacing: 1;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+  position: relative;
+
+  display: block;
+  overflow-y: auto;
+  /* white-space: nowrap; */
+
+  border: 1px solid #aaa;
+  height: 150px;
+  width: 250px;
+}
+
+.LI-Layout-sm::-webkit-scrollbar {
+  background: #e0e0e0 !important;
+  width: 3px !important;
+  height: 3px !important ;
+  padding: 0 2px;
+}
+
+.LI-Layout-sm::-webkit-scrollbar-thumb {
+  background: #333 !important;
+  border-radius: 3px 3px !important;
+}
+
+.LI-Layout-sm li {
+  border: none;
+
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.7rem !important;
+  color: #333 !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+  cursor: default !important;
+  /* pointer-events: none !important; */
+  /* margin: 0.25rem 0 0.25rem 0.25rem; */
+}
+.LI-Layout-sm input {
   margin-right: 5px !important;
   cursor: default !important;
 }
@@ -2364,7 +2416,7 @@ nav ul li a span.fa {
 #admin-dashboard .container > div {
   display: flex;
   flex-direction: column;
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
 }
 /* #admin-dashboard .container > div > div{
   display: flex ;
@@ -4311,10 +4363,10 @@ nav ul li a span.fa {
 }
 
 #payroll .modal-content {
-  width: 55%;
+  width: 35%;
 }
 
-#payroll .modal-create-payroll .modal-content .label-6,
+/* #payroll .modal-create-payroll .modal-content .label-6,
 #payroll .modal-mass-payroll .modal-content .label-6 {
   padding: 0.4rem 0 0.4rem 0;
   font-weight: 600;
@@ -4497,6 +4549,7 @@ nav ul li a span.fa {
 #payroll .modal-mass-payroll .tableLayout .column5 {
   width: 18%;
 }
+*/
 
 /* view payslip */
 #payroll .modal-view-payslip .modal-content p {
