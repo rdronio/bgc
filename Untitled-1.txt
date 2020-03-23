@@ -5,20 +5,21 @@
  
  *mobile.css [Employee Leave Records, holiday notice, overtime records, subsitution, undertime, timerecords]
    -updated table head to match with the desktop view table head.
- 
+   -added margin on heading  
+
+ *all pages
+  -updated navigation
+
  *Admin Dashboard
    -fix the search box once press (Enter), (using localStorage) via vanilla js not jquery.
       [merge to mau to see if the new approach will work at the back]
  
 
-
-
-
  For Systemoph website redesign
 
   *Landing page 
    -mockup (done 3/18/2020)
-   -dev (in progress 50%)
+   -dev (in progress 75%)
 
   *Services
    -mockup (backlog)
