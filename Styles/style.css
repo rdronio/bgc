@@ -703,6 +703,12 @@ iframe {
   padding: 1rem 1.5rem;
 }
 
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  /* font-size: 0.9rem; */
+}
+
 .card-sm {
   height: 200px;
 }
@@ -2514,6 +2520,11 @@ nav ul li a span.fa {
 .card-2 table.tableLayoutDB {
   overflow-x: auto;
   white-space: nowrap;
+}
+
+.card-2:nth-child(2) table.tableLayoutDB {
+  top: 7px;
+  height: 179px;
 }
 
 /* ========[ Time Records ]======== */

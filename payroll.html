@@ -884,6 +884,29 @@
               <h5>Mass Generate Payroll</h5>
               <hr />
               <div>
+                <label class="label-6 block">Employee</label>
+                <!-- <label class="norecords">No Records Found</label> -->
+                <ul class="LI-Layout">
+                  <li>
+                    <input name="chkEmp01" id="chkEmp01" type="checkbox" />
+                    John Doe
+                  </li>
+                  <li>
+                    <input name="chkEmp01" id="chkEmp01" type="checkbox" />
+                    John Doe
+                  </li>
+                  <li>
+                    <input name="chkEmp01" id="chkEmp01" type="checkbox" />
+                    John Doe
+                  </li>
+                  <li>
+                    <input name="chkEmp01" id="chkEmp01" type="checkbox" />
+                    John Doe
+                  </li>
+                </ul>
+              </div>
+
+              <div>
                 <label class="label-6 block">Pay Frequency</label>
                 <select
                   name="drpDownPayFreqModal2"
@@ -896,20 +919,6 @@
                   <option value="twoWeeksOthers">Every 2 weeks (Others)</option>
                   <option value="custom">Custom</option>
                 </select>
-              </div>
-
-              <div>
-                <!-- <label for="selectEmpType" class="label-6 block">Employee Type</label>
-                <select
-                  name="selectEmpType"
-                  id="selectEmpType"
-                  class="select block"
-                  onchange=""
-                >
-                  <option value="">--Please choose an option--</option>
-                  <option value="admin">Admin</option>
-                  <option value="others">Others</option>
-                </select> -->
               </div>
 
               <div>
@@ -934,7 +943,7 @@
                 />
               </div>
 
-              <div class="modal-btn-container">
+              <!-- <div class="modal-btn-container hidden">
                 <a class="btn-sm btn-green mx-3" id="btnComputeModal"
                   >Compute</a
                 >
@@ -944,7 +953,7 @@
                   onclick="reset(`payroll`)"
                   >Clear</a
                 >
-              </div>
+              </div> -->
 
               <div class="hidden">
                 <label for="searchEmployee" class="label-6 block"
@@ -952,26 +961,6 @@
                 >
                 <input type="" value="" id="searchEmployee" />
               </div>
-
-              <!-- <label class="norecords">No Records Found</label> -->
-              <ul class="LI-Layout">
-                <li>
-                  <input name="chkEmp01" id="chkEmp01" type="checkbox" />
-                  John Doe
-                </li>
-                <li>
-                  <input name="chkEmp01" id="chkEmp01" type="checkbox" />
-                  John Doe
-                </li>
-                <li>
-                  <input name="chkEmp01" id="chkEmp01" type="checkbox" />
-                  John Doe
-                </li>
-                <li>
-                  <input name="chkEmp01" id="chkEmp01" type="checkbox" />
-                  John Doe
-                </li>
-              </ul>
 
               <div class="modal-btn-container">
                 <a class="btn-sm btn-primary mx-3" id="btnCreatePayrollModal">

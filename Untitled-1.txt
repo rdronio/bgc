@@ -3,16 +3,12 @@
 
  For HRIS [Front End] 
  
- *Saturday Schedule (Skeletal Force)
-   -updated table columns for both desktop & mobile view.
-   -updated modal list of employees design from table to ul li
-
  *Admin Dashboard
-   -updated Saturday Schedule card content
-   -updated mobile cards spacing
-
+   -added reminder icons for every cards except from the list of regular employees. This aims to help the users to identify reminders from others.
+   -removed search on saturday schedule.
+    
   *Payroll
-   - 
+   -moved list of employees to top from the Mass Generate Payroll modal.
 
  
 
@@ -20,7 +16,7 @@
 
   *Landing page 
    -mockup (done 3/18/2020)
-   -dev (in progress 75%)
+   -dev (in progress 80%)
 
   *Services
    -mockup (backlog)
