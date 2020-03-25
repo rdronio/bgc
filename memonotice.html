@@ -363,6 +363,7 @@
               <hr />
               <div>
                 <div>
+                  <!-- To -->
                   <div>
                     <label class="label-6 block">To</label>
                     <div>
@@ -395,7 +396,7 @@
                           data-tooltip="Show search options"
                           aria-label="Advanced search options"
                           class="showSearchRecOptions"
-                          onclick="toggleSearchRecFilter();"
+                          onclick="toggleSearchRecFilter(`#btnAddTo`);"
                         >
                           +
                         </a>
@@ -491,7 +492,13 @@
                         </div>
 
                         <div class="modal-btn-container">
-                          <a class="btn-sm btn-green mx-3" id="btnComputeModal"
+                          <a id="btnAddTo" class="btn-sm btn-green mx-3"
+                            >Add Recipient/s</a
+                          >
+                          <a id="btnAddCc" class="btn-sm btn-green mx-3"
+                            >Add Recipient/s</a
+                          >
+                          <a id="btnAddBcc" class="btn-sm btn-green mx-3"
                             >Add Recipient/s</a
                           >
                           <a
@@ -505,6 +512,7 @@
                     </div>
                   </div>
 
+                  <!-- Cc -->
                   <div>
                     <label class="label-6 block">Cc</label>
                     <div>
@@ -537,7 +545,7 @@
                           data-tooltip="Show search options"
                           aria-label="Advanced search options"
                           class="showSearchRecOptions"
-                          onclick="toggleSearchRecFilter();"
+                          onclick="toggleSearchRecFilter(`#btnAddCc`);"
                         >
                           +
                         </a>
@@ -545,6 +553,7 @@
                     </div>
                   </div>
 
+                  <!-- Bcc -->
                   <div>
                     <label class="label-6 block">Bcc</label>
                     <div>
@@ -577,112 +586,10 @@
                           data-tooltip="Show search options"
                           aria-label="Advanced search options"
                           class="showSearchRecOptions"
-                          onclick="toggleSearchRecFilter();"
+                          onclick="toggleSearchRecFilter(`#btnAddBcc`);"
                         >
                           +
                         </a>
-                      </div>
-                      <div class="searchRec-filter-container hidden">
-                        <div>
-                          <label for="drpDepartment" class="label-6 block"
-                            >Department</label
-                          >
-                          <select
-                            name="drpDepartment"
-                            id="drpDepartment"
-                            class="select"
-                          >
-                            <option value=""></option>
-                          </select>
-                        </div>
-
-                        <div>
-                          <label class="label-6">Employee </label>
-                          <ul class="LI-Layout-sm">
-                            <li>
-                              <input
-                                name="chkEmp01"
-                                id="chkEmp01"
-                                type="checkbox"
-                              />John Doe
-                            </li>
-                            <li>
-                              <input
-                                name="chkEmp01"
-                                id="chkEmp01"
-                                type="checkbox"
-                              />John Doe
-                            </li>
-                            <li>
-                              <input
-                                name="chkEmp01"
-                                id="chkEmp01"
-                                type="checkbox"
-                              />John Doe
-                            </li>
-                            <li>
-                              <input
-                                name="chkEmp01"
-                                id="chkEmp01"
-                                type="checkbox"
-                              />John Doe
-                            </li>
-                            <li>
-                              <input
-                                name="chkEmp01"
-                                id="chkEmp01"
-                                type="checkbox"
-                              />John Doe
-                            </li>
-                            <li>
-                              <input
-                                name="chkEmp01"
-                                id="chkEmp01"
-                                type="checkbox"
-                              />John Doe
-                            </li>
-                            <li>
-                              <input
-                                name="chkEmp01"
-                                id="chkEmp01"
-                                type="checkbox"
-                              />John Doe
-                            </li>
-                            <li>
-                              <input
-                                name="chkEmp01"
-                                id="chkEmp01"
-                                type="checkbox"
-                              />John Doe
-                            </li>
-                            <li>
-                              <input
-                                name="chkEmp01"
-                                id="chkEmp01"
-                                type="checkbox"
-                              />John Doe
-                            </li>
-                            <li>
-                              <input
-                                name="chkEmp01"
-                                id="chkEmp01"
-                                type="checkbox"
-                              />John Doe
-                            </li>
-                          </ul>
-                        </div>
-
-                        <div class="modal-btn-container">
-                          <a class="btn-sm btn-green mx-3" id="btnComputeModal"
-                            >Add Recipient/s</a
-                          >
-                          <a
-                            class="btn-sm btn-secondary mx-3"
-                            id="btnClearModal2"
-                            onclick="reset(`memonotice`)"
-                            >Clear</a
-                          >
-                        </div>
                       </div>
                     </div>
                   </div>

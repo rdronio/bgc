@@ -1935,15 +1935,33 @@ function toggleSearchFilter2() {
   }
 }
 
-function toggleSearchRecFilter() {
+function toggleSearchRecFilter(btnID) {
   try {
     const container = document.querySelector(".searchRec-filter-container");
     const showSearchRecOptions = document.querySelector(
       ".showSearchRecOptions"
     );
+    const btnAddTo = document.querySelector("#btnAddTo");
+    const btnAddCc = document.querySelector("#btnAddCc");
+    const btnAddBcc = document.querySelector("#btnAddBcc");
 
     container.classList.toggle("hidden");
     showSearchRecOptions.classList.toggle("rotate");
+
+    if (btnID === "#btnAddTo") {
+      console.log(btnAddTo);
+      btnAddTo.classList.remove("hidden");
+      btnAddCc.classList.add("hidden");
+      btnAddBcc.classList.add("hidden");
+    } else if (btnID === "#btnAddCc") {
+      btnAddTo.classList.add("hidden");
+      btnAddCc.classList.remove("hidden");
+      btnAddBcc.classList.add("hidden");
+    } else if (btnID === "#btnAddBcc") {
+      btnAddTo.classList.add("hidden");
+      btnAddCc.classList.add("hidden");
+      btnAddBcc.classList.remove("hidden");
+    }
   } catch (e) {
     console.log(e);
   }
