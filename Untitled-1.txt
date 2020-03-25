@@ -1,22 +1,25 @@
- This is JM and Roy Status Update [03/20/2020]
+ This is JM and Roy Status Update [03/21/2020]
  
 
  For HRIS [Front End] 
  
- *Admin Dashboard
-   -added reminder icons for every cards except from the list of regular employees. This aims to help the users to identify reminders from others.
-   -removed search on saturday schedule.
-    
-  *Payroll
-   -moved list of employees to top from the Mass Generate Payroll modal.
+  *Nav 
+    -applied the logo of bgc
 
- 
+
+
+ For Payroll [Front End] 
+  
+  *Nav
+    -applied the logo of bgc
+
+
 
  For Systemoph website redesign
 
   *Landing page 
    -mockup (done 3/18/2020)
-   -dev (in progress 80%)
+   -dev (in progress) 
 
   *Services
    -mockup (backlog)

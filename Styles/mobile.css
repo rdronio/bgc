@@ -42,6 +42,10 @@
     margin-right: 0 !important;
   }
 
+  input[type="checkbox"] {
+    width: unset !important;
+  }
+
   .select {
     width: 100% !important;
     margin-right: 0 !important;
@@ -378,8 +382,9 @@
   }
 
   .card {
-    /* margin: 1rem 0; */
+    margin: 1rem 0 !important;
     padding: 1rem 1rem;
+    border-radius: 0px;
   }
 
   .card-db {
@@ -2704,7 +2709,7 @@
 
   #memonotice .modal-content > div:first-of-type > div:first-of-type input,
   #memonotice .modal-content > div:first-of-type > div:first-of-type textarea {
-    width: 100% !important;
+    width: 100%;
   }
 
   #memonotice .modal-content > div:first-of-type > div:nth-of-type(2) select {
@@ -2761,6 +2766,10 @@
     width: 100%;
   } */
 
+  .modal-payrollmemo .modal-content .searchRec-filter-container {
+    left: 5vh;
+    top: 15vh;
+  }
   .modal-payrollmemo
     .modal-content
     .tableLayout
@@ -3642,8 +3651,9 @@
   }
 
   .card {
-    margin: 1rem 0;
+    margin: 1rem 0 !important;
     padding: 1rem 1.5rem;
+    border-radius: 0px;
   }
 
   /* ========[ Payslip Template ]======== */

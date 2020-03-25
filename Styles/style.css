@@ -700,7 +700,7 @@ iframe {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   margin: 0.5rem 0;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1rem;
 }
 
 .card-header {
@@ -883,6 +883,10 @@ iframe {
   text-align: center;
   color: #333 !important;
   padding: 0.7rem 0;
+}
+
+.logo .logo-link img {
+  width: 80%;
 }
 
 .menu-btn {
@@ -1391,8 +1395,7 @@ iframe {
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
 
-  max-width: 500px;
-  min-width: 334px;
+  max-width: 300px;
   position: absolute;
   width: 100%;
   z-index: 2;
@@ -4314,6 +4317,24 @@ nav ul li a span.fa {
   height: 27px;
   align-self: center;
 }
+
+.modal-payrollmemo
+  .modal-content
+  .searchRec-filter-container
+  .modal-btn-container {
+  margin: 0.75rem 0 !important;
+}
+.modal-payrollmemo
+  .modal-content
+  .searchRec-filter-container
+  .modal-btn-container
+  a {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+
 /* ========[ Payroll]======== */
 #payroll .container .card-1 > div:first-child {
   position: relative;
