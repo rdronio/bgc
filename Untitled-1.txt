@@ -6,12 +6,19 @@
   *Nav 
     -applied the logo of bgc
 
+  *Bulk Email
+    -Updated selection of recipients. (Selection of employee design adapted from sat. schedule)
+    -Updated selection of recipients. (Selection of employee design adapted from sat. schedule)
+
 
 
  For Payroll [Front End] 
   
   *Nav
     -applied the logo of bgc
+
+  *Payroll
+   -updated
 
 
 

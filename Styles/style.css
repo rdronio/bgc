@@ -1350,9 +1350,8 @@ iframe {
   align-self: center;
   justify-content: center;
 
-  height: 1.75rem;
-  width: 1.75rem;
-
+  padding: 1px 6px;
+  /* be back */
   /* padding: 0 0.2rem; */
   background: #333333;
 }
@@ -2027,10 +2026,12 @@ table.tableLayout-md tbody tr > td {
 
 /*======[ Table Layout Memo Recipient ]========*/
 
-table.tableLayoutRec {
-  border-spacing: 1;
+.tableLayoutRec {
+  display: flex;
+  align-items: center;
+
+  /* border-spacing: 1;
   border-collapse: collapse;
-  border-radius: 5px;
   overflow: hidden;
   position: relative;
   display: block;
@@ -2038,49 +2039,46 @@ table.tableLayoutRec {
   width: auto;
   margin-top: 2px;
   margin-right: 5px;
-}
-
-table.tableLayoutRec tbody tr {
-  font-size: 0.7rem;
   color: #333;
   line-height: 1.2;
   font-weight: unset;
-  border: 1px solid #eee;
   border-radius: 10px !important;
   height: 2.5rem;
-  margin: 1rem 0;
+  margin: 1rem 0; */
 }
 
-table.tableLayoutRec .column1 {
-  width: 6rem;
+.tableLayoutRec li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 5px;
+  font-size: 0.7rem;
+  border: 1px solid #eee;
+  padding: 0.4rem 0.8rem;
+  cursor: default;
+  margin-right: 5px;
 }
 
-table.tableLayoutRec .column2 {
-  width: 2rem !important;
+.tableLayoutRec .column1 {
+  /* width: 6rem; */
 }
 
-table.tableLayoutRec td {
-  border: none;
-  text-align: center;
+.tableLayoutRec .column2 {
+  /* width: 2rem !important; */
 }
 
 .btn-tableRec:first-child {
-  margin-right: 0.25rem;
+  margin-left: 0.6rem;
 }
-
+/*
 .btn-secondaryRec {
   color: rgb(51, 51, 51);
 }
-
+*/
 .btn-tableRec {
-  font-family: inherit;
-  font-size: 0.7rem;
-  font-weight: 500;
-  padding: 0.4rem 0rem;
-  letter-spacing: 1px;
-  border-radius: 100px;
-  text-align: center;
   cursor: pointer;
+  margin-top: 3px;
 }
 
 /* ======[ LI-Layout ] ======= */
@@ -4333,7 +4331,6 @@ nav ul li a span.fa {
   margin-bottom: 0.5rem;
   width: 100%;
 }
-
 
 /* ========[ Payroll]======== */
 #payroll .container .card-1 > div:first-child {
