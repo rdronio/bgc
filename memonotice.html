@@ -542,114 +542,6 @@
                           +
                         </a>
                       </div>
-                      <div class="searchRec-filter-container hidden">
-                        <div>
-                          <label class="label-6 block">Recipient</label>
-                          <div class="modal-rd-container">
-                            <label
-                              for="optAll"
-                              class="radio"
-                              onclick="toggleEmployeeSelection()"
-                            >
-                              <input
-                                type="radio"
-                                name="employeeSelection"
-                                id="optAll"
-                                value="All"
-                                class="hidden"
-                              />
-                              <span class="label"></span>By Group
-                            </label>
-
-                            <label
-                              for="optCustom"
-                              class="radio"
-                              onclick="toggleEmployeeSelection()"
-                            >
-                              <input
-                                type="radio"
-                                name="employeeSelection"
-                                id="optCustom"
-                                class="hidden"
-                                value="Custom"
-                              />
-                              <span class="label"></span>Custom
-                            </label>
-                          </div>
-                        </div>
-
-                        <div class="div1 hidden">
-                          <label
-                            for="selectDepartmentModal"
-                            class="label-6 block"
-                            >Select Department</label
-                          >
-                          <select
-                            name="selectDepartmentModal"
-                            id="selectDepartmentModal"
-                            class="select"
-                          >
-                            <option value="all">All</option>
-                            <option value="all">IT Department</option>
-                            <option value="all">Marketing Department</option>
-                            <option value="all">Sales Department</option>
-                            <option value="all">HR Department</option>
-                          </select>
-                        </div>
-
-                        <div class="div2 hidden">
-                          <label for="showEmployeeByModal" class="label-6 block"
-                            >Show Employee by</label
-                          >
-                          <select
-                            name="showEmployeeByModal"
-                            id="showEmployeeByModal"
-                            class="select"
-                            onchange="getEmployeeByModal()"
-                          >
-                            <option value=""
-                              >--Please choose an option--</option
-                            >
-                            <option value="department">Department</option>
-                            <option value="position">Position</option>
-                          </select>
-                          <select
-                            name="showEmployeeByCategoryModal"
-                            id="showEmployeeByCategoryModal"
-                            class="select"
-                          >
-                          </select>
-                        </div>
-
-                        <div class="div3 hidden">
-                          <label
-                            for="drpDownEmployeeModal"
-                            class="label-6 block"
-                            >Employee</label
-                          >
-                          <input
-                            type="text"
-                            list="drpDownEmployeeModal"
-                            class="select block"
-                          />
-                          <datalist id="drpDownEmployeeModal">
-                            <option>John Doe</option>
-                            <option>John Michael</option>
-                          </datalist>
-                        </div>
-
-                        <div class="modal-btn-container">
-                          <a class="btn-sm btn-green mx-3" id="btnComputeModal"
-                            >Add Recipient/s</a
-                          >
-                          <a
-                            class="btn-sm btn-secondary mx-3"
-                            id="btnClearModal2"
-                            onclick="reset(`memonotice`)"
-                            >Clear</a
-                          >
-                        </div>
-                      </div>
                     </div>
                   </div>
 
@@ -692,98 +584,92 @@
                       </div>
                       <div class="searchRec-filter-container hidden">
                         <div>
-                          <label class="label-6 block">Recipient</label>
-                          <div class="modal-rd-container">
-                            <label
-                              for="optAll"
-                              class="radio"
-                              onclick="toggleEmployeeSelection()"
-                            >
+                          <label for="drpDepartment" class="label-6 block"
+                            >Department</label
+                          >
+                          <select
+                            name="drpDepartment"
+                            id="drpDepartment"
+                            class="select"
+                          >
+                            <option value=""></option>
+                          </select>
+                        </div>
+
+                        <div>
+                          <label class="label-6">Employee </label>
+                          <ul class="LI-Layout-sm">
+                            <li>
                               <input
-                                type="radio"
-                                name="employeeSelection"
-                                id="optAll"
-                                value="All"
-                                class="hidden"
-                              />
-                              <span class="label"></span>By Group
-                            </label>
-
-                            <label
-                              for="optCustom"
-                              class="radio"
-                              onclick="toggleEmployeeSelection()"
-                            >
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
                               <input
-                                type="radio"
-                                name="employeeSelection"
-                                id="optCustom"
-                                class="hidden"
-                                value="Custom"
-                              />
-                              <span class="label"></span>Custom
-                            </label>
-                          </div>
-                        </div>
-
-                        <div class="div1 hidden">
-                          <label
-                            for="selectDepartmentModal"
-                            class="label-6 block"
-                            >Select Department</label
-                          >
-                          <select
-                            name="selectDepartmentModal"
-                            id="selectDepartmentModal"
-                            class="select"
-                          >
-                            <option value="all">All</option>
-                            <option value="all">IT Department</option>
-                            <option value="all">Marketing Department</option>
-                            <option value="all">Sales Department</option>
-                            <option value="all">HR Department</option>
-                          </select>
-                        </div>
-
-                        <div class="div2 hidden">
-                          <label for="showEmployeeByModal" class="label-6 block"
-                            >Show Employee by</label
-                          >
-                          <select
-                            name="showEmployeeByModal"
-                            id="showEmployeeByModal"
-                            class="select"
-                            onchange="getEmployeeByModal()"
-                          >
-                            <option value=""
-                              >--Please choose an option--</option
-                            >
-                            <option value="department">Department</option>
-                            <option value="position">Position</option>
-                          </select>
-                          <select
-                            name="showEmployeeByCategoryModal"
-                            id="showEmployeeByCategoryModal"
-                            class="select"
-                          >
-                          </select>
-                        </div>
-
-                        <div class="div3 hidden">
-                          <label
-                            for="drpDownEmployeeModal"
-                            class="label-6 block"
-                            >Employee</label
-                          >
-                          <input
-                            type="text"
-                            list="drpDownEmployeeModal"
-                            class="select block"
-                          />
-                          <datalist id="drpDownEmployeeModal">
-                            <option>John Doe</option>
-                            <option>John Michael</option>
-                          </datalist>
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                          </ul>
                         </div>
 
                         <div class="modal-btn-container">
@@ -852,7 +738,7 @@
                 <div>
                   <div>
                     <label class="label-6 block">Subject</label>
-                    <p>Lorem ipsum dolor</p>
+                    <p>Lorem ipsum dolor1</p>
                   </div>
 
                   <div>
@@ -877,38 +763,7 @@
                     <label class="label-6 block">Recipient</label>
                     <p>All</p>
                   </div>
-
-                  <div class="selectDepartmentModal hidden">
-                    <p>Department</p>
-                  </div>
-
-                  <div class="showEmployeeByModal hidden">
-                    <label for="showEmployeeByModal" class="label-6 block"
-                      >Show Employee by</label
-                    >
-                    <p>Department</p>
-                    <p>Position</p>
-                  </div>
                 </div>
-              </div>
-
-              <div class="modal-btn-container hidden">
-                <a class="btn-sm btn-green mx-3" id="btnComputeModal"
-                  >Add Recipient/s</a
-                >
-                <a
-                  class="btn-sm btn-secondary mx-3"
-                  id="btnClearModal2"
-                  onclick="reset(`memonotice`)"
-                  >Clear</a
-                >
-              </div>
-
-              <div class="hidden">
-                <label for="searchEmployeeModal" class="label-6 block"
-                  >Search Employee ID/Name</label
-                >
-                <input type="" value="" id="searchEmployeeModal" />
               </div>
 
               <table class="tableLayout">
