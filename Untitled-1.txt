@@ -7,8 +7,8 @@
     -applied the logo of bgc
 
   *Bulk Email
-    -Updated selection of recipients. (Selection of employee design adapted from sat. schedule)
-    -Updated selection of recipients. (Selection of employee design adapted from sat. schedule)
+    -Updated compose table tag to list tag. 
+    -Updated selection of recipients sub-modal. (Selection of employee design adapted from sat. schedule)
 
 
 

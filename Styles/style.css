@@ -2230,6 +2230,10 @@ table.tableLayout-md tbody tr > td {
   top: 1.5rem;
 }
 
+#login .left-container .logo .logo-link img {
+  width: 80px;
+}
+
 #login .left-container h2 {
   font-weight: bold;
   margin-bottom: 1rem;
