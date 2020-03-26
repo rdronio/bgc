@@ -938,12 +938,15 @@
                   type="text"
                   id="txtDateToModal2"
                   class="endDatePicker disabled"
-                  onchange="generatePayPeriodBgc(`#drpDownPayFreqModal2`,`#txtDateFromModal2`,`#txtDateToModal2`,`payroll`);"
                 />
               </div>
 
               <div class="modal-btn-container">
-                <a class="btn-sm btn-primary mx-3" id="btnCreatePayrollModal">
+                <a
+                  class="btn-sm btn-primary mx-3"
+                  id="btnGeneratePayroll"
+                  onclick="openModalPayrollList()"
+                >
                   Generate
                 </a>
                 <a
@@ -956,80 +959,98 @@
             </div>
           </div>
 
-          <!-- btnMassGeneratePayroll -->
-          <div class="modal modal-mass-payroll">
+          <!-- btnGenerate -->
+          <div class="modal modal-payroll-list">
             <div class="modal-content">
-              <h5>Mass Generate Payroll</h5>
+              <h5>Payroll</h5>
               <hr />
               <div>
-                <label class="label-6 block">Employee</label>
                 <!-- <label class="norecords">No Records Found</label> -->
-                <ul class="LI-Layout">
-                  <li>
-                    <input name="chkEmp01" id="chkEmp01" type="checkbox" />
-                    John Doe
-                  </li>
-                  <li>
-                    <input name="chkEmp01" id="chkEmp01" type="checkbox" />
-                    John Doe
-                  </li>
-                  <li>
-                    <input name="chkEmp01" id="chkEmp01" type="checkbox" />
-                    John Doe
-                  </li>
-                  <li>
-                    <input name="chkEmp01" id="chkEmp01" type="checkbox" />
-                    John Doe
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <label class="label-6 block">Pay Frequency</label>
-                <select
-                  name="drpDownPayFreqModal2"
-                  id="drpDownPayFreqModal2"
-                  class="select block drpDownPayFreq"
-                  onchange="generatePayPeriodBgc(`#drpDownPayFreqModal2`,`#txtDateFromModal2`,`#txtDateToModal2`,`payroll`);"
-                >
-                  <option value="">--Please choose an option--</option>
-                  <option value="twoWeeksAdmin">Every 2 weeks (Admin)</option>
-                  <option value="twoWeeksOthers">Every 2 weeks (Others)</option>
-                  <option value="custom">Custom</option>
-                </select>
-              </div>
-
-              <div>
-                <label class="label-6 block">Pay Period</label>
-                <label for="txtDateFromModal2" class="label-6 pt-0"
-                  >From:
-                </label>
-                <input
-                  name="txtDateFromModal2"
-                  type="text"
-                  id="txtDateFromModal2"
-                  class="startDatePicker disabled"
-                  onchange="generatePayPeriodBgc(`#drpDownPayFreqModal2`,`#txtDateFromModal2`,`#txtDateToModal2`,`payroll`);"
-                />
-                <label for="txtDateToModal2" class="label-6">To: </label>
-                <input
-                  name="txtDateToModal2"
-                  type="text"
-                  id="txtDateToModal2"
-                  class="endDatePicker disabled"
-                  onchange="generatePayPeriodBgc(`#drpDownPayFreqModal2`,`#txtDateFromModal2`,`#txtDateToModal2`,`payroll`);"
-                />
+                <table class="tableLayout">
+                  <tbody>
+                    <tr>
+                      <td class="column1">Employee Name</td>
+                      <td class="column2">Department</td>
+                      <td class="column3">Total Earnings</td>
+                      <td class="column4">Net Pay</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">
+                        John Doe
+                      </td>
+                      <td class="column2">IT Department</td>
+                      <td class="column3">15,000.00</td>
+                      <td class="column4">20,000.00</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">
+                        John Doe
+                      </td>
+                      <td class="column2">IT Department</td>
+                      <td class="column3">15,000.00</td>
+                      <td class="column4">20,000.00</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">
+                        John Doe
+                      </td>
+                      <td class="column2">IT Department</td>
+                      <td class="column3">15,000.00</td>
+                      <td class="column4">20,000.00</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">
+                        John Doe
+                      </td>
+                      <td class="column2">IT Department</td>
+                      <td class="column3">15,000.00</td>
+                      <td class="column4">20,000.00</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">
+                        John Doe
+                      </td>
+                      <td class="column2">IT Department</td>
+                      <td class="column3">15,000.00</td>
+                      <td class="column4">20,000.00</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">
+                        John Doe
+                      </td>
+                      <td class="column2">IT Department</td>
+                      <td class="column3">15,000.00</td>
+                      <td class="column4">20,000.00</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">
+                        John Doe
+                      </td>
+                      <td class="column2">IT Department</td>
+                      <td class="column3">15,000.00</td>
+                      <td class="column4">20,000.00</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">
+                        John Doe
+                      </td>
+                      <td class="column2">IT Department</td>
+                      <td class="column3">15,000.00</td>
+                      <td class="column4">20,000.00</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
 
               <div class="modal-btn-container">
-                <a class="btn-sm btn-primary mx-3" id="btnCreatePayrollModal">
-                  Generate
+                <a class="btn-sm btn-primary mx-3" id="">
+                  Create Payroll
                 </a>
                 <a
                   class="btn-sm btn-secondary mx-3"
-                  onclick="closeModal(`#btnCloseMassPayroll`);"
+                  onclick="closeModalPayrollList()"
                 >
-                  Cancel
+                  Back
                 </a>
               </div>
             </div>

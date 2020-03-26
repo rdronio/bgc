@@ -2702,6 +2702,19 @@
     margin: 0;
   }
 
+  #payroll .modal-payroll-list .tableLayout tbody tr td:nth-child(1):before {
+    content: "Employee name";
+  }
+  #payroll .modal-payroll-list .tableLayout tbody tr td:nth-child(2):before {
+    content: "Department";
+  }
+  #payroll .modal-payroll-list .tableLayout tbody tr td:nth-child(3):before {
+    content: "Total Earnings";
+  }
+  #payroll .modal-payroll-list .tableLayout tbody tr td:nth-child(4):before {
+    content: "Net Pay";
+  }
+
   /*============= Memo/Notice ============*/
   #memonotice .modal-content > div:first-of-type {
     flex-direction: column !important;

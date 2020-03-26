@@ -460,7 +460,24 @@ $(".startDatePicker").each(function() {
 
 $(".endDatePicker").each(function() {
   try {
-    $(this).datepicker({});
+    $(this).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      yearRange: "-10:+10",
+      onChangeMonthYear: function(year, month) {
+        var $datepicker = jQuery(this);
+        var date = new Date($datepicker.datepicker("getDate"));
+        var lastDayOfMonth = new Date(year, month, 0).getDate();
+        var preservedDay = Math.min(
+          lastDayOfMonth,
+          Math.max(1, date.getDate())
+        );
+        $datepicker.datepicker(
+          "setDate",
+          month + "/" + preservedDay + "/" + year
+        );
+      }
+    });
   } catch (e) {
     console.log(e);
   }
@@ -484,7 +501,6 @@ function generatePayPeriod(
     if (startDatePickerValue != "") {
       startDatePicker.classList.add("disabled");
       endDatePicker.classList.add("disabled");
-      alert("got pass    " + payFreq);
 
       if (payFreq === "twoWeeksAdmin") {
         startDatePicker.classList.remove("disabled");
@@ -497,8 +513,9 @@ function generatePayPeriod(
       } else if (payFreq === "custom") {
         startDatePicker.classList.remove("disabled");
         endDatePicker.classList.remove("disabled");
-        endDate.setDate(selectedDate.getDate());
-        $(endDatePicker).datepicker("option", "minDate", selectedDate);
+        // endDate.setDate(selectedDate.getDate());
+        // endDate.setDate(selectedDate.getDate());
+        // $(endDatePicker).datepicker("option", "minDate", selectedDate);
       } else {
         reset(formID);
       }
@@ -533,7 +550,7 @@ function generatePayPeriodBgc(
     let ten = new Date(y, m, 10);
     let eleven = new Date(y, m, 11);
     let twentysix = new Date(y, m, 26);
-    let gettwentyseven = new Date(y, m - 1, 27);
+    let twentyseven = new Date(y, m - 1, 27);
 
     if (payFreq != "") {
       startDatePicker.classList.add("disabled");
@@ -548,8 +565,8 @@ function generatePayPeriodBgc(
         $(startDatePicker).datepicker("setDate", sixteen);
         $(endDatePicker).datepicker("setDate", thirty);
       } else if (payFreq === "Others1") {
-        $(startDatePicker).datepicker("setDate", gettwentyseven);
-        $(startDatePicker).datepicker("setDate", gettwentyseven);
+        $(startDatePicker).datepicker("setDate", twentyseven);
+        $(startDatePicker).datepicker("setDate", twentyseven);
         $(endDatePicker).datepicker("setDate", ten);
       } else if (payFreq === "Others2") {
         $(startDatePicker).datepicker("setDate", eleven);
@@ -558,8 +575,9 @@ function generatePayPeriodBgc(
       } else if (payFreq === "custom") {
         startDatePicker.classList.remove("disabled");
         endDatePicker.classList.remove("disabled");
-        endDate.setDate(selectedDate.getDate());
-        $(endDatePicker).datepicker("option", "minDate", selectedDate);
+        // endDate.setDate(selectedDate.getDate());
+
+        // $(endDatePicker).datepicker("option", "minDate", selectedDate);
       } else {
         reset(formID);
       }
@@ -2052,6 +2070,27 @@ function loadSavedValue(txtID) {
 function resetSaveValue(id) {
   try {
     localStorage.removeItem(id);
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function openModalPayrollList() {
+  try {
+    const modal = document.querySelector(".modal-payroll-list");
+    const modal2 = document.querySelector(".modal-mass-payroll");
+    modal.style.display = "flex";
+    modal2.style.display = "none";
+  } catch (e) {
+    console.log(e);
+  }
+}
+function closeModalPayrollList() {
+  try {
+    const modal = document.querySelector(".modal-payroll-list");
+    const modal2 = document.querySelector(".modal-mass-payroll");
+    modal.style.display = "none";
+    modal2.style.display = "flex";
   } catch (e) {
     console.log(e);
   }

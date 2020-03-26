@@ -4143,7 +4143,7 @@ nav ul li a span.fa {
   flex: 1;
 }
 
-/* ========[ Payroll Memo ]======== */
+/* ========[  Memo/Notice ]======== */
 #memonotice .container .card-1 > div:first-child {
   position: relative;
   text-align: right;
@@ -4586,7 +4586,12 @@ nav ul li a span.fa {
 #payroll .modal-mass-payroll .tableLayout .column5 {
   width: 18%;
 }
-*/
+
+#payroll .modal-payroll-list .tableLayout {
+  display: block;
+  height: 358px;
+  overflow-y: auto;
+}
 
 /* view payslip */
 #payroll .modal-view-payslip .modal-content div div p {
