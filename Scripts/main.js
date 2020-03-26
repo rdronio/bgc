@@ -526,22 +526,34 @@ function generatePayPeriodBgc(
     let date = new Date(),
       y = date.getFullYear(),
       m = date.getMonth();
+    let first = new Date(y, m, 1);
     let fifteen = new Date(y, m, 15);
+    let sixteen = new Date(y, m, 16);
     let thirty = new Date(y, m, 30);
     let ten = new Date(y, m, 10);
+    let eleven = new Date(y, m, 11);
     let twentysix = new Date(y, m, 26);
+    let gettwentyseven = new Date(y, m - 1, 27);
 
     if (payFreq != "") {
       startDatePicker.classList.add("disabled");
       endDatePicker.classList.add("disabled");
 
-      if (payFreq === "twoWeeksAdmin") {
-        $(startDatePicker).datepicker("setDate", fifteen);
-        $(startDatePicker).datepicker("setDate", fifteen);
+      if (payFreq === "Admin1") {
+        $(startDatePicker).datepicker("setDate", first);
+        $(startDatePicker).datepicker("setDate", first);
+        $(endDatePicker).datepicker("setDate", fifteen);
+      } else if (payFreq === "Admin2") {
+        $(startDatePicker).datepicker("setDate", sixteen);
+        $(startDatePicker).datepicker("setDate", sixteen);
         $(endDatePicker).datepicker("setDate", thirty);
-      } else if (payFreq === "twoWeeksOthers") {
-        $(startDatePicker).datepicker("setDate", ten);
-        $(startDatePicker).datepicker("setDate", ten);
+      } else if (payFreq === "Others1") {
+        $(startDatePicker).datepicker("setDate", gettwentyseven);
+        $(startDatePicker).datepicker("setDate", gettwentyseven);
+        $(endDatePicker).datepicker("setDate", ten);
+      } else if (payFreq === "Others2") {
+        $(startDatePicker).datepicker("setDate", eleven);
+        $(startDatePicker).datepicker("setDate", eleven);
         $(endDatePicker).datepicker("setDate", twentysix);
       } else if (payFreq === "custom") {
         startDatePicker.classList.remove("disabled");
@@ -1949,7 +1961,6 @@ function toggleSearchRecFilter(btnID) {
     showSearchRecOptions.classList.toggle("rotate");
 
     if (btnID === "#btnAddTo") {
-      console.log(btnAddTo);
       btnAddTo.classList.remove("hidden");
       btnAddCc.classList.add("hidden");
       btnAddBcc.classList.add("hidden");

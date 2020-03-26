@@ -1,7 +1,7 @@
- This is JM and Roy Status Update [03/21/2020]
+ This is JM and Roy Status Update [03/25/2020]
  
 
- For HRIS [Front End] 
+ For HRIS & Payroll [Front End] 
  
   *Nav 
     -applied the logo of bgc
@@ -9,16 +9,9 @@
   *Bulk Email
     -Updated compose table tag to list tag. 
     -Updated selection of recipients sub-modal. (Selection of employee design adapted from sat. schedule)
+    -added function that will check which button to show in add recipient
 
 
-
- For Payroll [Front End] 
-  
-  *Nav
-    -applied the logo of bgc
-
-  *Payroll
-   -updated
 
 
 

@@ -914,6 +914,85 @@
                   onchange="generatePayPeriodBgc(`#drpDownPayFreqModal2`,`#txtDateFromModal2`,`#txtDateToModal2`,`payroll`);"
                 >
                   <option value="">--Please choose an option--</option>
+                  <option value="Admin1">Admin (1st Cutoff)</option>
+                  <option value="Admin2">Admin (2nd Cutoff) </option>
+                  <option value="Others1">Others (1st Cutoff) </option>
+                  <option value="Others2">Others (2nd Cutoff) </option>
+                  <option value="custom">Custom</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="label-6 block">Pay Period</label>
+                <label class="label-6 pt-0">From: </label>
+                <input
+                  name="txtDateFromModal2"
+                  type="text"
+                  id="txtDateFromModal2"
+                  class="startDatePicker disabled"
+                  onchange="generatePayPeriodBgc(`#drpDownPayFreqModal2`,`#txtDateFromModal2`,`#txtDateToModal2`,`payroll`);"
+                />
+                <label class="label-6">To: </label>
+                <input
+                  name="txtDateToModal2"
+                  type="text"
+                  id="txtDateToModal2"
+                  class="endDatePicker disabled"
+                  onchange="generatePayPeriodBgc(`#drpDownPayFreqModal2`,`#txtDateFromModal2`,`#txtDateToModal2`,`payroll`);"
+                />
+              </div>
+
+              <div class="modal-btn-container">
+                <a class="btn-sm btn-primary mx-3" id="btnCreatePayrollModal">
+                  Generate
+                </a>
+                <a
+                  class="btn-sm btn-secondary mx-3"
+                  onclick="closeModal(`#btnCloseMassPayroll`);"
+                >
+                  Cancel
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- btnMassGeneratePayroll -->
+          <div class="modal modal-mass-payroll">
+            <div class="modal-content">
+              <h5>Mass Generate Payroll</h5>
+              <hr />
+              <div>
+                <label class="label-6 block">Employee</label>
+                <!-- <label class="norecords">No Records Found</label> -->
+                <ul class="LI-Layout">
+                  <li>
+                    <input name="chkEmp01" id="chkEmp01" type="checkbox" />
+                    John Doe
+                  </li>
+                  <li>
+                    <input name="chkEmp01" id="chkEmp01" type="checkbox" />
+                    John Doe
+                  </li>
+                  <li>
+                    <input name="chkEmp01" id="chkEmp01" type="checkbox" />
+                    John Doe
+                  </li>
+                  <li>
+                    <input name="chkEmp01" id="chkEmp01" type="checkbox" />
+                    John Doe
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <label class="label-6 block">Pay Frequency</label>
+                <select
+                  name="drpDownPayFreqModal2"
+                  id="drpDownPayFreqModal2"
+                  class="select block drpDownPayFreq"
+                  onchange="generatePayPeriodBgc(`#drpDownPayFreqModal2`,`#txtDateFromModal2`,`#txtDateToModal2`,`payroll`);"
+                >
+                  <option value="">--Please choose an option--</option>
                   <option value="twoWeeksAdmin">Every 2 weeks (Admin)</option>
                   <option value="twoWeeksOthers">Every 2 weeks (Others)</option>
                   <option value="custom">Custom</option>
@@ -942,28 +1021,9 @@
                 />
               </div>
 
-              <!-- <div class="modal-btn-container hidden">
-                <a class="btn-sm btn-green mx-3" id="btnComputeModal"
-                  >Compute</a
-                >
-                <a
-                  class="btn-sm btn-secondary mx-3"
-                  id="btnClearModal2"
-                  onclick="reset(`payroll`)"
-                  >Clear</a
-                >
-              </div> -->
-
-              <div class="hidden">
-                <label for="searchEmployee" class="label-6 block"
-                  >Search Employee ID/Name</label
-                >
-                <input type="" value="" id="searchEmployee" />
-              </div>
-
               <div class="modal-btn-container">
                 <a class="btn-sm btn-primary mx-3" id="btnCreatePayrollModal">
-                  Mass Generate
+                  Generate
                 </a>
                 <a
                   class="btn-sm btn-secondary mx-3"

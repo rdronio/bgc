@@ -4399,6 +4399,10 @@ nav ul li a span.fa {
   width: 35%;
 }
 
+#payroll .modal-mass-payroll .modal-content div .LI-Layout {
+  height: 125px;
+}
+
 /* #payroll .modal-create-payroll .modal-content .label-6,
 #payroll .modal-mass-payroll .modal-content .label-6 {
   padding: 0.4rem 0 0.4rem 0;
@@ -4585,8 +4589,8 @@ nav ul li a span.fa {
 */
 
 /* view payslip */
-#payroll .modal-view-payslip .modal-content p {
-  font-size: 0.8rem;
+#payroll .modal-view-payslip .modal-content div div p {
+  font-size: 0.8rem !important;
   padding: 0.4rem 0 0.4rem 0;
 }
 
@@ -4613,18 +4617,24 @@ nav ul li a span.fa {
   flex: 1;
 }
 #payroll .modal-view-payslip .modal-content > div:nth-child(3) > div p {
+  font-size: 0.8rem;
   padding: 0 0 0.4rem 0;
+}
+#payroll .modal-view-payslip .modal-content > div:nth-child(5) > p,
+#payroll .modal-view-payslip .modal-content > div:nth-child(7) > div p {
+  font-size: 0.8rem;
 }
 #payroll .modal-view-payslip .modal-content > div:nth-child(5) {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 50%;
+  align-items: center;
 }
 
 #payroll .modal-view-payslip .modal-content > div:nth-child(7) {
   display: flex;
   flex-direction: row;
-  margin-bottom: 0.5rem;
+  align-items: center;
 }
 
 #payroll
@@ -4640,12 +4650,17 @@ nav ul li a span.fa {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 50%;
+  align-items: center;
 }
 
 #payroll .modal-view-payslip .modal-content > div:nth-child(9) {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 100%;
+  align-items: center;
+}
+#payroll .modal-view-payslip .modal-content > div:nth-child(9) > p {
+  font-size: 0.8rem;
 }
 
 /* ========[ Payslip ]======== */
