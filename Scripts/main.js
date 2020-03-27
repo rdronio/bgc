@@ -1971,26 +1971,75 @@ function toggleSearchRecFilter(btnID) {
     const showSearchRecOptions = document.querySelector(
       ".showSearchRecOptions"
     );
-    const btnAddTo = document.querySelector("#btnAddTo");
-    const btnAddCc = document.querySelector("#btnAddCc");
-    const btnAddBcc = document.querySelector("#btnAddBcc");
 
     container.classList.toggle("hidden");
     showSearchRecOptions.classList.toggle("rotate");
+  } catch (e) {
+    console.log(e);
+  }
+}
 
-    if (btnID === "#btnAddTo") {
-      btnAddTo.classList.remove("hidden");
-      btnAddCc.classList.add("hidden");
-      btnAddBcc.classList.add("hidden");
-    } else if (btnID === "#btnAddCc") {
-      btnAddTo.classList.add("hidden");
-      btnAddCc.classList.remove("hidden");
-      btnAddBcc.classList.add("hidden");
-    } else if (btnID === "#btnAddBcc") {
-      btnAddTo.classList.add("hidden");
-      btnAddCc.classList.add("hidden");
-      btnAddBcc.classList.remove("hidden");
-    }
+function openModalSelectRecTo() {
+  try {
+    const container = document.querySelector(".selectRecTo");
+
+    container.classList.toggle("hidden");
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function openModalSelectRecCc() {
+  try {
+    const container = document.querySelector(".selectRecCc");
+
+    container.classList.toggle("hidden");
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function openModalSelectRecBcc() {
+  try {
+    const container = document.querySelector(".selectRecBcc");
+
+    container.classList.toggle("hidden");
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function openModalSelectRecTo2() {
+  try {
+    const container = document.querySelector(".modal-payrollmemo");
+    const modal = document.querySelector(".selectRecTo");
+
+    container.style.display = "flex";
+    modal.classList.remove("hidden");
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function openModalSelectRecCc2() {
+  try {
+    const container = document.querySelector(".modal-payrollmemo");
+    const modal = document.querySelector(".selectRecCc");
+
+    container.style.display = "flex";
+    modal.classList.remove("hidden");
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function openModalSelectRecBcc2() {
+  try {
+    const container = document.querySelector(".modal-payrollmemo");
+    const modal = document.querySelector(".selectRecBcc");
+
+    container.style.display = "flex";
+    modal.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }

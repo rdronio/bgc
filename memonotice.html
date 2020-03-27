@@ -367,27 +367,8 @@
                   <div>
                     <label class="label-6 block">To</label>
                     <div>
-                      <ul class="tableLayoutRec">
-                        <li>
-                          <div class="column1">John Doe</div>
-                          <div class="column2">
-                            <a class="btn-tableRec btn-secondaryRec" onclick="">
-                              <svg
-                                focusable="false"
-                                height="24px"
-                                viewBox="0 0 24 24"
-                                width="24px"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-                                ></path>
-                                <path d="M0 0h24v24H0z" fill="none"></path>
-                              </svg>
-                            </a>
-                          </div>
-                        </li>
-                      </ul>
+                      <p class="noRecipients disabled">Add Recipients</p>
+                      <ul class="tableLayoutRec"></ul>
                     </div>
                     <div class="searchRec-main-container">
                       <div class="searchRec-container">
@@ -396,12 +377,14 @@
                           data-tooltip="Show search options"
                           aria-label="Advanced search options"
                           class="showSearchRecOptions"
-                          onclick="toggleSearchRecFilter(`#btnAddTo`);"
+                          onclick="openModalSelectRecTo()"
                         >
                           +
                         </a>
                       </div>
-                      <div class="searchRec-filter-container hidden">
+                      <div
+                        class="searchRec-filter-container selectRecTo hidden"
+                      >
                         <div>
                           <label for="drpDepartment" class="label-6 block"
                             >Department</label
@@ -432,27 +415,7 @@
                                 type="checkbox"
                               />John Doe
                             </li>
-                            <li>
-                              <input
-                                name="chkEmp01"
-                                id="chkEmp01"
-                                type="checkbox"
-                              />John Doe
-                            </li>
-                            <li>
-                              <input
-                                name="chkEmp01"
-                                id="chkEmp01"
-                                type="checkbox"
-                              />John Doe
-                            </li>
-                            <li>
-                              <input
-                                name="chkEmp01"
-                                id="chkEmp01"
-                                type="checkbox"
-                              />John Doe
-                            </li>
+
                             <li>
                               <input
                                 name="chkEmp01"
@@ -495,12 +458,6 @@
                           <a id="btnAddTo" class="btn-sm btn-green mx-3"
                             >Add Recipient/s</a
                           >
-                          <a id="btnAddCc" class="btn-sm btn-green mx-3"
-                            >Add Recipient/s</a
-                          >
-                          <a id="btnAddBcc" class="btn-sm btn-green mx-3"
-                            >Add Recipient/s</a
-                          >
                           <a
                             class="btn-sm btn-secondary mx-3"
                             id="btnClearModal2"
@@ -516,27 +473,8 @@
                   <div>
                     <label class="label-6 block">Cc</label>
                     <div>
-                      <ul class="tableLayoutRec">
-                        <li>
-                          <div class="column1">John DOe</div>
-                          <div class="column2">
-                            <a class="btn-tableRec btn-secondaryRec" onclick="">
-                              <svg
-                                focusable="false"
-                                height="24px"
-                                viewBox="0 0 24 24"
-                                width="24px"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-                                ></path>
-                                <path d="M0 0h24v24H0z" fill="none"></path>
-                              </svg>
-                            </a>
-                          </div>
-                        </li>
-                      </ul>
+                      <p class="noRecipients disabled">Add Cc</p>
+                      <ul class="tableLayoutRec"></ul>
                     </div>
                     <div class="searchRec-main-container">
                       <div class="searchRec-container">
@@ -545,10 +483,94 @@
                           data-tooltip="Show search options"
                           aria-label="Advanced search options"
                           class="showSearchRecOptions"
-                          onclick="toggleSearchRecFilter(`#btnAddCc`);"
+                          onclick="openModalSelectRecCc()"
                         >
                           +
                         </a>
+                      </div>
+                      <div
+                        class="searchRec-filter-container selectRecCc hidden"
+                      >
+                        <div>
+                          <label for="drpDepartment" class="label-6 block"
+                            >Department</label
+                          >
+                          <select
+                            name="drpDepartment"
+                            id="drpDepartment"
+                            class="select"
+                          >
+                            <option value=""></option>
+                          </select>
+                        </div>
+
+                        <div>
+                          <label class="label-6">Employee </label>
+                          <ul class="LI-Layout-sm">
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="modal-btn-container">
+                          <a id="btnAddTo" class="btn-sm btn-green mx-3"
+                            >Add Recipient/s</a
+                          >
+                          <a
+                            class="btn-sm btn-secondary mx-3"
+                            id="btnClearModal2"
+                            onclick="reset(`memonotice`)"
+                            >Clear</a
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -557,7 +579,578 @@
                   <div>
                     <label class="label-6 block">Bcc</label>
                     <div>
+                      <!-- <p class="noRecipients disabled">Add Bcc</p> -->
                       <ul class="tableLayoutRec">
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="column1">John DOe</div>
+                          <div class="column2">
+                            <a class="btn-tableRec btn-secondaryRec" onclick="">
+                              <svg
+                                focusable="false"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                ></path>
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
                         <li>
                           <div class="column1">John DOe</div>
                           <div class="column2">
@@ -586,10 +1179,94 @@
                           data-tooltip="Show search options"
                           aria-label="Advanced search options"
                           class="showSearchRecOptions"
-                          onclick="toggleSearchRecFilter(`#btnAddBcc`);"
+                          onclick="openModalSelectRecBcc()"
                         >
                           +
                         </a>
+                      </div>
+                      <div
+                        class="searchRec-filter-container selectRecBcc hidden"
+                      >
+                        <div>
+                          <label for="drpDepartment" class="label-6 block"
+                            >Department</label
+                          >
+                          <select
+                            name="drpDepartment"
+                            id="drpDepartment"
+                            class="select"
+                          >
+                            <option value=""></option>
+                          </select>
+                        </div>
+
+                        <div>
+                          <label class="label-6">Employee </label>
+                          <ul class="LI-Layout-sm">
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                            <li>
+                              <input
+                                name="chkEmp01"
+                                id="chkEmp01"
+                                type="checkbox"
+                              />John Doe
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="modal-btn-container">
+                          <a id="btnAddTo" class="btn-sm btn-green mx-3"
+                            >Add Recipient/s</a
+                          >
+                          <a
+                            class="btn-sm btn-secondary mx-3"
+                            id="btnClearModal2"
+                            onclick="reset(`memonotice`)"
+                            >Clear</a
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -691,29 +1368,62 @@
                     <td class="column4">Back End</td>
                     <td class="column5">john.doe@gmail.com</td>
                   </tr>
+                  <tr>
+                    <td class="column1">0001</td>
+                    <td class="column2">John Doe</td>
+                    <td class="column3">
+                      Programming
+                    </td>
+                    <td class="column4">Back End</td>
+                    <td class="column5">john.doe@gmail.com</td>
+                  </tr>
+                  <tr>
+                    <td class="column1">0001</td>
+                    <td class="column2">John Doe</td>
+                    <td class="column3">
+                      Programming
+                    </td>
+                    <td class="column4">Back End</td>
+                    <td class="column5">john.doe@gmail.com</td>
+                  </tr>
+                  <tr>
+                    <td class="column1">0001</td>
+                    <td class="column2">John Doe</td>
+                    <td class="column3">
+                      Programming
+                    </td>
+                    <td class="column4">Back End</td>
+                    <td class="column5">john.doe@gmail.com</td>
+                  </tr>
+                  <tr>
+                    <td class="column1">0001</td>
+                    <td class="column2">John Doe</td>
+                    <td class="column3">
+                      Programming
+                    </td>
+                    <td class="column4">Back End</td>
+                    <td class="column5">john.doe@gmail.com</td>
+                  </tr>
+                  <tr>
+                    <td class="column1">0001</td>
+                    <td class="column2">John Doe</td>
+                    <td class="column3">
+                      Programming
+                    </td>
+                    <td class="column4">Back End</td>
+                    <td class="column5">john.doe@gmail.com</td>
+                  </tr>
+                  <tr>
+                    <td class="column1">0001</td>
+                    <td class="column2">John Doe</td>
+                    <td class="column3">
+                      Programming
+                    </td>
+                    <td class="column4">Back End</td>
+                    <td class="column5">john.doe@gmail.com</td>
+                  </tr>
                 </tbody>
               </table>
-              <div class="pagination-container">
-                <div class="showmore-container">
-                  <a class="btn-showmore" href="#"
-                    ><i class="fas fa-chevron-down"></i>More Results</a
-                  >
-                </div>
-                <div class="pagination">
-                  <a href="#"><span>«</span></a>
-                  <a href="#"><span class="active">1</span></a>
-                  <a href="#"><span>2</span></a>
-                  <a href="#"><span>3</span></a>
-                  <a href="#"><span>4</span></a>
-                  <a href="#"><span>5</span></a>
-                  <a href="#"><span>6</span></a>
-                  <a href="#"><span>7</span></a>
-                  <a href="#"><span>8</span></a>
-                  <a href="#"><span>9</span></a>
-                  <a href="#"><span>10</span></a>
-                  <a href="#"><span>»</span></a>
-                </div>
-              </div>
 
               <div class="modal-btn-container">
                 <a

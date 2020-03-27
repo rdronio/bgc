@@ -3,16 +3,13 @@
 
  For HRIS & Payroll [Front End] 
  
-  *Nav 
-    -applied the logo of bgc
-
-  *Bulk Email
-    -Updated compose table tag to list tag. 
-    -Updated selection of recipients sub-modal. (Selection of employee design adapted from sat. schedule)
-    -added function that will check which button to show in add recipient
+   *Memo/Notice
 
 
-
+      -fixed scroll issue for multiple recipients.
+      -add modal for each fields of To, Cc & Bcc. 
+      -added function call to show selection of recipients.
+      Pano wala laman To Cc Bcc
 
 
  For Systemoph website redesign
@@ -22,9 +19,9 @@
    -dev (in progress) 
 
   *Services
-   -mockup (backlog)
+   -mockup (in progress)
    -dev (backlog)
 
   *About
-   -mockup (backlog)
+   -mockup (in progress)
    -dev (backlog)
