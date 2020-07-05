@@ -2144,3 +2144,21 @@ function closeModalPayrollList() {
     //console.log(e);
   }
 }
+
+function openModalMassPayroll() {
+  try {
+    const modal = document.querySelector(".modal-mass-payroll");
+    modal.style.display = "flex";
+  } catch (e) {
+    //console.log(e);
+  }
+}
+
+function closeModalMassPayroll() {
+  try {
+    const modal = document.querySelector(".modal-mass-payroll");
+    modal.style.display = "none";
+  } catch (e) {
+    //console.log(e);
+  }
+}
