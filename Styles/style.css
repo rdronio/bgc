@@ -2518,6 +2518,7 @@ table.tableLayout-md tbody tr > td {
 }
 
 #login .left-container {
+  position: relative;
   max-width: 50%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -2536,9 +2537,11 @@ table.tableLayout-md tbody tr > td {
 }
 
 #login .left-container .logo {
+  width: auto;
   position: absolute !important;
-  left: 1.5rem;
-  top: 1.5rem;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 #login .left-container .logo .logo-link img {
@@ -2592,7 +2595,7 @@ table.tableLayout-md tbody tr > td {
 
 #login-footer {
   position: absolute;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   bottom: 1rem;
   left: 0;
