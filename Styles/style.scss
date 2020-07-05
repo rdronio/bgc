@@ -2274,6 +2274,10 @@ table.tableLayout-md tbody tr > td {
   position: relative;
   width: 100%;
   margin-top: 1rem;
+
+  .forgotPass {
+    display: none;
+  }
 }
 
 #login .left-container .pass-container a {

@@ -2564,6 +2564,10 @@ table.tableLayout-md tbody tr > td {
   margin-top: 1rem;
 }
 
+#login .left-container .pass-container .forgotPass {
+  display: none;
+}
+
 #login .left-container .pass-container a {
   position: absolute;
   right: 0;
