@@ -8,7 +8,7 @@ function togglePassword() {
       x.type = "password";
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -22,27 +22,27 @@ function togglePassword2() {
       x.type = "password";
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
 // navigation
-$(document).ready(function() {
+$(document).ready(function () {
   try {
     //check admin dashboard
     $(window).on("load", loadSavedValue(`txtSeachRegular`));
     $(window).on("load", loadSavedValue(`txtSearch`));
 
-    $(".nav-list").on("click", "li", function() {
+    $(".nav-list").on("click", "li", function () {
       $(".nav-list li.current-page").removeClass("current-page");
       $(this).addClass("current-page");
     });
 
-    $(".btn-dropdown").on("click", function() {
+    $(".btn-dropdown").on("click", function () {
       this.classList.add("hidden");
     });
 
-    $(document).click(function(e) {
+    $(document).click(function (e) {
       e.stopPropagation();
       let container = $(".search-main-container");
 
@@ -54,7 +54,7 @@ $(document).ready(function() {
       }
     });
 
-    $(".datalist-data").on("click", "li", function() {
+    $(".datalist-data").on("click", "li", function () {
       $(".datalist-data li").removeClass("selected-datalist");
       $(this).addClass("selected-datalist");
 
@@ -66,7 +66,7 @@ $(document).ready(function() {
       hideDataList();
     });
 
-    $(document).click(function(e) {
+    $(document).click(function (e) {
       e.stopPropagation();
       let container = $(".btn-tools-container");
 
@@ -76,7 +76,7 @@ $(document).ready(function() {
       }
     });
 
-    $(document).click(function(e) {
+    $(document).click(function (e) {
       e.stopPropagation();
       let containerRec = $(".searchRec-main-container");
       const showSearchRecOptions = document.querySelector(
@@ -92,7 +92,7 @@ $(document).ready(function() {
       }
     });
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 });
 
@@ -110,39 +110,39 @@ $(document).ready(function() {
 //       $(this).addClass("active");
 //     });
 //   } catch (e) {
-//     console.log(e);
+//     //console.log(e);
 //   }
 // }
 
 function selectTab() {
   try {
-    $("#tab").on("click", "li", function() {
+    $("#tab").on("click", "li", function () {
       $(".tab-list li.current-tab").removeClass("current-tab");
       $(this).addClass("current-tab");
     });
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
 function selectTabEI() {
   try {
-    $("#tabIE").on("click", "li", function() {
+    $("#tabIE").on("click", "li", function () {
       $(".modal-tab-list li.current-tab").removeClass("current-tab");
       $(this).addClass("current-tab");
     });
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 function selectTabViewEI() {
   try {
-    $("#tabViewIE").on("click", "li", function() {
+    $("#tabViewIE").on("click", "li", function () {
       $(".modal-tab-list li.current-tab").removeClass("current-tab");
       $(this).addClass("current-tab");
     });
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -158,12 +158,12 @@ function toggleMenu() {
     menuBtn.classList.toggle("hidden");
     body.classList.toggle("noscroll");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
 // Time Picker
-$(".timepicker").each(function() {
+$(".timepicker").each(function () {
   try {
     $(this).timepicker({
       timeFormat: "hh:mm p",
@@ -174,15 +174,15 @@ $(".timepicker").each(function() {
       startTime: "8:00 AM",
       dynamic: false,
       dropdown: true,
-      scrollbar: true
+      scrollbar: true,
     });
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 });
 
 // Birthday Picker
-$(".bdayPicker").each(function() {
+$(".bdayPicker").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
@@ -190,7 +190,7 @@ $(".bdayPicker").each(function() {
       changeYear: true,
       defaultDate: "-18Y",
       yearRange: "-80:-18",
-      onChangeMonthYear: function(year, month) {
+      onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
         var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
@@ -202,22 +202,22 @@ $(".bdayPicker").each(function() {
           "setDate",
           month + "/" + preservedDay + "/" + year
         );
-      }
+      },
     });
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 });
 
 // Licence Expiration Date Picker
-$(".expDatePicker").each(function() {
+$(".expDatePicker").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
       yearRange: "-10:+10",
-      onChangeMonthYear: function(year, month) {
+      onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
         var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
@@ -229,10 +229,10 @@ $(".expDatePicker").each(function() {
           "setDate",
           month + "/" + preservedDay + "/" + year
         );
-      }
+      },
     });
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 });
 
@@ -247,7 +247,7 @@ $(".expDatePicker").each(function() {
 // });
 
 // Date Picker
-$(".datePicker").each(function() {
+$(".datePicker").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
@@ -255,7 +255,7 @@ $(".datePicker").each(function() {
       changeYear: true,
       yearRange: "-10:+10",
       beforeShowDay: $.datepicker.noWeekends,
-      onChangeMonthYear: function(year, month) {
+      onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
         var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
@@ -267,22 +267,22 @@ $(".datePicker").each(function() {
           "setDate",
           month + "/" + preservedDay + "/" + year
         );
-      }
+      },
     });
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 });
 
 // Date Picker with weekends
-$(".datePicker2").each(function() {
+$(".datePicker2").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
       yearRange: "-10:+10",
-      onChangeMonthYear: function(year, month) {
+      onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
         var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
@@ -294,15 +294,15 @@ $(".datePicker2").each(function() {
           "setDate",
           month + "/" + preservedDay + "/" + year
         );
-      }
+      },
     });
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 });
 
 // Leave Picker
-$(".leavePicker").each(function() {
+$(".leavePicker").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
@@ -310,7 +310,7 @@ $(".leavePicker").each(function() {
       changeYear: true,
       yearRange: "-10:+10",
       beforeShowDay: $.datepicker.noWeekends,
-      onChangeMonthYear: function(year, month) {
+      onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
         var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
@@ -322,15 +322,15 @@ $(".leavePicker").each(function() {
           "setDate",
           month + "/" + preservedDay + "/" + year
         );
-      }
+      },
     });
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 });
 
 // OT Picker
-$(".otPicker").each(function() {
+$(".otPicker").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
@@ -338,7 +338,7 @@ $(".otPicker").each(function() {
       changeYear: true,
       yearRange: "-10:+10",
       beforeShowDay: $.datepicker.noWeekends,
-      onChangeMonthYear: function(year, month) {
+      onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
         var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
@@ -350,15 +350,15 @@ $(".otPicker").each(function() {
           "setDate",
           month + "/" + preservedDay + "/" + year
         );
-      }
+      },
     });
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 });
 
 // Undertime Picker
-$(".utPicker").each(function() {
+$(".utPicker").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
@@ -366,7 +366,7 @@ $(".utPicker").each(function() {
       changeYear: true,
       yearRange: "-10:+10",
       beforeShowDay: $.datepicker.noWeekends,
-      onChangeMonthYear: function(year, month) {
+      onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
         var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
@@ -378,22 +378,22 @@ $(".utPicker").each(function() {
           "setDate",
           month + "/" + preservedDay + "/" + year
         );
-      }
+      },
     });
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 });
 
 // Termination Date Picker
-$(".terminationDatePicker").each(function() {
+$(".terminationDatePicker").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
       yearRange: "-10:+10",
-      onChangeMonthYear: function(year, month) {
+      onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
         var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
@@ -405,20 +405,20 @@ $(".terminationDatePicker").each(function() {
           "setDate",
           month + "/" + preservedDay + "/" + year
         );
-      }
+      },
     });
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 });
 
-$(".startDatePicker").each(function() {
+$(".startDatePicker").each(function () {
   try {
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
       yearRange: "-10:+10",
-      onChangeMonthYear: function(year, month) {
+      onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
         var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
@@ -430,7 +430,7 @@ $(".startDatePicker").each(function() {
           "setDate",
           month + "/" + preservedDay + "/" + year
         );
-      }
+      },
 
       // onSelect: function(date) {
       //   let selectedDate = new Date(date);
@@ -454,17 +454,17 @@ $(".startDatePicker").each(function() {
       // }
     });
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 });
 
-$(".endDatePicker").each(function() {
+$(".endDatePicker").each(function () {
   try {
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
       yearRange: "-10:+10",
-      onChangeMonthYear: function(year, month) {
+      onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
         var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
@@ -476,10 +476,10 @@ $(".endDatePicker").each(function() {
           "setDate",
           month + "/" + preservedDay + "/" + year
         );
-      }
+      },
     });
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 });
 
@@ -521,7 +521,7 @@ function generatePayPeriod(
       }
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -583,7 +583,7 @@ function generatePayPeriodBgc(
       }
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -638,7 +638,7 @@ function hidePayslipInfo() {
       child17.classList.remove("hidden");
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -671,7 +671,7 @@ function calcBusinessDays(dDate1, dDate2) {
 
     return iDateDiff + 1; // add 1 because dates are inclusive
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -679,7 +679,7 @@ function calcBusinessDays(dDate1, dDate2) {
 function getBusinessDateCount(startDate, endDate) {
   try {
     var elapsed, daysBeforeFirstSaturday, daysAfterLastSunday;
-    var ifThen = function(a, b, c) {
+    var ifThen = function (a, b, c) {
       return a == b ? c : a;
     };
 
@@ -697,7 +697,7 @@ function getBusinessDateCount(startDate, endDate) {
 
     return Math.ceil(elapsed);
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -708,7 +708,7 @@ function calc() {
       result = getBusinessDateCount(new Date(start), new Date(end));
     document.querySelector("#result").innerHTML = result;
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -734,7 +734,7 @@ function getEmployeeBy() {
     } else {
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -760,7 +760,7 @@ function getEmployeeByModal() {
     } else {
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -772,7 +772,7 @@ function removeOptions(select_box) {
       select_box.remove(i);
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -781,7 +781,7 @@ function scrollTop() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -789,7 +789,7 @@ function scrollTopModal() {
   try {
     document.querySelector(".modal-content").scrollTop = 0;
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -797,7 +797,7 @@ function scrollTopDataList() {
   try {
     document.querySelector(".datalist-data").scrollTop = 0;
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -906,7 +906,7 @@ function openModal(btn_id) {
     defaultTab("primary-info");
     scrollTopModal();
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -998,7 +998,7 @@ function closeModal(btn_id) {
     // defaultTabUpdate("primary-info-update");
     defaultTabViewIE("view-primary-info");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1025,7 +1025,7 @@ function openTabHrInfo() {
 
     scrollTopModal();
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1060,7 +1060,7 @@ function openTabHrInfoUpdate() {
 
     scrollTopModal();
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1068,7 +1068,7 @@ function reset(frm_id) {
   try {
     document.getElementById(frm_id).reset();
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1077,7 +1077,7 @@ function openModalWithPay() {
     const modalWithPay = document.querySelector(".modal-with-pay");
     modalWithPay.style.display = "flex";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1086,7 +1086,7 @@ function closeModalWithPay() {
     const modalWithPay = document.querySelector(".modal-with-pay");
     modalWithPay.style.display = "none";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1095,7 +1095,7 @@ function openModalConfirmation() {
     const modalConfirmation = document.querySelector(".modal-confirmation");
     modalConfirmation.style.display = "flex";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1104,7 +1104,7 @@ function closeModalConfirmation() {
     const modalConfirmation = document.querySelector(".modal-confirmation");
     modalConfirmation.style.display = "none";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1113,7 +1113,7 @@ function loadModal() {
     document.querySelector(".modal").innerHTML = "confirmation.html";
     openModalConfirmation();
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1122,7 +1122,7 @@ function openModalSetLeave() {
     const modal = document.querySelector(".modal-set-leave");
     modal.style.display = "flex";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1131,7 +1131,7 @@ function closeModalSetLeave() {
     const modal = document.querySelector(".modal-set-leave");
     modal.style.display = "none";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1143,12 +1143,12 @@ function openTab(tabName) {
     }
     document.getElementById(tabName).style.display = "flex";
 
-    $(".tab-list").on("click", "li", function() {
+    $(".tab-list").on("click", "li", function () {
       $(".tab-list li.current-tab").removeClass("current-tab");
       $(this).addClass("current-tab");
     });
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1162,12 +1162,12 @@ function openViewEmpInfoTab(tabName) {
 
     hideBasicInfo(tabName);
 
-    $(".tab-list").on("click", "li", function() {
+    $(".tab-list").on("click", "li", function () {
       $(".tab-list li.current-tab").removeClass("current-tab");
       $(this).addClass("current-tab");
     });
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1182,7 +1182,7 @@ function hideBasicInfo(tabName) {
       basicInfo.classList.remove("hidden");
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1192,7 +1192,7 @@ function redirectModalToUpdateEmployee() {
     modalViewEmployee.style.display = "none";
     openModal(`#btnUpdateEmployee`);
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1207,7 +1207,7 @@ function defaultTab(tabName) {
     $(".modal-tab-list li.current-tab").removeClass("current-tab");
     $(".modal-tab-list li:first-child").addClass("current-tab");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1222,7 +1222,7 @@ function defaultTabUpdate(tabName) {
     $(".modal-tab-list li.current-tab").removeClass("current-tab");
     $(".modal-tab-list li:nth-child(1)").addClass("current-tab");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1237,7 +1237,7 @@ function defaultTabViewIE(tabName) {
     $(".modal-tab-list li.current-tab").removeClass("current-tab");
     $(".modal-tab-list li:first-child").addClass("current-tab");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1273,7 +1273,7 @@ function toggleEndo() {
       dtTermDate.classList.remove("disabled");
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 function toggleEndo2() {
@@ -1308,7 +1308,7 @@ function toggleEndo2() {
       dtTermDate.classList.remove("disabled");
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1321,7 +1321,7 @@ function enableReq() {
     req2.classList.remove("disabled");
     req3.classList.remove("disabled");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1334,7 +1334,7 @@ function disableReq() {
     req2.classList.add("disabled");
     req3.classList.add("disabled");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1347,7 +1347,7 @@ function enableReq2() {
     req2.classList.remove("disabled");
     req3.classList.remove("disabled");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1360,7 +1360,7 @@ function disableReq2() {
     req2.classList.add("disabled");
     req3.classList.add("disabled");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1375,7 +1375,7 @@ function enableAccessRole() {
     txtPasswordLabel.classList.remove("disabled");
     txtPassword.classList.remove("disabled");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1390,7 +1390,7 @@ function disableAccessRole() {
     txtPasswordLabel.classList.add("disabled");
     txtPassword.classList.add("disabled");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1405,7 +1405,7 @@ function enableAccessRole2() {
     txtPasswordLabel.classList.remove("disabled");
     txtPassword.classList.remove("disabled");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1420,7 +1420,7 @@ function disableAccessRole2() {
     txtPasswordLabel.classList.add("disabled");
     txtPassword.classList.add("disabled");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1438,7 +1438,7 @@ function removeHidden() {
       btnProjectTask.classList.add("hidden");
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1448,7 +1448,7 @@ function resetAddEmpProj() {
       ".txtTaskName-container .txtTaskField"
     );
 
-    resetEmpProj.forEach(element => {
+    resetEmpProj.forEach((element) => {
       element.classList.add("hidden");
     });
 
@@ -1462,7 +1462,7 @@ function resetAddEmpProj() {
       btnProjectTask.classList.remove("hidden");
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1478,7 +1478,7 @@ function showEM() {
     card2.classList.add("hidden");
     card1.classList.remove("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 function showSM() {
@@ -1493,7 +1493,7 @@ function showSM() {
     card2.classList.remove("hidden");
     card1.classList.add("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1509,7 +1509,7 @@ function showPayrollIM() {
     card2.classList.remove("hidden");
     card1.classList.add("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 function showPayrollEM() {
@@ -1524,7 +1524,7 @@ function showPayrollEM() {
     card2.classList.add("hidden");
     card1.classList.remove("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1540,7 +1540,7 @@ function showIM() {
     card2.classList.remove("hidden");
     card1.classList.add("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1552,7 +1552,7 @@ function showER() {
     card2.classList.add("hidden");
     card1.classList.remove("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1564,7 +1564,7 @@ function showPE() {
     card2.classList.remove("hidden");
     card1.classList.add("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1576,7 +1576,7 @@ function showTR() {
     card2.classList.add("hidden");
     card1.classList.remove("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 function showPTA() {
@@ -1587,7 +1587,7 @@ function showPTA() {
     card2.classList.remove("hidden");
     card1.classList.add("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1599,7 +1599,7 @@ function showLR() {
     card2.classList.add("hidden");
     card1.classList.remove("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1611,7 +1611,7 @@ function showPLA() {
     card2.classList.remove("hidden");
     card1.classList.add("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1627,7 +1627,7 @@ function showOR() {
     card2.classList.add("hidden");
     card1.classList.remove("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1643,7 +1643,7 @@ function showPOA() {
     card2.classList.remove("hidden");
     card1.classList.add("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1659,7 +1659,7 @@ function showUR() {
     card2.classList.add("hidden");
     card1.classList.remove("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1675,7 +1675,7 @@ function showPUA() {
     card2.classList.remove("hidden");
     card1.classList.add("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1687,7 +1687,7 @@ function showIP() {
     card2.classList.add("hidden");
     card1.classList.remove("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1699,7 +1699,7 @@ function showCT() {
     card2.classList.remove("hidden");
     card1.classList.add("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 function showP() {
@@ -1710,7 +1710,7 @@ function showP() {
     card2.classList.add("hidden");
     card1.classList.remove("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1722,7 +1722,7 @@ function showPPA() {
     card2.classList.remove("hidden");
     card1.classList.add("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1731,7 +1731,7 @@ function openModalLeaveRemarks() {
     const modalRemarks = document.querySelector(".modal-leave-remarks");
     modalRemarks.style.display = "flex";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1740,7 +1740,7 @@ function closeModalLeaveRemarks() {
     const modalRemarks = document.querySelector(".modal-leave-remarks");
     modalRemarks.style.display = "none";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1749,7 +1749,7 @@ function openModalOvertimeRemarks() {
     const modalRemarks = document.querySelector(".modal-overtime-remarks");
     modalRemarks.style.display = "flex";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1758,7 +1758,7 @@ function closeModalOvertimeRemarks() {
     const modalRemarks = document.querySelector(".modal-overtime-remarks");
     modalRemarks.style.display = "none";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 function openModalTimeAlterationRemarks() {
@@ -1768,7 +1768,7 @@ function openModalTimeAlterationRemarks() {
     );
     modalRemarks.style.display = "flex";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1779,7 +1779,7 @@ function closeModalTimeAlterationRemarks() {
     );
     modalRemarks.style.display = "none";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 function openModalExpenseRemarks() {
@@ -1787,7 +1787,7 @@ function openModalExpenseRemarks() {
     const modalRemarks = document.querySelector(".modal-expense-remarks");
     modalRemarks.style.display = "flex";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1796,7 +1796,7 @@ function closeModalExpenseRemarks() {
     const modalRemarks = document.querySelector(".modal-expense-remarks");
     modalRemarks.style.display = "none";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 function openModalUndertimeRemarks() {
@@ -1804,7 +1804,7 @@ function openModalUndertimeRemarks() {
     const modalRemarks = document.querySelector(".modal-undertime-remarks");
     modalRemarks.style.display = "flex";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1813,7 +1813,7 @@ function closeModalUndertimeRemarks() {
     const modalRemarks = document.querySelector(".modal-undertime-remarks");
     modalRemarks.style.display = "none";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1822,7 +1822,7 @@ function openModalViewDTR() {
     const modal = document.querySelector(".modal-view-dtr");
     modal.style.display = "flex";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1831,7 +1831,7 @@ function closeModalViewDTR() {
     const modal = document.querySelector(".modal-view-dtr");
     modal.style.display = "none";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1840,7 +1840,7 @@ function toggleDropDown() {
     const drpdown = document.querySelector(".btn-dropdown");
     drpdown.classList.toggle("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1861,7 +1861,7 @@ function toggleEmployeeSelection() {
       div3.classList.remove("hidden");
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1882,7 +1882,7 @@ function toggleEmployeeSelection3() {
       div9.classList.remove("hidden");
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1900,7 +1900,7 @@ function checkSearchInput() {
       scrollTopDataList();
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1915,7 +1915,7 @@ function checkSearchInput2() {
       btnClearSearch.classList.remove("hidden");
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1926,7 +1926,7 @@ function clearSearch(formID) {
     btnClearSearch.classList.add("hidden");
     reset(formID);
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1937,7 +1937,7 @@ function clearSearch2(formID) {
     btnClearSearch.classList.add("hidden");
     reset(formID);
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1949,7 +1949,7 @@ function toggleSearchFilter() {
     container.classList.toggle("hidden");
     showSearchOptions.classList.toggle("rotate");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1961,7 +1961,7 @@ function toggleSearchFilter2() {
     container.classList.toggle("hidden");
     showSearchOptions.classList.toggle("rotate");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1975,7 +1975,7 @@ function toggleSearchRecFilter(btnID) {
     container.classList.toggle("hidden");
     showSearchRecOptions.classList.toggle("rotate");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1985,7 +1985,7 @@ function openModalSelectRecTo() {
 
     container.classList.toggle("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -1995,7 +1995,7 @@ function openModalSelectRecCc() {
 
     container.classList.toggle("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -2005,7 +2005,7 @@ function openModalSelectRecBcc() {
 
     container.classList.toggle("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -2017,7 +2017,7 @@ function openModalSelectRecTo2() {
     container.style.display = "flex";
     modal.classList.remove("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -2029,7 +2029,7 @@ function openModalSelectRecCc2() {
     container.style.display = "flex";
     modal.classList.remove("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -2041,7 +2041,7 @@ function openModalSelectRecBcc2() {
     container.style.display = "flex";
     modal.classList.remove("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -2053,7 +2053,7 @@ function toggleSearchRecFilter3() {
     container3.classList.toggle("hidden");
     showSearchRecOptions3.classList.toggle("rotate");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -2063,7 +2063,7 @@ function showDataList() {
     scrollTopDataList();
     datalist.classList.remove("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -2073,7 +2073,7 @@ function hideDataList() {
 
     datalist.classList.add("hidden");
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -2092,7 +2092,7 @@ function saveValue(e) {
     var val = e.value; // get the value.
     localStorage.setItem(id, val); // Every time user writing something, the localStorage's value will override .
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -2103,7 +2103,7 @@ function getSavedValue(v) {
     }
     return localStorage.getItem(v);
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -2112,7 +2112,7 @@ function loadSavedValue(txtID) {
     document.getElementById(txtID).value = getSavedValue(txtID);
     resetSaveValue(txtID);
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -2120,7 +2120,7 @@ function resetSaveValue(id) {
   try {
     localStorage.removeItem(id);
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 
@@ -2131,7 +2131,7 @@ function openModalPayrollList() {
     modal.style.display = "flex";
     modal2.style.display = "none";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
 function closeModalPayrollList() {
@@ -2141,6 +2141,6 @@ function closeModalPayrollList() {
     modal.style.display = "none";
     modal2.style.display = "flex";
   } catch (e) {
-    console.log(e);
+    //console.log(e);
   }
 }
