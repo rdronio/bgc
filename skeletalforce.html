@@ -376,13 +376,32 @@
                 </ul>
 
                 <label for="txtDate" class="label-6">Date </label>
-                <input name="txtDate" id="txtDate" class="datePicker2" />
+                <input
+                  name="txtDate"
+                  id="txtDate"
+                  class="datePicker2"
+                  autocomplete="off"
+                />
 
-                <label for="txtTime" class="label-6">Start Time </label>
-                <input type="time" name="txtTime" id="txtTime" />
+                <label for="txtTime" class="label-6"
+                  >Start Time <span class="note">(hh:mm am/pm)</span></label
+                >
+                <input
+                  type="time"
+                  name="txtTime"
+                  id="txtTime"
+                  autocomplete="off"
+                />
 
-                <label for="txtTime" class="label-6">End Time </label>
-                <input type="time" name="txtTime" id="txtTime" />
+                <label for="txtTime" class="label-6"
+                  >End Time <span class="note">(hh:mm am/pm)</span></label
+                >
+                <input
+                  type="time"
+                  name="txtTime"
+                  id="txtTime"
+                  autocomplete="off"
+                />
               </div>
               <div class="modal-btn-container">
                 <a class="btn-sm btn-primary mx-3" id="btnSubmitAddHoliday"
@@ -392,7 +411,7 @@
                   class="btn-sm btn-secondary mx-3"
                   onclick="closeModal(`#btnCloseModal1`);"
                   >Cancel</a
-                >
+                >`
               </div>
             </div>
           </div>
