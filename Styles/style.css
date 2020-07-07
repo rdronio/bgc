@@ -35,16 +35,6 @@ html {
   border-radius: 10px 10px !important;
 }
 
-::-moz-selection {
-  color: none;
-  background: none;
-}
-
-::selection {
-  color: none;
-  background: none;
-}
-
 form {
   height: 100%;
 }
@@ -115,6 +105,16 @@ label {
   font-weight: 400;
   font-size: 0.8rem;
   -webkit-tap-highlight-color: transparent;
+}
+
+label::-moz-selection {
+  color: none;
+  background: none;
+}
+
+label::selection {
+  color: none;
+  background: none;
 }
 
 hr {
