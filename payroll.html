@@ -20,7 +20,7 @@
     <script src="Scripts/jquery-3.4.1.min.js"></script>
     <script src="Scripts/jquery-ui.min.js"></script>
 
-    <title>HRIS, Payroll & Time Keeping System</title>
+    <title>HRIS & Payroll</title>
   </head>
   <body>
     <form id="payroll" action="#" autocomplete="off">
@@ -47,13 +47,120 @@
             </div>
             <div class="profile_info">
               <span>Welcome</span>
-              <h2>HR Payroll</h2>
+              <h2 id="access-role">HR Payroll</h2>
               <p>&nbsp;</p>
             </div>
           </div>
 
           <!-- / menu -->
-          <ul class="nav-list">
+          <ul class="nav-list" id="sudo-access">
+            <li>
+              <a href="index.html"
+                ><i class="fas fa-sign-out-alt"></i>Sign Out</a
+              >
+            </li>
+          </ul>
+
+          <ul class="nav-list" id="hradmin-access">
+            <li class="current-page">
+              <a href="admindashboard.html"
+                ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-tasks"> </i>Approvals<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu hidden">
+                <li>
+                  <a href="PayrollApproval.html">Payroll Approval</a>
+                </li>
+                <li>
+                  <a href="Substitution.html">Subtitute Records</a>
+                </li>
+                <li>
+                  <a href="LeaveRecords.html">Leave Records</a>
+                </li>
+                <li><a href="OvertimeRecords.html">Overtime Records</a></li>
+                <li>
+                  <a href="Undertime.html">Undertime Records</a>
+                </li>
+                <li>
+                  <a href="skeletalforce.html">Saturday Schedule</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-file-alt"></i> Employee Records<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu hidden">
+                <li>
+                  <a href="employeemasterlist.html">Employee Masterlist</a>
+                </li>
+                <li>
+                  <a href="adminleaverecords.html">Employee Leave Records</a>
+                </li>
+                <li><a href="TimeRecords.html">Employee Time Records</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#"
+                ><i class="fas fa-bullhorn"></i>Memo/Notice<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu hidden">
+                <li>
+                  <a href="memonotice.html">Bulk Email</a>
+                </li>
+                <li>
+                  <a href="filecabinet.html">File Cabinet</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-chart-area"></i>Reports<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu hidden">
+                <li>
+                  <a href="GenerateDtrReport.html">Generate DTR</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="importtimerecords.html"
+                ><i class="fas fa-download"></i>Import Time Records</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-cog"></i>System Preferences<span
+                  class="fa fa-chevron-down"
+                ></span
+              ></a>
+              <ul class="nav child_menu hidden">
+                <li>
+                  <a href="holidaynotice.html">Holiday Notice</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="index.html"
+                ><i class="fas fa-sign-out-alt"></i>Sign Out</a
+              >
+            </li>
+          </ul>
+
+          <ul class="nav-list" id="hrpayroll-access">
             <li class="hidden">
               <a href="payrolldashboard.html"
                 ><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a
@@ -92,6 +199,14 @@
                 </li>
               </ul>
             </li>
+            <li>
+              <a href="index.html"
+                ><i class="fas fa-sign-out-alt"></i>Sign Out</a
+              >
+            </li>
+          </ul>
+
+          <ul class="nav-list" id="oic-access">
             <li>
               <a href="index.html"
                 ><i class="fas fa-sign-out-alt"></i>Sign Out</a

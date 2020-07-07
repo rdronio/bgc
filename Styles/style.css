@@ -45,12 +45,6 @@ html {
   background: none;
 }
 
-/* For Mozilla Firefox */
-::-moz-selection {
-  color: none;
-  background: none;
-}
-
 form {
   height: 100%;
 }
@@ -164,13 +158,6 @@ textarea::-moz-selection {
 
 input[type="text"]::selection,
 textarea::selection {
-  color: white;
-  background: #3390ff;
-}
-
-/* For Mozilla Firefox */
-input[type="text"]::-moz-selection,
-textarea::-moz-selection {
   color: white;
   background: #3390ff;
 }
@@ -895,7 +882,7 @@ iframe {
 }
 
 .block {
-  display: block;
+  display: block !important;
 }
 
 .inline-block {
@@ -2692,6 +2679,10 @@ nav .profile .profile_pic img {
   border-radius: 50%;
   width: 5.5rem;
   margin-bottom: 0.5rem;
+}
+
+nav .nav-list {
+  display: none;
 }
 
 /* nav ul > li:hover {

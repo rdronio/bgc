@@ -26,9 +26,36 @@ function togglePassword2() {
   }
 }
 
+function checkAccessRole() {
+  try {
+    const accessRole = document.querySelector("#access-role").innerHTML;
+    const navList = document.querySelector(".nav-list");
+    const sudoAccess = document.querySelector("#sudo-access");
+    const hradminAccess = document.querySelector("#hradmin-access");
+    const hrpayrollAccess = document.querySelector("#hrpayroll-access");
+    const oicAccess = document.querySelector("#oic-access");
+
+    if (accessRole === "Admin") {
+      sudoAccess.classList.add("block");
+    } else if (accessRole === "HR Admin") {
+      hradminAccess.classList.add("block");
+    } else if (accessRole === "HR Payroll") {
+      hrpayrollAccess.classList.add("block");
+    } else if (accessRole === "OIC") {
+      oicAccess.classList.add("block");
+    } else {
+      navList.classList.remove("block");
+    }
+  } catch (e) {
+    console.log(e);
+  }
+}
+
 // navigation
 $(document).ready(function () {
   try {
+    checkAccessRole();
+
     //check admin dashboard
     $(window).on("load", loadSavedValue(`txtSeachRegular`));
     $(window).on("load", loadSavedValue(`txtSearch`));
