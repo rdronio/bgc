@@ -988,7 +988,8 @@ iframe {
 }
 
 .logo .logo-link img {
-  width: 80%;
+  content: url("http://hris-bgc-test.azurewebsites.net/Images/BGC-LOGO-CLARK.png");
+  width: 80px;
 }
 
 .menu-btn {
