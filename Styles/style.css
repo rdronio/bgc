@@ -5156,6 +5156,18 @@ a {
 
 #payroll .modal-content {
   width: 35%;
+  overflow-x: hidden;
+}
+
+#payroll .modal-content label {
+  font-weight: 600 !important;
+  padding: 0.4rem 0 0.4rem 0;
+}
+
+#payroll .modal-content p {
+  font-size: 0.8rem !important;
+  font-weight: 400 !important;
+  padding-top: 0.4rem;
 }
 
 #payroll .modal-mass-payroll .modal-content div .LI-Layout {
@@ -5245,14 +5257,11 @@ a {
   margin-right: 0;
   margin: 0.25rem 0;
 } */
-#payroll .modal-create-payroll .modal-content > div:nth-child(12) > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+#payroll .modal-create-payroll .modal-content > div:nth-child(12) {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   width: 50%;
 }
 
