@@ -1290,7 +1290,7 @@ iframe {
           align-items: center;
   height: 2.5rem;
   margin-right: auto;
-  max-width: 500px;
+  max-width: 400px;
   position: relative;
   -webkit-transition: background 100ms ease-in, width 100ms ease-out;
   transition: background 100ms ease-in, width 100ms ease-out;
