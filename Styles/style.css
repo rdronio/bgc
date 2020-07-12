@@ -364,6 +364,7 @@ iframe {
   border-radius: 100px;
   text-align: center;
   cursor: pointer;
+  min-width: 100px;
 }
 
 .btn-table:first-child {
@@ -2682,6 +2683,10 @@ nav .profile .profile_pic img {
 }
 
 nav .nav-list {
+  display: none;
+}
+
+nav .nav-list2 {
   display: none;
 }
 

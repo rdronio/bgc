@@ -95,6 +95,11 @@
   }
   .btn-table {
     padding: 0.3rem 0.75rem;
+    display: block;
+  }
+  .btn-table:first-child {
+    margin-right: 0;
+    margin-bottom: 5px;
   }
   .btn-circle-container {
     -webkit-box-pack: start;
@@ -323,9 +328,6 @@
     /* color: #000 !important;
       font-weight: 600 !important; */
     /* font-size: 0.8rem !important; */
-  }
-  .pagination {
-    display: none !important;
   }
   .tab-list li {
     margin-top: 0.5rem;

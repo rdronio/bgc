@@ -105,6 +105,12 @@
 
   .btn-table {
     padding: 0.3rem 0.75rem;
+    display: block;
+  }
+
+  .btn-table:first-child {
+    margin-right: 0;
+    margin-bottom: 5px;
   }
 
   .btn-circle-container {
@@ -333,7 +339,7 @@
   }
 
   .pagination {
-    display: none !important;
+    // display: none !important;
   }
   .tab-list li {
     margin-top: 0.5rem;
