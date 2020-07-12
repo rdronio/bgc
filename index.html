@@ -30,7 +30,7 @@
       <div class="overlay"></div>
       <div class="left-container">
         <div class="logo">
-          <a href="#" class="logo-link">
+          <a href="" class="logo-link">
             <img src="/Images/BGC-LOGO-CLARK.png" alt="BGC Logo" />
           </a>
         </div>
@@ -187,49 +187,49 @@
     </section>
 
     <script>
-      const inputUsername = document.getElementById("txtUsername");
-      const inputPass = document.getElementById("txtUsername");
+      const inputUsername = document.getElementById('txtUsername');
+      const inputPass = document.getElementById('txtUsername');
 
-      inputUsername.addEventListener("keyup", function (event) {
+      inputUsername.addEventListener('keyup', function (event) {
         if (event.keyCode === 13) {
           // Cancel the default action, if needed
           // event.preventDefault();
 
-          document.getElementById("btnSignIn").click();
+          document.getElementById('btnSignIn').click();
         }
       });
 
-      inputPass.addEventListener("keyup", function (event) {
+      inputPass.addEventListener('keyup', function (event) {
         if (event.keyCode === 13) {
           // Cancel the default action, if needed
           // event.preventDefault();
 
-          document.getElementById("btnSignIn").click();
+          document.getElementById('btnSignIn').click();
         }
       });
 
       function sampleSignIn() {
-        const lblInvalid = document.querySelector("#lblInvalid");
-        const username = document.querySelector("#txtUsername").value;
+        const lblInvalid = document.querySelector('#lblInvalid');
+        const username = document.querySelector('#txtUsername').value;
 
-        if (username === "sudo") {
+        if (username === 'sudo') {
           window.location.replace(
-            "https://systemohr-demo.netlify.com/sudodashboard.html"
+            'https://systemohr-demo.netlify.com/sudodashboard.html'
           );
-        } else if (username === "hradmin") {
+        } else if (username === 'hradmin') {
           window.location.replace(
-            "https://systemohr-demo.netlify.com/admindashboard.html"
+            'https://systemohr-demo.netlify.com/admindashboard.html'
           );
-        } else if (username === "hrpayroll") {
+        } else if (username === 'hrpayroll') {
           window.location.replace(
-            "https://systemohr-demo.netlify.com/payroll.html"
+            'https://systemohr-demo.netlify.com/payroll.html'
           );
-        } else if (username === "oic") {
+        } else if (username === 'oic') {
           window.location.replace(
-            "https://systemohr-demo.netlify.com/oicdashboard.html"
+            'https://systemohr-demo.netlify.com/oicdashboard.html'
           );
         } else {
-          lblInvalid.classList.remove("hidden");
+          lblInvalid.classList.remove('hidden');
         }
       }
     </script>
