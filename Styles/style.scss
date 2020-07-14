@@ -3864,6 +3864,49 @@ nav ul li a span.fa {
   flex: 1;
 }
 
+/* view merits */
+#employee-masterlist .modal-view-employee .modal-content #view-hr-merits > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* view contri */
+#employee-masterlist .modal-view-employee .modal-content #view-hr-contri > div {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+#employee-masterlist
+  .modal-view-employee
+  .modal-content
+  #view-hr-contri
+  > div
+  > div {
+  flex: 1;
+}
+
+/* view savings */
+#employee-masterlist
+  .modal-view-employee
+  .modal-content
+  #view-hr-savings
+  > div {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+#employee-masterlist
+  .modal-view-employee
+  .modal-content
+  #view-hr-savings
+  > div
+  > div {
+  flex: 1;
+}
+
 /* ========[ Payroll Add Employee ]======== */
 #payroll-add-employee .container .card-1 > div:nth-child(2) {
   position: relative;

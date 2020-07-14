@@ -1872,15 +1872,17 @@
                     >
                   </li>
                   <li>
-                    <a onclick="openViewEmpInfoTab('view-hr-info')">Merits</a>
+                    <a onclick="openViewEmpInfoTab('view-hr-merits')">Merits</a>
                   </li>
                   <li>
-                    <a onclick="openViewEmpInfoTab('view-hr-info')"
+                    <a onclick="openViewEmpInfoTab('view-hr-contri')"
                       >Contribution</a
                     >
                   </li>
                   <li>
-                    <a onclick="openViewEmpInfoTab('view-hr-info')">Savings</a>
+                    <a onclick="openViewEmpInfoTab('view-hr-savings')"
+                      >Savings</a
+                    >
                   </li>
                   <!-- <li class="">
                     <a onclick="openViewEmpInfoTab('assignments')"
@@ -2492,24 +2494,181 @@
                 <h4 class="notAvailable">Not Available for Demo</h4>
               </div>
 
-              <!-- Performance & Training Tab -->
-              <div id="perf-train" class="tabViewIEList" style="display: none;">
-                <h4 class="notAvailable">Not Available for Demo</h4>
+              <!-- Merits Tab -->
+              <div
+                id="view-hr-merits"
+                class="tabViewIEList"
+                style="display: none;"
+              >
+                <div>
+                  <div>
+                    <label class="label-5">Total Merits</label class="label-5">
+                    <p>0</p>
+                  </div>
+                </div>
+
+                <!-- Merits Records -->
+                <!-- <label class="norecords">No Records Found</label> -->
+                <table class="tableLayout">
+                  <tbody>
+                    <tr>
+                      <td class="column1">Month</td>
+                      <td class="column2">Merit Points</td>
+                      <td class="column3">Reason</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">November 20, 2019</td>
+                      <td class="column2">5</td>
+                      <td class="column3">Lorem ipsum dolor sit amet.</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="pagination-container">
+                  <div class="showmore-container">
+                    <a class="btn-showmore" href="#"
+                      ><i class="fas fa-chevron-down"></i>More Results</a
+                    >
+                  </div>
+                  <div class="pagination">
+                    <a href="#"><span>«</span></a>
+                    <a href="#"><span class="active">1</span></a>
+                    <a href="#"><span>2</span></a>
+                    <a href="#"><span>3</span></a>
+                    <a href="#"><span>4</span></a>
+                    <a href="#"><span>5</span></a>
+                    <a href="#"><span>6</span></a>
+                    <a href="#"><span>7</span></a>
+                    <a href="#"><span>8</span></a>
+                    <a href="#"><span>9</span></a>
+                    <a href="#"><span>10</span></a>
+                    <a href="#"><span>»</span></a>
+                  </div>
+                </div>
               </div>
 
               <!-- Contirbution Tax Tab -->
               <div
-                id="contribution-tax"
+                id="view-hr-contri"
                 class="tabViewIEList"
                 style="display: none;"
               >
-                <h4 class="notAvailable">Not Available for Demo</h4>
+                <div>
+                  <div>
+                    <label class="label-5">Current Month</label>
+                    <p>July</p>
+                  </div>
+                  <div>
+                    <label class="label-5">SSS</label>
+                    <p>0</p>
+                  </div>
+                  <div>
+                    <label class="label-5">Pag-Ibig</label>
+                    <p>0</p>
+                  </div>
+                  <div>
+                    <label class="label-5">Philhealth</label>
+                    <p>0</p>
+                  </div>
+                </div>
+
+                <!-- Contri Records -->
+                <!-- <label class="norecords">No Records Found</label> -->
+                <table class="tableLayout">
+                  <tbody>
+                    <tr>
+                      <td class="column1">Month</td>
+                      <td class="column2">SSS</td>
+                      <td class="column3">Pag-Ibig</td>
+                      <td class="column3">Philhealth</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">November 20, 2019</td>
+                      <td class="column2">100</td>
+                      <td class="column3">200</td>
+                      <td class="column3">150</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="pagination-container">
+                  <div class="showmore-container">
+                    <a class="btn-showmore" href="#"
+                      ><i class="fas fa-chevron-down"></i>More Results</a
+                    >
+                  </div>
+                  <div class="pagination">
+                    <a href="#"><span>«</span></a>
+                    <a href="#"><span class="active">1</span></a>
+                    <a href="#"><span>2</span></a>
+                    <a href="#"><span>3</span></a>
+                    <a href="#"><span>4</span></a>
+                    <a href="#"><span>5</span></a>
+                    <a href="#"><span>6</span></a>
+                    <a href="#"><span>7</span></a>
+                    <a href="#"><span>8</span></a>
+                    <a href="#"><span>9</span></a>
+                    <a href="#"><span>10</span></a>
+                    <a href="#"><span>»</span></a>
+                  </div>
+                </div>
               </div>
 
-              <!-- Files Tab -->
-              <div id="files" class="tabViewIEList" style="display: none;">
-                <h4 class="notAvailable">Not Available for Demo</h4>
+              <!-- Savings Tab -->
+              <div
+                id="view-hr-savings"
+                class="tabViewIEList"
+                style="display: none;"
+              >
+                <div>
+                  <div>
+                    <label class="label-5">Current Month</label>
+                    <p>July</p>
+                  </div>
+                  <div>
+                    <label class="label-5">Total savings</label>
+                    <p>0</p>
+                  </div>
+                </div>
+
+                <!-- Savings Records -->
+                <!-- <label class="norecords">No Records Found</label> -->
+                <table class="tableLayout">
+                  <tbody>
+                    <tr>
+                      <td class="column1">Month</td>
+                      <td class="column2">Amount</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">November 20, 2019</td>
+                      <td class="column2">5</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="pagination-container">
+                  <div class="showmore-container">
+                    <a class="btn-showmore" href="#"
+                      ><i class="fas fa-chevron-down"></i>More Results</a
+                    >
+                  </div>
+                  <div class="pagination">
+                    <a href="#"><span>«</span></a>
+                    <a href="#"><span class="active">1</span></a>
+                    <a href="#"><span>2</span></a>
+                    <a href="#"><span>3</span></a>
+                    <a href="#"><span>4</span></a>
+                    <a href="#"><span>5</span></a>
+                    <a href="#"><span>6</span></a>
+                    <a href="#"><span>7</span></a>
+                    <a href="#"><span>8</span></a>
+                    <a href="#"><span>9</span></a>
+                    <a href="#"><span>10</span></a>
+                    <a href="#"><span>»</span></a>
+                  </div>
+                </div>
               </div>
+
               <!-- Time Records Tab -->
               <div
                 id="time-records"
