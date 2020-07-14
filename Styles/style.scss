@@ -1194,6 +1194,32 @@ iframe {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
+.search-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0 5px;
+  line-height: 0;
+}
+
+.search-container button svg {
+  border-radius: 50%;
+  color: #333;
+  height: 32px;
+  width: 32px;
+  padding: 5px;
+}
+.search-container button:hover svg {
+  background-color: rgba(60, 64, 67, 0.12);
+}
+.search-container button:focus svg,
+.search-container button:active svg {
+  outline: none;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
 .search-container > div {
   height: 40px;
   width: 100%;
@@ -1363,6 +1389,38 @@ iframe {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
+
+.searchRec-container button {
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  cursor: pointer;
+
+  color: #fff !important;
+
+  display: flex;
+  /* flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: center; */
+
+  padding: 0px 6px 1px 6px;
+
+  background: #333333;
+
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.searchRec-container button:hover {
+  background-color: rgba(60, 64, 67, 0.12);
+}
+.searchRec-container button:focus,
+.searchRec-container button:active {
+  outline: none;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
 .searchRec-container > div {
   height: 40px;
   width: 100%;
@@ -4213,9 +4271,6 @@ nav ul li a span.fa {
 }
 
 /* view hr info */
-#payroll-add-employee .modal-view-employee .modal-content #view-hr-info {
-}
-
 #payroll-add-employee .modal-view-employee .modal-content #view-hr-info {
   display: flex;
   flex-direction: row;

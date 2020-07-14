@@ -2194,3 +2194,56 @@ function closeModalMassPayroll() {
     //console.log(e);
   }
 }
+
+function openModalMerit() {
+  try {
+    const modal = document.querySelector('.modal-add-merit');
+    modal.style.display = 'flex';
+  } catch (e) {
+    //console.log(e);
+  }
+}
+
+function closeModalMerit() {
+  try {
+    const modal = document.querySelector('.modal-add-merit');
+    modal.style.display = 'none';
+  } catch (e) {
+    //console.log(e);
+  }
+}
+
+function openModalSavings() {
+  try {
+    const modal = document.querySelector('.modal-add-savings');
+    modal.style.display = 'flex';
+  } catch (e) {
+    //console.log(e);
+  }
+}
+
+function closeModalSavings() {
+  try {
+    const modal = document.querySelector('.modal-add-savings');
+    modal.style.display = 'none';
+  } catch (e) {
+    //console.log(e);
+  }
+}
+function openModalContributions() {
+  try {
+    const modal = document.querySelector('.modal-add-contributions');
+    modal.style.display = 'flex';
+  } catch (e) {
+    //console.log(e);
+  }
+}
+
+function closeModalContributions() {
+  try {
+    const modal = document.querySelector('.modal-add-contributions');
+    modal.style.display = 'none';
+  } catch (e) {
+    //console.log(e);
+  }
+}
