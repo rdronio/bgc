@@ -25,7 +25,7 @@
   <body>
     <form id="manage-employee" action="#" autocomplete="off">
       <!-- main -->
-      <div class="main ">
+      <div class="main">
         <!-- nav -->
         <nav id="nav">
           <div class="logo">
@@ -360,12 +360,12 @@
                   </div>
 
                   <div class="btn-filter-container">
-                    <a class="btn-sm btn-primary " id="btnSearchPayroll">
+                    <a class="btn-sm btn-primary" id="btnSearchPayroll">
                       Search
                     </a>
 
                     <a
-                      class="btn-sm btn-secondary hidden "
+                      class="btn-sm btn-secondary hidden"
                       id="btnClearMemoNotice"
                     >
                       Clear
@@ -634,7 +634,7 @@
 
             <div class="card card-2 hidden">
               <!--  employee -->
-              <table class="tableLayout ">
+              <table class="tableLayout">
                 <tbody>
                   <tr>
                     <td class="column1">Employee ID</td>
@@ -952,7 +952,7 @@
               </div>
 
               <!-- HR Info Tab -->
-              <div id="hr-info" class="tabNameHrModal" style="display:none">
+              <div id="hr-info" class="tabNameHrModal" style="display: none;">
                 <div>
                   <label for="txtBioNumber" class="label-6"
                     >Bio Number <span class="note-red">*</span></label
@@ -1229,7 +1229,7 @@
               </div>
 
               <!-- Access Tab -->
-              <div id="access" class="tabNameHrModal" style="display:none">
+              <div id="access" class="tabNameHrModal" style="display: none;">
                 <label class="label-6">Grant Access Role</label>
                 <div class="modal-rd-container">
                   <label for="optYesAccessRole" class="radio">
@@ -1508,7 +1508,7 @@
               <div
                 id="hr-info-update"
                 class="tabNameHrModal"
-                style="display:none"
+                style="display: none;"
               >
                 <div>
                   <label for="txtDateEmployed2" class="label-6"
@@ -1740,7 +1740,7 @@
               <div
                 id="access-update"
                 class="tabNameHrModal"
-                style="display:none"
+                style="display: none;"
               >
                 <label class="label-6">Grant Access Role</label>
                 <div class="modal-rd-container">
@@ -1833,7 +1833,18 @@
                       >HR Information</a
                     >
                   </li>
-                  <li class="">
+                  <li>
+                    <a onclick="openViewEmpInfoTab('view-hr-info')">Merits</a>
+                  </li>
+                  <li>
+                    <a onclick="openViewEmpInfoTab('view-hr-info')"
+                      >Contribution</a
+                    >
+                  </li>
+                  <li>
+                    <a onclick="openViewEmpInfoTab('view-hr-info')">Savings</a>
+                  </li>
+                  <!-- <li class="">
                     <a onclick="openViewEmpInfoTab('assignments')"
                       >Assignments</a
                     >
@@ -1868,11 +1879,11 @@
                   </li>
                   <li class="">
                     <a onclick="openViewEmpInfoTab('files')">Files</a>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
 
-              <div class="summary-employee-info-container ">
+              <div class="summary-employee-info-container">
                 <div>
                   <div class="summary-employee-info-header">
                     <label class="label-5">Basic Employee Information </label>
@@ -2042,7 +2053,11 @@
               </div>
 
               <!-- HR Info Tab -->
-              <div id="view-hr-info" class="tabViewIEList" style="display:none">
+              <div
+                id="view-hr-info"
+                class="tabViewIEList"
+                style="display: none;"
+              >
                 <div>
                   <label for="lblBioNo" class="label-6">Bio Number </label>
                   <p name="lblBioNo" id="lblBioNo">
@@ -2137,7 +2152,11 @@
               </div>
 
               <!-- Access Tab -->
-              <div id="view-access" class="tabViewIEList" style="display:none">
+              <div
+                id="view-access"
+                class="tabViewIEList"
+                style="display: none;"
+              >
                 <label for="lblRole" class="label-6">Role</label>
                 <p name="lblRole" id="lblRole">Employee</p>
               </div>
@@ -2146,7 +2165,7 @@
               <div
                 id="leave-records"
                 class="tabViewIEList"
-                style="display:none"
+                style="display: none;"
               >
                 <!-- Leave Records Table -->
                 <!-- <label class="norecords">No Records Found</label> -->
@@ -2256,7 +2275,7 @@
               <div
                 id="overtime-records"
                 class="tabViewIEList"
-                style="display:none"
+                style="display: none;"
               >
                 <!-- Overtime Records -->
                 <!-- <label class="norecords">No Records Found</label> -->
@@ -2427,12 +2446,16 @@
               </div>
 
               <!-- Assignments Tab -->
-              <div id="assignments" class="tabViewIEList" style="display:none">
+              <div
+                id="assignments"
+                class="tabViewIEList"
+                style="display: none;"
+              >
                 <h4 class="notAvailable">Not Available for Demo</h4>
               </div>
 
               <!-- Performance & Training Tab -->
-              <div id="perf-train" class="tabViewIEList" style="display:none">
+              <div id="perf-train" class="tabViewIEList" style="display: none;">
                 <h4 class="notAvailable">Not Available for Demo</h4>
               </div>
 
@@ -2440,17 +2463,21 @@
               <div
                 id="contribution-tax"
                 class="tabViewIEList"
-                style="display:none"
+                style="display: none;"
               >
                 <h4 class="notAvailable">Not Available for Demo</h4>
               </div>
 
               <!-- Files Tab -->
-              <div id="files" class="tabViewIEList" style="display:none">
+              <div id="files" class="tabViewIEList" style="display: none;">
                 <h4 class="notAvailable">Not Available for Demo</h4>
               </div>
               <!-- Time Records Tab -->
-              <div id="time-records" class="tabViewIEList" style="display:none">
+              <div
+                id="time-records"
+                class="tabViewIEList"
+                style="display: none;"
+              >
                 <!-- Time Records -->
                 <!-- <label class="norecords">No Records Found</label> -->
                 <table class="tableLayout">
