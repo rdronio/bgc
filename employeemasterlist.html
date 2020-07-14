@@ -177,7 +177,7 @@
                   <a onclick="showEM()">Employee Masterlist</a>
                 </li>
                 <li>
-                  <a onclick="showSM()">Sample</a>
+                  <a onclick="showSM()">Import Employee</a>
                 </li>
               </ul>
             </div>
@@ -633,6 +633,18 @@
             </div>
 
             <div class="card card-2 hidden">
+              <label for="csvFileInput" class="label-6 block">Upload CSV</label>
+              <input
+                type="file"
+                name="csvFileInput"
+                id="csvFileInput"
+                accept=".csv"
+              />
+
+              <a class="btn-sm btn-primary" id="btnUploadMasterlist" onclick="">
+                Upload
+              </a>
+
               <!--  employee -->
               <table class="tableLayout">
                 <tbody>
@@ -722,6 +734,27 @@
                   </tr>
                 </tbody>
               </table>
+
+              <div class="success">
+                <i class="far fa-check-circle"></i>
+                <h3>Successfully saved!</h3>
+              </div>
+
+              <div class="btn-container">
+                <button
+                  href=""
+                  class="btn-sm btn-primary mx-3"
+                  id="btnSaveMasterlist"
+                >
+                  Save
+                </button>
+                <button
+                  class="btn-sm btn-secondary mx-3"
+                  id="btnClearMasterlist"
+                >
+                  Clear
+                </button>
+              </div>
             </div>
           </div>
 
@@ -1295,6 +1328,11 @@
                   class="btn-sm btn-primary mx-3 hidden"
                   id="btnModalUpdateEmployee"
                   >Update Employee</a
+                >
+                <a
+                  class="btn-sm btn-red mx-3 hidden"
+                  id="btnModalDeleteEmployee"
+                  >Delete Employee</a
                 >
                 <a
                   class="btn-sm btn-secondary mx-3"
