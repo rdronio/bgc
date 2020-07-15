@@ -25,7 +25,7 @@
     <title>HRIS & Payroll System</title>
   </head>
   <body>
-    <form id="substitution" action="#" autocomplete="off">
+    <form id="contribution" action="#" autocomplete="off">
       <!-- main -->
       <div class="main">
         <!-- nav -->
@@ -413,7 +413,15 @@
           <!-- btnAddContributions -->
           <div class="modal modal-add-contributions">
             <div class="modal-content">
-              <h5>Contributions Form</h5>
+              <div class="header-delete-container">
+                <h5>Contribution Form</h5>
+                <a
+                  class="btn-xs btn-alt-red mx-3"
+                  id="btnDelete"
+                  onclick="window.confirm('Delete this Merit record?')"
+                  >Delete</a
+                >
+              </div>
               <hr />
               <div class="">
                 <label for="txtDepartment" class="label-6">Department </label>

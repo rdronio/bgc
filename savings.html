@@ -25,7 +25,7 @@
     <title>HRIS & Payroll System</title>
   </head>
   <body>
-    <form id="substitution" action="#" autocomplete="off">
+    <form id="savings" action="#" autocomplete="off">
       <!-- main -->
       <div class="main">
         <!-- nav -->
@@ -409,7 +409,15 @@
           <!-- btnAddSavings -->
           <div class="modal modal-add-savings">
             <div class="modal-content">
-              <h5>Savings Form</h5>
+              <div class="header-delete-container">
+                <h5>Savings Form</h5>
+                <a
+                  class="btn-xs btn-alt-red mx-3"
+                  id="btnDelete"
+                  onclick="window.confirm('Delete this Merit record?')"
+                  >Delete</a
+                >
+              </div>
               <hr />
               <div class="">
                 <label for="txtDepartment" class="label-6">Department </label>
