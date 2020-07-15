@@ -186,7 +186,7 @@
             </div> -->
             <div class="card card-1">
               <div>
-                <a class="btn-xs btn-alt" onclick="openModalContributions();"
+                <a class="btn-xs btn-alt" onclick="addModalContributions();"
                   >Add Contributions
                 </a>
               </div>
@@ -393,7 +393,7 @@
                     <td class="column1">
                       <a
                         class="btn-table btn-secondary"
-                        onclick="openModalContributions();"
+                        onclick="editModalContributions();"
                         >Edit</a
                       >
                     </td>
@@ -411,7 +411,7 @@
 
           <!-- Modal Section -->
           <!-- btnAddContributions -->
-          <div class="modal modal-add-contributions">
+          <div class="modal modal-contributions">
             <div class="modal-content">
               <div class="header-delete-container">
                 <h5>Contribution Form</h5>
@@ -480,7 +480,12 @@
                 />
               </div>
               <div class="modal-btn-container">
-                <a class="btn-sm btn-primary mx-3" id="btnSave">Save</a>
+                <a class="btn-sm btn-primary mx-3" id="btnAdd"
+                  >Add Contribution</a
+                >
+                <a class="btn-sm btn-primary mx-3 hidden" id="btnEdit"
+                  >Save Changes</a
+                >
                 <a
                   class="btn-sm btn-secondary mx-3"
                   onclick="closeModalContributions();"
