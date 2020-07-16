@@ -1266,6 +1266,7 @@ iframe {
 
 .pagination-container {
   text-align: right !important;
+  display: none !important;
 }
 
 .pagination {
@@ -2284,20 +2285,46 @@ table.tableLayoutDB {
   margin: 1rem 0;
   position: relative;
   display: block;
+  overflow-x: auto;
   overflow-y: auto;
-  white-space: nowrap;
+  max-height: 300px;
+  /* white-space: nowrap; */
 }
 
 .tableLayoutDB::-webkit-scrollbar {
-  background: #e0e0e0 !important;
-  width: 3px !important;
-  height: 3px !important;
-  padding: 0 2px;
+  height: 16px;
+  overflow: visible;
+  width: 16px;
+}
+
+.tableLayoutDB::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+
+.tableLayoutDB::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 .tableLayoutDB::-webkit-scrollbar-thumb {
-  background: #333 !important;
-  border-radius: 3px 3px !important;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 1px 1px 1px 6px;
+  min-height: 28px;
+  padding: 100px 0 0;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+}
+
+.tableLayoutDB::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.tableLayoutDB::-webkit-scrollbar-track {
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0 0 4px;
 }
 
 table.tableLayoutDB * {
@@ -2394,23 +2421,49 @@ table.tableLayout-md {
   border-collapse: collapse;
   border-radius: 5px;
   overflow: hidden;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   position: relative;
   display: block;
+  overflow-x: auto;
   overflow-y: auto;
+  max-height: 550px;
   /* white-space: nowrap; */
 }
 
 .tableLayout-md::-webkit-scrollbar {
-  background: #e0e0e0 !important;
-  width: 3px !important;
-  height: 3px !important;
-  padding: 0 2px;
+  height: 16px;
+  overflow: visible;
+  width: 16px;
+}
+
+.tableLayout-md::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+
+.tableLayout-md::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 .tableLayout-md::-webkit-scrollbar-thumb {
-  background: #333 !important;
-  border-radius: 3px 3px !important;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 1px 1px 1px 6px;
+  min-height: 28px;
+  padding: 100px 0 0;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+}
+
+.tableLayout-md::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.tableLayout-md::-webkit-scrollbar-track {
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0 0 4px;
 }
 
 table.tableLayout-md * {
@@ -3114,8 +3167,7 @@ nav ul li a span.fa {
 }
 
 .card-2:nth-child(2) table.tableLayoutDB {
-  top: 7px;
-  height: 179px;
+  top: 14px;
 }
 
 /* ========[ Time Records ]======== */
