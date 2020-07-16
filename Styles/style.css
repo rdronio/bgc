@@ -23,16 +23,39 @@ html {
 }
 
 ::-webkit-scrollbar {
-  background: #fff !important;
-  width: 10px !important;
-  padding: 0 2px;
-  border-top-right-radius: 10px !important;
-  border-bottom-right-radius: 10px !important;
+  height: 16px;
+  overflow: visible;
+  width: 16px;
+}
+
+::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333 !important;
-  border-radius: 10px 10px !important;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 1px 1px 1px 6px;
+  min-height: 28px;
+  padding: 100px 0 0;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-track {
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0 0 4px;
 }
 
 form {
@@ -2112,15 +2135,39 @@ table.tableLayout {
 }
 
 .tableLayout::-webkit-scrollbar {
-  background: #e0e0e0 !important;
-  width: 7px !important;
-  height: 7px !important;
-  padding: 0 2px;
+  height: 16px;
+  overflow: visible;
+  width: 16px;
+}
+
+.tableLayout::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+
+.tableLayout::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 .tableLayout::-webkit-scrollbar-thumb {
-  background: #333 !important;
-  border-radius: 7px 7px !important;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 1px 1px 1px 6px;
+  min-height: 28px;
+  padding: 100px 0 0;
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+}
+
+.tableLayout::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.tableLayout::-webkit-scrollbar-track {
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 0 0 4px;
 }
 
 table.tableLayout * {
@@ -2265,12 +2312,38 @@ table.tableLayoutDB th {
 }
 
 table.tableLayoutDB tbody tr:first-child {
-  border-bottom: 2px #333 solid !important;
   font-size: 0.65rem !important;
   color: #333 !important;
   text-transform: uppercase !important;
   font-weight: bold !important;
   pointer-events: none !important;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 1;
+}
+
+table.tableLayoutDB tbody tr:first-child td {
+  font-size: 0.65rem !important;
+  color: #333 !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+  pointer-events: none !important;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 1;
+}
+
+table.tableLayoutDB tbody tr:first-child td:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px #333 solid;
 }
 
 table.tableLayoutDB tbody tr:last-child {
