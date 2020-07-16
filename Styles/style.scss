@@ -1292,7 +1292,7 @@ iframe {
   min-width: 334px;
   position: absolute;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 }
 .search-filter-container > div {
   display: -webkit-box;
@@ -1837,13 +1837,16 @@ iframe {
 table.tableLayout {
   border-spacing: 1;
   border-collapse: collapse;
+  // border-collapse: separate;
   border-radius: 5px;
   overflow: hidden;
   margin: 1rem 0;
   position: relative;
 
-  /* display: block; */
+  display: block;
   overflow-x: auto;
+  overflow-y: auto;
+  max-height: 550px;
   /* white-space: nowrap; */
 }
 
@@ -1882,13 +1885,47 @@ table.tableLayout thead tr {
 }
 
 table.tableLayout tbody tr:first-child {
-  border-bottom: 2px #333 solid !important;
+  // border-bottom: 2px #333 solid !important;
   font-size: 0.65rem !important;
   color: #333 !important;
   text-transform: uppercase !important;
   font-weight: bold !important;
   pointer-events: none !important;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 1;
 }
+
+table.tableLayout tbody tr:first-child td {
+  font-size: 0.65rem !important;
+  color: #333 !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+  pointer-events: none !important;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 1;
+}
+
+table.tableLayout tbody tr:first-child td:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px #333 solid;
+}
+
+// table.tableLayout tbody tr:first-child {
+//   border-bottom: 2px #333 solid !important;
+//   font-size: 0.65rem !important;
+//   color: #333 !important;
+//   text-transform: uppercase !important;
+//   font-weight: bold !important;
+//   pointer-events: none !important;
+// }
 
 table.tableLayout tbody tr:last-child {
   border: 0;
