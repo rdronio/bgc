@@ -2244,6 +2244,31 @@ table.tableLayout-md tbody tr:first-child {
   pointer-events: none !important;
 }
 
+table.tableLayout-md tbody tr:first-child {
+  // border-bottom: 2px #333 solid !important;
+  font-size: 0.65rem !important;
+  color: #333 !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+  pointer-events: none !important;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 1;
+}
+
+table.tableLayout-md tbody tr:first-child td {
+  font-size: 0.65rem !important;
+  color: #333 !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+  pointer-events: none !important;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 1;
+}
+
 table.tableLayout-md tbody tr:last-child {
   border: 0;
 }
