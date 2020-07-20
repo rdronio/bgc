@@ -217,10 +217,15 @@ $(".monthPicker").each(function () {
       changeYear: true,
       showButtonPanel: true,
       dateFormat: "MM yy",
-      onClose: function (dateText, inst) {
+      yearRange: "+0:+10",
+      minDate: new Date(),
+      onClose: function (dateText, inst, selectedDate) {
         $(this).datepicker(
           "setDate",
-          new Date(inst.selectedYear, inst.selectedMonth, 1)
+          new Date(inst.selectedYear, inst.selectedMonth, 1),
+          "option",
+          "minDate",
+          selectedDate
         );
       },
     });
