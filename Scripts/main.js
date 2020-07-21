@@ -259,6 +259,37 @@ $('.monthPicker2').each(function () {
   }
 });
 
+// Saturday Date Picker
+$('.saturdayDatePicker').each(function () {
+  try {
+    //Create jQueryUI datepicker
+    $(this).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      yearRange: '-10:+10',
+      beforeShowDay: function (date) {
+        var day = date.getDay();
+        return [day == 6, ''];
+      },
+      onChangeMonthYear: function (year, month) {
+        var $datepicker = jQuery(this);
+        var date = new Date($datepicker.datepicker('getDate'));
+        var lastDayOfMonth = new Date(year, month, 0).getDate();
+        var preservedDay = Math.min(
+          lastDayOfMonth,
+          Math.max(1, date.getDate())
+        );
+        $datepicker.datepicker(
+          'setDate',
+          month + '/' + preservedDay + '/' + year
+        );
+      },
+    });
+  } catch (e) {
+    console.log(e);
+  }
+});
+
 // Birthday Picker
 $('.bdayPicker').each(function () {
   try {
