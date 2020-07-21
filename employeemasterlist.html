@@ -669,20 +669,28 @@
                     <td class="column2">Employee Number</td>
                     <td class="column3">Department</td>
                     <td class="column4">Position</td>
-                    <td class="column5">Account Number</td>
-                    <td class="column6">Last Name</td>
-                    <td class="column7">Given Name</td>
-                    <td class="column8">Middle Name</td>
-                    <td class="column9">Birthdate</td>
-                    <td class="column10">Date Hired</td>
-                    <td class="column11">SSS Number</td>
-                    <td class="column12">Philhealth Number</td>
-                    <td class="column13">Pag Ibig Number</td>
-                    <td class="column14">Tin</td>
-                    <td class="column15">Street</td>
-                    <td class="column16">Province</td>
-                    <td class="column17">City</td>
-                    <td class="column18">Barangay</td>
+                    <td class="column5">Employment Status</td>
+                    <td class="column6">Account Number</td>
+                    <td class="column7">Last Name</td>
+                    <td class="column8">Given Name</td>
+                    <td class="column9">Middle Name</td>
+                    <td class="column10">Birthdate</td>
+                    <td class="column11">Date Hired</td>
+                    <td class="column12">SSS Number</td>
+                    <td class="column13">Philhealth Number</td>
+                    <td class="column14">Pag Ibig Number</td>
+                    <td class="column15">Tin</td>
+                    <td class="column16">Street</td>
+                    <td class="column17">Province</td>
+                    <td class="column18">City</td>
+                    <td class="column19">Barangay</td>
+                    <td class="column20">Basic Salary</td>
+                    <td class="column21">Merits</td>
+                    <td class="column22">SSS</td>
+                    <td class="column23">Philhealth</td>
+                    <td class="column24">Pagibig</td>
+                    <td class="column25">Savings</td>
+                    <td class="column26">Month/Year</td>
                   </tr>
                   <tr>
                     <td class="column1"></td>
@@ -703,6 +711,14 @@
                     <td class="column16"></td>
                     <td class="column17"></td>
                     <td class="column18"></td>
+                    <td class="column19"></td>
+                    <td class="column20"></td>
+                    <td class="column21"></td>
+                    <td class="column22"></td>
+                    <td class="column23"></td>
+                    <td class="column24"></td>
+                    <td class="column25"></td>
+                    <td class="column26"></td>
                   </tr>
                 </tbody>
               </table>
@@ -734,47 +750,65 @@
 
               <!--  employee -->
               <table class="tableLayout">
-                <tbody>
-                  <tr>
-                    <td class="column1">BIO Number</td>
-                    <td class="column2">Employee Number</td>
-                    <td class="column3">Department</td>
-                    <td class="column4">Position</td>
-                    <td class="column5">Account Number</td>
-                    <td class="column6">Last Name</td>
-                    <td class="column7">Given Name</td>
-                    <td class="column8">Middle Name</td>
-                    <td class="column9">Birthdate</td>
-                    <td class="column10">Date Hired</td>
-                    <td class="column11">SSS Number</td>
-                    <td class="column12">Philhealth Number</td>
-                    <td class="column13">Pag Ibig Number</td>
-                    <td class="column14">Tin</td>
-                    <td class="column15">Street</td>
-                    <td class="column16">Province</td>
-                    <td class="column17">City</td>
-                    <td class="column18">Barangay</td>
-                  </tr>
-                  <tr>
-                    <td class="column1"></td>
-                    <td class="column2"></td>
-                    <td class="column3"></td>
-                    <td class="column4"></td>
-                    <td class="column5"></td>
-                    <td class="column6"></td>
-                    <td class="column7"></td>
-                    <td class="column8"></td>
-                    <td class="column9"></td>
-                    <td class="column10"></td>
-                    <td class="column11"></td>
-                    <td class="column12"></td>
-                    <td class="column13"></td>
-                    <td class="column14"></td>
-                    <td class="column15"></td>
-                    <td class="column16"></td>
-                    <td class="column17"></td>
-                    <td class="column18"></td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <td class="column0">Action</td>
+                      <td class="column1">BIO Number</td>
+                      <td class="column2">Employee Number</td>
+                      <td class="column3">Department</td>
+                      <td class="column4">Position</td>
+                      <td class="column5">Employment Status</td>
+                      <td class="column6">Account Number</td>
+                      <td class="column7">Last Name</td>
+                      <td class="column8">Given Name</td>
+                      <td class="column9">Middle Name</td>
+                      <td class="column10">Birthdate</td>
+                      <td class="column11">Date Hired</td>
+                      <td class="column12">SSS Number</td>
+                      <td class="column13">Philhealth Number</td>
+                      <td class="column14">Pag Ibig Number</td>
+                      <td class="column15">Tin</td>
+                      <td class="column16">Street</td>
+                      <td class="column17">Province</td>
+                      <td class="column18">City</td>
+                      <td class="column19">Barangay</td>
+                      <td class="column20">Basic Salary</td>
+                      <td class="column21">Merits</td>
+                      <td class="column22">SSS</td>
+                      <td class="column23">Philhealth</td>
+                      <td class="column24">Pagibig</td>
+                      <td class="column25">Savings</td>
+                      <td class="column26">Month/Year</td>
+                    </tr>
+                    <tr>
+                      <td class="column0"><a class="btn-table btn-secondary" onclick="confirm('Permanently delete this Employee Record?');">Delete</a></td>
+                      <td class="column1"></td>
+                      <td class="column2"></td>
+                      <td class="column3"></td>
+                      <td class="column4"></td>
+                      <td class="column5"></td>
+                      <td class="column6"></td>
+                      <td class="column7"></td>
+                      <td class="column8"></td>
+                      <td class="column9"></td>
+                      <td class="column10"></td>
+                      <td class="column11"></td>
+                      <td class="column12"></td>
+                      <td class="column13"></td>
+                      <td class="column14"></td>
+                      <td class="column15"></td>
+                      <td class="column16"></td>
+                      <td class="column17"></td>
+                      <td class="column18"></td>
+                      <td class="column19"></td>
+                      <td class="column20"></td>
+                      <td class="column21"></td>
+                      <td class="column22"></td>
+                      <td class="column23"></td>
+                      <td class="column24"></td>
+                      <td class="column25"></td>
+                      <td class="column26"></td>
+                    </tr>
                 </tbody>
               </table>
 
@@ -907,16 +941,16 @@
                       />
                     </div>
 
-                    <label for="txtLastName" class="label-6">Last Name </label>
+                    <label for="txtLastName" class="label-6">Last Name <span class="note-red">*</span></label>
                     <input name="txtLastName" type="text" id="txtLastName" />
 
                     <label for="txtFirstName" class="label-6"
-                      >Given Name
+                      >Given Name <span class="note-red">*</span>
                     </label>
                     <input name="txtFirstName" type="text" id="txtFirstName" />
 
                     <label for="txtMiddleName" class="label-6"
-                      >Middle Name
+                      >Middle Name  <span class="note">(Optional)</span>
                     </label>
                     <input
                       name="txtMiddleName"
@@ -925,7 +959,7 @@
                     />
 
                     <label for="dtPickerBirthday" class="label-6"
-                      >Birthday
+                      >Birthday <span class="note-red">*</span>
                     </label>
                     <input
                       name="dtPickerBirthday"
@@ -934,7 +968,7 @@
                       class="bdayPicker"
                     />
 
-                    <label class="label-6">Gender</label>
+                    <label class="label-6">Gender <span class="note-red">*</span></label>
                     <div class="modal-rd-container">
                       <label for="optMale" class="radio">
                         <input
@@ -957,7 +991,7 @@
                       </label>
                     </div>
 
-                    <label class="label-6">Civil Status</label>
+                    <label class="label-6">Civil Status <span class="note-red">*</span></label>
                     <div class="modal-rd-container">
                       <label for="optSingle" class="radio">
                         <input
@@ -1102,7 +1136,7 @@
                   />
 
                   <label for="txtEmpIdNumber" class="label-6"
-                    >Employee ID Number</label
+                    >Employee ID Number <span class="note-red">*</span></label
                   >
                   <input
                     name="txtEmpIdNumber"
@@ -1113,7 +1147,7 @@
                   />
 
                   <label for="txtDateEmployed" class="label-6"
-                    >Date Hired</label
+                    >Date Hired <span class="note-red">*</span></label
                   >
                   <input
                     name="txtDateEmployed"
@@ -1122,7 +1156,7 @@
                     class="datePicker"
                   />
 
-                  <label for="drpDepartment" class="label-6">Department</label>
+                  <label for="drpDepartment" class="label-6">Department <span class="note-red">*</span></label>
                   <select
                     name="drpDepartment"
                     id="drptDepartment"
@@ -1137,7 +1171,7 @@
                   >
                   </select>
 
-                  <label for="selectPosition" class="label-6">Position</label>
+                  <label for="selectPosition" class="label-6">Position <span class="note-red">*</span></label>
                   <select
                     name="selectPosition"
                     id="selectPosition"
@@ -1155,7 +1189,7 @@
                   >
                   </select>
 
-                  <label for="txtSalary" class="label-6">Basic Salary</label>
+                  <label for="txtSalary" class="label-6">Basic Salary <span class="note-red">*</span></label>
                   <input
                     name="txtSalary"
                     type="number"
@@ -1171,7 +1205,7 @@
                     <option value="regular">Night Shift</option>
                   </select>
 
-                  <label class="label-6">Schedule</label>
+                  <label class="label-6">Schedule <span class="note">(Military Time) </span><span class="note-red">*</span></label>
                   <label for="txtScheduleFrom" class="note">From</label>
                   <input
                     name="txtScheduleFrom"
@@ -1188,13 +1222,13 @@
                   />
 
                   <label for="selectEmploymentStatus" class="label-6"
-                    >Employment status</label
+                    >Employment status <span class="note-red">*</span></label
                   >
                   <select
                     name="selectEmploymentStatus"
                     id="selectEmploymentStatus"
                     class="select"
-                    onchange="toggleEndo();"
+                    onchange="toggleTermination();"
                   >
                     <option value="probationary">Probationary</option>
                     <option value="regular">Regular</option>
@@ -1435,7 +1469,7 @@
                 <a
                   class="btn-sm btn-red mx-3 hidden"
                   id="btnModalDeleteEmployee"
-                  >Delete Employee</a
+                  >Archive Employee</a
                 >
                 <a
                   class="btn-sm btn-secondary mx-3"
