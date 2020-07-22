@@ -836,6 +836,10 @@ iframe {
   height: 300px;
 }
 
+.card-lg {
+  height: 490px;
+}
+
 .current-page > a {
   background: #00aedb;
   color: #fff !important;
