@@ -308,26 +308,6 @@
                   </a>
                 </div>
                 <div class="search-filter-container hidden">
-                  <div>
-                    <label class="block">Filter Date</label>
-                    <div class="datePeriod">
-                      <label for="txtDateFrom">From: </label>
-                      <input
-                        name="txtDateFrom"
-                        type="text"
-                        id="txtDateFrom"
-                        class="startDatePicker"
-                      />
-                      <label for="txtDateTo">To: </label>
-                      <input
-                        name="txtDateTo"
-                        type="text"
-                        id="txtDateTo"
-                        class="endDatePicker"
-                      />
-                    </div>
-                  </div>
-
                   <div class="showEmployeeBy">
                     <label for="showEmployeeBy" class="label-6 block"
                       >Show Employee by</label
@@ -366,26 +346,31 @@
                 </div>
               </div>
 
-              <!-- Time Records -->
+              <!-- Weekly TimeSheet Records -->
+              <!-- <label class="norecords">No Records Found</label> -->
               <table class="tableLayout">
                 <tbody>
                   <tr>
-                    <td class="column1">Employee Name</td>
-                    <td class="column2">Date</td>
-                    <td class="column3">Time In</td>
-                    <td class="column4">Time Out</td>
-                    <td class="column5">Tardiness (min/s)</td>
-                    <td class="column6">Tardiness (hour/s)</td>
-                    <td class="column7">Memo Point/s</td>
+                    <td class="column1">Schedule</td>
+                    <td class="column2">Monday<br />Time In/Out</td>
+                    <td class="column3">Tuesday<br />Time In/Out</td>
+                    <td class="column4">Wednesday<br />Time In/Out</td>
+                    <td class="column5">Thursday<br />Time In/Out</td>
+                    <td class="column6">Friday<br />Time In/Out</td>
+                    <td class="column7">Saturday<br />Time In/Out</td>
+                    <td class="column8">Sunday<br />Time In/Out</td>
+                    <td class="column9">Total (hour/s)</td>
                   </tr>
                   <tr>
-                    <td class="column1">John DOe</td>
-                    <td class="column2">Feb. 03, 2020</td>
-                    <td class="column3">7:53AM</td>
-                    <td class="column4">5:02PM</td>
-                    <td class="column5">8.12</td>
-                    <td class="column6">0.00</td>
-                    <td class="column7">0</td>
+                    <td class="column1">08:00 AM - 05:00 PM</td>
+                    <td class="column2">09:00 AM - 05:00 PM</td>
+                    <td class="column3">09:00 AM - 05:00 PM</td>
+                    <td class="column4">09:00 AM - 05:00 PM</td>
+                    <td class="column5">09:00 AM - 05:00 PM</td>
+                    <td class="column6">09:00 AM - 05:00 PM</td>
+                    <td class="column7">09:00 AM - 05:00 PM</td>
+                    <td class="column8">09:00 AM - 05:00 PM</td>
+                    <td class="column9">50.00</td>
                   </tr>
                 </tbody>
               </table>
