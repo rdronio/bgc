@@ -675,24 +675,29 @@
                     <td class="column8">Given Name</td>
                     <td class="column9">Middle Name</td>
                     <td class="column10">Birthdate</td>
-                    <td class="column11">Date Hired</td>
-                    <td class="column12">SSS Number</td>
-                    <td class="column13">Philhealth Number</td>
-                    <td class="column14">Pag Ibig Number</td>
-                    <td class="column15">Tin</td>
-                    <td class="column16">Street</td>
-                    <td class="column17">Province</td>
-                    <td class="column18">City</td>
-                    <td class="column19">Barangay</td>
-                    <td class="column20">Emergency Contact</td>
-                    <td class="column21">Daily Rate</td>
-                    <td class="column22">Basic Salary</td>
-                    <td class="column23">Merits</td>
-                    <td class="column24">SSS</td>
-                    <td class="column25">Philhealth</td>
-                    <td class="column26">Pagibig</td>
-                    <td class="column27">Savings</td>
-                    <td class="column28">Month/Year</td>
+                    <td class="column11">Civil Status</td>
+                    <td class="column12">Contact No.</td>
+                    <td class="column13">Date Hired</td>
+                    <td class="column14">SSS Number</td>
+                    <td class="column15">Philhealth Number</td>
+                    <td class="column16">Pag Ibig Number</td>
+                    <td class="column17">Tin</td>
+                    <td class="column18">Street</td>
+                    <td class="column19">Province</td>
+                    <td class="column20">City</td>
+                    <td class="column21">Barangay</td>
+                    <td class="column22">Emergency Contact</td>
+                    <td class="column23">Daily Rate</td>
+                    <td class="column24">Basic Salary</td>
+                    <td class="column25">Merits</td>
+                    <td class="column26">SSS</td>
+                    <td class="column27">Philhealth</td>
+                    <td class="column28">Pagibig</td>
+                    <td class="column29">Savings</td>
+                    <td class="column30">Month/Year</td>
+                    <td class="column31">Emergency Contact</td>
+                    <td class="column32">Emergency No.</td>
+                    <td class="column33">Remarks</td>
                   </tr>
                   <tr>
                     <td class="column1"></td>
@@ -723,6 +728,11 @@
                     <td class="column26"></td>
                     <td class="column27"></td>
                     <td class="column28"></td>
+                    <td class="column29"></td>
+                    <td class="column30"></td>
+                    <td class="column31"></td>
+                    <td class="column32"></td>
+                    <td class="column33"></td>
                   </tr>
                 </tbody>
               </table>
@@ -767,24 +777,29 @@
                       <td class="column8">Given Name</td>
                       <td class="column9">Middle Name</td>
                       <td class="column10">Birthdate</td>
-                      <td class="column11">Date Hired</td>
-                      <td class="column12">SSS Number</td>
-                      <td class="column13">Philhealth Number</td>
-                      <td class="column14">Pag Ibig Number</td>
-                      <td class="column15">Tin</td>
-                      <td class="column16">Street</td>
-                      <td class="column17">Province</td>
-                      <td class="column18">City</td>
-                      <td class="column19">Barangay</td>
-                      <td class="column20">Emergency Contact</td>
-                      <td class="column21">Daily Rate</td>
-                      <td class="column22">Basic Salary</td>
-                      <td class="column23">Merits</td>
-                      <td class="column24">SSS</td>
-                      <td class="column25">Philhealth</td>
-                      <td class="column26">Pagibig</td>
-                      <td class="column27">Savings</td>
-                      <td class="column28">Month/Year</td>
+                      <td class="column11">Civil Status</td>
+                      <td class="column12">Contact No.</td>
+                      <td class="column13">Date Hired</td>
+                      <td class="column14">SSS Number</td>
+                      <td class="column15">Philhealth Number</td>
+                      <td class="column16">Pag Ibig Number</td>
+                      <td class="column17">Tin</td>
+                      <td class="column18">Street</td>
+                      <td class="column19">Province</td>
+                      <td class="column20">City</td>
+                      <td class="column21">Barangay</td>
+                      <td class="column22">Emergency Contact</td>
+                      <td class="column23">Daily Rate</td>
+                      <td class="column24">Basic Salary</td>
+                      <td class="column25">Merits</td>
+                      <td class="column26">SSS</td>
+                      <td class="column27">Philhealth</td>
+                      <td class="column28">Pagibig</td>
+                      <td class="column29">Savings</td>
+                      <td class="column30">Month/Year</td>
+                      <td class="column31">Emergency Contact</td>
+                      <td class="column32">Emergency No.</td>
+                      <td class="column33">Remarks</td>
                     </tr>
                     <tr>
                       <td class="column0"><a class="btn-table btn-secondary" onclick="confirm('Permanently delete this Employee Record?');">Delete</a></td>
@@ -816,6 +831,11 @@
                       <td class="column26"></td>
                       <td class="column27"></td>
                       <td class="column28"></td>
+                      <td class="column29"></td>
+                      <td class="column30"></td>
+                      <td class="column31"></td>
+                      <td class="column32"></td>
+                      <td class="column33"></td>
                     </tr>
                 </tbody>
               </table>
@@ -1197,6 +1217,14 @@
                   >
                   </select>
 
+                  <label for="txtDailyRate" class="label-6">Daily Rate <span class="note-red">*</span></label>
+                  <input
+                    name="txtDailyRate"
+                    type="number"
+                    min="0"
+                    id="txtDailyRate"
+                  />
+
                   <label for="txtSalary" class="label-6">Basic Salary <span class="note-red">*</span></label>
                   <input
                     name="txtSalary"
@@ -1403,6 +1431,11 @@
                     id="req3"
                     accept="files/*"
                   />
+
+                  <label for="txtRemarks" class="label-6"
+                    >Remarks</label
+                  >
+                  <textarea name="txtRemarks" id="txtRemarks"></textarea>
                 </div>
               </div>
 
@@ -2207,8 +2240,6 @@
                   <div>
                     <label class="label-6">Address: </label>
                     <p name="txtCompleteAddress" id="txtCompleteAddress">
-                      #222 Dahlia Street Alido Heights Subd. Bulihan, Malolos,
-                      Bulacan
                     </p>
                   </div>
                   <div>
@@ -2268,10 +2299,15 @@
                   <label for="lblPosition" class="label-6">Position </label>
                   <p name="lblPosition" id="lblPosition">Programmer</p>
 
-                  <label for="lblManager" class="label-6"
+                  <label for="lblManager" class="label-6 hidden"
                     >Manager <span class="note">(Approver)</span></label
                   >
-                  <p name="lblManager" id="lblManager">Manager John Doe</p>
+                  <p name="lblManager" id="lblManager" class="hidden">Manager John Doe</p>
+
+                  <label for="lblDailyRate" class="label-6"
+                    >Daily Rate
+                  </label>
+                  <p name="lblDailyRate" id="lblDailyRate">500</p>
 
                   <label for="lblBasicSalary" class="label-6"
                     >Basic Salary
@@ -2288,6 +2324,12 @@
                   <p name="lblEmploymentStatus" id="lblEmploymentStatus">
                     Regular
                   </p>
+
+                  <label class="label-6">Schedule </label>
+                  <label class="note" for="appt-time">From </label>
+                  <p id="lblSchedFrom" name="appt-time">08:00 AM</p>
+                  <label class="note" for="appt">To </label>
+                  <p id="lblSchedTo" name="appt-time">05:00 PM</p>
 
                   <label class="label-6">Leaves </label>
                   <label id="lblSickLeaveLabel" for="lblSickLeave" class="note"
@@ -2325,7 +2367,7 @@
                   <label for="lblSssNo" class="label-6">SSS Number </label>
                   <p name="lblSssNo" id="lblSssNo">00-0000000-0</p>
 
-                  <label for="lblAccNo" class="label-6">Account Number </label>
+                  <label for="lblAccNo" class="label-6">Debit Card Number </label>
                   <p name="lblAccNo" id="lblAccNo">0000-0000-0000</p>
 
                   <br />
@@ -2334,6 +2376,10 @@
                     >Attached/Uploaded Requirements
                   </label>
                   <p name="lblRequirements" id="lblRequirements">Yes</p>
+
+                  <label for="txtRemarks" class="label-6"
+                  >Remarks</label>
+                  <p name="txtRemarks" id="txtRemarks">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, modi?</p>
                 </div>
               </div>
 

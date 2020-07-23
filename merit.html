@@ -385,20 +385,25 @@
                     <td class="column2">Employee Name</td>
                     <td class="column3">Department</td>
                     <td class="column4">Month</td>
-                    <td class="column5">Merit Points</td>
+                    <td class="column5">Memo Points</td>
                     <td class="column6">Reason</td>
                   </tr>
                   <tr>
                     <td class="column1">
                       <a
                         class="btn-table btn-secondary"
+                        onclick="window.confirm('Delete this Merit record?')"
+                        >Delete</a
+                      >
+                      <!-- <a
+                        class="btn-table btn-secondary"
                         onclick="editModalMerit();"
                         >Edit</a
-                      >
+                      > -->
                     </td>
                     <td class="column2">John Doe</td>
                     <td class="column3">HR Department</td>
-                    <td class="column4">November 20, 2019</td>
+                    <td class="column4">July 20, 2019</td>
                     <td class="column5">5</td>
                     <td class="column6">Lorem ipsum dolor sit amet.</td>
                   </tr>
@@ -444,20 +449,13 @@
                 <label for="selectMonth" class="label-6">Month </label>
                 <input
                   type="text"
-                  class="monthPicker"
+                  class="datePicker2"
                   name="selectMonth"
                   id="selectMonth"
                 />
 
-                <label for="txtMeritPoints" class="label-6"
-                  >Merit Points
-                </label>
-                <input
-                  name="txtMeritPoints"
-                  type="number"
-                  min="0"
-                  id="txtMeritPoints"
-                />
+                <label for="txtMeritPoints" class="label-6">Memo Points </label>
+                <input name="txtMeritPoints" type="text" id="txtMeritPoints" />
 
                 <label for="txtAreaReason" class="label-6">Reason </label>
                 <textarea name="txtAreaReason" id="txtAreaReason"></textarea>
