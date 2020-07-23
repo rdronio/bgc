@@ -175,7 +175,7 @@
           </div>
 
           <div class="container">
-            <h2>Time Records</h2>
+            <h2>Weekly Schedule</h2>
             <!-- <div id="tab">
               <ul class="tab-list" onclick="selectTab();">
                 <li class="current-tab">
@@ -346,36 +346,98 @@
                 </div>
               </div>
 
+              <div class="weekly-nav-container">
+                <div>
+                  <h4>
+                    <span id="lblWeek">July 11, 2020 - July 17, 2020</span>
+                  </h4>
+                </div>
+                <div class="week-nav">
+                  <a class="btn-sm btn-green mx-5" id="btnAlterTime"
+                    >Previous Week</a
+                  >
+                  <a
+                    class="btn-sm btn-green mx-5"
+                    onclick="closeModal(`#btnCloseTimeAlteration`);"
+                    >Next Week</a
+                  >
+                </div>
+              </div>
               <!-- Weekly TimeSheet Records -->
               <!-- <label class="norecords">No Records Found</label> -->
               <table class="tableLayout">
                 <tbody>
                   <tr>
-                    <td class="column1">Schedule</td>
-                    <td class="column2">Monday<br />Time In/Out</td>
-                    <td class="column3">Tuesday<br />Time In/Out</td>
-                    <td class="column4">Wednesday<br />Time In/Out</td>
-                    <td class="column5">Thursday<br />Time In/Out</td>
-                    <td class="column6">Friday<br />Time In/Out</td>
-                    <td class="column7">Saturday<br />Time In/Out</td>
-                    <td class="column8">Sunday<br />Time In/Out</td>
-                    <td class="column9">Total (hour/s)</td>
+                    <td class="column1">Employee Name</td>
+                    <td class="column2">Schedule</td>
+                    <td class="column3">
+                      <span id="lblMon">11</span><br />Monday<br />In/Out
+                    </td>
+                    <td class="column4">
+                      <span id="lblMon">12</span><br />Tuesday<br />In/Out
+                    </td>
+                    <td class="column5">
+                      <span id="lblMon">13</span><br />Wednesday<br />In/Out
+                    </td>
+                    <td class="column6">
+                      <span id="lblMon">14</span><br />Thursday<br />In/Out
+                    </td>
+                    <td class="column7">
+                      <span id="lblMon">15</span><br />
+                      Friday<br />In/Out
+                    </td>
+                    <td class="column8">
+                      <span id="lblMon">16</span><br />Saturday<br />In/Out
+                    </td>
+                    <td class="column9">
+                      <span id="lblMon">17</span><br />
+                      Sunday<br />In/Out
+                    </td>
+                    <td class="column10">Total (hour/s)</td>
                   </tr>
                   <tr>
-                    <td class="column1">08:00 AM - 05:00 PM</td>
-                    <td class="column2">09:00 AM - 05:00 PM</td>
-                    <td class="column3">09:00 AM - 05:00 PM</td>
-                    <td class="column4">09:00 AM - 05:00 PM</td>
-                    <td class="column5">09:00 AM - 05:00 PM</td>
-                    <td class="column6">09:00 AM - 05:00 PM</td>
-                    <td class="column7">09:00 AM - 05:00 PM</td>
-                    <td class="column8">09:00 AM - 05:00 PM</td>
-                    <td class="column9">50.00</td>
+                    <td class="column1">
+                      John Doe
+                    </td>
+                    <td class="column2">
+                      08:00 AM <br />
+                      05:00 PM
+                    </td>
+                    <td class="column3">
+                      08:00 AM <br />
+                      05:00 PM
+                    </td>
+                    <td class="column4">
+                      08:00 AM <br />
+                      05:00 PM
+                    </td>
+                    <td class="column5">
+                      08:00 AM <br />
+                      05:00 PM
+                    </td>
+                    <td class="column6">
+                      08:00 AM <br />
+                      05:00 PM
+                    </td>
+                    <td class="column7">
+                      08:00 AM <br />
+                      05:00 PM
+                    </td>
+                    <td class="column8">
+                      08:00 AM <br />
+                      05:00 PM
+                    </td>
+                    <td class="column9">
+                      08:00 AM <br />
+                      05:00 PM
+                    </td>
+
+                    <td class="column10">50.00</td>
                   </tr>
                 </tbody>
               </table>
 
-              <div class="pagination-container">
+              <div class="pagination-container hidden">
                 <div class="showmore-container">
                   <a class="btn-showmore" href="#"
                     ><i class="fas fa-chevron-down"></i>More Results</a
