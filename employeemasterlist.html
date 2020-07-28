@@ -2063,6 +2063,16 @@
                       >Savings</a
                     >
                   </li>
+                  <li>
+                    <a onclick="openViewEmpInfoTab('leave-records')"
+                      >Leave Records</a
+                    >
+                  </li>
+                  <li>
+                    <a onclick="openViewEmpInfoTab('payroll-records')"
+                      >Payroll Records</a
+                    >
+                  </li>
                   <!-- <li class="">
                     <a onclick="openViewEmpInfoTab('assignments')"
                       >Assignments</a
@@ -2075,11 +2085,6 @@
                   </li>
                   <li class="hidden">
                     <a onclick="openViewEmpInfoTab('view-access')">Access</a>
-                  </li>
-                  <li>
-                    <a onclick="openViewEmpInfoTab('leave-records')"
-                      >Leave Records</a
-                    >
                   </li>
                   <li>
                     <a onclick="openViewEmpInfoTab('overtime-records')"
@@ -2401,106 +2406,23 @@
               >
                 <!-- Leave Records Table -->
                 <!-- <label class="norecords">No Records Found</label> -->
+                <!-- Leave Records Table -->
                 <table class="tableLayout">
                   <tbody>
                     <tr>
-                      <td class="column1">Date</td>
-                      <td class="column2">Type</td>
-                      <td class="column3">From</td>
-                      <td class="column4">To</td>
-                      <td class="column5">No. of days</td>
-                      <td class="column6">With Pay</td>
-                      <td class="column7">Reason</td>
-                      <td class="column8">Status</td>
+                      <td class="column1">Type</td>
+                      <td class="column2">From</td>
+                      <td class="column3">To</td>
+                      <td class="column4">No. of days</td>
                     </tr>
                     <tr>
-                      <td class="column1">November 18, 2019</td>
-                      <td class="column2">Vacation</td>
-                      <td class="column3">November 18, 2019</td>
-                      <td class="column4">November 21, 2019</td>
-                      <td class="column5">3</td>
-                      <td class="column6">Yes</td>
-                      <td class="column7">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Magni, ullam.
-                      </td>
-                      <td class="column8">Approved</td>
-                    </tr>
-                    <tr>
-                      <td class="column1">November 18, 2019</td>
-                      <td class="column2">Vacation</td>
-                      <td class="column3">November 18, 2019</td>
-                      <td class="column4">November 21, 2019</td>
-                      <td class="column5">3</td>
-                      <td class="column6">Yes</td>
-                      <td class="column7">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Magni, ullam.
-                      </td>
-                      <td class="column8">Approved</td>
-                    </tr>
-                    <tr>
-                      <td class="column1">November 18, 2019</td>
-                      <td class="column2">Vacation</td>
-                      <td class="column3">November 18, 2019</td>
-                      <td class="column4">November 21, 2019</td>
-                      <td class="column5">3</td>
-                      <td class="column6">Yes</td>
-                      <td class="column7">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Magni, ullam.
-                      </td>
-                      <td class="column8">Rejected</td>
-                    </tr>
-                    <tr>
-                      <td class="column1">November 18, 2019</td>
-                      <td class="column2">Vacation</td>
-                      <td class="column3">November 18, 2019</td>
-                      <td class="column4">November 21, 2019</td>
-                      <td class="column5">3</td>
-                      <td class="column6">Yes</td>
-                      <td class="column7">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Magni, ullam.
-                      </td>
-                      <td class="column8">Approved</td>
-                    </tr>
-                    <tr>
-                      <td class="column1">November 18, 2019</td>
-                      <td class="column2">Vacation</td>
-                      <td class="column3">November 18, 2019</td>
-                      <td class="column4">November 21, 2019</td>
-                      <td class="column5">3</td>
-                      <td class="column6">Yes</td>
-                      <td class="column7">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Magni, ullam.
-                      </td>
-                      <td class="column8">Approved</td>
+                      <td class="column1">Vacation</td>
+                      <td class="column2">November 18, 2019</td>
+                      <td class="column3">November 21, 2019</td>
+                      <td class="column4">3</td>
                     </tr>
                   </tbody>
                 </table>
-                <div class="pagination-container">
-                  <div class="showmore-container">
-                    <a class="btn-showmore" href="#"
-                      ><i class="fas fa-chevron-down"></i>More Results</a
-                    >
-                  </div>
-                  <div class="pagination">
-                    <a href="#"><span>«</span></a>
-                    <a href="#"><span class="active">1</span></a>
-                    <a href="#"><span>2</span></a>
-                    <a href="#"><span>3</span></a>
-                    <a href="#"><span>4</span></a>
-                    <a href="#"><span>5</span></a>
-                    <a href="#"><span>6</span></a>
-                    <a href="#"><span>7</span></a>
-                    <a href="#"><span>8</span></a>
-                    <a href="#"><span>9</span></a>
-                    <a href="#"><span>10</span></a>
-                    <a href="#"><span>»</span></a>
-                  </div>
-                </div>
               </div>
 
               <!-- Overtime  Record Tab -->
@@ -2944,6 +2866,32 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Payroll Variables Tab -->
+              <div
+                id="payroll-records"
+                class="tabViewIEList"
+                style="display: none;"
+              >
+                <!-- Payroll Records Table -->
+                <!-- <label class="norecords">No Records Found</label> -->
+                <table class="tableLayout">
+                  <tbody>
+                    <tr>
+                      <td class="column1">Payroll Period</td>
+                      <td class="column2">From</td>
+                      <td class="column3">To</td>
+                      <td class="column4">No. of days</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">Vacation</td>
+                      <td class="column2">November 18, 2019</td>
+                      <td class="column3">November 21, 2019</td>
+                      <td class="column4">3</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>              
 
               <div class="modal-btn-container">
                 <a
