@@ -3410,6 +3410,22 @@ nav ul li a span.fa {
   height: 100%;
 }
 
+/* ========[ payroll-consolidation ]======== */
+#payroll-consolidation .container .card-1 > div:first-child {
+  position: relative;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+#payroll-consolidation .container .card-1 > div:first-child a {
+  margin-left: 0.5rem;
+  height: 100%;
+}
+
+#payroll-consolidation .modal-content {
+  width: 30%;
+}
+
 /* ========[ Expense Records ]======== */
 #expense-records .container .card-1 div:first-child {
   position: relative;
