@@ -2500,3 +2500,37 @@ function closeModalContributions() {
     console.log(e);
   }
 }
+
+function openModalConsolidation() {
+  try {
+    const modal = document.querySelector(".modal-payrollconsolidation");
+    const btnDelete = document.querySelector("#btnDelete");
+    const btnAdd = document.querySelector("#btnAdd");
+    const btnEdit = document.querySelector("#btnEdit");
+
+    modal.style.display = "flex";
+    btnDelete.classList.add("hidden");
+    btnAdd.classList.remove("hidden");
+    btnEdit.classList.add("hidden");
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function closeModalConsolidation() {
+  try {
+    const modal = document.querySelector(".modal-payrollconsolidation");
+    modal.style.display = "none";
+
+    enableField("drpDepartment");
+    enableField("drpEmployee");
+    clearSelectDepartment(drpDepartment);
+    clearSelectEmployee(drpEmployee);
+    clearField(txtDate);
+    clearField(txtSSS);
+    clearField(txtPagIbig);
+    clearField(txtPhilhealth);
+  } catch (e) {
+    console.log(e);
+  }
+}
