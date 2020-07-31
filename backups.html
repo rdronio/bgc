@@ -221,7 +221,7 @@
             </div>
 
             <div class="card card-2 hidden">
-              <label for="restoreBackup" class="label-6 block">Select backup to restore</label>
+              <label for="restoreBackup" class="label-6 block">Select backup to restore <span class="note">(Note: This will also overwrite any existing data)</span></label>
               <input
                 type="file"
                 name="restoreBackup"
@@ -232,30 +232,15 @@
               <a
                 class="btn-sm btn-primary "
                 id="btnRestoreBackup"
-                onclick=""
+                onclick="confirm('Proceed to Restore Data?\nNote: \nMake sure you have a backup of the current data before overwriting the current data');"
               >
                 Restore
               </a>
 
+              <!-- *show this or use alert* -->
               <div class="success">
                 <i class="far fa-check-circle"></i>
                 <h3>Successfully restored!</h3>
-              </div>
-
-              <div class="btn-container">
-                <button
-                  href=""
-                  class="btn-sm btn-primary mx-3"
-                  id="btnSaveMasterlist"
-                >
-                  Save
-                </button>
-                <button
-                  class="btn-sm btn-secondary mx-3"
-                  id="btnClearMasterlist"
-                >
-                  Clear
-                </button>
               </div>
             </div>
 
