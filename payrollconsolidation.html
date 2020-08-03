@@ -389,7 +389,11 @@
                   </tr>
                   <tr>
                     <td class="column0">
-                      <a class="btn-table btn-secondary" onclick="">Edit</a>
+                      <a
+                        class="btn-table btn-secondary"
+                        onclick="openModalEditConsolidation();"
+                        >Edit</a
+                      >
                     </td>
                     <td class="column1">John Doe 2</td>
                     <td class="column2">604.17</td>
@@ -427,7 +431,11 @@
                   </tr>
                   <tr>
                     <td class="column0">
-                      <a class="btn-table btn-secondary" onclick="">Edit</a>
+                      <a
+                        class="btn-table btn-secondary"
+                        onclick="openModalEditConsolidation();"
+                        >Edit</a
+                      >
                     </td>
                     <td class="column1">John Doe</td>
                     <td class="column2">604.17</td>
@@ -550,6 +558,130 @@
                 <a
                   class="btn-sm btn-secondary mx-3"
                   onclick="closeModalConsolidation();"
+                  >Cancel</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Section -->
+          <!-- btnEdit -->
+          <div class="modal modal-edit-consolidation">
+            <div class="modal-content">
+              <div class="header-delete-container">
+                <h5>Update Employee Consolidation</h5>
+              </div>
+
+              <hr />
+
+              <div>
+                <div>
+                  <label class="label-6" for="empName">Employee Name</label>
+                  <p name="empName" id="empName">
+                    John Doe
+                  </p>
+                  <label for="txtLegalHoliday" class="label-6"
+                    >Legal Holiday</label
+                  >
+                  <span class="note">*Please indicate no. of hours</span>
+                  <input
+                    name="txtLegalHoliday"
+                    type="text"
+                    id="txtLegalHoliday"
+                  />
+                  <label for="txtSpecialHoliday" class="label-6"
+                    >Special Holiday
+                  </label>
+                  <span class="note">*Please indicate no. of days</span>
+                  <input
+                    name="txtSpecialHoliday"
+                    type="text"
+                    id="txtSpecialHoliday"
+                  />
+                  <label for="txtRestDay" class="label-6"
+                    >Special on Rest Day
+                  </label>
+                  <span class="note">*Please indicate no. of days</span>
+                  <input name="txtRestDay" type="text" id="txtRestDay" />
+                  <label for="txtLegalRestDay" class="label-6"
+                    >Legal on Rest Day
+                  </label>
+                  <span class="note">*Please indicate no. of days</span>
+                  <input
+                    name="txtLegalRestDay"
+                    type="text"
+                    id="txtLegalRestDay"
+                  />
+                  <label for="txtSundayRate" class="label-6">Sunday Rate</label
+                  ><span class="note">*Please indicate no. of days</span>
+                  <input name="txtSundayRate" type="text" id="txtSundayRate" />
+
+                  <label for="txtOrdinaryOT" class="label-6"
+                    >Ordinary Overtime</label
+                  ><span class="note">*Please indicate no. of hours</span>
+                  <input name="txtOrdinaryOT" type="text" id="txtOrdinaryOT" />
+                  <label for="txtLegalOT" class="label-6">Legal Overtime</label
+                  ><span class="note">*Please indicate no. of hours</span>
+                  <input name="txtLegalOT" type="text" id="txtLegalOT" />
+                  <label for="txtSpecialRestOT" class="label-6"
+                    >Special/Rest Day OT</label
+                  ><span class="note">*Please indicate no. of hours</span>
+                  <input
+                    name="txtSpecialRestOT"
+                    type="text"
+                    id="txtSpecialRestOT"
+                  />
+                  <label for="txtRegularNSD" class="label-6">Regular NSD</label
+                  ><span class="note">*Please indicate no. of hours</span>
+                  <input name="txtRegularNSD" type="text" id="txtRegularNSD" />
+                  <label for="txtHolidayNSD" class="label-6">Holiday NSD</label
+                  ><span class="note">*Please indicate no. of hours</span>
+                  <input name="txtHolidayNSD" type="text" id="txtHolidayNSD" />
+                </div>
+                <div>
+                  <label class="label-6"> &nbsp;</label>
+                  <p>
+                    &nbsp;
+                  </p>
+                  <label for="txtAbsencesUndertime" class="label-6"
+                    >Absences/Undertime
+                  </label>
+                  <input
+                    name="txtAbsencesUndertime"
+                    type="text"
+                    id="txtAbsencesUndertime"
+                  />
+                  <label for="txtAllowancesRetro" class="label-6"
+                    >Allowances/Retro Pay
+                  </label>
+                  <input
+                    name="txtAllowancesRetro"
+                    type="text"
+                    id="txtAllowancesRetro"
+                  />
+                  <label for="txtSSSLoan" class="label-6">SSS Loan</label>
+                  <input name="txtSSSLoan" type="text" id="txtSSSLoan" />
+                  <label for="txtHDMFLoan" class="label-6">HDMF Loan</label>
+                  <input name="txtHDMFLoan" type="text" id="txtHDMFLoan" />
+                  <label for="txtCashBond" class="label-6">Cash Bond</label>
+                  <input name="txtCashBond" type="text" id="txtCashBond" />
+                  <label for="txtOthers" class="label-6">Others</label>
+                  <input name="txtOthers" type="text" id="txtOthers" />
+                  <label for="txtSBWS" class="label-6">SBWS</label>
+                  <input name="txtSBWS" type="text" id="txtSBWS" />
+                  <label for="txtMP2" class="label-6">MP2</label>
+                  <input name="txtMP2" type="text" id="txtMP2" />
+                  <label for="txtATM" class="label-6">ATM</label>
+                  <input name="txtATM" type="text" id="txtATM" />
+                  <label for="txtCash" class="label-6">Cash</label>
+                  <input name="txtCash" type="text" id="txtCash" />
+                </div>
+              </div>
+              <div class="modal-btn-container">
+                <a class="btn-sm btn-primary mx-3" id="btnSave">Save</a>
+                <a
+                  class="btn-sm btn-secondary mx-3"
+                  onclick="closeModalEditConsolidation();"
                   >Cancel</a
                 >
               </div>
