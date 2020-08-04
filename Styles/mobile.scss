@@ -431,6 +431,17 @@
     box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
     margin: 1.25rem 0;
   }
+
+  table.tableLayout tbody tr:hover {
+    color: unset;
+    background-color: unset;
+    cursor: unset;
+  }
+
+  table.tableLayout tbody tr:hover:nth-child(even) {
+    background-color: #d3dee2;
+  }
+
   table.tableLayout tbody tr td {
     padding-left: 50%;
     /* margin-bottom: 0.75rem; */
@@ -3525,6 +3536,322 @@
     tr
     td:nth-child(3):before {
     content: "Action";
+  }
+
+  /* ========[ payroll-consolidation ]======== */
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(1):before {
+    content: "Action";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(2):before {
+    content: "Employee Name";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(3):before {
+    content: "13th month";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(4):before {
+    content: "Date Hired";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(5):before {
+    content: "Rate Per Day";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(6):before {
+    content: "Rate Per Hour";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(7):before {
+    content: "Days Work";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(8):before {
+    content: "Basic Pay";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(9):before {
+    content: "Legal Holidays";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(10):before {
+    content: "Special Holidays";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(11):before {
+    content: "Special on Rest Day";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(12):before {
+    content: "Legal on Rest Day";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(13):before {
+    content: "Sunday Rate";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(14):before {
+    content: "Total Holiday";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(15):before {
+    content: "Ordinary Overtime";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(16):before {
+    content: "Legal Overtime";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(17):before {
+    content: "Special/Rest Day Overtime";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(18):before {
+    content: "Regular NSD";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(19):before {
+    content: "Holiday NSD";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(20):before {
+    content: "Total OT";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(21):before {
+    content: "Additional Days Of Work";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(22):before {
+    content: "Absences/Overtime";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(23):before {
+    content: "Allowance/Retro Pay";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(24):before {
+    content: "Gross Pay";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(25):before {
+    content: "SSS Loan";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(26):before {
+    content: "HDMF Loan";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(27):before {
+    content: "Cash Bond";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(28):before {
+    content: "Others";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(29):before {
+    content: "SBWS";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(30):before {
+    content: "MP2";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(31):before {
+    content: "Total Deductions";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(32):before {
+    content: "Net Pay";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(33):before {
+    content: "ATM";
+  }
+  #payroll-consolidation
+    .container
+    .card-1
+    .tableLayout
+    tbody
+    tr
+    td:nth-child(34):before {
+    content: "Cash";
+  }
+
+  #payroll-consolidation
+    .modal-edit-consolidation
+    .modal-content
+    *:nth-child(3) {
+    display: flex;
+    flex-direction: column;
   }
 
   /* ========[ Payslip Template ]======== */
