@@ -5822,6 +5822,15 @@ nav ul li a span.fa {
     font-size: 1.25rem;
     margin-bottom: 7rem;
   }
+
+  /* ========[ Payroll Consolidation ]======== */
+  #payroll-consolidation
+    .modal-edit-consolidation
+    .modal-content
+    *:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* TABLET LANDSCAPE / DESKTOP */

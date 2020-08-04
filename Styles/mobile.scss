@@ -4109,3 +4109,8 @@
   > div:nth-child(5) {
   order: 5;
 }
+
+#payroll-consolidation .modal-edit-consolidation .modal-content *:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+}
