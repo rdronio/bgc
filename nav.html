@@ -205,10 +205,10 @@
         ></span
       ></a>
       <ul class="nav child_menu">
-        <li>
+        <li class="current-page">
           <a href="SaturdaySched.aspx">Saturday Schedule</a>
         </li>
-        <li class="current-page">
+        <li>
           <a href="Substitution.aspx">Substitute Records</a>
         </li>
         <li>
@@ -322,7 +322,7 @@
 </nav>
 <!--NAV MENU END-->
 
-<!-- masterlisy -->
+<!-- Employee records -->
 <!--NAV MENU-->
 <nav id="nav">
   <div class="logo">
@@ -389,10 +389,10 @@
         ></span
       ></a>
       <ul class="nav child_menu">
-        <li>
+        <li class="current-page">
           <a href="ManageEmployees.aspx">Employee Masterlist</a>
         </li>
-        <li class="current-page">
+        <li>
           <a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a>
         </li>
         <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
@@ -563,18 +563,10 @@
         <li><a href="savings.aspx">Employee Savings</a></li>
       </ul>
     </li>
-
     <li>
-      <a href="#"
-        ><i class="fas fa-folder-open"></i>Memo/Notice<span
-          class="fa fa-chevron-down"
-        ></span
-      ></a>
-      <ul class="nav child_menu">
-        <li class="current-page">
-          <a href="FileCabinet.aspx">File Cabinet</a>
-        </li>
-      </ul>
+      <a class="current-page" href="FileCabinet.aspx"
+        ><i class="fas fa-folder-open"></i>File Cabinet</a
+      >
     </li>
     <li>
       <a href="#"
@@ -654,7 +646,7 @@
 </nav>
 <!--NAV MENU END-->
 
-<!-- file cabinet -->
+<!-- Reports -->
 <!--NAV MENU-->
 <nav id="nav">
   <div class="logo">
@@ -816,7 +808,7 @@
 </nav>
 <!--NAV MENU END-->
 
-<!-- file cabinet -->
+<!-- Import Time Records -->
 <!--NAV MENU-->
 <nav id="nav">
   <div class="logo">
@@ -978,7 +970,7 @@
 </nav>
 <!--NAV MENU END-->
 
-<!-- holiday list -->
+<!-- System Preferences -->
 <!--NAV MENU-->
 <nav id="nav">
   <div class="logo">
@@ -1088,6 +1080,7 @@
       <ul class="nav child_menu">
         <li class="current-page">
           <a href="HolidayList.aspx">Holiday Notice</a>
+          <a class="hidden" href="backups.aspx">Backups</a>
         </li>
       </ul>
     </li>
