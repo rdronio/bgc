@@ -1,115 +1,136 @@
+<!-- admin dashboard -->
+<!--NAV MENU-->
+<nav id="nav">
+  <div class="logo">
+    <a href="" class="logo-link">
+      <img alt="BGC Logo" />
+      <p>HRIS &amp; Payroll System</p>
+    </a>
+  </div>
 
-        <!--NAV MENU-->
-        <nav id="nav">
-          <div class="logo">
-              <a href="" class="logo-link">
-                 <img alt="BGC Logo">
-                 <p>HRIS &amp; Payroll System</p>
-              </a>
-          </div>
+  <!-- profile quick info -->
+  <div class="profile">
+    <div class="profile_pic">
+      <a href="#"
+        ><img src="/Images/user.png" alt="..." class="img-circle profile_img"
+      /></a>
+    </div>
+    <div class="profile_info">
+      <span>Welcome</span>
+      <h2 id="access-role">HR Admin</h2>
+      <p>&nbsp;</p>
+    </div>
+  </div>
 
-          <!-- profile quick info -->
-          <div class="profile">
-              <div class="profile_pic">
-                  <a href="#"><img src="/Images/user.png" alt="..." class="img-circle profile_img"></a>
-              </div>
-              <div class="profile_info">
-                  <span>Welcome</span>
-                  <h2 id="access-role">HR Admin</h2>
-                  <p>&nbsp;</p>
-              </div>
-          </div>
+  <!--SUDO ACESS-->
+  <ul class="nav-list" id="sudo-access">
+    <li>
+      <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
 
-          
-          
-          <!--SUDO ACESS-->
-            <ul class="nav-list" id="sudo-access">
-              <li>
-                <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-            </ul>  
-            
-          <!--HR Admin ACESS--> 
-          <ul id="hradminaccess" class="nav-list block">
-              <li class="current-page">
-                <a href="DashboardAdmin.aspx"><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-tasks"> </i>Approvals<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                <li>
-                    <a href="SaturdaySched.aspx">Saturday Schedule</a>
-                  </li>
-                  <li>
-                    <a href="Substitution.aspx">Substitute Records</a>
-                  </li>
-                  <li>
-                    <a href="LeaveRecords.aspx">Leave Records</a>
-                  </li>
-                  <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
-                  <li>
-                    <a href="UndertimeRecords.aspx">Undertime Records</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-file-alt"></i> Employee Records<span class="fa fa-chevron-down"></span></a>
-              <ul class="nav child_menu hidden">
-                <li>
-                  <a href="ManageEmployees.aspx">Employee Masterlist</a>
-                </li>
-                <li><a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a></li>
-                <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
-                <li><a href="merit.aspx">Employee Merits</a></li>
-                <li><a href="contribution.aspx">Employee Contributions</a></li>
-                <li><a href="savings.aspx">Employee Savings</a></li>
-              </ul>
-              </li>
-              
-              <li>
-                <a href="#"><i class="fas fa-bullhorn"></i>Memo/Notice<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                  <li>
-                    <a href="FileCabinet.aspx">File Cabinet</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chart-area"></i>Reports<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                  <li>
-                    <a href="GenerateDtrReport.aspx">Generate DTR</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="EmployeeMasterlist.aspx"><i class="fas fa-download"></i>Import Time Records</a>
-              </li>
-              <li>
-               <a href="#"><i class="fas fa-cog"></i>System Preferences<span class="fa fa-chevron-down"></span></a>
-                              <ul class="nav child_menu hidden">
-                                  <li>
-                                      <a href="HolidayList.aspx">Holiday Notice</a>
-                                  </li>
-                              </ul>
-              </li>
-              <li>
-                <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-            </ul>                      
-          
-          <!--HR Payroll ACESS-->            
-          <ul id="hrpayrollaccess" class="nav-list">
-              <!--<li>
+  <!--HR Admin ACESS-->
+  <ul id="hradminaccess" class="nav-list block">
+    <li class="current-page">
+      <a href="DashboardAdmin.aspx"
+        ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
+      >
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-tasks"> </i>Approvals<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="SaturdaySched.aspx">Saturday Schedule</a>
+        </li>
+        <li>
+          <a href="Substitution.aspx">Substitute Records</a>
+        </li>
+        <li>
+          <a href="LeaveRecords.aspx">Leave Records</a>
+        </li>
+        <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
+        <li>
+          <a href="UndertimeRecords.aspx">Undertime Records</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-file-alt"></i> Employee Records<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="ManageEmployees.aspx">Employee Masterlist</a>
+        </li>
+        <li><a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a></li>
+        <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
+        <li><a href="merit.aspx">Employee Merits</a></li>
+        <li><a href="contribution.aspx">Employee Contributions</a></li>
+        <li><a href="savings.aspx">Employee Savings</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="FileCabinet.aspx"
+        ><i class="fas fa-folder-open"></i>File Cabinet</a
+      >
+    </li>
+
+    <li>
+      <a href="#"
+        ><i class="fas fa-chart-area"></i>Reports<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="GenerateDtrReport.aspx">Generate DTR</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="EmployeeMasterlist.aspx"
+        ><i class="fas fa-download"></i>Import Time Records</a
+      >
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-cog"></i>System Preferences<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="HolidayList.aspx">Holiday Notice</a>
+          <a class="hidden" href="backups.aspx">Backups</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
+
+  <!--HR Payroll ACESS-->
+  <ul id="hrpayrollaccess" class="nav-list">
+    <!--<li>
                   <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
               </li>-->
-              <li>
-                  <a href="PayrollMain.aspx"><i class="fas fa-file-invoice"></i>Payroll</a>
-              </li>
-              <li class="current-page">
-                  <a href="ManageEmployees.aspx"><i class="fas fa-file-alt"></i>Employee Masterlist</a>
-              </li>
-              <!--<li>
+    <li>
+      <a href="PayrollMain.aspx"><i class="fas fa-file-invoice"></i>Payroll</a>
+    </li>
+    <li class="current-page">
+      <a href="ManageEmployees.aspx"
+        ><i class="fas fa-file-alt"></i>Employee Masterlist</a
+      >
+    </li>
+    <!--<li>
                   <a href="SendMemo.aspx"><i class="far fa-bell"></i>Memo / Notice</a>
               </li>
               <li>
@@ -126,134 +147,152 @@
                       </li>
                   </ul>
               </li>-->
-              <li>
-                  <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-          </ul>
-          
-            
-                             
+    <li>
+      <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
 
-          <div class="close-menu">
-              <a onclick="toggleMenu()">
-                  <i class="fas fa-times"></i>
-              </a>
-          </div>
-        </nav>
-        <!--NAV MENU END-->
+  <div class="close-menu">
+    <a onclick="toggleMenu()">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
+</nav>
+<!--NAV MENU END-->
 
 <!-- approval -->
-        <!--NAV MENU-->
-        <nav id="nav">
-          <div class="logo">
-              <a href="" class="logo-link">
-                  <img alt="BGC Logo">
-                  <p>HRIS &amp; Payroll System</p>
-              </a>
-          </div>
+<!--NAV MENU-->
+<nav id="nav">
+  <div class="logo">
+    <a href="" class="logo-link">
+      <img alt="BGC Logo" />
+      <p>HRIS &amp; Payroll System</p>
+    </a>
+  </div>
 
-          <!-- profile quick info -->
-          <div class="profile">
-              <div class="profile_pic">
-                  <a href="#"><img src="/Images/user.png" alt="..." class="img-circle profile_img"></a>
-              </div>
-              <div class="profile_info">
-                  <span>Welcome</span>
-                  <h2 id="access-role">HR Admin</h2>
-                  <p>&nbsp;</p>
-              </div>
-          </div>
+  <!-- profile quick info -->
+  <div class="profile">
+    <div class="profile_pic">
+      <a href="#"
+        ><img src="/Images/user.png" alt="..." class="img-circle profile_img"
+      /></a>
+    </div>
+    <div class="profile_info">
+      <span>Welcome</span>
+      <h2 id="access-role">HR Admin</h2>
+      <p>&nbsp;</p>
+    </div>
+  </div>
 
-          
-          
-          <!--SUDO ACESS-->
-            <ul class="nav-list" id="sudo-access">
-              <li>
-                <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-            </ul>  
-            
-          <!--HR Admin ACESS--> 
-          <ul id="hradminaccess" class="nav-list block">
-              <li>
-                <a href="DashboardAdmin.aspx"><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-tasks"> </i>Approvals<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu">
-                <li>
-                    <a href="SaturdaySched.aspx">Saturday Schedule</a>
-                  </li>
-                  <li class="current-page">
-                    <a href="Substitution.aspx">Substitute Records</a>
-                  </li>
-                  <li>
-                    <a href="LeaveRecords.aspx">Leave Records</a>
-                  </li>
-                  <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
-                  <li>
-                    <a href="UndertimeRecords.aspx">Undertime Records</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-file-alt"></i> Employee Records<span class="fa fa-chevron-down"></span></a>
-              <ul class="nav child_menu hidden">
-                <li>
-                  <a href="ManageEmployees.aspx">Employee Masterlist</a>
-                </li>
-                <li><a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a></li>
-                <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
-                <li><a href="merit.aspx">Employee Merits</a></li>
-                <li><a href="contribution.aspx">Employee Contributions</a></li>
-                <li><a href="savings.aspx">Employee Savings</a></li>
-              </ul>
-              </li>
-              
-              <li>
-                <a href="#"><i class="fas fa-bullhorn"></i>Memo/Notice<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                  <li>
-                    <a href="FileCabinet.aspx">File Cabinet</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chart-area"></i>Reports<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                  <li>
-                    <a href="GenerateDtrReport.aspx">Generate DTR</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="EmployeeMasterlist.aspx"><i class="fas fa-download"></i>Import Time Records</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-cog"></i>System Preferences<span class="fa fa-chevron-down"></span></a>
-                              <ul class="nav child_menu hidden">
-                                  <li>
-                                      <a href="HolidayList.aspx">Holiday Notice</a>
-                                  </li>
-                              </ul>
-              </li>
-              <li>
-                <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-            </ul>                      
-          
-          <!--HR Payroll ACESS-->            
-          <ul id="hrpayrollaccess" class="nav-list">
-              <!--<li>
+  <!--SUDO ACESS-->
+  <ul class="nav-list" id="sudo-access">
+    <li>
+      <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
+
+  <!--HR Admin ACESS-->
+  <ul id="hradminaccess" class="nav-list block">
+    <li>
+      <a href="DashboardAdmin.aspx"
+        ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
+      >
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-tasks"> </i>Approvals<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu">
+        <li>
+          <a href="SaturdaySched.aspx">Saturday Schedule</a>
+        </li>
+        <li class="current-page">
+          <a href="Substitution.aspx">Substitute Records</a>
+        </li>
+        <li>
+          <a href="LeaveRecords.aspx">Leave Records</a>
+        </li>
+        <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
+        <li>
+          <a href="UndertimeRecords.aspx">Undertime Records</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-file-alt"></i> Employee Records<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="ManageEmployees.aspx">Employee Masterlist</a>
+        </li>
+        <li><a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a></li>
+        <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
+        <li><a href="merit.aspx">Employee Merits</a></li>
+        <li><a href="contribution.aspx">Employee Contributions</a></li>
+        <li><a href="savings.aspx">Employee Savings</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="FileCabinet.aspx"
+        ><i class="fas fa-folder-open"></i>File Cabinet</a
+      >
+    </li>
+
+    <li>
+      <a href="#"
+        ><i class="fas fa-chart-area"></i>Reports<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="GenerateDtrReport.aspx">Generate DTR</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="EmployeeMasterlist.aspx"
+        ><i class="fas fa-download"></i>Import Time Records</a
+      >
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-cog"></i>System Preferences<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="HolidayList.aspx">Holiday Notice</a>
+          <a class="hidden" href="backups.aspx">Backups</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
+
+  <!--HR Payroll ACESS-->
+  <ul id="hrpayrollaccess" class="nav-list">
+    <!--<li>
                   <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
               </li>-->
-              <li>
-                  <a href="PayrollMain.aspx"><i class="fas fa-file-invoice"></i>Payroll</a>
-              </li>
-              <li class="current-page">
-                  <a href="ManageEmployees.aspx"><i class="fas fa-file-alt"></i>Employee Masterlist</a>
-              </li>
-              <!--<li>
+    <li>
+      <a href="PayrollMain.aspx"><i class="fas fa-file-invoice"></i>Payroll</a>
+    </li>
+    <li class="current-page">
+      <a href="ManageEmployees.aspx"
+        ><i class="fas fa-file-alt"></i>Employee Masterlist</a
+      >
+    </li>
+    <!--<li>
                   <a href="SendMemo.aspx"><i class="far fa-bell"></i>Memo / Notice</a>
               </li>
               <li>
@@ -270,134 +309,154 @@
                       </li>
                   </ul>
               </li>-->
-              <li>
-                  <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-          </ul>
-          
-            
-                              
+    <li>
+      <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
 
-          <div class="close-menu">
-              <a onclick="toggleMenu()">
-                  <i class="fas fa-times"></i>
-              </a>
-          </div>
-        </nav>
-        <!--NAV MENU END-->
+  <div class="close-menu">
+    <a onclick="toggleMenu()">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
+</nav>
+<!--NAV MENU END-->
 
 <!-- masterlisy -->
-        <!--NAV MENU-->
-        <nav id="nav">
-          <div class="logo">
-              <a href="" class="logo-link">
-                  <img alt="BGC Logo">
-                  <p>HRIS &amp; Payroll System</p>
-              </a>
-          </div>
+<!--NAV MENU-->
+<nav id="nav">
+  <div class="logo">
+    <a href="" class="logo-link">
+      <img alt="BGC Logo" />
+      <p>HRIS &amp; Payroll System</p>
+    </a>
+  </div>
 
-          <!-- profile quick info -->
-          <div class="profile">
-              <div class="profile_pic">
-                  <a href="#"><img src="/Images/user.png" alt="..." class="img-circle profile_img"></a>
-              </div>
-              <div class="profile_info">
-                  <span>Welcome</span>
-                  <h2 id="access-role">HR Admin</h2>
-                  <p>&nbsp;</p>
-              </div>
-          </div>
+  <!-- profile quick info -->
+  <div class="profile">
+    <div class="profile_pic">
+      <a href="#"
+        ><img src="/Images/user.png" alt="..." class="img-circle profile_img"
+      /></a>
+    </div>
+    <div class="profile_info">
+      <span>Welcome</span>
+      <h2 id="access-role">HR Admin</h2>
+      <p>&nbsp;</p>
+    </div>
+  </div>
 
-          
-          
-          <!--SUDO ACESS-->
-            <ul class="nav-list" id="sudo-access">
-              <li>
-                <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-            </ul>  
-            
-          <!--HR Admin ACESS--> 
-          <ul id="hradminaccess" class="nav-list block">
-              <li>
-                <a href="DashboardAdmin.aspx"><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-tasks"> </i>Approvals<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                <li>
-                    <a href="SaturdaySched.aspx">Saturday Schedule</a>
-                  </li>
-                  <li>
-                    <a href="Substitution.aspx">Substitute Records</a>
-                  </li>
-                  <li>
-                    <a href="LeaveRecords.aspx">Leave Records</a>
-                  </li>
-                  <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
-                  <li>
-                    <a href="UndertimeRecords.aspx">Undertime Records</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-file-alt"></i> Employee Records<span class="fa fa-chevron-down"></span></a>
-              <ul class="nav child_menu">
-                <li>
-                  <a href="ManageEmployees.aspx">Employee Masterlist</a>
-                </li>
-                <li class="current-page"><a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a></li>
-                <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
-                <li><a href="merit.aspx">Employee Merits</a></li>
-                <li><a href="contribution.aspx">Employee Contributions</a></li>
-                <li><a href="savings.aspx">Employee Savings</a></li>
-              </ul>
-              </li>
-              
-              <li>
-                <a href="#"><i class="fas fa-bullhorn"></i>Memo/Notice<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                  <li>
-                    <a href="FileCabinet.aspx">File Cabinet</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chart-area"></i>Reports<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                  <li>
-                    <a href="GenerateDtrReport.aspx">Generate DTR</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="EmployeeMasterlist.aspx"><i class="fas fa-download"></i>Import Time Records</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-cog"></i>System Preferences<span class="fa fa-chevron-down"></span></a>
-                              <ul class="nav child_menu hidden">
-                                  <li>
-                                      <a href="HolidayList.aspx">Holiday Notice</a>
-                                  </li>
-                              </ul>
-              </li>
-              <li>
-                <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-            </ul>                      
-          
-          <!--HR Payroll ACESS-->            
-          <ul id="hrpayrollaccess" class="nav-list">
-              <!--<li>
+  <!--SUDO ACESS-->
+  <ul class="nav-list" id="sudo-access">
+    <li>
+      <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
+
+  <!--HR Admin ACESS-->
+  <ul id="hradminaccess" class="nav-list block">
+    <li>
+      <a href="DashboardAdmin.aspx"
+        ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
+      >
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-tasks"> </i>Approvals<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="SaturdaySched.aspx">Saturday Schedule</a>
+        </li>
+        <li>
+          <a href="Substitution.aspx">Substitute Records</a>
+        </li>
+        <li>
+          <a href="LeaveRecords.aspx">Leave Records</a>
+        </li>
+        <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
+        <li>
+          <a href="UndertimeRecords.aspx">Undertime Records</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-file-alt"></i> Employee Records<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu">
+        <li>
+          <a href="ManageEmployees.aspx">Employee Masterlist</a>
+        </li>
+        <li class="current-page">
+          <a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a>
+        </li>
+        <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
+        <li><a href="merit.aspx">Employee Merits</a></li>
+        <li><a href="contribution.aspx">Employee Contributions</a></li>
+        <li><a href="savings.aspx">Employee Savings</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="FileCabinet.aspx"
+        ><i class="fas fa-folder-open"></i>File Cabinet</a
+      >
+    </li>
+
+    <li>
+      <a href="#"
+        ><i class="fas fa-chart-area"></i>Reports<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="GenerateDtrReport.aspx">Generate DTR</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="EmployeeMasterlist.aspx"
+        ><i class="fas fa-download"></i>Import Time Records</a
+      >
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-cog"></i>System Preferences<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="HolidayList.aspx">Holiday Notice</a>
+          <a class="hidden" href="backups.aspx">Backups</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
+
+  <!--HR Payroll ACESS-->
+  <ul id="hrpayrollaccess" class="nav-list">
+    <!--<li>
                   <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
               </li>-->
-              <li>
-                  <a href="PayrollMain.aspx"><i class="fas fa-file-invoice"></i>Payroll</a>
-              </li>
-              <li class="current-page">
-                  <a href="ManageEmployees.aspx"><i class="fas fa-file-alt"></i>Employee Masterlist</a>
-              </li>
-              <!--<li>
+    <li>
+      <a href="PayrollMain.aspx"><i class="fas fa-file-invoice"></i>Payroll</a>
+    </li>
+    <li class="current-page">
+      <a href="ManageEmployees.aspx"
+        ><i class="fas fa-file-alt"></i>Employee Masterlist</a
+      >
+    </li>
+    <!--<li>
                   <a href="SendMemo.aspx"><i class="far fa-bell"></i>Memo / Notice</a>
               </li>
               <li>
@@ -414,134 +473,158 @@
                       </li>
                   </ul>
               </li>-->
-              <li>
-                  <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-          </ul>
-          
-            
-                              
+    <li>
+      <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
 
-          <div class="close-menu">
-              <a onclick="toggleMenu()">
-                  <i class="fas fa-times"></i>
-              </a>
-          </div>
-        </nav>
-        <!--NAV MENU END-->
+  <div class="close-menu">
+    <a onclick="toggleMenu()">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
+</nav>
+<!--NAV MENU END-->
 
 <!-- file cabinet -->
-        <!--NAV MENU-->
-        <nav id="nav">
-          <div class="logo">
-              <a href="" class="logo-link">
-                  <img alt="BGC Logo">
-                  <p>HRIS &amp; Payroll System</p>
-              </a>
-          </div>
+<!--NAV MENU-->
+<nav id="nav">
+  <div class="logo">
+    <a href="" class="logo-link">
+      <img alt="BGC Logo" />
+      <p>HRIS &amp; Payroll System</p>
+    </a>
+  </div>
 
-          <!-- profile quick info -->
-          <div class="profile">
-              <div class="profile_pic">
-                  <a href="#"><img src="/Images/user.png" alt="..." class="img-circle profile_img"></a>
-              </div>
-              <div class="profile_info">
-                  <span>Welcome</span>
-                  <h2 id="access-role">HR Admin</h2>
-                  <p>&nbsp;</p>
-              </div>
-          </div>
+  <!-- profile quick info -->
+  <div class="profile">
+    <div class="profile_pic">
+      <a href="#"
+        ><img src="/Images/user.png" alt="..." class="img-circle profile_img"
+      /></a>
+    </div>
+    <div class="profile_info">
+      <span>Welcome</span>
+      <h2 id="access-role">HR Admin</h2>
+      <p>&nbsp;</p>
+    </div>
+  </div>
 
-          
-          
-          <!--SUDO ACESS-->
-            <ul class="nav-list" id="sudo-access">
-              <li>
-                <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-            </ul>  
-            
-          <!--HR Admin ACESS--> 
-          <ul id="hradminaccess" class="nav-list block">
-              <li>
-                <a href="DashboardAdmin.aspx"><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-tasks"> </i>Approvals<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                <li>
-                    <a href="SaturdaySched.aspx">Saturday Schedule</a>
-                  </li>
-                  <li>
-                    <a href="Substitution.aspx">Substitute Records</a>
-                  </li>
-                  <li>
-                    <a href="LeaveRecords.aspx">Leave Records</a>
-                  </li>
-                  <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
-                  <li>
-                    <a href="UndertimeRecords.aspx">Undertime Records</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-file-alt"></i> Employee Records<span class="fa fa-chevron-down"></span></a>
-              <ul class="nav child_menu hidden">
-                <li>
-                  <a href="ManageEmployees.aspx">Employee Masterlist</a>
-                </li>
-                <li ><a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a></li>
-                <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
-                <li><a href="merit.aspx">Employee Merits</a></li>
-                <li><a href="contribution.aspx">Employee Contributions</a></li>
-                <li><a href="savings.aspx">Employee Savings</a></li>
-              </ul>
-              </li>
-              
-              <li>
-                <a href="#"><i class="fas fa-bullhorn"></i>Memo/Notice<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu">
-                  <li class="current-page">
-                    <a href="FileCabinet.aspx">File Cabinet</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chart-area"></i>Reports<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                  <li>
-                    <a href="GenerateDtrReport.aspx">Generate DTR</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="EmployeeMasterlist.aspx"><i class="fas fa-download"></i>Import Time Records</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-cog"></i>System Preferences<span class="fa fa-chevron-down"></span></a>
-                              <ul class="nav child_menu hidden">
-                                  <li>
-                                      <a href="HolidayList.aspx">Holiday Notice</a>
-                                  </li>
-                              </ul>
-              </li>
-              <li>
-                <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-            </ul>                      
-          
-          <!--HR Payroll ACESS-->            
-          <ul id="hrpayrollaccess" class="nav-list">
-              <!--<li>
+  <!--SUDO ACESS-->
+  <ul class="nav-list" id="sudo-access">
+    <li>
+      <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
+
+  <!--HR Admin ACESS-->
+  <ul id="hradminaccess" class="nav-list block">
+    <li>
+      <a href="DashboardAdmin.aspx"
+        ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
+      >
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-tasks"> </i>Approvals<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="SaturdaySched.aspx">Saturday Schedule</a>
+        </li>
+        <li>
+          <a href="Substitution.aspx">Substitute Records</a>
+        </li>
+        <li>
+          <a href="LeaveRecords.aspx">Leave Records</a>
+        </li>
+        <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
+        <li>
+          <a href="UndertimeRecords.aspx">Undertime Records</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-file-alt"></i> Employee Records<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="ManageEmployees.aspx">Employee Masterlist</a>
+        </li>
+        <li><a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a></li>
+        <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
+        <li><a href="merit.aspx">Employee Merits</a></li>
+        <li><a href="contribution.aspx">Employee Contributions</a></li>
+        <li><a href="savings.aspx">Employee Savings</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#"
+        ><i class="fas fa-folder-open"></i>Memo/Notice<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu">
+        <li class="current-page">
+          <a href="FileCabinet.aspx">File Cabinet</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-chart-area"></i>Reports<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="GenerateDtrReport.aspx">Generate DTR</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="EmployeeMasterlist.aspx"
+        ><i class="fas fa-download"></i>Import Time Records</a
+      >
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-cog"></i>System Preferences<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="HolidayList.aspx">Holiday Notice</a>
+          <a class="hidden" href="backups.aspx">Backups</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
+
+  <!--HR Payroll ACESS-->
+  <ul id="hrpayrollaccess" class="nav-list">
+    <!--<li>
                   <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
               </li>-->
-              <li>
-                  <a href="PayrollMain.aspx"><i class="fas fa-file-invoice"></i>Payroll</a>
-              </li>
-              <li class="current-page">
-                  <a href="ManageEmployees.aspx"><i class="fas fa-file-alt"></i>Employee Masterlist</a>
-              </li>
-              <!--<li>
+    <li>
+      <a href="PayrollMain.aspx"><i class="fas fa-file-invoice"></i>Payroll</a>
+    </li>
+    <li class="current-page">
+      <a href="ManageEmployees.aspx"
+        ><i class="fas fa-file-alt"></i>Employee Masterlist</a
+      >
+    </li>
+    <!--<li>
                   <a href="SendMemo.aspx"><i class="far fa-bell"></i>Memo / Notice</a>
               </li>
               <li>
@@ -558,134 +641,152 @@
                       </li>
                   </ul>
               </li>-->
-              <li>
-                  <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-          </ul>
-          
-            
-                              
+    <li>
+      <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
 
-          <div class="close-menu">
-              <a onclick="toggleMenu()">
-                  <i class="fas fa-times"></i>
-              </a>
-          </div>
-        </nav>
-        <!--NAV MENU END-->
+  <div class="close-menu">
+    <a onclick="toggleMenu()">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
+</nav>
+<!--NAV MENU END-->
 
 <!-- file cabinet -->
-        <!--NAV MENU-->
-        <nav id="nav">
-          <div class="logo">
-              <a href="" class="logo-link">
-                  <img alt="BGC Logo">
-                  <p>HRIS &amp; Payroll System</p>
-              </a>
-          </div>
+<!--NAV MENU-->
+<nav id="nav">
+  <div class="logo">
+    <a href="" class="logo-link">
+      <img alt="BGC Logo" />
+      <p>HRIS &amp; Payroll System</p>
+    </a>
+  </div>
 
-          <!-- profile quick info -->
-          <div class="profile">
-              <div class="profile_pic">
-                  <a href="#"><img src="/Images/user.png" alt="..." class="img-circle profile_img"></a>
-              </div>
-              <div class="profile_info">
-                  <span>Welcome</span>
-                  <h2 id="access-role">HR Admin</h2>
-                  <p>&nbsp;</p>
-              </div>
-          </div>
+  <!-- profile quick info -->
+  <div class="profile">
+    <div class="profile_pic">
+      <a href="#"
+        ><img src="/Images/user.png" alt="..." class="img-circle profile_img"
+      /></a>
+    </div>
+    <div class="profile_info">
+      <span>Welcome</span>
+      <h2 id="access-role">HR Admin</h2>
+      <p>&nbsp;</p>
+    </div>
+  </div>
 
-          
-          
-          <!--SUDO ACESS-->
-            <ul class="nav-list" id="sudo-access">
-              <li>
-                <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-            </ul>  
-            
-          <!--HR Admin ACESS--> 
-          <ul id="hradminaccess" class="nav-list block">
-              <li>
-                <a href="DashboardAdmin.aspx"><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-tasks"> </i>Approvals<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                <li>
-                    <a href="SaturdaySched.aspx">Saturday Schedule</a>
-                  </li>
-                  <li>
-                    <a href="Substitution.aspx">Substitute Records</a>
-                  </li>
-                  <li>
-                    <a href="LeaveRecords.aspx">Leave Records</a>
-                  </li>
-                  <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
-                  <li>
-                    <a href="UndertimeRecords.aspx">Undertime Records</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-file-alt"></i> Employee Records<span class="fa fa-chevron-down"></span></a>
-              <ul class="nav child_menu hidden">
-                <li>
-                  <a href="ManageEmployees.aspx">Employee Masterlist</a>
-                </li>
-                <li ><a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a></li>
-                <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
-                <li><a href="merit.aspx">Employee Merits</a></li>
-                <li><a href="contribution.aspx">Employee Contributions</a></li>
-                <li><a href="savings.aspx">Employee Savings</a></li>
-              </ul>
-              </li>
-              
-              <li>
-                <a href="#"><i class="fas fa-bullhorn"></i>Memo/Notice<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                  <li>
-                    <a href="FileCabinet.aspx">File Cabinet</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chart-area"></i>Reports<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu">
-                  <li class="current-page">
-                    <a href="GenerateDtrReport.aspx">Generate DTR</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="EmployeeMasterlist.aspx"><i class="fas fa-download"></i>Import Time Records</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-cog"></i>System Preferences<span class="fa fa-chevron-down"></span></a>
-                              <ul class="nav child_menu hidden">
-                                  <li>
-                                      <a href="HolidayList.aspx">Holiday Notice</a>
-                                  </li>
-                              </ul>
-              </li>
-              <li>
-                <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-            </ul>                      
-          
-          <!--HR Payroll ACESS-->            
-          <ul id="hrpayrollaccess" class="nav-list">
-              <!--<li>
+  <!--SUDO ACESS-->
+  <ul class="nav-list" id="sudo-access">
+    <li>
+      <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
+
+  <!--HR Admin ACESS-->
+  <ul id="hradminaccess" class="nav-list block">
+    <li>
+      <a href="DashboardAdmin.aspx"
+        ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
+      >
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-tasks"> </i>Approvals<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="SaturdaySched.aspx">Saturday Schedule</a>
+        </li>
+        <li>
+          <a href="Substitution.aspx">Substitute Records</a>
+        </li>
+        <li>
+          <a href="LeaveRecords.aspx">Leave Records</a>
+        </li>
+        <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
+        <li>
+          <a href="UndertimeRecords.aspx">Undertime Records</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-file-alt"></i> Employee Records<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="ManageEmployees.aspx">Employee Masterlist</a>
+        </li>
+        <li><a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a></li>
+        <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
+        <li><a href="merit.aspx">Employee Merits</a></li>
+        <li><a href="contribution.aspx">Employee Contributions</a></li>
+        <li><a href="savings.aspx">Employee Savings</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="FileCabinet.aspx"
+        ><i class="fas fa-folder-open"></i>File Cabinet</a
+      >
+    </li>
+
+    <li>
+      <a href="#"
+        ><i class="fas fa-chart-area"></i>Reports<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu">
+        <li class="current-page">
+          <a href="GenerateDtrReport.aspx">Generate DTR</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="EmployeeMasterlist.aspx"
+        ><i class="fas fa-download"></i>Import Time Records</a
+      >
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-cog"></i>System Preferences<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="HolidayList.aspx">Holiday Notice</a>
+          <a class="hidden" href="backups.aspx">Backups</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
+
+  <!--HR Payroll ACESS-->
+  <ul id="hrpayrollaccess" class="nav-list">
+    <!--<li>
                   <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
               </li>-->
-              <li>
-                  <a href="PayrollMain.aspx"><i class="fas fa-file-invoice"></i>Payroll</a>
-              </li>
-              <li class="current-page">
-                  <a href="ManageEmployees.aspx"><i class="fas fa-file-alt"></i>Employee Masterlist</a>
-              </li>
-              <!--<li>
+    <li>
+      <a href="PayrollMain.aspx"><i class="fas fa-file-invoice"></i>Payroll</a>
+    </li>
+    <li class="current-page">
+      <a href="ManageEmployees.aspx"
+        ><i class="fas fa-file-alt"></i>Employee Masterlist</a
+      >
+    </li>
+    <!--<li>
                   <a href="SendMemo.aspx"><i class="far fa-bell"></i>Memo / Notice</a>
               </li>
               <li>
@@ -702,134 +803,152 @@
                       </li>
                   </ul>
               </li>-->
-              <li>
-                  <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-          </ul>
-          
-            
-                              
+    <li>
+      <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
 
-          <div class="close-menu">
-              <a onclick="toggleMenu()">
-                  <i class="fas fa-times"></i>
-              </a>
-          </div>
-        </nav>
-        <!--NAV MENU END-->
+  <div class="close-menu">
+    <a onclick="toggleMenu()">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
+</nav>
+<!--NAV MENU END-->
 
 <!-- file cabinet -->
-        <!--NAV MENU-->
-        <nav id="nav">
-          <div class="logo">
-              <a href="" class="logo-link">
-                  <img alt="BGC Logo">
-                  <p>HRIS &amp; Payroll System</p>
-              </a>
-          </div>
+<!--NAV MENU-->
+<nav id="nav">
+  <div class="logo">
+    <a href="" class="logo-link">
+      <img alt="BGC Logo" />
+      <p>HRIS &amp; Payroll System</p>
+    </a>
+  </div>
 
-          <!-- profile quick info -->
-          <div class="profile">
-              <div class="profile_pic">
-                  <a href="#"><img src="/Images/user.png" alt="..." class="img-circle profile_img"></a>
-              </div>
-              <div class="profile_info">
-                  <span>Welcome</span>
-                  <h2 id="access-role">HR Admin</h2>
-                  <p>&nbsp;</p>
-              </div>
-          </div>
+  <!-- profile quick info -->
+  <div class="profile">
+    <div class="profile_pic">
+      <a href="#"
+        ><img src="/Images/user.png" alt="..." class="img-circle profile_img"
+      /></a>
+    </div>
+    <div class="profile_info">
+      <span>Welcome</span>
+      <h2 id="access-role">HR Admin</h2>
+      <p>&nbsp;</p>
+    </div>
+  </div>
 
-          
-          
-          <!--SUDO ACESS-->
-            <ul class="nav-list" id="sudo-access">
-              <li>
-                <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-            </ul>  
-            
-          <!--HR Admin ACESS--> 
-          <ul id="hradminaccess" class="nav-list block">
-              <li>
-                <a href="DashboardAdmin.aspx"><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-tasks"> </i>Approvals<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                <li>
-                    <a href="SaturdaySched.aspx">Saturday Schedule</a>
-                  </li>
-                  <li>
-                    <a href="Substitution.aspx">Substitute Records</a>
-                  </li>
-                  <li>
-                    <a href="LeaveRecords.aspx">Leave Records</a>
-                  </li>
-                  <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
-                  <li>
-                    <a href="UndertimeRecords.aspx">Undertime Records</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-file-alt"></i> Employee Records<span class="fa fa-chevron-down"></span></a>
-              <ul class="nav child_menu hidden">
-                <li>
-                  <a href="ManageEmployees.aspx">Employee Masterlist</a>
-                </li>
-                <li ><a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a></li>
-                <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
-                <li><a href="merit.aspx">Employee Merits</a></li>
-                <li><a href="contribution.aspx">Employee Contributions</a></li>
-                <li><a href="savings.aspx">Employee Savings</a></li>
-              </ul>
-              </li>
-              
-              <li>
-                <a href="#"><i class="fas fa-bullhorn"></i>Memo/Notice<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                  <li>
-                    <a href="FileCabinet.aspx">File Cabinet</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chart-area"></i>Reports<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                  <li>
-                    <a href="GenerateDtrReport.aspx">Generate DTR</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="current-page">
-                <a href="EmployeeMasterlist.aspx"><i class="fas fa-download"></i>Import Time Records</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-cog"></i>System Preferences<span class="fa fa-chevron-down"></span></a>
-                              <ul class="nav child_menu hidden">
-                                  <li>
-                                      <a href="HolidayList.aspx">Holiday Notice</a>
-                                  </li>
-                              </ul>
-              </li>
-              <li>
-                <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-            </ul>                      
-          
-          <!--HR Payroll ACESS-->            
-          <ul id="hrpayrollaccess" class="nav-list">
-              <!--<li>
+  <!--SUDO ACESS-->
+  <ul class="nav-list" id="sudo-access">
+    <li>
+      <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
+
+  <!--HR Admin ACESS-->
+  <ul id="hradminaccess" class="nav-list block">
+    <li>
+      <a href="DashboardAdmin.aspx"
+        ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
+      >
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-tasks"> </i>Approvals<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="SaturdaySched.aspx">Saturday Schedule</a>
+        </li>
+        <li>
+          <a href="Substitution.aspx">Substitute Records</a>
+        </li>
+        <li>
+          <a href="LeaveRecords.aspx">Leave Records</a>
+        </li>
+        <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
+        <li>
+          <a href="UndertimeRecords.aspx">Undertime Records</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-file-alt"></i> Employee Records<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="ManageEmployees.aspx">Employee Masterlist</a>
+        </li>
+        <li><a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a></li>
+        <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
+        <li><a href="merit.aspx">Employee Merits</a></li>
+        <li><a href="contribution.aspx">Employee Contributions</a></li>
+        <li><a href="savings.aspx">Employee Savings</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="FileCabinet.aspx"
+        ><i class="fas fa-folder-open"></i>File Cabinet</a
+      >
+    </li>
+
+    <li>
+      <a href="#"
+        ><i class="fas fa-chart-area"></i>Reports<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="GenerateDtrReport.aspx">Generate DTR</a>
+        </li>
+      </ul>
+    </li>
+    <li class="current-page">
+      <a href="EmployeeMasterlist.aspx"
+        ><i class="fas fa-download"></i>Import Time Records</a
+      >
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-cog"></i>System Preferences<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="HolidayList.aspx">Holiday Notice</a>
+          <a class="hidden" href="backups.aspx">Backups</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
+
+  <!--HR Payroll ACESS-->
+  <ul id="hrpayrollaccess" class="nav-list">
+    <!--<li>
                   <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
               </li>-->
-              <li>
-                  <a href="PayrollMain.aspx"><i class="fas fa-file-invoice"></i>Payroll</a>
-              </li>
-              <li class="current-page">
-                  <a href="ManageEmployees.aspx"><i class="fas fa-file-alt"></i>Employee Masterlist</a>
-              </li>
-              <!--<li>
+    <li>
+      <a href="PayrollMain.aspx"><i class="fas fa-file-invoice"></i>Payroll</a>
+    </li>
+    <li class="current-page">
+      <a href="ManageEmployees.aspx"
+        ><i class="fas fa-file-alt"></i>Employee Masterlist</a
+      >
+    </li>
+    <!--<li>
                   <a href="SendMemo.aspx"><i class="far fa-bell"></i>Memo / Notice</a>
               </li>
               <li>
@@ -846,134 +965,151 @@
                       </li>
                   </ul>
               </li>-->
-              <li>
-                  <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-          </ul>
-          
-            
-                              
+    <li>
+      <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
 
-          <div class="close-menu">
-              <a onclick="toggleMenu()">
-                  <i class="fas fa-times"></i>
-              </a>
-          </div>
-        </nav>
-        <!--NAV MENU END-->
+  <div class="close-menu">
+    <a onclick="toggleMenu()">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
+</nav>
+<!--NAV MENU END-->
 
 <!-- holiday list -->
-        <!--NAV MENU-->
-        <nav id="nav">
-          <div class="logo">
-              <a href="" class="logo-link">
-                  <img alt="BGC Logo">
-                  <p>HRIS &amp; Payroll System</p>
-              </a>
-          </div>
+<!--NAV MENU-->
+<nav id="nav">
+  <div class="logo">
+    <a href="" class="logo-link">
+      <img alt="BGC Logo" />
+      <p>HRIS &amp; Payroll System</p>
+    </a>
+  </div>
 
-          <!-- profile quick info -->
-          <div class="profile">
-              <div class="profile_pic">
-                  <a href="#"><img src="/Images/user.png" alt="..." class="img-circle profile_img"></a>
-              </div>
-              <div class="profile_info">
-                  <span>Welcome</span>
-                  <h2 id="access-role">HR Admin</h2>
-                  <p>&nbsp;</p>
-              </div>
-          </div>
+  <!-- profile quick info -->
+  <div class="profile">
+    <div class="profile_pic">
+      <a href="#"
+        ><img src="/Images/user.png" alt="..." class="img-circle profile_img"
+      /></a>
+    </div>
+    <div class="profile_info">
+      <span>Welcome</span>
+      <h2 id="access-role">HR Admin</h2>
+      <p>&nbsp;</p>
+    </div>
+  </div>
 
-          
-          
-          <!--SUDO ACESS-->
-            <ul class="nav-list" id="sudo-access">
-              <li>
-                <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-            </ul>  
-            
-          <!--HR Admin ACESS--> 
-          <ul id="hradminaccess" class="nav-list block">
-              <li>
-                <a href="DashboardAdmin.aspx"><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-tasks"> </i>Approvals<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                <li>
-                    <a href="SaturdaySched.aspx">Saturday Schedule</a>
-                  </li>
-                  <li>
-                    <a href="Substitution.aspx">Substitute Records</a>
-                  </li>
-                  <li>
-                    <a href="LeaveRecords.aspx">Leave Records</a>
-                  </li>
-                  <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
-                  <li>
-                    <a href="UndertimeRecords.aspx">Undertime Records</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-file-alt"></i> Employee Records<span class="fa fa-chevron-down"></span></a>
-              <ul class="nav child_menu hidden">
-                <li>
-                  <a href="ManageEmployees.aspx">Employee Masterlist</a>
-                </li>
-                <li ><a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a></li>
-                <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
-                <li><a href="merit.aspx">Employee Merits</a></li>
-                <li><a href="contribution.aspx">Employee Contributions</a></li>
-                <li><a href="savings.aspx">Employee Savings</a></li>
-              </ul>
-              </li>
-              
-              <li>
-                <a href="#"><i class="fas fa-bullhorn"></i>Memo/Notice<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                  <li>
-                    <a href="FileCabinet.aspx">File Cabinet</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-chart-area"></i>Reports<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                  <li>
-                    <a href="GenerateDtrReport.aspx">Generate DTR</a>
-                  </li>
-                </ul>
-              </li>
-              <li >
-                <a href="EmployeeMasterlist.aspx"><i class="fas fa-download"></i>Import Time Records</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-cog"></i>System Preferences<span class="fa fa-chevron-down"></span></a>
-                              <ul class="nav child_menu">
-                                  <li class="current-page">
-                                      <a href="HolidayList.aspx">Holiday Notice</a>
-                                  </li>
-                              </ul>
-              </li>
-              <li>
-                <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-            </ul>                      
-          
-          <!--HR Payroll ACESS-->            
-          <ul id="hrpayrollaccess" class="nav-list">
-              <!--<li>
+  <!--SUDO ACESS-->
+  <ul class="nav-list" id="sudo-access">
+    <li>
+      <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
+
+  <!--HR Admin ACESS-->
+  <ul id="hradminaccess" class="nav-list block">
+    <li>
+      <a href="DashboardAdmin.aspx"
+        ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
+      >
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-tasks"> </i>Approvals<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="SaturdaySched.aspx">Saturday Schedule</a>
+        </li>
+        <li>
+          <a href="Substitution.aspx">Substitute Records</a>
+        </li>
+        <li>
+          <a href="LeaveRecords.aspx">Leave Records</a>
+        </li>
+        <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
+        <li>
+          <a href="UndertimeRecords.aspx">Undertime Records</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-file-alt"></i> Employee Records<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="ManageEmployees.aspx">Employee Masterlist</a>
+        </li>
+        <li><a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a></li>
+        <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
+        <li><a href="merit.aspx">Employee Merits</a></li>
+        <li><a href="contribution.aspx">Employee Contributions</a></li>
+        <li><a href="savings.aspx">Employee Savings</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="FileCabinet.aspx"
+        ><i class="fas fa-folder-open"></i>File Cabinet</a
+      >
+    </li>
+
+    <li>
+      <a href="#"
+        ><i class="fas fa-chart-area"></i>Reports<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu hidden">
+        <li>
+          <a href="GenerateDtrReport.aspx">Generate DTR</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="EmployeeMasterlist.aspx"
+        ><i class="fas fa-download"></i>Import Time Records</a
+      >
+    </li>
+    <li>
+      <a href="#"
+        ><i class="fas fa-cog"></i>System Preferences<span
+          class="fa fa-chevron-down"
+        ></span
+      ></a>
+      <ul class="nav child_menu">
+        <li class="current-page">
+          <a href="HolidayList.aspx">Holiday Notice</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
+
+  <!--HR Payroll ACESS-->
+  <ul id="hrpayrollaccess" class="nav-list">
+    <!--<li>
                   <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
               </li>-->
-              <li>
-                  <a href="PayrollMain.aspx"><i class="fas fa-file-invoice"></i>Payroll</a>
-              </li>
-              <li class="current-page">
-                  <a href="ManageEmployees.aspx"><i class="fas fa-file-alt"></i>Employee Masterlist</a>
-              </li>
-              <!--<li>
+    <li>
+      <a href="PayrollMain.aspx"><i class="fas fa-file-invoice"></i>Payroll</a>
+    </li>
+    <li class="current-page">
+      <a href="ManageEmployees.aspx"
+        ><i class="fas fa-file-alt"></i>Employee Masterlist</a
+      >
+    </li>
+    <!--<li>
                   <a href="SendMemo.aspx"><i class="far fa-bell"></i>Memo / Notice</a>
               </li>
               <li>
@@ -990,18 +1126,15 @@
                       </li>
                   </ul>
               </li>-->
-              <li>
-                  <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-              </li>
-          </ul>
-          
-            
-                              
+    <li>
+      <a href="LoginPage.aspx"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+    </li>
+  </ul>
 
-          <div class="close-menu">
-              <a onclick="toggleMenu()">
-                  <i class="fas fa-times"></i>
-              </a>
-          </div>
-        </nav>
-        <!--NAV MENU END-->
+  <div class="close-menu">
+    <a onclick="toggleMenu()">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
+</nav>
+<!--NAV MENU END-->
