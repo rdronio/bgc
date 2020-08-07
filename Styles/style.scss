@@ -3076,6 +3076,10 @@ nav ul li a span.fa {
   width: 33%;
 }
 
+#payroll-consolidation .modal-payrollconsolidation .modal-content .select {
+  width: 230px;
+}
+
 #payroll-consolidation .modal-edit-consolidation .modal-content {
   width: 40%;
 }
@@ -3087,6 +3091,23 @@ nav ul li a span.fa {
 
 #payroll-consolidation
   .modal-edit-consolidation
+  .modal-content
+  *:nth-child(3)
+  div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+#payroll-consolidation
+  .modal-edit-consolidation2
+  .modal-content
+  *:nth-child(3) {
+  display: flex;
+  flex-direction: row;
+}
+
+#payroll-consolidation
+  .modal-edit-consolidation2
   .modal-content
   *:nth-child(3)
   div {

@@ -2501,6 +2501,14 @@ function closeModalContributions() {
   }
 }
 
+function clearSelectPayPeriod(input) {
+  try {
+    input.value = 'Select Pay Period';
+  } catch (e) {
+    console.log(e);
+  }
+}
+
 function openModalConsolidation() {
   try {
     const modal = document.querySelector('.modal-payrollconsolidation');
@@ -2516,8 +2524,9 @@ function closeModalConsolidation() {
     const modal = document.querySelector('.modal-payrollconsolidation');
     modal.style.display = 'none';
 
-    clearField(txtDateFromModal);
-    clearField(txtDateToModal);
+    // clearField(txtDateFromModal);
+    // clearField(txtDateToModal);
+    clearSelectPayPeriod(selectPayperiod);
   } catch (e) {
     console.log(e);
   }
@@ -2561,8 +2570,28 @@ function closeModalEditConsolidation() {
     const modal = document.querySelector('.modal-edit-consolidation');
     modal.style.display = 'none';
 
-    clearField(txtDateFromModal);
-    clearField(txtDateToModal);
+    // clearField(txtDateFromModal);
+    // clearField(txtDateToModal);
+  } catch (e) {
+    console.log(e);
+  }
+}
+function openModalEditConsolidation2() {
+  try {
+    const modal = document.querySelector('.modal-edit-consolidation2');
+
+    modal.style.display = 'flex';
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function closeModalEditConsolidation2() {
+  try {
+    const modal = document.querySelector('.modal-edit-consolidation2');
+    modal.style.display = 'none';
+
+    clearSelectDepartment(drpDepartment);
   } catch (e) {
     console.log(e);
   }
