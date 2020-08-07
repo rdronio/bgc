@@ -348,7 +348,7 @@
                 <h3 id="txtUpcomingSat">June 26, 2020 - July 10, 2020</h3>
               </div>
 
-              <!-- Payroll Records 1st CutOff Table -->
+              <!-- Payroll Records 1st Table -->
               <!-- <label class="norecords">No Records Found</label> -->
               <table class="tableLayout">
                 <tbody>
@@ -374,7 +374,7 @@
                     <td class="column18">Holiday NSD</td>
                     <td class="column19">Total OT</td>
                     <td class="column20">Additional Days Of Work</td>
-                    <td class="column21">Absences/ Overtime</td>
+                    <td class="column21">Absences/ Undertime</td>
                     <td class="column22">Allowance/ Retro Pay</td>
                     <td class="column23">Gross Pay</td>
                     <td class="column24">SSS Loan</td>
@@ -433,7 +433,7 @@
                 </tbody>
               </table>
 
-              <!-- Payroll Records 2nd CutOff  Table -->
+              <!-- Payroll Records 2nd Table -->
               <!-- <label class="norecords">No Records Found</label> -->
               <table class="tableLayout">
                 <tbody>
@@ -441,21 +441,26 @@
                     <td class="column0">Action</td>
                     <td class="column1">Employee Name</td>
                     <td class="column2">13th month</td>
+                    <!-- <td class="column3">Date Hired</td> -->
                     <td class="column4">Rate Per Day</td>
                     <td class="column5">Rate Per Hour</td>
                     <td class="column6">Days Work</td>
                     <td class="column7">Basic Pay</td>
                     <td class="column8">Legal Holidays</td>
                     <td class="column9">Special Holidays</td>
+                    <td class="column10">Special on Rest Day</td>
+                    <td class="column11">Legal on Rest Day</td>
                     <td class="column12">Sunday Rate</td>
                     <td class="column13">Total Holiday</td>
                     <td class="column14">Ordinary Overtime</td>
+                    <td class="column15">Legal Overtime</td>
                     <td class="column16">Special/Rest Day Overtime</td>
                     <td class="column17">Regular NSD</td>
                     <td class="column18">Holiday NSD</td>
                     <td class="column19">Total OT</td>
+                    <td class="column20">Additional Days Of Work</td>
                     <td class="column21">Absences/ Undertime</td>
-                    <td class="column22">Allowance</td>
+                    <td class="column22">Allowance/ Retro Pay</td>
                     <td class="column23">Gross Pay</td>
                     <td class="column24">SSS-EE</td>
                     <td class="column24">PHIC-EE</td>
@@ -482,6 +487,10 @@
                         >Edit</a
                       >
                     </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -771,6 +780,20 @@
                     type="text"
                     id="txtSpecialHoliday2"
                   />
+                  <label for="txtRestDay2" class="label-6"
+                    >Special on Rest Day
+                  </label>
+                  <span class="note">*Please indicate no. of days</span>
+                  <input name="txtRestDay2" type="text" id="txtRestDay2" />
+                  <label for="txtLegalRestDay2" class="label-6"
+                    >Legal on Rest Day
+                  </label>
+                  <span class="note">*Please indicate no. of days</span>
+                  <input
+                    name="txtLegalRestDay2"
+                    type="text"
+                    id="txtLegalRestDay2"
+                  />
                   <label for="txtSundayRate2" class="label-6">Sunday Rate</label
                   ><span class="note">*Please indicate no. of days</span>
                   <input
@@ -787,6 +810,9 @@
                     type="text"
                     id="txtOrdinaryOT2"
                   />
+                  <label for="txtLegalOT2" class="label-6">Legal Overtime</label
+                  ><span class="note">*Please indicate no. of hours</span>
+                  <input name="txtLegalOT2" type="text" id="txtLegalOT2" />
                   <label for="txtSpecialRestOT2" class="label-6"
                     >Special/Rest Day OT</label
                   ><span class="note">*Please indicate no. of hours</span>
