@@ -107,6 +107,11 @@ a:hover {
   text-decoration: none;
 }
 
+a::selection {
+  color: none;
+  background: none;
+}
+
 /* ------------------------------------ */
 h1 {
   font-size: 1.75rem;
@@ -2478,6 +2483,119 @@ table.tableLayout-md tbody tr > td {
   cursor: default !important;
 }
 
+/* ========[ ZUI Table / Sticky Table Layout ]======== */
+
+// table.tableLayout {
+//   border-spacing: 1;
+//   border-collapse: collapse;
+//   // border-collapse: separate;
+//   border-radius: 5px;
+//   overflow: hidden;
+//   margin: 1rem 0;
+//   position: relative;
+
+//   display: block;
+//   overflow-x: auto;
+//   overflow-y: auto;
+//   max-height: 550px;
+//   /* white-space: nowrap; */
+// }
+
+table.zui-table tbody tr:first-child {
+  font-size: 0.65rem !important;
+  color: #333 !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+  pointer-events: none !important;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 1;
+}
+
+table.zui-table tbody tr:first-child td {
+  font-size: 0.65rem !important;
+  color: #333 !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+  pointer-events: none !important;
+  background: #ffffff;
+  z-index: 1;
+}
+
+table.zui-table tbody tr:last-child {
+  border: 0;
+}
+
+table.zui-table tbody tr:nth-child(even) {
+  background-color: #d3dee2;
+}
+
+table.zui-table tbody tr {
+  font-size: 0.7rem;
+  color: #333;
+  line-height: 1.2;
+  font-weight: unset;
+  border-bottom: 1px solid #eee;
+  height: 3rem;
+  margin: 1rem 0;
+}
+
+table.zui-table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  // border-collapse: separate;
+  border-radius: 5px;
+  overflow: hidden;
+  // margin: 1rem 0;
+  // position: relative;
+
+  // display: block;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 550px;
+}
+
+.zui-table tbody td {
+  border: none;
+  text-align: center;
+  padding: 1rem 1rem;
+  white-space: nowrap;
+}
+.zui-wrapper {
+  position: relative;
+}
+.zui-scroller {
+  margin-left: 230px;
+  overflow-x: scroll;
+  overflow-y: visible;
+  padding-bottom: 5px;
+}
+.zui-table .zui-sticky-col {
+  left: 0;
+  position: absolute;
+  top: auto;
+  width: 80px;
+  height: 47px;
+}
+
+.zui-table tr:nth-child(even) .zui-sticky-col {
+  background-color: #d3dee2;
+}
+
+.zui-table .zui-sticky-col2 {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  left: 80px;
+  position: absolute;
+  top: auto;
+  width: 150px;
+  height: 47px;
+}
+
+.zui-table tr:nth-child(even) .zui-sticky-col2 {
+  background-color: #d3dee2;
+}
+
 /* ========[ Main ]======== */
 .main {
   height: 100%;
@@ -3081,7 +3199,7 @@ nav ul li a span.fa {
 }
 
 #payroll-consolidation .modal-edit-consolidation .modal-content {
-  width: 40%;
+  width: 60%;
 }
 
 #payroll-consolidation .modal-edit-consolidation .modal-content *:nth-child(3) {

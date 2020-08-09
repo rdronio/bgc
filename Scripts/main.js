@@ -2558,8 +2558,38 @@ function showRB() {
 function openModalEditConsolidation() {
   try {
     const modal = document.querySelector('.modal-edit-consolidation');
+    const contriER = document.querySelectorAll('.contri-ER');
+    const deductions = document.querySelectorAll('.deductions');
 
     modal.style.display = 'flex';
+
+    contriER.forEach((item) => {
+      item.classList.add('hidden');
+    });
+
+    deductions.forEach((item) => {
+      item.classList.remove('hidden');
+    });
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function openModalEditConsolidation2() {
+  try {
+    const modal = document.querySelector('.modal-edit-consolidation');
+    const contriER = document.querySelectorAll('.contri-ER');
+    const deductions = document.querySelectorAll('.deductions');
+
+    modal.style.display = 'flex';
+
+    contriER.forEach((item) => {
+      item.classList.remove('hidden');
+    });
+
+    deductions.forEach((item) => {
+      item.classList.add('hidden');
+    });
   } catch (e) {
     console.log(e);
   }
@@ -2572,26 +2602,6 @@ function closeModalEditConsolidation() {
 
     // clearField(txtDateFromModal);
     // clearField(txtDateToModal);
-  } catch (e) {
-    console.log(e);
-  }
-}
-function openModalEditConsolidation2() {
-  try {
-    const modal = document.querySelector('.modal-edit-consolidation2');
-
-    modal.style.display = 'flex';
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-function closeModalEditConsolidation2() {
-  try {
-    const modal = document.querySelector('.modal-edit-consolidation2');
-    modal.style.display = 'none';
-
-    clearSelectDepartment(drpDepartment);
   } catch (e) {
     console.log(e);
   }
