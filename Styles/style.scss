@@ -2501,18 +2501,6 @@ table.tableLayout-md tbody tr > td {
 //   /* white-space: nowrap; */
 // }
 
-table.zui-table tbody tr:first-child {
-  font-size: 0.65rem !important;
-  color: #333 !important;
-  text-transform: uppercase !important;
-  font-weight: bold !important;
-  pointer-events: none !important;
-  position: sticky;
-  top: 0;
-  background: #ffffff;
-  z-index: 1;
-}
-
 table.zui-table tbody tr:first-child td {
   font-size: 0.65rem !important;
   color: #333 !important;
@@ -2529,6 +2517,12 @@ table.zui-table tbody tr:last-child {
 
 table.zui-table tbody tr:nth-child(even) {
   background-color: #d3dee2;
+}
+
+// Gross pay and net pay
+table.zui-table tbody tr:first-child td:nth-child(23),
+table.zui-table tbody tr:first-child td:nth-child(31) {
+  background-color: #55cb90;
 }
 
 table.zui-table tbody tr {
@@ -2562,14 +2556,24 @@ table.zui-table {
   padding: 1rem 1rem;
   white-space: nowrap;
 }
+
+.zui-container {
+  display: block;
+  max-height: 550px;
+}
+
 .zui-wrapper {
   position: relative;
+  max-height: 550px;
+  overflow-y: auto;
 }
+
 .zui-scroller {
-  margin-left: 230px;
+  margin-left: 280px;
   overflow-x: scroll;
   overflow-y: visible;
   padding-bottom: 5px;
+  // max-height: 550px;
 }
 .zui-table .zui-sticky-col {
   left: 0;
@@ -2583,17 +2587,35 @@ table.zui-table {
   background-color: #d3dee2;
 }
 
+.zui-table tr:hover .zui-sticky-col {
+  color: #fff;
+  background-color: #2d9cdb;
+  cursor: pointer;
+}
+
 .zui-table .zui-sticky-col2 {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   left: 80px;
   position: absolute;
   top: auto;
-  width: 150px;
+  width: 200px;
   height: 47px;
 }
 
 .zui-table tr:nth-child(even) .zui-sticky-col2 {
   background-color: #d3dee2;
+}
+
+.zui-table tr:hover .zui-sticky-col2 {
+  color: #fff;
+  background-color: #2d9cdb;
+  cursor: pointer;
+}
+
+table.zui-table tbody tr:hover {
+  color: #fff;
+  background-color: #2d9cdb;
+  cursor: pointer;
 }
 
 /* ========[ Main ]======== */
