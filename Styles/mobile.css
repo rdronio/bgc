@@ -420,6 +420,7 @@
     /* margin-bottom: 0.75rem; */
     /* margin-bottom: 0.5rem; */
     border: none;
+    width: 100%;
   }
   table.tableLayout tbody tr td:last-child {
     margin-bottom: 0;
@@ -3744,6 +3745,116 @@ td:nth-child(29):before {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  /* ========[ Payroll Report Per Employee ]======== */
+  #payroll-report-per-employee
+.container
+> .card-1
+.tableLayout
+tbody
+tr
+td:nth-child(1):before {
+    content: 'Payroll Period';
+  }
+  #payroll-report-per-employee
+.container
+> .card-1
+.tableLayout
+tbody
+tr
+td:nth-child(2):before {
+    content: 'Online Total';
+  }
+  #payroll-report-per-employee
+.container
+> .card-1
+.tableLayout
+tbody
+tr
+td:nth-child(3):before {
+    content: 'Cash Total';
+  }
+  #payroll-report-per-employee
+.container
+> .card-1
+.tableLayout
+tbody
+tr
+td:nth-child(4):before {
+    content: 'Total BIG C Payroll';
+  }
+  #payroll-report-per-employee
+.container
+> .card-1
+.tableLayout
+tbody
+tr
+td:nth-child(5):before {
+    content: 'Prepared By';
+  }
+  #payroll-report-per-employee
+.container
+> .card-1
+.tableLayout
+tbody
+tr
+td:nth-child(6):before {
+    content: 'Action';
+  }
+  /* ========[ Payroll Report Per Department ]======== */
+  #payroll-report-per-department
+.container
+> .card-1
+.tableLayout
+tbody
+tr
+td:nth-child(1):before {
+    content: 'Payroll Period';
+  }
+  #payroll-report-per-department
+.container
+> .card-1
+.tableLayout
+tbody
+tr
+td:nth-child(2):before {
+    content: 'Total1';
+  }
+  #payroll-report-per-department
+.container
+> .card-1
+.tableLayout
+tbody
+tr
+td:nth-child(3):before {
+    content: 'Total2';
+  }
+  #payroll-report-per-department
+.container
+> .card-1
+.tableLayout
+tbody
+tr
+td:nth-child(4):before {
+    content: 'Total3';
+  }
+  #payroll-report-per-department
+.container
+> .card-1
+.tableLayout
+tbody
+tr
+td:nth-child(5):before {
+    content: 'Prepared By';
+  }
+  #payroll-report-per-department
+.container
+> .card-1
+.tableLayout
+tbody
+tr
+td:nth-child(6):before {
+    content: 'Action';
   }
   /* ========[ Payslip Template ]======== */
   #payslip-template .modal-content {
