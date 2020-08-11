@@ -26,12 +26,11 @@
     <form id="payroll" action="#" autocomplete="off">
       <!-- main -->
       <div class="main">
-        <!-- nav -->
         <nav id="nav">
           <div class="logo">
             <a href="" class="logo-link">
               <img alt="BGC Logo" />
-              <p>HRIS & Payroll System</p>
+              <p>HRIS &amp; Payroll System</p>
             </a>
           </div>
 
@@ -52,7 +51,9 @@
             </div>
           </div>
 
-          <!-- / menu -->
+          <!--NAV MENU-->
+
+          <!--SUDO ACESS-->
           <ul class="nav-list" id="sudo-access">
             <li>
               <a href="index.html"
@@ -61,9 +62,10 @@
             </li>
           </ul>
 
+          <!--HR Admin ACCESS-->
           <ul class="nav-list" id="hradmin-access">
             <li class="current-page">
-              <a href="admindashboard.html"
+              <a href="DashboardAdmin.aspx"
                 ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
               >
             </li>
@@ -75,20 +77,20 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="PayrollApproval.html">Payroll Approval</a>
+                  <a href="SaturdaySched.aspx">Saturday Schedule</a>
                 </li>
                 <li>
-                  <a href="Substitution.html">Subtitute Records</a>
+                  <a href="PayrollApproval.aspx">Payroll Approval</a>
                 </li>
                 <li>
-                  <a href="LeaveRecords.html">Leave Records</a>
-                </li>
-                <li><a href="OvertimeRecords.html">Overtime Records</a></li>
-                <li>
-                  <a href="Undertime.html">Undertime Records</a>
+                  <a href="Substitution.aspx">Substitute Records</a>
                 </li>
                 <li>
-                  <a href="skeletalforce.html">Saturday Schedule</a>
+                  <a href="LeaveRecords.aspx">Leave Records</a>
+                </li>
+                <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
+                <li>
+                  <a href="UndertimeRecords.aspx">Undertime Records</a>
                 </li>
               </ul>
             </li>
@@ -100,12 +102,12 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="employeemasterlist.html">Employee Masterlist</a>
+                  <a href="ManageEmployees.aspx">Employee Masterlist</a>
                 </li>
                 <li>
-                  <a href="adminleaverecords.html">Employee Leave Records</a>
+                  <a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a>
                 </li>
-                <li><a href="TimeRecords.html">Employee Time Records</a></li>
+                <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
               </ul>
             </li>
 
@@ -117,10 +119,10 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="memonotice.html">Bulk Email</a>
+                  <a href="UnderConstructionAdmin.aspx">Bulk Email</a>
                 </li>
                 <li>
-                  <a href="filecabinet.html">File Cabinet</a>
+                  <a href="FileCabinet.aspx">File Cabinet</a>
                 </li>
               </ul>
             </li>
@@ -132,12 +134,12 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="GenerateDtrReport.html">Generate DTR</a>
+                  <a href="GenerateDtrReport.aspx">Generate DTR</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="importtimerecords.html"
+              <a href="EmployeeMasterlist.aspx"
                 ><i class="fas fa-download"></i>Import Time Records</a
               >
             </li>
@@ -149,36 +151,30 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="holidaynotice.html">Holiday Notice</a>
+                  <a href="HolidayList.aspx">Holiday Notice</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="index.html"
+              <a href="LoginPage.aspx"
                 ><i class="fas fa-sign-out-alt"></i>Sign Out</a
               >
             </li>
           </ul>
 
-          <ul class="nav-list" id="hrpayroll-access">
-            <li class="hidden">
-              <a href="payrolldashboard.html"
-                ><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a
-              >
-            </li>
+          <!--HR Payroll ACESS-->
+          <ul class="nav-list block" id="hrpayroll-access">
+            <!--<li>
+                  <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
+              </li>-->
             <li class="current-page">
-              <a href="payroll.html"
+              <a href="PayrollMain.aspx"
                 ><i class="fas fa-file-invoice"></i>Payroll</a
               >
             </li>
             <li>
-              <a href="payrolladdemployee.html"
+              <a href="ManageEmployees.aspx"
                 ><i class="fas fa-file-alt"></i>Employee Masterlist</a
-              >
-            </li>
-            <li>
-              <a href="memonotice.html"
-                ><i class="far fa-bell"></i>Memo / Notice</a
               >
             </li>
             <li>
@@ -189,23 +185,24 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="generatedtrreport.html">Generate DTR Report</a>
+                  <a href="GenerateDtrReport.aspx">Generate DTR Report</a>
                 </li>
                 <li>
-                  <a href="payrollreport.html">Payroll Report</a>
+                  <a href="payrollreport.aspx">Payroll Report</a>
                 </li>
                 <li>
-                  <a href="payrollpayslip.html">Payslips</a>
+                  <a href="payrollpayslip.aspx">Payslips</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="index.html"
+              <a href="LoginPage.aspx"
                 ><i class="fas fa-sign-out-alt"></i>Sign Out</a
               >
             </li>
           </ul>
 
+          <!--OIC ACESS-->
           <ul class="nav-list" id="oic-access">
             <li>
               <a href="index.html"
@@ -213,6 +210,8 @@
               >
             </li>
           </ul>
+
+          <!--NAV MENU END-->
 
           <div class="close-menu">
             <a onclick="toggleMenu()">
