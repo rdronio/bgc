@@ -1,11 +1,11 @@
 function togglePassword() {
   try {
-    var x = document.querySelector('#txtPass');
+    var x = document.querySelector("#txtPass");
 
-    if (x.type === 'password') {
-      x.type = 'text';
+    if (x.type === "password") {
+      x.type = "text";
     } else {
-      x.type = 'password';
+      x.type = "password";
     }
   } catch (e) {
     console.log(e);
@@ -14,12 +14,12 @@ function togglePassword() {
 
 function togglePassword2() {
   try {
-    var x = document.querySelector('#txtPass2');
+    var x = document.querySelector("#txtPass2");
 
-    if (x.type === 'password') {
-      x.type = 'text';
+    if (x.type === "password") {
+      x.type = "text";
     } else {
-      x.type = 'password';
+      x.type = "password";
     }
   } catch (e) {
     console.log(e);
@@ -28,23 +28,23 @@ function togglePassword2() {
 
 function checkAccessRole() {
   try {
-    const accessRole = document.querySelector('#access-role').innerHTML;
-    const navList = document.querySelector('.nav-list');
-    const sudoAccess = document.querySelector('#sudo-access');
-    const hradminAccess = document.querySelector('#hradmin-access');
-    const hrpayrollAccess = document.querySelector('#hrpayroll-access');
-    const oicAccess = document.querySelector('#oic-access');
+    const accessRole = document.querySelector("#access-role").innerHTML;
+    const navList = document.querySelector(".nav-list");
+    const sudoAccess = document.querySelector("#sudo-access");
+    const hradminAccess = document.querySelector("#hradmin-access");
+    const hrpayrollAccess = document.querySelector("#hrpayroll-access");
+    const oicAccess = document.querySelector("#oic-access");
 
-    if (accessRole === 'Admin') {
-      sudoAccess.classList.add('block');
-    } else if (accessRole === 'HR Admin') {
-      hradminAccess.classList.add('block');
-    } else if (accessRole === 'HR Payroll') {
-      hrpayrollAccess.classList.add('block');
-    } else if (accessRole === 'OIC') {
-      oicAccess.classList.add('block');
+    if (accessRole === "Admin") {
+      sudoAccess.classList.add("block");
+    } else if (accessRole === "HR Admin") {
+      hradminAccess.classList.add("block");
+    } else if (accessRole === "HR Payroll") {
+      hrpayrollAccess.classList.add("block");
+    } else if (accessRole === "OIC") {
+      oicAccess.classList.add("block");
     } else {
-      navList.classList.remove('block');
+      navList.classList.remove("block");
     }
   } catch (e) {
     console.log(e);
@@ -57,21 +57,21 @@ $(document).ready(function () {
     checkAccessRole();
 
     //check admin dashboard
-    $(window).on('load', loadSavedValue(`txtSeachRegular`));
-    $(window).on('load', loadSavedValue(`txtSearch`));
+    $(window).on("load", loadSavedValue(`txtSeachRegular`));
+    $(window).on("load", loadSavedValue(`txtSearch`));
 
-    $('.nav-list').on('click', 'li', function () {
-      $('.nav-list li.current-page').removeClass('current-page');
-      $(this).addClass('current-page');
+    $(".nav-list").on("click", "li", function () {
+      $(".nav-list li.current-page").removeClass("current-page");
+      $(this).addClass("current-page");
     });
 
-    $('.btn-dropdown').on('click', function () {
-      this.classList.add('hidden');
+    $(".btn-dropdown").on("click", function () {
+      this.classList.add("hidden");
     });
 
     $(document).click(function (e) {
       e.stopPropagation();
-      let container = $('.search-main-container');
+      let container = $(".search-main-container");
 
       //check if the clicked area is dropDown or not
       if (container.has(e.target).length === 0) {
@@ -81,13 +81,13 @@ $(document).ready(function () {
       }
     });
 
-    $('.datalist-data').on('click', 'li', function () {
-      $('.datalist-data li').removeClass('selected-datalist');
-      $(this).addClass('selected-datalist');
+    $(".datalist-data").on("click", "li", function () {
+      $(".datalist-data li").removeClass("selected-datalist");
+      $(this).addClass("selected-datalist");
 
-      let selectedOption = document.querySelector('.selected-datalist div span')
+      let selectedOption = document.querySelector(".selected-datalist div span")
         .innerHTML;
-      let txtSearch = document.querySelector('#txtSearch');
+      let txtSearch = document.querySelector("#txtSearch");
 
       txtSearch.value = selectedOption;
       hideDataList();
@@ -95,26 +95,26 @@ $(document).ready(function () {
 
     $(document).click(function (e) {
       e.stopPropagation();
-      let container = $('.btn-tools-container');
+      let container = $(".btn-tools-container");
 
       //check if the clicked area is dropDown or not
       if (container.has(e.target).length === 0) {
-        $('.btn-dropdown').addClass('hidden');
+        $(".btn-dropdown").addClass("hidden");
       }
     });
 
     $(document).click(function (e) {
       e.stopPropagation();
-      let containerRec = $('.searchRec-main-container');
+      let containerRec = $(".searchRec-main-container");
       const showSearchRecOptions = document.querySelector(
-        '.showSearchRecOptions'
+        ".showSearchRecOptions"
       );
 
       //check if the clicked area is dropDown or not
       if (containerRec.has(e.target).length === 0) {
-        $('.searchRec-filter-container').addClass('hidden');
+        $(".searchRec-filter-container").addClass("hidden");
         // showSearchRecOptions.classList.remove("rotate");
-        $('.showSearchRecOptions svg').removeClass('rotate');
+        $(".showSearchRecOptions svg").removeClass("rotate");
         hideDataList();
       }
     });
@@ -143,9 +143,9 @@ $(document).ready(function () {
 
 function selectTab() {
   try {
-    $('#tab').on('click', 'li', function () {
-      $('.tab-list li.current-tab').removeClass('current-tab');
-      $(this).addClass('current-tab');
+    $("#tab").on("click", "li", function () {
+      $(".tab-list li.current-tab").removeClass("current-tab");
+      $(this).addClass("current-tab");
     });
   } catch (e) {
     console.log(e);
@@ -154,9 +154,9 @@ function selectTab() {
 
 function selectTabEI() {
   try {
-    $('#tabIE').on('click', 'li', function () {
-      $('.modal-tab-list li.current-tab').removeClass('current-tab');
-      $(this).addClass('current-tab');
+    $("#tabIE").on("click", "li", function () {
+      $(".modal-tab-list li.current-tab").removeClass("current-tab");
+      $(this).addClass("current-tab");
     });
   } catch (e) {
     console.log(e);
@@ -164,9 +164,9 @@ function selectTabEI() {
 }
 function selectTabViewEI() {
   try {
-    $('#tabViewIE').on('click', 'li', function () {
-      $('.modal-tab-list li.current-tab').removeClass('current-tab');
-      $(this).addClass('current-tab');
+    $("#tabViewIE").on("click", "li", function () {
+      $(".modal-tab-list li.current-tab").removeClass("current-tab");
+      $(this).addClass("current-tab");
     });
   } catch (e) {
     console.log(e);
@@ -175,30 +175,30 @@ function selectTabViewEI() {
 
 function toggleMenu() {
   try {
-    const menu = document.querySelector('#nav');
-    const content = document.querySelector('.content');
-    const menuBtn = document.querySelector('.menu-btn');
-    const body = document.querySelector('body');
+    const menu = document.querySelector("#nav");
+    const content = document.querySelector(".content");
+    const menuBtn = document.querySelector(".menu-btn");
+    const body = document.querySelector("body");
 
-    menu.classList.toggle('show');
-    content.classList.toggle('blur');
-    menuBtn.classList.toggle('hidden');
-    body.classList.toggle('noscroll');
+    menu.classList.toggle("show");
+    content.classList.toggle("blur");
+    menuBtn.classList.toggle("hidden");
+    body.classList.toggle("noscroll");
   } catch (e) {
     console.log(e);
   }
 }
 
 // Time Picker
-$('.timepicker').each(function () {
+$(".timepicker").each(function () {
   try {
     $(this).timepicker({
-      timeFormat: 'hh:mm p',
+      timeFormat: "hh:mm p",
       interval: 1,
-      minTime: '12:00 AM',
-      maxTime: '11:59 PM',
-      defaultTime: 'null',
-      startTime: '8:00 AM',
+      minTime: "12:00 AM",
+      maxTime: "11:59 PM",
+      defaultTime: "null",
+      startTime: "8:00 AM",
       dynamic: false,
       dropdown: true,
       scrollbar: true,
@@ -209,22 +209,22 @@ $('.timepicker').each(function () {
 });
 
 // Month Picker
-$('.monthPicker').each(function () {
+$(".monthPicker").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
       showButtonPanel: true,
-      dateFormat: 'MM yy',
-      yearRange: '+0:+10',
+      dateFormat: "MM yy",
+      yearRange: "+0:+10",
       minDate: new Date(),
       onClose: function (dateText, inst, selectedDate) {
         $(this).datepicker(
-          'setDate',
+          "setDate",
           new Date(inst.selectedYear, inst.selectedMonth, 1),
-          'option',
-          'minDate',
+          "option",
+          "minDate",
           selectedDate
         );
       },
@@ -234,22 +234,22 @@ $('.monthPicker').each(function () {
   }
 });
 // Month Picker2
-$('.monthPicker2').each(function () {
+$(".monthPicker2").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
       showButtonPanel: true,
-      dateFormat: 'mm/yy',
-      yearRange: '+0:+10',
+      dateFormat: "mm/yy",
+      yearRange: "+0:+10",
       minDate: new Date(),
       onClose: function (dateText, inst, selectedDate) {
         $(this).datepicker(
-          'setDate',
+          "setDate",
           new Date(inst.selectedYear, inst.selectedMonth, 1),
-          'option',
-          'minDate',
+          "option",
+          "minDate",
           selectedDate
         );
       },
@@ -260,28 +260,28 @@ $('.monthPicker2').each(function () {
 });
 
 // Saturday Date Picker
-$('.saturdayDatePicker').each(function () {
+$(".saturdayDatePicker").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
-      yearRange: '-10:+10',
+      yearRange: "-10:+10",
       beforeShowDay: function (date) {
         var day = date.getDay();
-        return [day == 6, ''];
+        return [day == 6, ""];
       },
       onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
-        var date = new Date($datepicker.datepicker('getDate'));
+        var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
         var preservedDay = Math.min(
           lastDayOfMonth,
           Math.max(1, date.getDate())
         );
         $datepicker.datepicker(
-          'setDate',
-          month + '/' + preservedDay + '/' + year
+          "setDate",
+          month + "/" + preservedDay + "/" + year
         );
       },
     });
@@ -291,25 +291,25 @@ $('.saturdayDatePicker').each(function () {
 });
 
 // Birthday Picker
-$('.bdayPicker').each(function () {
+$(".bdayPicker").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
-      defaultDate: '-18Y',
-      yearRange: '-80:-18',
+      defaultDate: "-18Y",
+      yearRange: "-80:-18",
       onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
-        var date = new Date($datepicker.datepicker('getDate'));
+        var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
         var preservedDay = Math.min(
           lastDayOfMonth,
           Math.max(1, date.getDate())
         );
         $datepicker.datepicker(
-          'setDate',
-          month + '/' + preservedDay + '/' + year
+          "setDate",
+          month + "/" + preservedDay + "/" + year
         );
       },
     });
@@ -319,24 +319,24 @@ $('.bdayPicker').each(function () {
 });
 
 // Licence Expiration Date Picker
-$('.expDatePicker').each(function () {
+$(".expDatePicker").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
-      yearRange: '-10:+10',
+      yearRange: "-10:+10",
       onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
-        var date = new Date($datepicker.datepicker('getDate'));
+        var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
         var preservedDay = Math.min(
           lastDayOfMonth,
           Math.max(1, date.getDate())
         );
         $datepicker.datepicker(
-          'setDate',
-          month + '/' + preservedDay + '/' + year
+          "setDate",
+          month + "/" + preservedDay + "/" + year
         );
       },
     });
@@ -356,25 +356,25 @@ $('.expDatePicker').each(function () {
 // });
 
 // Date Picker
-$('.datePicker').each(function () {
+$(".datePicker").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
-      yearRange: '-10:+10',
+      yearRange: "-10:+10",
       beforeShowDay: $.datepicker.noWeekends,
       onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
-        var date = new Date($datepicker.datepicker('getDate'));
+        var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
         var preservedDay = Math.min(
           lastDayOfMonth,
           Math.max(1, date.getDate())
         );
         $datepicker.datepicker(
-          'setDate',
-          month + '/' + preservedDay + '/' + year
+          "setDate",
+          month + "/" + preservedDay + "/" + year
         );
       },
     });
@@ -384,24 +384,24 @@ $('.datePicker').each(function () {
 });
 
 // Date Picker with weekends
-$('.datePicker2').each(function () {
+$(".datePicker2").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
-      yearRange: '-10:+10',
+      yearRange: "-10:+10",
       onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
-        var date = new Date($datepicker.datepicker('getDate'));
+        var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
         var preservedDay = Math.min(
           lastDayOfMonth,
           Math.max(1, date.getDate())
         );
         $datepicker.datepicker(
-          'setDate',
-          month + '/' + preservedDay + '/' + year
+          "setDate",
+          month + "/" + preservedDay + "/" + year
         );
       },
     });
@@ -411,25 +411,25 @@ $('.datePicker2').each(function () {
 });
 
 // Leave Picker
-$('.leavePicker').each(function () {
+$(".leavePicker").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
-      yearRange: '-10:+10',
+      yearRange: "-10:+10",
       beforeShowDay: $.datepicker.noWeekends,
       onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
-        var date = new Date($datepicker.datepicker('getDate'));
+        var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
         var preservedDay = Math.min(
           lastDayOfMonth,
           Math.max(1, date.getDate())
         );
         $datepicker.datepicker(
-          'setDate',
-          month + '/' + preservedDay + '/' + year
+          "setDate",
+          month + "/" + preservedDay + "/" + year
         );
       },
     });
@@ -439,25 +439,25 @@ $('.leavePicker').each(function () {
 });
 
 // OT Picker
-$('.otPicker').each(function () {
+$(".otPicker").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
-      yearRange: '-10:+10',
+      yearRange: "-10:+10",
       beforeShowDay: $.datepicker.noWeekends,
       onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
-        var date = new Date($datepicker.datepicker('getDate'));
+        var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
         var preservedDay = Math.min(
           lastDayOfMonth,
           Math.max(1, date.getDate())
         );
         $datepicker.datepicker(
-          'setDate',
-          month + '/' + preservedDay + '/' + year
+          "setDate",
+          month + "/" + preservedDay + "/" + year
         );
       },
     });
@@ -467,25 +467,25 @@ $('.otPicker').each(function () {
 });
 
 // Undertime Picker
-$('.utPicker').each(function () {
+$(".utPicker").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
-      yearRange: '-10:+10',
+      yearRange: "-10:+10",
       beforeShowDay: $.datepicker.noWeekends,
       onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
-        var date = new Date($datepicker.datepicker('getDate'));
+        var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
         var preservedDay = Math.min(
           lastDayOfMonth,
           Math.max(1, date.getDate())
         );
         $datepicker.datepicker(
-          'setDate',
-          month + '/' + preservedDay + '/' + year
+          "setDate",
+          month + "/" + preservedDay + "/" + year
         );
       },
     });
@@ -495,24 +495,24 @@ $('.utPicker').each(function () {
 });
 
 // Termination Date Picker
-$('.terminationDatePicker').each(function () {
+$(".terminationDatePicker").each(function () {
   try {
     //Create jQueryUI datepicker
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
-      yearRange: '-10:+10',
+      yearRange: "-10:+10",
       onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
-        var date = new Date($datepicker.datepicker('getDate'));
+        var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
         var preservedDay = Math.min(
           lastDayOfMonth,
           Math.max(1, date.getDate())
         );
         $datepicker.datepicker(
-          'setDate',
-          month + '/' + preservedDay + '/' + year
+          "setDate",
+          month + "/" + preservedDay + "/" + year
         );
       },
     });
@@ -521,23 +521,23 @@ $('.terminationDatePicker').each(function () {
   }
 });
 
-$('.startDatePicker').each(function () {
+$(".startDatePicker").each(function () {
   try {
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
-      yearRange: '-10:+10',
+      yearRange: "-10:+10",
       onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
-        var date = new Date($datepicker.datepicker('getDate'));
+        var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
         var preservedDay = Math.min(
           lastDayOfMonth,
           Math.max(1, date.getDate())
         );
         $datepicker.datepicker(
-          'setDate',
-          month + '/' + preservedDay + '/' + year
+          "setDate",
+          month + "/" + preservedDay + "/" + year
         );
       },
 
@@ -567,23 +567,23 @@ $('.startDatePicker').each(function () {
   }
 });
 
-$('.endDatePicker').each(function () {
+$(".endDatePicker").each(function () {
   try {
     $(this).datepicker({
       changeMonth: true,
       changeYear: true,
-      yearRange: '-10:+10',
+      yearRange: "-10:+10",
       onChangeMonthYear: function (year, month) {
         var $datepicker = jQuery(this);
-        var date = new Date($datepicker.datepicker('getDate'));
+        var date = new Date($datepicker.datepicker("getDate"));
         var lastDayOfMonth = new Date(year, month, 0).getDate();
         var preservedDay = Math.min(
           lastDayOfMonth,
           Math.max(1, date.getDate())
         );
         $datepicker.datepicker(
-          'setDate',
-          month + '/' + preservedDay + '/' + year
+          "setDate",
+          month + "/" + preservedDay + "/" + year
         );
       },
     });
@@ -607,21 +607,21 @@ function generatePayPeriod(
     let selectedDate = new Date(startDatePickerValue);
     let endDate = new Date(startDatePickerValue);
 
-    if (startDatePickerValue != '') {
-      startDatePicker.classList.add('disabled');
-      endDatePicker.classList.add('disabled');
+    if (startDatePickerValue != "") {
+      startDatePicker.classList.add("disabled");
+      endDatePicker.classList.add("disabled");
 
-      if (payFreq === 'twoWeeksAdmin') {
-        startDatePicker.classList.remove('disabled');
-        endDatePicker.classList.remove('disabled');
+      if (payFreq === "twoWeeksAdmin") {
+        startDatePicker.classList.remove("disabled");
+        endDatePicker.classList.remove("disabled");
         endDate.setDate(selectedDate.getDate() + 14);
-        $(endDatePicker).datepicker('setDate', endDate);
-      } else if (payFreq === 'twoWeeksOthers') {
+        $(endDatePicker).datepicker("setDate", endDate);
+      } else if (payFreq === "twoWeeksOthers") {
         endDate.setDate(selectedDate.getDate() + 14);
-        $(endDatePicker).datepicker('setDate', endDate);
-      } else if (payFreq === 'custom') {
-        startDatePicker.classList.remove('disabled');
-        endDatePicker.classList.remove('disabled');
+        $(endDatePicker).datepicker("setDate", endDate);
+      } else if (payFreq === "custom") {
+        startDatePicker.classList.remove("disabled");
+        endDatePicker.classList.remove("disabled");
         // endDate.setDate(selectedDate.getDate());
         // endDate.setDate(selectedDate.getDate());
         // $(endDatePicker).datepicker("option", "minDate", selectedDate);
@@ -661,29 +661,29 @@ function generatePayPeriodBgc(
     let twentysix = new Date(y, m, 26);
     let twentyseven = new Date(y, m - 1, 27);
 
-    if (payFreq != '') {
-      startDatePicker.classList.add('disabled');
-      endDatePicker.classList.add('disabled');
+    if (payFreq != "") {
+      startDatePicker.classList.add("disabled");
+      endDatePicker.classList.add("disabled");
 
-      if (payFreq === 'Admin1') {
-        $(startDatePicker).datepicker('setDate', first);
-        $(startDatePicker).datepicker('setDate', first);
-        $(endDatePicker).datepicker('setDate', fifteen);
-      } else if (payFreq === 'Admin2') {
-        $(startDatePicker).datepicker('setDate', sixteen);
-        $(startDatePicker).datepicker('setDate', sixteen);
-        $(endDatePicker).datepicker('setDate', thirty);
-      } else if (payFreq === 'Others1') {
-        $(startDatePicker).datepicker('setDate', twentyseven);
-        $(startDatePicker).datepicker('setDate', twentyseven);
-        $(endDatePicker).datepicker('setDate', ten);
-      } else if (payFreq === 'Others2') {
-        $(startDatePicker).datepicker('setDate', eleven);
-        $(startDatePicker).datepicker('setDate', eleven);
-        $(endDatePicker).datepicker('setDate', twentysix);
-      } else if (payFreq === 'custom') {
-        startDatePicker.classList.remove('disabled');
-        endDatePicker.classList.remove('disabled');
+      if (payFreq === "Admin1") {
+        $(startDatePicker).datepicker("setDate", first);
+        $(startDatePicker).datepicker("setDate", first);
+        $(endDatePicker).datepicker("setDate", fifteen);
+      } else if (payFreq === "Admin2") {
+        $(startDatePicker).datepicker("setDate", sixteen);
+        $(startDatePicker).datepicker("setDate", sixteen);
+        $(endDatePicker).datepicker("setDate", thirty);
+      } else if (payFreq === "Others1") {
+        $(startDatePicker).datepicker("setDate", twentyseven);
+        $(startDatePicker).datepicker("setDate", twentyseven);
+        $(endDatePicker).datepicker("setDate", ten);
+      } else if (payFreq === "Others2") {
+        $(startDatePicker).datepicker("setDate", eleven);
+        $(startDatePicker).datepicker("setDate", eleven);
+        $(endDatePicker).datepicker("setDate", twentysix);
+      } else if (payFreq === "custom") {
+        startDatePicker.classList.remove("disabled");
+        endDatePicker.classList.remove("disabled");
         // endDate.setDate(selectedDate.getDate());
 
         // $(endDatePicker).datepicker("option", "minDate", selectedDate);
@@ -698,53 +698,53 @@ function generatePayPeriodBgc(
 
 function hidePayslipInfo() {
   try {
-    const drpEmployee = document.querySelector('#drpDownEmployee');
+    const drpEmployee = document.querySelector("#drpDownEmployee");
     const emp = drpEmployee.options[drpEmployee.selectedIndex].value;
 
     const child7 = document.querySelector(
-      '#payroll .modal-content > *:nth-child(7)'
+      "#payroll .modal-content > *:nth-child(7)"
     );
     const child11 = document.querySelector(
-      '#payroll .modal-content > *:nth-child(11)'
+      "#payroll .modal-content > *:nth-child(11)"
     );
     const child12 = document.querySelector(
-      '#payroll .modal-content > *:nth-child(12)'
+      "#payroll .modal-content > *:nth-child(12)"
     );
     const child13 = document.querySelector(
-      '#payroll .modal-content > *:nth-child(13)'
+      "#payroll .modal-content > *:nth-child(13)"
     );
     const child14 = document.querySelector(
-      '#payroll .modal-content > *:nth-child(14)'
+      "#payroll .modal-content > *:nth-child(14)"
     );
     const child15 = document.querySelector(
-      '#payroll .modal-content > *:nth-child(15)'
+      "#payroll .modal-content > *:nth-child(15)"
     );
     const child16 = document.querySelector(
-      '#payroll .modal-content > *:nth-child(16)'
+      "#payroll .modal-content > *:nth-child(16)"
     );
     const child17 = document.querySelector(
-      '#payroll .modal-content > *:nth-child(17)'
+      "#payroll .modal-content > *:nth-child(17)"
     );
 
     console.log();
-    if (emp === 'All') {
-      child7.classList.add('hidden');
-      child11.classList.add('hidden');
-      child12.classList.add('hidden');
-      child13.classList.add('hidden');
-      child14.classList.add('hidden');
-      child15.classList.add('hidden');
-      child16.classList.add('hidden');
-      child17.classList.add('hidden');
+    if (emp === "All") {
+      child7.classList.add("hidden");
+      child11.classList.add("hidden");
+      child12.classList.add("hidden");
+      child13.classList.add("hidden");
+      child14.classList.add("hidden");
+      child15.classList.add("hidden");
+      child16.classList.add("hidden");
+      child17.classList.add("hidden");
     } else {
-      child7.classList.remove('hidden');
-      child11.classList.remove('hidden');
-      child12.classList.remove('hidden');
-      child13.classList.remove('hidden');
-      child14.classList.remove('hidden');
-      child15.classList.remove('hidden');
-      child16.classList.remove('hidden');
-      child17.classList.remove('hidden');
+      child7.classList.remove("hidden");
+      child11.classList.remove("hidden");
+      child12.classList.remove("hidden");
+      child13.classList.remove("hidden");
+      child14.classList.remove("hidden");
+      child15.classList.remove("hidden");
+      child16.classList.remove("hidden");
+      child17.classList.remove("hidden");
     }
   } catch (e) {
     console.log(e);
@@ -812,10 +812,10 @@ function getBusinessDateCount(startDate, endDate) {
 
 function calc() {
   try {
-    let start = document.querySelector('#txtDateFrom').value,
-      end = document.querySelector('#txtDateTo').value,
+    let start = document.querySelector("#txtDateFrom").value,
+      end = document.querySelector("#txtDateTo").value,
       result = getBusinessDateCount(new Date(start), new Date(end));
-    document.querySelector('#result').innerHTML = result;
+    document.querySelector("#result").innerHTML = result;
   } catch (e) {
     console.log(e);
   }
@@ -824,19 +824,19 @@ function calc() {
 // Show Employee based on selected option
 function getEmployeeBy() {
   try {
-    const select = document.querySelector('#showEmployeeBy');
+    const select = document.querySelector("#showEmployeeBy");
     const showEmployeeByCategory = document.querySelector(
-      '#showEmployeeByCategory'
+      "#showEmployeeByCategory"
     );
     removeOptions(showEmployeeByCategory);
-    const departments = ['Programming', 'Marketing', 'Sales', 'Human Resource'];
-    const positions = ['Manager', 'Programmer', 'Sales Assistant', 'Technical'];
+    const departments = ["Programming", "Marketing", "Sales", "Human Resource"];
+    const positions = ["Manager", "Programmer", "Sales Assistant", "Technical"];
 
-    if (select.options[select.selectedIndex].value == 'department') {
+    if (select.options[select.selectedIndex].value == "department") {
       for (dept in departments) {
         showEmployeeByCategory.appendChild(new Option(departments[dept]));
       }
-    } else if (select.options[select.selectedIndex].value == 'position') {
+    } else if (select.options[select.selectedIndex].value == "position") {
       for (pos in positions) {
         showEmployeeByCategory.appendChild(new Option(positions[pos]));
       }
@@ -850,19 +850,19 @@ function getEmployeeBy() {
 // Show Employee based on selected option
 function getEmployeeByModal() {
   try {
-    const select = document.querySelector('#showEmployeeByModal');
+    const select = document.querySelector("#showEmployeeByModal");
     const showEmployeeByCategory = document.querySelector(
-      '#showEmployeeByCategoryModal'
+      "#showEmployeeByCategoryModal"
     );
     removeOptions(showEmployeeByCategory);
-    const departments = ['Programming', 'Marketing', 'Sales', 'Human Resource'];
-    const positions = ['Manager', 'Programmer', 'Sales Assistant', 'Technical'];
+    const departments = ["Programming", "Marketing", "Sales", "Human Resource"];
+    const positions = ["Manager", "Programmer", "Sales Assistant", "Technical"];
 
-    if (select.options[select.selectedIndex].value == 'department') {
+    if (select.options[select.selectedIndex].value == "department") {
       for (dept in departments) {
         showEmployeeByCategory.appendChild(new Option(departments[dept]));
       }
-    } else if (select.options[select.selectedIndex].value == 'position') {
+    } else if (select.options[select.selectedIndex].value == "position") {
       for (pos in positions) {
         showEmployeeByCategory.appendChild(new Option(positions[pos]));
       }
@@ -896,7 +896,7 @@ function scrollTop() {
 
 function scrollTopModal() {
   try {
-    document.querySelector('.modal-content').scrollTop = 0;
+    document.querySelector(".modal-content").scrollTop = 0;
   } catch (e) {
     console.log(e);
   }
@@ -904,7 +904,7 @@ function scrollTopModal() {
 
 function scrollTopDataList() {
   try {
-    document.querySelector('.datalist-data').scrollTop = 0;
+    document.querySelector(".datalist-data").scrollTop = 0;
   } catch (e) {
     console.log(e);
   }
@@ -913,111 +913,111 @@ function scrollTopDataList() {
 function openModal(btn_id) {
   try {
     // List modal
-    const modal1 = document.querySelector('.modal');
-    const modalFileUpload = document.querySelector('.modal-file-upload');
+    const modal1 = document.querySelector(".modal");
+    const modalFileUpload = document.querySelector(".modal-file-upload");
     const modalFileSubstitution = document.querySelector(
-      '.modal-file-substitution'
+      ".modal-file-substitution"
     );
     const modalTimeAlteration = document.querySelector(
-      '.modal-time-alteration'
+      ".modal-time-alteration"
     );
     const modalOvertimeRecord = document.querySelector(
-      '.modal-overtime-application'
+      ".modal-overtime-application"
     );
     const modalUndertimeRecord = document.querySelector(
-      '.modal-undertime-application'
+      ".modal-undertime-application"
     );
     const modalExpenseRecord = document.querySelector(
-      '.modal-expense-application'
+      ".modal-expense-application"
     );
 
-    const modalAddHoliday = document.querySelector('.modal-add-holiday');
-    const modalEditHoliday = document.querySelector('.modal-edit-holiday');
+    const modalAddHoliday = document.querySelector(".modal-add-holiday");
+    const modalEditHoliday = document.querySelector(".modal-edit-holiday");
 
-    const modalFileLeave = document.querySelector('.modal-file-leave');
-    const modalCreatePayroll = document.querySelector('.modal-create-payroll');
-    const modalMassPayroll = document.querySelector('.modal-mass-payroll');
-    const modalPayrollMemo = document.querySelector('.modal-payrollmemo');
-    const modalAddEmployee = document.querySelector('.modal-add-employee');
+    const modalFileLeave = document.querySelector(".modal-file-leave");
+    const modalCreatePayroll = document.querySelector(".modal-create-payroll");
+    const modalMassPayroll = document.querySelector(".modal-mass-payroll");
+    const modalPayrollMemo = document.querySelector(".modal-payrollmemo");
+    const modalAddEmployee = document.querySelector(".modal-add-employee");
     const modalAddEmployeeHeader = document.querySelector(
-      '#add-employee-header'
+      "#add-employee-header"
     );
-    const modalAddEmployeeBtn = document.querySelector('#btnModalAddEmployee');
+    const modalAddEmployeeBtn = document.querySelector("#btnModalAddEmployee");
     const modalUpdateEmployeeBtn = document.querySelector(
-      '#btnModalUpdateEmployee'
+      "#btnModalUpdateEmployee"
     );
     const modalDeleteEmployeeBtn = document.querySelector(
-      '#btnModalDeleteEmployee'
+      "#btnModalDeleteEmployee"
     );
-    const selectDept = document.querySelector('#drpDepartment');
-    const selectDeptUpdate = document.querySelector('#drpDepartmentUpdate');
+    const selectDept = document.querySelector("#drpDepartment");
+    const selectDeptUpdate = document.querySelector("#drpDepartmentUpdate");
     // const modalUpdateEmployee = document.querySelector(
     //   ".modal-update-employee"
     // );
-    const modalViewEmployee = document.querySelector('.modal-view-employee');
-    const modalAddEmpTask = document.querySelector('.modal-add-inprogresstask');
-    const modalViewPayslip = document.querySelector('.modal-view-payslip');
-    const modalViewMemo = document.querySelector('.modal-viewpayrollmemo');
+    const modalViewEmployee = document.querySelector(".modal-view-employee");
+    const modalAddEmpTask = document.querySelector(".modal-add-inprogresstask");
+    const modalViewPayslip = document.querySelector(".modal-view-payslip");
+    const modalViewMemo = document.querySelector(".modal-viewpayrollmemo");
 
     // get open modal button
     const modalBtn = btn_id;
 
-    if (modalBtn === '#btnTimeAlteration') {
-      modalTimeAlteration.style.display = 'flex';
-    } else if (modalBtn === '#btnOvertimeApplication') {
-      modalOvertimeRecord.style.display = 'flex';
-    } else if (modalBtn === '#btnUndertimeApplication') {
-      modalUndertimeRecord.style.display = 'flex';
-    } else if (modalBtn === '#btnFileSubstitution') {
-      modalFileSubstitution.style.display = 'flex';
-    } else if (modalBtn === '#btnFileLeave') {
-      modalFileLeave.style.display = 'flex';
-    } else if (modalBtn === '#btnAddExpense') {
-      modalExpenseRecord.style.display = 'flex';
-    } else if (modalBtn === '#btnCreatePayroll') {
-      modalCreatePayroll.style.display = 'flex';
-    } else if (modalBtn === '#btnMassGeneratePayroll') {
-      modalMassPayroll.style.display = 'flex';
-    } else if (modalBtn === '#btnAddEmployee') {
-      modalAddEmployee.style.display = 'flex';
-      modalAddEmployeeHeader.innerHTML = 'Add Employment Information';
-      modalAddEmployeeBtn.classList.remove('hidden');
-      modalUpdateEmployeeBtn.classList.add('hidden');
-      modalDeleteEmployeeBtn.classList.add('hidden');
-      selectDept.classList.remove('hidden');
-      selectDeptUpdate.classList.add('hidden');
-    } else if (modalBtn === '#btnUpdateEmployee') {
-      modalAddEmployee.style.display = 'flex';
-      modalAddEmployeeHeader.innerHTML = 'Update Employment Information';
-      modalAddEmployeeBtn.classList.add('hidden');
-      modalUpdateEmployeeBtn.classList.remove('hidden');
-      modalDeleteEmployeeBtn.classList.remove('hidden');
-      selectDept.classList.add('hidden');
-      selectDeptUpdate.classList.remove('hidden');
+    if (modalBtn === "#btnTimeAlteration") {
+      modalTimeAlteration.style.display = "flex";
+    } else if (modalBtn === "#btnOvertimeApplication") {
+      modalOvertimeRecord.style.display = "flex";
+    } else if (modalBtn === "#btnUndertimeApplication") {
+      modalUndertimeRecord.style.display = "flex";
+    } else if (modalBtn === "#btnFileSubstitution") {
+      modalFileSubstitution.style.display = "flex";
+    } else if (modalBtn === "#btnFileLeave") {
+      modalFileLeave.style.display = "flex";
+    } else if (modalBtn === "#btnAddExpense") {
+      modalExpenseRecord.style.display = "flex";
+    } else if (modalBtn === "#btnCreatePayroll") {
+      modalCreatePayroll.style.display = "flex";
+    } else if (modalBtn === "#btnMassGeneratePayroll") {
+      modalMassPayroll.style.display = "flex";
+    } else if (modalBtn === "#btnAddEmployee") {
+      modalAddEmployee.style.display = "flex";
+      modalAddEmployeeHeader.innerHTML = "Add Employment Information";
+      modalAddEmployeeBtn.classList.remove("hidden");
+      modalUpdateEmployeeBtn.classList.add("hidden");
+      modalDeleteEmployeeBtn.classList.add("hidden");
+      selectDept.classList.remove("hidden");
+      selectDeptUpdate.classList.add("hidden");
+    } else if (modalBtn === "#btnUpdateEmployee") {
+      modalAddEmployee.style.display = "flex";
+      modalAddEmployeeHeader.innerHTML = "Update Employment Information";
+      modalAddEmployeeBtn.classList.add("hidden");
+      modalUpdateEmployeeBtn.classList.remove("hidden");
+      modalDeleteEmployeeBtn.classList.remove("hidden");
+      selectDept.classList.add("hidden");
+      selectDeptUpdate.classList.remove("hidden");
       // defaultTabUpdate("primary-info-update");
-    } else if (modalBtn === '#btnViewEmployee') {
-      modalViewEmployee.style.display = 'flex';
-      hideBasicInfo('view-primary-info');
-    } else if (modalBtn === '#btnAddEmpTask') {
-      modalAddEmpTask.style.display = 'flex';
-    } else if (modalBtn === '#btnViewPayslip') {
-      modalViewPayslip.style.display = 'flex';
-    } else if (modalBtn === '#btnAddHoliday') {
-      modalAddHoliday.style.display = 'flex';
-    } else if (modalBtn === '#btnEditHoliday') {
-      modalEditHoliday.style.display = 'flex';
-    } else if (modalBtn === '#btnAddPayrollMemo') {
-      modalPayrollMemo.style.display = 'flex';
-    } else if (modalBtn === '#btnViewMemoNotice') {
-      modalViewMemo.style.display = 'flex';
-    } else if (modalBtn === '#btnFileUpload') {
-      modalFileUpload.style.display = 'flex';
-    } else if (modalBtn === '#btnModal1') {
-      modal1.style.display = 'flex';
+    } else if (modalBtn === "#btnViewEmployee") {
+      modalViewEmployee.style.display = "flex";
+      hideBasicInfo("view-primary-info");
+    } else if (modalBtn === "#btnAddEmpTask") {
+      modalAddEmpTask.style.display = "flex";
+    } else if (modalBtn === "#btnViewPayslip") {
+      modalViewPayslip.style.display = "flex";
+    } else if (modalBtn === "#btnAddHoliday") {
+      modalAddHoliday.style.display = "flex";
+    } else if (modalBtn === "#btnEditHoliday") {
+      modalEditHoliday.style.display = "flex";
+    } else if (modalBtn === "#btnAddPayrollMemo") {
+      modalPayrollMemo.style.display = "flex";
+    } else if (modalBtn === "#btnViewMemoNotice") {
+      modalViewMemo.style.display = "flex";
+    } else if (modalBtn === "#btnFileUpload") {
+      modalFileUpload.style.display = "flex";
+    } else if (modalBtn === "#btnModal1") {
+      modal1.style.display = "flex";
     }
 
     //set tab back to primary-info
-    defaultTab('primary-info');
+    defaultTab("primary-info");
     scrollTopModal();
   } catch (e) {
     console.log(e);
@@ -1027,90 +1027,90 @@ function openModal(btn_id) {
 function closeModal(btn_id) {
   try {
     // List modal
-    const modal1 = document.querySelector('.modal');
-    const modalFileUpload = document.querySelector('.modal-file-upload');
+    const modal1 = document.querySelector(".modal");
+    const modalFileUpload = document.querySelector(".modal-file-upload");
     const modalFileSubstitution = document.querySelector(
-      '.modal-file-substitution'
+      ".modal-file-substitution"
     );
     const modalTimeAlteration = document.querySelector(
-      '.modal-time-alteration'
+      ".modal-time-alteration"
     );
     const modalOvertimeRecord = document.querySelector(
-      '.modal-overtime-application'
+      ".modal-overtime-application"
     );
     const modalUndertimeRecord = document.querySelector(
-      '.modal-undertime-application'
+      ".modal-undertime-application"
     );
     const modalExpenseRecord = document.querySelector(
-      '.modal-expense-application'
+      ".modal-expense-application"
     );
-    const modalAddHoliday = document.querySelector('.modal-add-holiday');
-    const modalEditHoliday = document.querySelector('.modal-edit-holiday');
-    const modalFileLeave = document.querySelector('.modal-file-leave');
-    const modalCreatePayroll = document.querySelector('.modal-create-payroll');
-    const modalMassPayroll = document.querySelector('.modal-mass-payroll');
-    const modalAddEmployee = document.querySelector('.modal-add-employee');
+    const modalAddHoliday = document.querySelector(".modal-add-holiday");
+    const modalEditHoliday = document.querySelector(".modal-edit-holiday");
+    const modalFileLeave = document.querySelector(".modal-file-leave");
+    const modalCreatePayroll = document.querySelector(".modal-create-payroll");
+    const modalMassPayroll = document.querySelector(".modal-mass-payroll");
+    const modalAddEmployee = document.querySelector(".modal-add-employee");
     // const modalUpdateEmployee = document.querySelector(
     //   ".modal-update-employee"
     // );
-    const modalViewEmployee = document.querySelector('.modal-view-employee');
-    const modalAddEmpTask = document.querySelector('.modal-add-inprogresstask');
-    const modalViewPayslip = document.querySelector('.modal-view-payslip');
-    const modalPayrollMemo = document.querySelector('.modal-payrollmemo');
-    const modalViewMemo = document.querySelector('.modal-viewpayrollmemo');
+    const modalViewEmployee = document.querySelector(".modal-view-employee");
+    const modalAddEmpTask = document.querySelector(".modal-add-inprogresstask");
+    const modalViewPayslip = document.querySelector(".modal-view-payslip");
+    const modalPayrollMemo = document.querySelector(".modal-payrollmemo");
+    const modalViewMemo = document.querySelector(".modal-viewpayrollmemo");
 
     // get open modal button
     const modalBtn = btn_id;
 
-    if (modalBtn === '#btnCloseTimeAlteration') {
-      modalTimeAlteration.style.display = 'none';
-    } else if (modalBtn === '#btnCloseOvertimeApplication') {
-      modalOvertimeRecord.style.display = 'none';
-    } else if (modalBtn === '#btnCloseUndertimeApplication') {
-      modalUndertimeRecord.style.display = 'none';
-    } else if (modalBtn === '#btnCloseFileSubstitution') {
-      modalFileSubstitution.style.display = 'none';
-    } else if (modalBtn === '#btnCloseFileLeave') {
-      modalFileLeave.style.display = 'none';
-    } else if (modalBtn === '#btnCloseAddExpense') {
-      modalExpenseRecord.style.display = 'none';
-    } else if (modalBtn === '#btnCloseCreatePayroll') {
-      modalCreatePayroll.style.display = 'none';
+    if (modalBtn === "#btnCloseTimeAlteration") {
+      modalTimeAlteration.style.display = "none";
+    } else if (modalBtn === "#btnCloseOvertimeApplication") {
+      modalOvertimeRecord.style.display = "none";
+    } else if (modalBtn === "#btnCloseUndertimeApplication") {
+      modalUndertimeRecord.style.display = "none";
+    } else if (modalBtn === "#btnCloseFileSubstitution") {
+      modalFileSubstitution.style.display = "none";
+    } else if (modalBtn === "#btnCloseFileLeave") {
+      modalFileLeave.style.display = "none";
+    } else if (modalBtn === "#btnCloseAddExpense") {
+      modalExpenseRecord.style.display = "none";
+    } else if (modalBtn === "#btnCloseCreatePayroll") {
+      modalCreatePayroll.style.display = "none";
       reset(`payroll`);
-    } else if (modalBtn === '#btnCloseMassPayroll') {
-      modalMassPayroll.style.display = 'none';
+    } else if (modalBtn === "#btnCloseMassPayroll") {
+      modalMassPayroll.style.display = "none";
       reset(`payroll`);
-    } else if (modalBtn === '#btnCloseAddEmployee') {
-      modalAddEmployee.style.display = 'none';
-    } else if (modalBtn === '#btnCloseAddHoliday') {
-      modalAddHoliday.style.display = 'none';
-    } else if (modalBtn === '#btnCloseEditHoliday') {
-      modalEditHoliday.style.display = 'none';
+    } else if (modalBtn === "#btnCloseAddEmployee") {
+      modalAddEmployee.style.display = "none";
+    } else if (modalBtn === "#btnCloseAddHoliday") {
+      modalAddHoliday.style.display = "none";
+    } else if (modalBtn === "#btnCloseEditHoliday") {
+      modalEditHoliday.style.display = "none";
     }
     //  else if (modalBtn === "#btnCloseUpdateEmployee") {
     //   modalUpdateEmployee.style.display = "none";
     // }
-    else if (modalBtn === '#btnCloseViewEmployee') {
-      modalViewEmployee.style.display = 'none';
-    } else if (modalBtn === '#btnCloseAddEmpTask') {
-      modalAddEmpTask.style.display = 'none';
+    else if (modalBtn === "#btnCloseViewEmployee") {
+      modalViewEmployee.style.display = "none";
+    } else if (modalBtn === "#btnCloseAddEmpTask") {
+      modalAddEmpTask.style.display = "none";
       resetAddEmpProj();
-    } else if (modalBtn === '#btnCloseViewPayslip') {
-      modalViewPayslip.style.display = 'none';
-    } else if (modalBtn === '#btnClosePayrollMemo') {
-      modalPayrollMemo.style.display = 'none';
-    } else if (modalBtn === '#btnCloseViewMemo') {
-      modalViewMemo.style.display = 'none';
-    } else if (modalBtn === '#btnCloseFileUpload') {
-      modalFileUpload.style.display = 'none';
-    } else if (modalBtn === '#btnCloseModal1') {
-      modal1.style.display = 'none';
+    } else if (modalBtn === "#btnCloseViewPayslip") {
+      modalViewPayslip.style.display = "none";
+    } else if (modalBtn === "#btnClosePayrollMemo") {
+      modalPayrollMemo.style.display = "none";
+    } else if (modalBtn === "#btnCloseViewMemo") {
+      modalViewMemo.style.display = "none";
+    } else if (modalBtn === "#btnCloseFileUpload") {
+      modalFileUpload.style.display = "none";
+    } else if (modalBtn === "#btnCloseModal1") {
+      modal1.style.display = "none";
     }
 
     //set tab back to primary-info
-    defaultTab('primary-info');
+    defaultTab("primary-info");
     // defaultTabUpdate("primary-info-update");
-    defaultTabViewIE('view-primary-info');
+    defaultTabViewIE("view-primary-info");
   } catch (e) {
     console.log(e);
   }
@@ -1118,24 +1118,24 @@ function closeModal(btn_id) {
 
 function openTabHrInfo() {
   try {
-    const modalAddEmployee = document.querySelector('.modal-add-employee');
-    const modalAddEmployeeBtn = document.querySelector('#btnModalAddEmployee');
+    const modalAddEmployee = document.querySelector(".modal-add-employee");
+    const modalAddEmployeeBtn = document.querySelector("#btnModalAddEmployee");
     const modalUpdateEmployeeBtn = document.querySelector(
-      '#btnModalUpdateEmployee'
+      "#btnModalUpdateEmployee"
     );
 
-    modalAddEmployee.style.display = 'flex';
-    modalAddEmployeeBtn.classList.remove('hidden');
-    modalUpdateEmployeeBtn.classList.add('hidden');
+    modalAddEmployee.style.display = "flex";
+    modalAddEmployeeBtn.classList.remove("hidden");
+    modalUpdateEmployeeBtn.classList.add("hidden");
 
-    const x = document.getElementsByClassName('tabNameHrModal');
+    const x = document.getElementsByClassName("tabNameHrModal");
     for (i = 0; i < x.length; i++) {
-      x[i].style.display = 'none';
+      x[i].style.display = "none";
     }
-    document.getElementById('hr-info').style.display = 'flex';
+    document.getElementById("hr-info").style.display = "flex";
 
-    $('.modal-tab-list li.current-tab').removeClass('current-tab');
-    $('.modal-tab-list li:nth-child(2)').addClass('current-tab');
+    $(".modal-tab-list li.current-tab").removeClass("current-tab");
+    $(".modal-tab-list li:nth-child(2)").addClass("current-tab");
 
     scrollTopModal();
   } catch (e) {
@@ -1145,32 +1145,32 @@ function openTabHrInfo() {
 
 function openTabHrInfoUpdate() {
   try {
-    const modalAddEmployee = document.querySelector('.modal-add-employee');
+    const modalAddEmployee = document.querySelector(".modal-add-employee");
     const modalAddEmployeeHeader = document.querySelector(
-      '#add-employee-header'
+      "#add-employee-header"
     );
-    const modalAddEmployeeBtn = document.querySelector('#btnModalAddEmployee');
+    const modalAddEmployeeBtn = document.querySelector("#btnModalAddEmployee");
     const modalUpdateEmployeeBtn = document.querySelector(
-      '#btnModalUpdateEmployee'
+      "#btnModalUpdateEmployee"
     );
-    const selectDept = document.querySelector('#drpDepartment');
-    const selectDeptUpdate = document.querySelector('#drpDepartmentUpdate');
+    const selectDept = document.querySelector("#drpDepartment");
+    const selectDeptUpdate = document.querySelector("#drpDepartmentUpdate");
 
-    modalAddEmployee.style.display = 'flex';
-    modalAddEmployeeHeader.innerHTML = 'Update Employment Information';
-    modalAddEmployeeBtn.classList.add('hidden');
-    modalUpdateEmployeeBtn.classList.remove('hidden');
-    selectDept.classList.add('hidden');
-    selectDeptUpdate.classList.remove('hidden');
+    modalAddEmployee.style.display = "flex";
+    modalAddEmployeeHeader.innerHTML = "Update Employment Information";
+    modalAddEmployeeBtn.classList.add("hidden");
+    modalUpdateEmployeeBtn.classList.remove("hidden");
+    selectDept.classList.add("hidden");
+    selectDeptUpdate.classList.remove("hidden");
 
-    const x = document.getElementsByClassName('tabNameHrModal');
+    const x = document.getElementsByClassName("tabNameHrModal");
     for (i = 0; i < x.length; i++) {
-      x[i].style.display = 'none';
+      x[i].style.display = "none";
     }
-    document.getElementById('hr-info').style.display = 'flex';
+    document.getElementById("hr-info").style.display = "flex";
 
-    $('.modal-tab-list li.current-tab').removeClass('current-tab');
-    $('.modal-tab-list li:nth-child(2)').addClass('current-tab');
+    $(".modal-tab-list li.current-tab").removeClass("current-tab");
+    $(".modal-tab-list li:nth-child(2)").addClass("current-tab");
 
     scrollTopModal();
   } catch (e) {
@@ -1188,7 +1188,7 @@ function reset(frm_id) {
 
 function clearField(input) {
   try {
-    input.value = '';
+    input.value = "";
   } catch (e) {
     console.log(e);
   }
@@ -1196,7 +1196,7 @@ function clearField(input) {
 
 function clearSelectDepartment(input) {
   try {
-    input.value = 'Select Department';
+    input.value = "Select Department";
   } catch (e) {
     console.log(e);
   }
@@ -1204,7 +1204,7 @@ function clearSelectDepartment(input) {
 
 function clearSelectEmployee(input) {
   try {
-    input.value = 'Select Employee';
+    input.value = "Select Employee";
   } catch (e) {
     console.log(e);
   }
@@ -1220,8 +1220,8 @@ function enableField(field_ID) {
 
 function openModalWithPay() {
   try {
-    const modalWithPay = document.querySelector('.modal-with-pay');
-    modalWithPay.style.display = 'flex';
+    const modalWithPay = document.querySelector(".modal-with-pay");
+    modalWithPay.style.display = "flex";
   } catch (e) {
     console.log(e);
   }
@@ -1229,8 +1229,8 @@ function openModalWithPay() {
 
 function closeModalWithPay() {
   try {
-    const modalWithPay = document.querySelector('.modal-with-pay');
-    modalWithPay.style.display = 'none';
+    const modalWithPay = document.querySelector(".modal-with-pay");
+    modalWithPay.style.display = "none";
   } catch (e) {
     console.log(e);
   }
@@ -1238,8 +1238,8 @@ function closeModalWithPay() {
 
 function openModalConfirmation() {
   try {
-    const modalConfirmation = document.querySelector('.modal-confirmation');
-    modalConfirmation.style.display = 'flex';
+    const modalConfirmation = document.querySelector(".modal-confirmation");
+    modalConfirmation.style.display = "flex";
   } catch (e) {
     console.log(e);
   }
@@ -1247,8 +1247,8 @@ function openModalConfirmation() {
 
 function closeModalConfirmation() {
   try {
-    const modalConfirmation = document.querySelector('.modal-confirmation');
-    modalConfirmation.style.display = 'none';
+    const modalConfirmation = document.querySelector(".modal-confirmation");
+    modalConfirmation.style.display = "none";
   } catch (e) {
     console.log(e);
   }
@@ -1256,7 +1256,7 @@ function closeModalConfirmation() {
 
 function loadModal() {
   try {
-    document.querySelector('.modal').innerHTML = 'confirmation.html';
+    document.querySelector(".modal").innerHTML = "confirmation.html";
     openModalConfirmation();
   } catch (e) {
     console.log(e);
@@ -1265,8 +1265,8 @@ function loadModal() {
 
 function openModalSetLeave() {
   try {
-    const modal = document.querySelector('.modal-set-leave');
-    modal.style.display = 'flex';
+    const modal = document.querySelector(".modal-set-leave");
+    modal.style.display = "flex";
   } catch (e) {
     console.log(e);
   }
@@ -1274,8 +1274,8 @@ function openModalSetLeave() {
 
 function closeModalSetLeave() {
   try {
-    const modal = document.querySelector('.modal-set-leave');
-    modal.style.display = 'none';
+    const modal = document.querySelector(".modal-set-leave");
+    modal.style.display = "none";
   } catch (e) {
     console.log(e);
   }
@@ -1283,15 +1283,15 @@ function closeModalSetLeave() {
 
 function openTab(tabName) {
   try {
-    var x = document.getElementsByClassName('tabNameHrModal');
+    var x = document.getElementsByClassName("tabNameHrModal");
     for (i = 0; i < x.length; i++) {
-      x[i].style.display = 'none';
+      x[i].style.display = "none";
     }
-    document.getElementById(tabName).style.display = 'flex';
+    document.getElementById(tabName).style.display = "flex";
 
-    $('.tab-list').on('click', 'li', function () {
-      $('.tab-list li.current-tab').removeClass('current-tab');
-      $(this).addClass('current-tab');
+    $(".tab-list").on("click", "li", function () {
+      $(".tab-list li.current-tab").removeClass("current-tab");
+      $(this).addClass("current-tab");
     });
   } catch (e) {
     console.log(e);
@@ -1300,17 +1300,17 @@ function openTab(tabName) {
 
 function openViewEmpInfoTab(tabName) {
   try {
-    var x = document.getElementsByClassName('tabViewIEList');
+    var x = document.getElementsByClassName("tabViewIEList");
     for (i = 0; i < x.length; i++) {
-      x[i].style.display = 'none';
+      x[i].style.display = "none";
     }
-    document.getElementById(tabName).style.display = 'flex';
+    document.getElementById(tabName).style.display = "flex";
 
     hideBasicInfo(tabName);
 
-    $('.tab-list').on('click', 'li', function () {
-      $('.tab-list li.current-tab').removeClass('current-tab');
-      $(this).addClass('current-tab');
+    $(".tab-list").on("click", "li", function () {
+      $(".tab-list li.current-tab").removeClass("current-tab");
+      $(this).addClass("current-tab");
     });
   } catch (e) {
     console.log(e);
@@ -1320,12 +1320,12 @@ function openViewEmpInfoTab(tabName) {
 function hideBasicInfo(tabName) {
   try {
     const basicInfo = document.querySelector(
-      '.summary-employee-info-container'
+      ".summary-employee-info-container"
     );
-    if (tabName === 'view-primary-info') {
-      basicInfo.classList.add('hidden');
+    if (tabName === "view-primary-info") {
+      basicInfo.classList.add("hidden");
     } else {
-      basicInfo.classList.remove('hidden');
+      basicInfo.classList.remove("hidden");
     }
   } catch (e) {
     console.log(e);
@@ -1334,8 +1334,8 @@ function hideBasicInfo(tabName) {
 
 function redirectModalToUpdateEmployee() {
   try {
-    const modalViewEmployee = document.querySelector('.modal-view-employee');
-    modalViewEmployee.style.display = 'none';
+    const modalViewEmployee = document.querySelector(".modal-view-employee");
+    modalViewEmployee.style.display = "none";
     openModal(`#btnUpdateEmployee`);
   } catch (e) {
     console.log(e);
@@ -1344,14 +1344,14 @@ function redirectModalToUpdateEmployee() {
 
 function defaultTab(tabName) {
   try {
-    var x = document.getElementsByClassName('tabNameHrModal');
+    var x = document.getElementsByClassName("tabNameHrModal");
     for (i = 0; i < x.length; i++) {
-      x[i].style.display = 'none';
+      x[i].style.display = "none";
     }
-    document.getElementById(tabName).style.display = 'flex';
+    document.getElementById(tabName).style.display = "flex";
 
-    $('.modal-tab-list li.current-tab').removeClass('current-tab');
-    $('.modal-tab-list li:first-child').addClass('current-tab');
+    $(".modal-tab-list li.current-tab").removeClass("current-tab");
+    $(".modal-tab-list li:first-child").addClass("current-tab");
   } catch (e) {
     console.log(e);
   }
@@ -1359,14 +1359,14 @@ function defaultTab(tabName) {
 
 function defaultTabUpdate(tabName) {
   try {
-    var x = document.getElementsByClassName('tabNameHrModal');
+    var x = document.getElementsByClassName("tabNameHrModal");
     for (i = 0; i < x.length; i++) {
-      x[i].style.display = 'none';
+      x[i].style.display = "none";
     }
-    document.getElementById(tabName).style.display = 'flex';
+    document.getElementById(tabName).style.display = "flex";
 
-    $('.modal-tab-list li.current-tab').removeClass('current-tab');
-    $('.modal-tab-list li:nth-child(1)').addClass('current-tab');
+    $(".modal-tab-list li.current-tab").removeClass("current-tab");
+    $(".modal-tab-list li:nth-child(1)").addClass("current-tab");
   } catch (e) {
     console.log(e);
   }
@@ -1374,14 +1374,14 @@ function defaultTabUpdate(tabName) {
 
 function defaultTabViewIE(tabName) {
   try {
-    var x = document.getElementsByClassName('tabViewIEList');
+    var x = document.getElementsByClassName("tabViewIEList");
     for (i = 0; i < x.length; i++) {
-      x[i].style.display = 'none';
+      x[i].style.display = "none";
     }
-    document.getElementById(tabName).style.display = 'flex';
+    document.getElementById(tabName).style.display = "flex";
 
-    $('.modal-tab-list li.current-tab').removeClass('current-tab');
-    $('.modal-tab-list li:first-child').addClass('current-tab');
+    $(".modal-tab-list li.current-tab").removeClass("current-tab");
+    $(".modal-tab-list li:first-child").addClass("current-tab");
   } catch (e) {
     console.log(e);
   }
@@ -1389,17 +1389,17 @@ function defaultTabViewIE(tabName) {
 
 function toggleTermination() {
   try {
-    const selectEmploymentStatus = $('#drpEmpStatus').find(':selected').text();
+    const selectEmploymentStatus = $("#drpEmpStatus").find(":selected").text();
 
-    const dtTermDateLabel = document.querySelector('#dtTermDateLabel');
-    const dtTermDate = document.querySelector('#dtTermDate');
+    const dtTermDateLabel = document.querySelector("#dtTermDateLabel");
+    const dtTermDate = document.querySelector("#dtTermDate");
 
-    dtTermDateLabel.classList.add('disabled');
-    dtTermDate.classList.add('disabled');
+    dtTermDateLabel.classList.add("disabled");
+    dtTermDate.classList.add("disabled");
 
-    if (selectEmploymentStatus === 'Terminated') {
-      dtTermDateLabel.classList.remove('disabled');
-      dtTermDate.classList.remove('disabled');
+    if (selectEmploymentStatus === "Terminated") {
+      dtTermDateLabel.classList.remove("disabled");
+      dtTermDate.classList.remove("disabled");
     }
   } catch (e) {
     console.log(e);
@@ -1408,34 +1408,34 @@ function toggleTermination() {
 
 function toggleEndo() {
   try {
-    const selectEmploymentStatus = $('#selectEmploymentStatus')
-      .find(':selected')
+    const selectEmploymentStatus = $("#selectEmploymentStatus")
+      .find(":selected")
       .text();
-    const lblLeave = document.querySelector('#txtLeaveLabel');
-    const lblSickLeave = document.querySelector('#txtSickLeaveLabel');
-    const txtSickLeave = document.querySelector('#txtSickLeave');
-    const lblVELeave = document.querySelector('#txtVELeaveLabel');
-    const txtVELeave = document.querySelector('#txtVELeave');
-    const dtTermDateLabel = document.querySelector('#dtTermDateLabel');
-    const dtTermDate = document.querySelector('#dtTermDate');
+    const lblLeave = document.querySelector("#txtLeaveLabel");
+    const lblSickLeave = document.querySelector("#txtSickLeaveLabel");
+    const txtSickLeave = document.querySelector("#txtSickLeave");
+    const lblVELeave = document.querySelector("#txtVELeaveLabel");
+    const txtVELeave = document.querySelector("#txtVELeave");
+    const dtTermDateLabel = document.querySelector("#dtTermDateLabel");
+    const dtTermDate = document.querySelector("#dtTermDate");
 
-    lblLeave.classList.add('disabled');
-    lblSickLeave.classList.add('disabled');
-    txtSickLeave.classList.add('disabled');
-    lblVELeave.classList.add('disabled');
-    txtVELeave.classList.add('disabled');
-    dtTermDateLabel.classList.add('disabled');
-    dtTermDate.classList.add('disabled');
+    lblLeave.classList.add("disabled");
+    lblSickLeave.classList.add("disabled");
+    txtSickLeave.classList.add("disabled");
+    lblVELeave.classList.add("disabled");
+    txtVELeave.classList.add("disabled");
+    dtTermDateLabel.classList.add("disabled");
+    dtTermDate.classList.add("disabled");
 
-    if (selectEmploymentStatus === 'Regular') {
-      lblLeave.classList.remove('disabled');
-      lblSickLeave.classList.remove('disabled');
-      txtSickLeave.classList.remove('disabled');
-      lblVELeave.classList.remove('disabled');
-      txtVELeave.classList.remove('disabled');
-    } else if (selectEmploymentStatus === 'Terminated') {
-      dtTermDateLabel.classList.remove('disabled');
-      dtTermDate.classList.remove('disabled');
+    if (selectEmploymentStatus === "Regular") {
+      lblLeave.classList.remove("disabled");
+      lblSickLeave.classList.remove("disabled");
+      txtSickLeave.classList.remove("disabled");
+      lblVELeave.classList.remove("disabled");
+      txtVELeave.classList.remove("disabled");
+    } else if (selectEmploymentStatus === "Terminated") {
+      dtTermDateLabel.classList.remove("disabled");
+      dtTermDate.classList.remove("disabled");
     }
   } catch (e) {
     console.log(e);
@@ -1443,34 +1443,34 @@ function toggleEndo() {
 }
 function toggleEndo2() {
   try {
-    const selectEmploymentStatus = $('#selectEmploymentStatus2')
-      .find(':selected')
+    const selectEmploymentStatus = $("#selectEmploymentStatus2")
+      .find(":selected")
       .text();
-    const lblLeave = document.querySelector('#txtLeaveLabel2');
-    const lblSickLeave = document.querySelector('#txtSickLeaveLabel2');
-    const txtSickLeave = document.querySelector('#txtSickLeave2');
-    const lblVELeave = document.querySelector('#txtVELeaveLabel2');
-    const txtVELeave = document.querySelector('#txtVELeave2');
-    const dtTermDateLabel = document.querySelector('#dtTermDateLabel2');
-    const dtTermDate = document.querySelector('#dtTermDate2');
+    const lblLeave = document.querySelector("#txtLeaveLabel2");
+    const lblSickLeave = document.querySelector("#txtSickLeaveLabel2");
+    const txtSickLeave = document.querySelector("#txtSickLeave2");
+    const lblVELeave = document.querySelector("#txtVELeaveLabel2");
+    const txtVELeave = document.querySelector("#txtVELeave2");
+    const dtTermDateLabel = document.querySelector("#dtTermDateLabel2");
+    const dtTermDate = document.querySelector("#dtTermDate2");
 
-    lblLeave.classList.add('disabled');
-    lblSickLeave.classList.add('disabled');
-    txtSickLeave.classList.add('disabled');
-    lblVELeave.classList.add('disabled');
-    txtVELeave.classList.add('disabled');
-    dtTermDateLabel.classList.add('disabled');
-    dtTermDate.classList.add('disabled');
+    lblLeave.classList.add("disabled");
+    lblSickLeave.classList.add("disabled");
+    txtSickLeave.classList.add("disabled");
+    lblVELeave.classList.add("disabled");
+    txtVELeave.classList.add("disabled");
+    dtTermDateLabel.classList.add("disabled");
+    dtTermDate.classList.add("disabled");
 
-    if (selectEmploymentStatus === 'Regular') {
-      lblLeave.classList.remove('disabled');
-      lblSickLeave.classList.remove('disabled');
-      txtSickLeave.classList.remove('disabled');
-      lblVELeave.classList.remove('disabled');
-      txtVELeave.classList.remove('disabled');
-    } else if (selectEmploymentStatus === 'End of Contract') {
-      dtTermDateLabel.classList.remove('disabled');
-      dtTermDate.classList.remove('disabled');
+    if (selectEmploymentStatus === "Regular") {
+      lblLeave.classList.remove("disabled");
+      lblSickLeave.classList.remove("disabled");
+      txtSickLeave.classList.remove("disabled");
+      lblVELeave.classList.remove("disabled");
+      txtVELeave.classList.remove("disabled");
+    } else if (selectEmploymentStatus === "End of Contract") {
+      dtTermDateLabel.classList.remove("disabled");
+      dtTermDate.classList.remove("disabled");
     }
   } catch (e) {
     console.log(e);
@@ -1479,12 +1479,12 @@ function toggleEndo2() {
 
 function enableReq() {
   try {
-    const req1 = document.querySelector('#req1');
-    const req2 = document.querySelector('#req2');
-    const req3 = document.querySelector('#req3');
-    req1.classList.remove('disabled');
-    req2.classList.remove('disabled');
-    req3.classList.remove('disabled');
+    const req1 = document.querySelector("#req1");
+    const req2 = document.querySelector("#req2");
+    const req3 = document.querySelector("#req3");
+    req1.classList.remove("disabled");
+    req2.classList.remove("disabled");
+    req3.classList.remove("disabled");
   } catch (e) {
     console.log(e);
   }
@@ -1492,12 +1492,12 @@ function enableReq() {
 
 function disableReq() {
   try {
-    const req1 = document.querySelector('#req1');
-    const req2 = document.querySelector('#req2');
-    const req3 = document.querySelector('#req3');
-    req1.classList.add('disabled');
-    req2.classList.add('disabled');
-    req3.classList.add('disabled');
+    const req1 = document.querySelector("#req1");
+    const req2 = document.querySelector("#req2");
+    const req3 = document.querySelector("#req3");
+    req1.classList.add("disabled");
+    req2.classList.add("disabled");
+    req3.classList.add("disabled");
   } catch (e) {
     console.log(e);
   }
@@ -1505,12 +1505,12 @@ function disableReq() {
 
 function enableReq2() {
   try {
-    const req1 = document.querySelector('#req1_2');
-    const req2 = document.querySelector('#req2_2');
-    const req3 = document.querySelector('#req3_2');
-    req1.classList.remove('disabled');
-    req2.classList.remove('disabled');
-    req3.classList.remove('disabled');
+    const req1 = document.querySelector("#req1_2");
+    const req2 = document.querySelector("#req2_2");
+    const req3 = document.querySelector("#req3_2");
+    req1.classList.remove("disabled");
+    req2.classList.remove("disabled");
+    req3.classList.remove("disabled");
   } catch (e) {
     console.log(e);
   }
@@ -1518,12 +1518,12 @@ function enableReq2() {
 
 function disableReq2() {
   try {
-    const req1 = document.querySelector('#req1_2');
-    const req2 = document.querySelector('#req2_2');
-    const req3 = document.querySelector('#req3_2');
-    req1.classList.add('disabled');
-    req2.classList.add('disabled');
-    req3.classList.add('disabled');
+    const req1 = document.querySelector("#req1_2");
+    const req2 = document.querySelector("#req2_2");
+    const req3 = document.querySelector("#req3_2");
+    req1.classList.add("disabled");
+    req2.classList.add("disabled");
+    req3.classList.add("disabled");
   } catch (e) {
     console.log(e);
   }
@@ -1531,14 +1531,14 @@ function disableReq2() {
 
 function enableAccessRole() {
   try {
-    const selectRoleLabel = document.querySelector('#selectRoleLabel');
-    const selectRole = document.querySelector('#selectRole');
-    const txtPasswordLabel = document.querySelector('#txtPasswordLabel');
-    const txtPassword = document.querySelector('#txtPassword');
-    selectRoleLabel.classList.remove('disabled');
-    selectRole.classList.remove('disabled');
-    txtPasswordLabel.classList.remove('disabled');
-    txtPassword.classList.remove('disabled');
+    const selectRoleLabel = document.querySelector("#selectRoleLabel");
+    const selectRole = document.querySelector("#selectRole");
+    const txtPasswordLabel = document.querySelector("#txtPasswordLabel");
+    const txtPassword = document.querySelector("#txtPassword");
+    selectRoleLabel.classList.remove("disabled");
+    selectRole.classList.remove("disabled");
+    txtPasswordLabel.classList.remove("disabled");
+    txtPassword.classList.remove("disabled");
   } catch (e) {
     console.log(e);
   }
@@ -1546,14 +1546,14 @@ function enableAccessRole() {
 
 function disableAccessRole() {
   try {
-    const selectRoleLabel = document.querySelector('#selectRoleLabel');
-    const selectRole = document.querySelector('#selectRole');
-    const txtPasswordLabel = document.querySelector('#txtPasswordLabel');
-    const txtPassword = document.querySelector('#txtPassword');
-    selectRoleLabel.classList.add('disabled');
-    selectRole.classList.add('disabled');
-    txtPasswordLabel.classList.add('disabled');
-    txtPassword.classList.add('disabled');
+    const selectRoleLabel = document.querySelector("#selectRoleLabel");
+    const selectRole = document.querySelector("#selectRole");
+    const txtPasswordLabel = document.querySelector("#txtPasswordLabel");
+    const txtPassword = document.querySelector("#txtPassword");
+    selectRoleLabel.classList.add("disabled");
+    selectRole.classList.add("disabled");
+    txtPasswordLabel.classList.add("disabled");
+    txtPassword.classList.add("disabled");
   } catch (e) {
     console.log(e);
   }
@@ -1561,14 +1561,14 @@ function disableAccessRole() {
 
 function enableAccessRole2() {
   try {
-    const selectRoleLabel = document.querySelector('#selectRoleLabel2');
-    const selectRole = document.querySelector('#selectRole2');
-    const txtPasswordLabel = document.querySelector('#txtPasswordLabel2');
-    const txtPassword = document.querySelector('#txtPassword2');
-    selectRoleLabel.classList.remove('disabled');
-    selectRole.classList.remove('disabled');
-    txtPasswordLabel.classList.remove('disabled');
-    txtPassword.classList.remove('disabled');
+    const selectRoleLabel = document.querySelector("#selectRoleLabel2");
+    const selectRole = document.querySelector("#selectRole2");
+    const txtPasswordLabel = document.querySelector("#txtPasswordLabel2");
+    const txtPassword = document.querySelector("#txtPassword2");
+    selectRoleLabel.classList.remove("disabled");
+    selectRole.classList.remove("disabled");
+    txtPasswordLabel.classList.remove("disabled");
+    txtPassword.classList.remove("disabled");
   } catch (e) {
     console.log(e);
   }
@@ -1576,14 +1576,14 @@ function enableAccessRole2() {
 
 function disableAccessRole2() {
   try {
-    const selectRoleLabel = document.querySelector('#selectRoleLabel2');
-    const selectRole = document.querySelector('#selectRole2');
-    const txtPasswordLabel = document.querySelector('#txtPasswordLabel2');
-    const txtPassword = document.querySelector('#txtPassword2');
-    selectRoleLabel.classList.add('disabled');
-    selectRole.classList.add('disabled');
-    txtPasswordLabel.classList.add('disabled');
-    txtPassword.classList.add('disabled');
+    const selectRoleLabel = document.querySelector("#selectRoleLabel2");
+    const selectRole = document.querySelector("#selectRole2");
+    const txtPasswordLabel = document.querySelector("#txtPasswordLabel2");
+    const txtPassword = document.querySelector("#txtPassword2");
+    selectRoleLabel.classList.add("disabled");
+    selectRole.classList.add("disabled");
+    txtPasswordLabel.classList.add("disabled");
+    txtPassword.classList.add("disabled");
   } catch (e) {
     console.log(e);
   }
@@ -1592,15 +1592,15 @@ function disableAccessRole2() {
 function removeHidden() {
   try {
     const inputProjectTask = document.querySelector(
-      'input.txtTaskField.hidden'
+      "input.txtTaskField.hidden"
     );
-    inputProjectTask.classList.remove('hidden');
+    inputProjectTask.classList.remove("hidden");
 
-    const lastTaskField = document.querySelector('#txtTaskField_15');
-    const btnProjectTask = document.querySelector('.btnAddTask');
+    const lastTaskField = document.querySelector("#txtTaskField_15");
+    const btnProjectTask = document.querySelector(".btnAddTask");
 
-    if (lastTaskField.classList.contains('hidden') == false) {
-      btnProjectTask.classList.add('hidden');
+    if (lastTaskField.classList.contains("hidden") == false) {
+      btnProjectTask.classList.add("hidden");
     }
   } catch (e) {
     console.log(e);
@@ -1610,21 +1610,21 @@ function removeHidden() {
 function resetAddEmpProj() {
   try {
     const resetEmpProj = document.querySelectorAll(
-      '.txtTaskName-container .txtTaskField'
+      ".txtTaskName-container .txtTaskField"
     );
 
     resetEmpProj.forEach((element) => {
-      element.classList.add('hidden');
+      element.classList.add("hidden");
     });
 
-    const firstTaskField = document.querySelector('#txtTaskField_1');
-    firstTaskField.classList.remove('hidden');
+    const firstTaskField = document.querySelector("#txtTaskField_1");
+    firstTaskField.classList.remove("hidden");
 
-    const lastTaskField = document.querySelector('#txtTaskField_15');
-    const btnProjectTask = document.querySelector('.btnAddTask');
+    const lastTaskField = document.querySelector("#txtTaskField_15");
+    const btnProjectTask = document.querySelector(".btnAddTask");
 
-    if (lastTaskField.classList.contains('hidden') == true) {
-      btnProjectTask.classList.remove('hidden');
+    if (lastTaskField.classList.contains("hidden") == true) {
+      btnProjectTask.classList.remove("hidden");
     }
   } catch (e) {
     console.log(e);
@@ -1634,18 +1634,18 @@ function resetAddEmpProj() {
 function showEM() {
   try {
     const card1 = document.querySelector(
-      '#employee-masterlist .container .card-1'
+      "#employee-masterlist .container .card-1"
     );
     const card2 = document.querySelector(
-      '#employee-masterlist .container .card-2'
+      "#employee-masterlist .container .card-2"
     );
     const card3 = document.querySelector(
-      '#employee-masterlist .container .card-3'
+      "#employee-masterlist .container .card-3"
     );
 
-    card3.classList.add('hidden');
-    card2.classList.add('hidden');
-    card1.classList.remove('hidden');
+    card3.classList.add("hidden");
+    card2.classList.add("hidden");
+    card1.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1653,18 +1653,18 @@ function showEM() {
 function showSM() {
   try {
     const card1 = document.querySelector(
-      '#employee-masterlist .container .card-1'
+      "#employee-masterlist .container .card-1"
     );
     const card2 = document.querySelector(
-      '#employee-masterlist .container .card-2'
+      "#employee-masterlist .container .card-2"
     );
     const card3 = document.querySelector(
-      '#employee-masterlist .container .card-3'
+      "#employee-masterlist .container .card-3"
     );
 
-    card3.classList.add('hidden');
-    card1.classList.add('hidden');
-    card2.classList.remove('hidden');
+    card3.classList.add("hidden");
+    card1.classList.add("hidden");
+    card2.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1673,18 +1673,18 @@ function showSM() {
 function showAE() {
   try {
     const card1 = document.querySelector(
-      '#employee-masterlist .container .card-1'
+      "#employee-masterlist .container .card-1"
     );
     const card2 = document.querySelector(
-      '#employee-masterlist .container .card-2'
+      "#employee-masterlist .container .card-2"
     );
     const card3 = document.querySelector(
-      '#employee-masterlist .container .card-3'
+      "#employee-masterlist .container .card-3"
     );
 
-    card1.classList.add('hidden');
-    card2.classList.add('hidden');
-    card3.classList.remove('hidden');
+    card1.classList.add("hidden");
+    card2.classList.add("hidden");
+    card3.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1693,14 +1693,14 @@ function showAE() {
 function showPayrollIM() {
   try {
     const card1 = document.querySelector(
-      '#payroll-add-employee .container .card-1'
+      "#payroll-add-employee .container .card-1"
     );
     const card2 = document.querySelector(
-      '#payroll-add-employee .container .card-2'
+      "#payroll-add-employee .container .card-2"
     );
 
-    card2.classList.remove('hidden');
-    card1.classList.add('hidden');
+    card2.classList.remove("hidden");
+    card1.classList.add("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1708,14 +1708,14 @@ function showPayrollIM() {
 function showPayrollEM() {
   try {
     const card1 = document.querySelector(
-      '#payroll-add-employee .container .card-1'
+      "#payroll-add-employee .container .card-1"
     );
     const card2 = document.querySelector(
-      '#payroll-add-employee .container .card-2'
+      "#payroll-add-employee .container .card-2"
     );
 
-    card2.classList.add('hidden');
-    card1.classList.remove('hidden');
+    card2.classList.add("hidden");
+    card1.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1724,14 +1724,14 @@ function showPayrollEM() {
 function showIM() {
   try {
     const card1 = document.querySelector(
-      '#employee-masterlist .container .card-1'
+      "#employee-masterlist .container .card-1"
     );
     const card2 = document.querySelector(
-      '#employee-masterlist .container .card-2'
+      "#employee-masterlist .container .card-2"
     );
 
-    card2.classList.remove('hidden');
-    card1.classList.add('hidden');
+    card2.classList.remove("hidden");
+    card1.classList.add("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1739,11 +1739,11 @@ function showIM() {
 
 function showER() {
   try {
-    const card1 = document.querySelector('#expense-records .container .card-1');
-    const card2 = document.querySelector('#expense-records .container .card-2');
+    const card1 = document.querySelector("#expense-records .container .card-1");
+    const card2 = document.querySelector("#expense-records .container .card-2");
 
-    card2.classList.add('hidden');
-    card1.classList.remove('hidden');
+    card2.classList.add("hidden");
+    card1.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1751,11 +1751,11 @@ function showER() {
 
 function showPE() {
   try {
-    const card1 = document.querySelector('#expense-records .container .card-1');
-    const card2 = document.querySelector('#expense-records .container .card-2');
+    const card1 = document.querySelector("#expense-records .container .card-1");
+    const card2 = document.querySelector("#expense-records .container .card-2");
 
-    card2.classList.remove('hidden');
-    card1.classList.add('hidden');
+    card2.classList.remove("hidden");
+    card1.classList.add("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1763,22 +1763,22 @@ function showPE() {
 
 function showTR() {
   try {
-    const card1 = document.querySelector('#time-records .container .card-1');
-    const card2 = document.querySelector('#time-records .container .card-2');
+    const card1 = document.querySelector("#time-records .container .card-1");
+    const card2 = document.querySelector("#time-records .container .card-2");
 
-    card2.classList.add('hidden');
-    card1.classList.remove('hidden');
+    card2.classList.add("hidden");
+    card1.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
 }
 function showPTA() {
   try {
-    const card1 = document.querySelector('#time-records .container .card-1');
-    const card2 = document.querySelector('#time-records .container .card-2');
+    const card1 = document.querySelector("#time-records .container .card-1");
+    const card2 = document.querySelector("#time-records .container .card-2");
 
-    card2.classList.remove('hidden');
-    card1.classList.add('hidden');
+    card2.classList.remove("hidden");
+    card1.classList.add("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1786,11 +1786,11 @@ function showPTA() {
 
 function showLR() {
   try {
-    const card1 = document.querySelector('#leaverecords .container .card-1');
-    const card2 = document.querySelector('#leaverecords .container .card-2');
+    const card1 = document.querySelector("#leaverecords .container .card-1");
+    const card2 = document.querySelector("#leaverecords .container .card-2");
 
-    card2.classList.add('hidden');
-    card1.classList.remove('hidden');
+    card2.classList.add("hidden");
+    card1.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1798,11 +1798,11 @@ function showLR() {
 
 function showPLA() {
   try {
-    const card1 = document.querySelector('#leaverecords .container .card-1');
-    const card2 = document.querySelector('#leaverecords .container .card-2');
+    const card1 = document.querySelector("#leaverecords .container .card-1");
+    const card2 = document.querySelector("#leaverecords .container .card-2");
 
-    card2.classList.remove('hidden');
-    card1.classList.add('hidden');
+    card2.classList.remove("hidden");
+    card1.classList.add("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1811,14 +1811,14 @@ function showPLA() {
 function showOR() {
   try {
     const card1 = document.querySelector(
-      '#overtime-records .container .card-1'
+      "#overtime-records .container .card-1"
     );
     const card2 = document.querySelector(
-      '#overtime-records .container .card-2'
+      "#overtime-records .container .card-2"
     );
 
-    card2.classList.add('hidden');
-    card1.classList.remove('hidden');
+    card2.classList.add("hidden");
+    card1.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1827,14 +1827,14 @@ function showOR() {
 function showPOA() {
   try {
     const card1 = document.querySelector(
-      '#overtime-records .container .card-1'
+      "#overtime-records .container .card-1"
     );
     const card2 = document.querySelector(
-      '#overtime-records .container .card-2'
+      "#overtime-records .container .card-2"
     );
 
-    card2.classList.remove('hidden');
-    card1.classList.add('hidden');
+    card2.classList.remove("hidden");
+    card1.classList.add("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1843,14 +1843,14 @@ function showPOA() {
 function showUR() {
   try {
     const card1 = document.querySelector(
-      '#undertime-records .container .card-1'
+      "#undertime-records .container .card-1"
     );
     const card2 = document.querySelector(
-      '#undertime-records .container .card-2'
+      "#undertime-records .container .card-2"
     );
 
-    card2.classList.add('hidden');
-    card1.classList.remove('hidden');
+    card2.classList.add("hidden");
+    card1.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1859,14 +1859,14 @@ function showUR() {
 function showPUA() {
   try {
     const card1 = document.querySelector(
-      '#undertime-records .container .card-1'
+      "#undertime-records .container .card-1"
     );
     const card2 = document.querySelector(
-      '#undertime-records .container .card-2'
+      "#undertime-records .container .card-2"
     );
 
-    card2.classList.remove('hidden');
-    card1.classList.add('hidden');
+    card2.classList.remove("hidden");
+    card1.classList.add("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1874,11 +1874,11 @@ function showPUA() {
 
 function showIP() {
   try {
-    const card1 = document.querySelector('#project-task .container .card-1');
-    const card2 = document.querySelector('#project-task .container .card-2');
+    const card1 = document.querySelector("#project-task .container .card-1");
+    const card2 = document.querySelector("#project-task .container .card-2");
 
-    card2.classList.add('hidden');
-    card1.classList.remove('hidden');
+    card2.classList.add("hidden");
+    card1.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1886,22 +1886,22 @@ function showIP() {
 
 function showCT() {
   try {
-    const card1 = document.querySelector('#project-task .container .card-1');
-    const card2 = document.querySelector('#project-task .container .card-2');
+    const card1 = document.querySelector("#project-task .container .card-1");
+    const card2 = document.querySelector("#project-task .container .card-2");
 
-    card2.classList.remove('hidden');
-    card1.classList.add('hidden');
+    card2.classList.remove("hidden");
+    card1.classList.add("hidden");
   } catch (e) {
     console.log(e);
   }
 }
 function showP() {
   try {
-    const card1 = document.querySelector('#payroll .container .card-1');
-    const card2 = document.querySelector('#payroll .container .card-2');
+    const card1 = document.querySelector("#payroll .container .card-1");
+    const card2 = document.querySelector("#payroll .container .card-2");
 
-    card2.classList.add('hidden');
-    card1.classList.remove('hidden');
+    card2.classList.add("hidden");
+    card1.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1909,11 +1909,11 @@ function showP() {
 
 function showPPA() {
   try {
-    const card1 = document.querySelector('#payroll .container .card-1');
-    const card2 = document.querySelector('#payroll .container .card-2');
+    const card1 = document.querySelector("#payroll .container .card-1");
+    const card2 = document.querySelector("#payroll .container .card-2");
 
-    card2.classList.remove('hidden');
-    card1.classList.add('hidden');
+    card2.classList.remove("hidden");
+    card1.classList.add("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -1921,8 +1921,8 @@ function showPPA() {
 
 function openModalLeaveRemarks() {
   try {
-    const modalRemarks = document.querySelector('.modal-leave-remarks');
-    modalRemarks.style.display = 'flex';
+    const modalRemarks = document.querySelector(".modal-leave-remarks");
+    modalRemarks.style.display = "flex";
   } catch (e) {
     console.log(e);
   }
@@ -1930,8 +1930,8 @@ function openModalLeaveRemarks() {
 
 function closeModalLeaveRemarks() {
   try {
-    const modalRemarks = document.querySelector('.modal-leave-remarks');
-    modalRemarks.style.display = 'none';
+    const modalRemarks = document.querySelector(".modal-leave-remarks");
+    modalRemarks.style.display = "none";
   } catch (e) {
     console.log(e);
   }
@@ -1939,8 +1939,8 @@ function closeModalLeaveRemarks() {
 
 function openModalOvertimeRemarks() {
   try {
-    const modalRemarks = document.querySelector('.modal-overtime-remarks');
-    modalRemarks.style.display = 'flex';
+    const modalRemarks = document.querySelector(".modal-overtime-remarks");
+    modalRemarks.style.display = "flex";
   } catch (e) {
     console.log(e);
   }
@@ -1948,8 +1948,8 @@ function openModalOvertimeRemarks() {
 
 function closeModalOvertimeRemarks() {
   try {
-    const modalRemarks = document.querySelector('.modal-overtime-remarks');
-    modalRemarks.style.display = 'none';
+    const modalRemarks = document.querySelector(".modal-overtime-remarks");
+    modalRemarks.style.display = "none";
   } catch (e) {
     console.log(e);
   }
@@ -1957,9 +1957,9 @@ function closeModalOvertimeRemarks() {
 function openModalTimeAlterationRemarks() {
   try {
     const modalRemarks = document.querySelector(
-      '.modal-timealteration-remarks'
+      ".modal-timealteration-remarks"
     );
-    modalRemarks.style.display = 'flex';
+    modalRemarks.style.display = "flex";
   } catch (e) {
     console.log(e);
   }
@@ -1968,17 +1968,17 @@ function openModalTimeAlterationRemarks() {
 function closeModalTimeAlterationRemarks() {
   try {
     const modalRemarks = document.querySelector(
-      '.modal-timealteration-remarks'
+      ".modal-timealteration-remarks"
     );
-    modalRemarks.style.display = 'none';
+    modalRemarks.style.display = "none";
   } catch (e) {
     console.log(e);
   }
 }
 function openModalExpenseRemarks() {
   try {
-    const modalRemarks = document.querySelector('.modal-expense-remarks');
-    modalRemarks.style.display = 'flex';
+    const modalRemarks = document.querySelector(".modal-expense-remarks");
+    modalRemarks.style.display = "flex";
   } catch (e) {
     console.log(e);
   }
@@ -1986,16 +1986,16 @@ function openModalExpenseRemarks() {
 
 function closeModalExpenseRemarks() {
   try {
-    const modalRemarks = document.querySelector('.modal-expense-remarks');
-    modalRemarks.style.display = 'none';
+    const modalRemarks = document.querySelector(".modal-expense-remarks");
+    modalRemarks.style.display = "none";
   } catch (e) {
     console.log(e);
   }
 }
 function openModalUndertimeRemarks() {
   try {
-    const modalRemarks = document.querySelector('.modal-undertime-remarks');
-    modalRemarks.style.display = 'flex';
+    const modalRemarks = document.querySelector(".modal-undertime-remarks");
+    modalRemarks.style.display = "flex";
   } catch (e) {
     console.log(e);
   }
@@ -2003,8 +2003,8 @@ function openModalUndertimeRemarks() {
 
 function closeModalUndertimeRemarks() {
   try {
-    const modalRemarks = document.querySelector('.modal-undertime-remarks');
-    modalRemarks.style.display = 'none';
+    const modalRemarks = document.querySelector(".modal-undertime-remarks");
+    modalRemarks.style.display = "none";
   } catch (e) {
     console.log(e);
   }
@@ -2012,8 +2012,8 @@ function closeModalUndertimeRemarks() {
 
 function openModalViewDTR() {
   try {
-    const modal = document.querySelector('.modal-view-dtr');
-    modal.style.display = 'flex';
+    const modal = document.querySelector(".modal-view-dtr");
+    modal.style.display = "flex";
   } catch (e) {
     console.log(e);
   }
@@ -2021,8 +2021,8 @@ function openModalViewDTR() {
 
 function closeModalViewDTR() {
   try {
-    const modal = document.querySelector('.modal-view-dtr');
-    modal.style.display = 'none';
+    const modal = document.querySelector(".modal-view-dtr");
+    modal.style.display = "none";
   } catch (e) {
     console.log(e);
   }
@@ -2030,8 +2030,8 @@ function closeModalViewDTR() {
 
 function toggleDropDown() {
   try {
-    const drpdown = document.querySelector('.btn-dropdown');
-    drpdown.classList.toggle('hidden');
+    const drpdown = document.querySelector(".btn-dropdown");
+    drpdown.classList.toggle("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -2039,19 +2039,19 @@ function toggleDropDown() {
 
 function toggleEmployeeSelection() {
   try {
-    const div1 = document.querySelector('.div1');
-    const div2 = document.querySelector('.div2');
-    const div3 = document.querySelector('.div3');
+    const div1 = document.querySelector(".div1");
+    const div2 = document.querySelector(".div2");
+    const div3 = document.querySelector(".div3");
     let radioValue = $("input[name='employeeSelection']:checked").val();
 
-    if (radioValue === 'All') {
-      div1.classList.remove('hidden');
-      div2.classList.add('hidden');
-      div3.classList.add('hidden');
-    } else if (radioValue === 'Custom') {
-      div1.classList.add('hidden');
-      div2.classList.remove('hidden');
-      div3.classList.remove('hidden');
+    if (radioValue === "All") {
+      div1.classList.remove("hidden");
+      div2.classList.add("hidden");
+      div3.classList.add("hidden");
+    } else if (radioValue === "Custom") {
+      div1.classList.add("hidden");
+      div2.classList.remove("hidden");
+      div3.classList.remove("hidden");
     }
   } catch (e) {
     console.log(e);
@@ -2060,19 +2060,19 @@ function toggleEmployeeSelection() {
 
 function toggleEmployeeSelection3() {
   try {
-    const div7 = document.querySelector('.div7');
-    const div8 = document.querySelector('.div8');
-    const div9 = document.querySelector('.div9');
+    const div7 = document.querySelector(".div7");
+    const div8 = document.querySelector(".div8");
+    const div9 = document.querySelector(".div9");
     let radioValue = $("input[name='employeeSelection3']:checked").val();
 
-    if (radioValue === 'All') {
-      div7.classList.remove('hidden');
-      div8.classList.add('hidden');
-      div9.classList.add('hidden');
-    } else if (radioValue === 'Custom') {
-      div7.classList.add('hidden');
-      div8.classList.remove('hidden');
-      div9.classList.remove('hidden');
+    if (radioValue === "All") {
+      div7.classList.remove("hidden");
+      div8.classList.add("hidden");
+      div9.classList.add("hidden");
+    } else if (radioValue === "Custom") {
+      div7.classList.add("hidden");
+      div8.classList.remove("hidden");
+      div9.classList.remove("hidden");
     }
   } catch (e) {
     console.log(e);
@@ -2081,14 +2081,14 @@ function toggleEmployeeSelection3() {
 
 function checkSearchInput() {
   try {
-    const txtSearch = document.querySelector('#txtSearch').value;
-    const btnClearSearch = document.querySelector('.btn-clear-search');
+    const txtSearch = document.querySelector("#txtSearch").value;
+    const btnClearSearch = document.querySelector(".btn-clear-search");
 
-    if (txtSearch === '') {
-      btnClearSearch.classList.add('hidden');
+    if (txtSearch === "") {
+      btnClearSearch.classList.add("hidden");
       // hideDataList();
     } else {
-      btnClearSearch.classList.remove('hidden');
+      btnClearSearch.classList.remove("hidden");
       // showDataList();
       scrollTopDataList();
     }
@@ -2099,13 +2099,13 @@ function checkSearchInput() {
 
 function checkSearchInput2() {
   try {
-    const txtSearch = document.querySelector('.txtSearch2').value;
-    const btnClearSearch = document.querySelector('.btn-clear-search2');
+    const txtSearch = document.querySelector(".txtSearch2").value;
+    const btnClearSearch = document.querySelector(".btn-clear-search2");
 
-    if (txtSearch === '') {
-      btnClearSearch.classList.add('hidden');
+    if (txtSearch === "") {
+      btnClearSearch.classList.add("hidden");
     } else {
-      btnClearSearch.classList.remove('hidden');
+      btnClearSearch.classList.remove("hidden");
     }
   } catch (e) {
     console.log(e);
@@ -2114,9 +2114,9 @@ function checkSearchInput2() {
 
 function clearSearch(formID) {
   try {
-    const btnClearSearch = document.querySelector('.btn-clear-search');
+    const btnClearSearch = document.querySelector(".btn-clear-search");
 
-    btnClearSearch.classList.add('hidden');
+    btnClearSearch.classList.add("hidden");
     reset(formID);
   } catch (e) {
     console.log(e);
@@ -2125,9 +2125,9 @@ function clearSearch(formID) {
 
 function clearSearch2(formID) {
   try {
-    const btnClearSearch = document.querySelector('.btn-clear-search2');
+    const btnClearSearch = document.querySelector(".btn-clear-search2");
 
-    btnClearSearch.classList.add('hidden');
+    btnClearSearch.classList.add("hidden");
     reset(formID);
   } catch (e) {
     console.log(e);
@@ -2136,11 +2136,11 @@ function clearSearch2(formID) {
 
 function toggleSearchFilter() {
   try {
-    const container = document.querySelector('.search-filter-container');
-    const showSearchOptions = document.querySelector('.showSearchOptions svg');
+    const container = document.querySelector(".search-filter-container");
+    const showSearchOptions = document.querySelector(".showSearchOptions svg");
 
-    container.classList.toggle('hidden');
-    showSearchOptions.classList.toggle('rotate');
+    container.classList.toggle("hidden");
+    showSearchOptions.classList.toggle("rotate");
   } catch (e) {
     console.log(e);
   }
@@ -2148,11 +2148,11 @@ function toggleSearchFilter() {
 
 function toggleSearchFilter2() {
   try {
-    const container = document.querySelector('.sr-f-2');
-    const showSearchOptions = document.querySelector('.showSearchOptions2 svg');
+    const container = document.querySelector(".sr-f-2");
+    const showSearchOptions = document.querySelector(".showSearchOptions2 svg");
 
-    container.classList.toggle('hidden');
-    showSearchOptions.classList.toggle('rotate');
+    container.classList.toggle("hidden");
+    showSearchOptions.classList.toggle("rotate");
   } catch (e) {
     console.log(e);
   }
@@ -2160,13 +2160,13 @@ function toggleSearchFilter2() {
 
 function toggleSearchRecFilter(btnID) {
   try {
-    const container = document.querySelector('.searchRec-filter-container');
+    const container = document.querySelector(".searchRec-filter-container");
     const showSearchRecOptions = document.querySelector(
-      '.showSearchRecOptions'
+      ".showSearchRecOptions"
     );
 
-    container.classList.toggle('hidden');
-    showSearchRecOptions.classList.toggle('rotate');
+    container.classList.toggle("hidden");
+    showSearchRecOptions.classList.toggle("rotate");
   } catch (e) {
     console.log(e);
   }
@@ -2174,9 +2174,9 @@ function toggleSearchRecFilter(btnID) {
 
 function openModalSelectRecTo() {
   try {
-    const container = document.querySelector('.selectRecTo');
+    const container = document.querySelector(".selectRecTo");
 
-    container.classList.toggle('hidden');
+    container.classList.toggle("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -2184,9 +2184,9 @@ function openModalSelectRecTo() {
 
 function openModalSelectRecCc() {
   try {
-    const container = document.querySelector('.selectRecCc');
+    const container = document.querySelector(".selectRecCc");
 
-    container.classList.toggle('hidden');
+    container.classList.toggle("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -2194,9 +2194,9 @@ function openModalSelectRecCc() {
 
 function openModalSelectRecBcc() {
   try {
-    const container = document.querySelector('.selectRecBcc');
+    const container = document.querySelector(".selectRecBcc");
 
-    container.classList.toggle('hidden');
+    container.classList.toggle("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -2204,11 +2204,11 @@ function openModalSelectRecBcc() {
 
 function openModalSelectRecTo2() {
   try {
-    const container = document.querySelector('.modal-payrollmemo');
-    const modal = document.querySelector('.selectRecTo');
+    const container = document.querySelector(".modal-payrollmemo");
+    const modal = document.querySelector(".selectRecTo");
 
-    container.style.display = 'flex';
-    modal.classList.remove('hidden');
+    container.style.display = "flex";
+    modal.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -2216,11 +2216,11 @@ function openModalSelectRecTo2() {
 
 function openModalSelectRecCc2() {
   try {
-    const container = document.querySelector('.modal-payrollmemo');
-    const modal = document.querySelector('.selectRecCc');
+    const container = document.querySelector(".modal-payrollmemo");
+    const modal = document.querySelector(".selectRecCc");
 
-    container.style.display = 'flex';
-    modal.classList.remove('hidden');
+    container.style.display = "flex";
+    modal.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -2228,11 +2228,11 @@ function openModalSelectRecCc2() {
 
 function openModalSelectRecBcc2() {
   try {
-    const container = document.querySelector('.modal-payrollmemo');
-    const modal = document.querySelector('.selectRecBcc');
+    const container = document.querySelector(".modal-payrollmemo");
+    const modal = document.querySelector(".selectRecBcc");
 
-    container.style.display = 'flex';
-    modal.classList.remove('hidden');
+    container.style.display = "flex";
+    modal.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -2240,11 +2240,11 @@ function openModalSelectRecBcc2() {
 
 function toggleSearchRecFilter3() {
   try {
-    const container3 = document.querySelector('.sr-f-3');
-    const showSearchRecOptions3 = document.querySelector('.sr-o-3');
+    const container3 = document.querySelector(".sr-f-3");
+    const showSearchRecOptions3 = document.querySelector(".sr-o-3");
 
-    container3.classList.toggle('hidden');
-    showSearchRecOptions3.classList.toggle('rotate');
+    container3.classList.toggle("hidden");
+    showSearchRecOptions3.classList.toggle("rotate");
   } catch (e) {
     console.log(e);
   }
@@ -2252,9 +2252,9 @@ function toggleSearchRecFilter3() {
 
 function showDataList() {
   try {
-    const datalist = document.querySelector('.datalist-data');
+    const datalist = document.querySelector(".datalist-data");
     scrollTopDataList();
-    datalist.classList.remove('hidden');
+    datalist.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -2262,9 +2262,9 @@ function showDataList() {
 
 function hideDataList() {
   try {
-    const datalist = document.querySelector('.datalist-data');
+    const datalist = document.querySelector(".datalist-data");
 
-    datalist.classList.add('hidden');
+    datalist.classList.add("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -2274,7 +2274,7 @@ function reloadOnEnter(e, txtID) {
   var keycode = event.keyCode ? event.keyCode : event.which;
 
   saveValue(txtID);
-  if (keycode == '13') {
+  if (keycode == "13") {
     location.reload();
   }
 }
@@ -2292,7 +2292,7 @@ function saveValue(e) {
 function getSavedValue(v) {
   try {
     if (!localStorage.getItem(v)) {
-      return ''; // You can change this to your defualt value.
+      return ""; // You can change this to your defualt value.
     }
     return localStorage.getItem(v);
   } catch (e) {
@@ -2319,20 +2319,20 @@ function resetSaveValue(id) {
 
 function openModalPayrollList() {
   try {
-    const modal = document.querySelector('.modal-payroll-list');
-    const modal2 = document.querySelector('.modal-mass-payroll');
-    modal.style.display = 'flex';
-    modal2.style.display = 'none';
+    const modal = document.querySelector(".modal-payroll-list");
+    const modal2 = document.querySelector(".modal-mass-payroll");
+    modal.style.display = "flex";
+    modal2.style.display = "none";
   } catch (e) {
     console.log(e);
   }
 }
 function closeModalPayrollList() {
   try {
-    const modal = document.querySelector('.modal-payroll-list');
-    const modal2 = document.querySelector('.modal-mass-payroll');
-    modal.style.display = 'none';
-    modal2.style.display = 'flex';
+    const modal = document.querySelector(".modal-payroll-list");
+    const modal2 = document.querySelector(".modal-mass-payroll");
+    modal.style.display = "none";
+    modal2.style.display = "flex";
   } catch (e) {
     console.log(e);
   }
@@ -2340,8 +2340,8 @@ function closeModalPayrollList() {
 
 function openModalMassPayroll() {
   try {
-    const modal = document.querySelector('.modal-mass-payroll');
-    modal.style.display = 'flex';
+    const modal = document.querySelector(".modal-mass-payroll");
+    modal.style.display = "flex";
   } catch (e) {
     console.log(e);
   }
@@ -2349,8 +2349,8 @@ function openModalMassPayroll() {
 
 function closeModalMassPayroll() {
   try {
-    const modal = document.querySelector('.modal-mass-payroll');
-    modal.style.display = 'none';
+    const modal = document.querySelector(".modal-mass-payroll");
+    modal.style.display = "none";
   } catch (e) {
     console.log(e);
   }
@@ -2358,15 +2358,15 @@ function closeModalMassPayroll() {
 
 function addModalMerit() {
   try {
-    const modal = document.querySelector('.modal-merit');
-    const btnDelete = document.querySelector('#btnDelete');
-    const btnAdd = document.querySelector('#btnAdd');
-    const btnEdit = document.querySelector('#btnEdit');
+    const modal = document.querySelector(".modal-merit");
+    const btnDelete = document.querySelector("#btnDelete");
+    const btnAdd = document.querySelector("#btnAdd");
+    const btnEdit = document.querySelector("#btnEdit");
 
-    modal.style.display = 'flex';
-    btnDelete.classList.add('hidden');
-    btnAdd.classList.remove('hidden');
-    btnEdit.classList.add('hidden');
+    modal.style.display = "flex";
+    btnDelete.classList.add("hidden");
+    btnAdd.classList.remove("hidden");
+    btnEdit.classList.add("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -2374,15 +2374,15 @@ function addModalMerit() {
 
 function editModalMerit() {
   try {
-    const modal = document.querySelector('.modal-merit');
-    const btnDelete = document.querySelector('#btnDelete');
-    const btnAdd = document.querySelector('#btnAdd');
-    const btnEdit = document.querySelector('#btnEdit');
+    const modal = document.querySelector(".modal-merit");
+    const btnDelete = document.querySelector("#btnDelete");
+    const btnAdd = document.querySelector("#btnAdd");
+    const btnEdit = document.querySelector("#btnEdit");
 
-    modal.style.display = 'flex';
-    btnDelete.classList.remove('hidden');
-    btnAdd.classList.add('hidden');
-    btnEdit.classList.remove('hidden');
+    modal.style.display = "flex";
+    btnDelete.classList.remove("hidden");
+    btnAdd.classList.add("hidden");
+    btnEdit.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -2390,11 +2390,11 @@ function editModalMerit() {
 
 function closeModalMerit() {
   try {
-    const modal = document.querySelector('.modal-merit');
-    modal.style.display = 'none';
+    const modal = document.querySelector(".modal-merit");
+    modal.style.display = "none";
 
-    enableField('drpDepartment');
-    enableField('drpEmployee');
+    enableField("drpDepartment");
+    enableField("drpEmployee");
     clearSelectDepartment(drpDepartment);
     clearSelectEmployee(drpEmployee);
     clearField(selectMonth);
@@ -2407,15 +2407,15 @@ function closeModalMerit() {
 
 function addModalSavings() {
   try {
-    const modal = document.querySelector('.modal-savings');
-    const btnDelete = document.querySelector('#btnDelete');
-    const btnAdd = document.querySelector('#btnAdd');
-    const btnEdit = document.querySelector('#btnEdit');
+    const modal = document.querySelector(".modal-savings");
+    const btnDelete = document.querySelector("#btnDelete");
+    const btnAdd = document.querySelector("#btnAdd");
+    const btnEdit = document.querySelector("#btnEdit");
 
-    modal.style.display = 'flex';
-    btnDelete.classList.add('hidden');
-    btnAdd.classList.remove('hidden');
-    btnEdit.classList.add('hidden');
+    modal.style.display = "flex";
+    btnDelete.classList.add("hidden");
+    btnAdd.classList.remove("hidden");
+    btnEdit.classList.add("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -2423,15 +2423,15 @@ function addModalSavings() {
 
 function editModalSavings() {
   try {
-    const modal = document.querySelector('.modal-savings');
-    const btnDelete = document.querySelector('#btnDelete');
-    const btnAdd = document.querySelector('#btnAdd');
-    const btnEdit = document.querySelector('#btnEdit');
+    const modal = document.querySelector(".modal-savings");
+    const btnDelete = document.querySelector("#btnDelete");
+    const btnAdd = document.querySelector("#btnAdd");
+    const btnEdit = document.querySelector("#btnEdit");
 
-    modal.style.display = 'flex';
-    btnDelete.classList.remove('hidden');
-    btnAdd.classList.add('hidden');
-    btnEdit.classList.remove('hidden');
+    modal.style.display = "flex";
+    btnDelete.classList.remove("hidden");
+    btnAdd.classList.add("hidden");
+    btnEdit.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -2439,10 +2439,10 @@ function editModalSavings() {
 
 function closeModalSavings() {
   try {
-    const modal = document.querySelector('.modal-savings');
-    modal.style.display = 'none';
-    enableField('drpDepartment');
-    enableField('drpEmployee');
+    const modal = document.querySelector(".modal-savings");
+    modal.style.display = "none";
+    enableField("drpDepartment");
+    enableField("drpEmployee");
     clearSelectDepartment(drpDepartment);
     clearSelectEmployee(drpEmployee);
     clearField(txtDate);
@@ -2453,15 +2453,15 @@ function closeModalSavings() {
 }
 function addModalContributions() {
   try {
-    const modal = document.querySelector('.modal-contributions');
-    const btnDelete = document.querySelector('#btnDelete');
-    const btnAdd = document.querySelector('#btnAdd');
-    const btnEdit = document.querySelector('#btnEdit');
+    const modal = document.querySelector(".modal-contributions");
+    const btnDelete = document.querySelector("#btnDelete");
+    const btnAdd = document.querySelector("#btnAdd");
+    const btnEdit = document.querySelector("#btnEdit");
 
-    modal.style.display = 'flex';
-    btnDelete.classList.add('hidden');
-    btnAdd.classList.remove('hidden');
-    btnEdit.classList.add('hidden');
+    modal.style.display = "flex";
+    btnDelete.classList.add("hidden");
+    btnAdd.classList.remove("hidden");
+    btnEdit.classList.add("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -2469,15 +2469,15 @@ function addModalContributions() {
 
 function editModalContributions() {
   try {
-    const modal = document.querySelector('.modal-contributions');
-    const btnDelete = document.querySelector('#btnDelete');
-    const btnAdd = document.querySelector('#btnAdd');
-    const btnEdit = document.querySelector('#btnEdit');
+    const modal = document.querySelector(".modal-contributions");
+    const btnDelete = document.querySelector("#btnDelete");
+    const btnAdd = document.querySelector("#btnAdd");
+    const btnEdit = document.querySelector("#btnEdit");
 
-    modal.style.display = 'flex';
-    btnDelete.classList.remove('hidden');
-    btnAdd.classList.add('hidden');
-    btnEdit.classList.remove('hidden');
+    modal.style.display = "flex";
+    btnDelete.classList.remove("hidden");
+    btnAdd.classList.add("hidden");
+    btnEdit.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -2485,11 +2485,11 @@ function editModalContributions() {
 
 function closeModalContributions() {
   try {
-    const modal = document.querySelector('.modal-contributions');
-    modal.style.display = 'none';
+    const modal = document.querySelector(".modal-contributions");
+    modal.style.display = "none";
 
-    enableField('drpDepartment');
-    enableField('drpEmployee');
+    enableField("drpDepartment");
+    enableField("drpEmployee");
     clearSelectDepartment(drpDepartment);
     clearSelectEmployee(drpEmployee);
     clearField(txtDate);
@@ -2503,7 +2503,7 @@ function closeModalContributions() {
 
 function clearSelectPayPeriod(input) {
   try {
-    input.value = 'Select Pay Period';
+    input.value = "Select Pay Period";
   } catch (e) {
     console.log(e);
   }
@@ -2511,9 +2511,10 @@ function clearSelectPayPeriod(input) {
 
 function openModalConsolidation() {
   try {
-    const modal = document.querySelector('.modal-payrollconsolidation');
+    const modal = document.querySelector(".modal-payrollconsolidation");
 
-    modal.style.display = 'flex';
+    modal.style.display = "flex";
+    checkLeapYear();
   } catch (e) {
     console.log(e);
   }
@@ -2521,8 +2522,8 @@ function openModalConsolidation() {
 
 function closeModalConsolidation() {
   try {
-    const modal = document.querySelector('.modal-payrollconsolidation');
-    modal.style.display = 'none';
+    const modal = document.querySelector(".modal-payrollconsolidation");
+    modal.style.display = "none";
 
     // clearField(txtDateFromModal);
     // clearField(txtDateToModal);
@@ -2534,22 +2535,22 @@ function closeModalConsolidation() {
 
 function showB() {
   try {
-    const card1 = document.querySelector('#backups .container .card-1');
-    const card2 = document.querySelector('#backups .container .card-2');
+    const card1 = document.querySelector("#backups .container .card-1");
+    const card2 = document.querySelector("#backups .container .card-2");
 
-    card2.classList.add('hidden');
-    card1.classList.remove('hidden');
+    card2.classList.add("hidden");
+    card1.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
 }
 function showRB() {
   try {
-    const card1 = document.querySelector('#backups .container .card-1');
-    const card2 = document.querySelector('#backups .container .card-2');
+    const card1 = document.querySelector("#backups .container .card-1");
+    const card2 = document.querySelector("#backups .container .card-2");
 
-    card1.classList.add('hidden');
-    card2.classList.remove('hidden');
+    card1.classList.add("hidden");
+    card2.classList.remove("hidden");
   } catch (e) {
     console.log(e);
   }
@@ -2557,18 +2558,18 @@ function showRB() {
 
 function openModalEditConsolidation() {
   try {
-    const modal = document.querySelector('.modal-edit-consolidation');
-    const contriER = document.querySelectorAll('.contri-ER');
-    const deductions = document.querySelectorAll('.deductions');
+    const modal = document.querySelector(".modal-edit-consolidation");
+    const contriER = document.querySelectorAll(".contri-ER");
+    const deductions = document.querySelectorAll(".deductions");
 
-    modal.style.display = 'flex';
+    modal.style.display = "flex";
 
     contriER.forEach((item) => {
-      item.classList.add('hidden');
+      item.classList.add("hidden");
     });
 
     deductions.forEach((item) => {
-      item.classList.remove('hidden');
+      item.classList.remove("hidden");
     });
   } catch (e) {
     console.log(e);
@@ -2577,18 +2578,18 @@ function openModalEditConsolidation() {
 
 function openModalEditConsolidation2() {
   try {
-    const modal = document.querySelector('.modal-edit-consolidation');
-    const contriER = document.querySelectorAll('.contri-ER');
-    const deductions = document.querySelectorAll('.deductions');
+    const modal = document.querySelector(".modal-edit-consolidation");
+    const contriER = document.querySelectorAll(".contri-ER");
+    const deductions = document.querySelectorAll(".deductions");
 
-    modal.style.display = 'flex';
+    modal.style.display = "flex";
 
     contriER.forEach((item) => {
-      item.classList.remove('hidden');
+      item.classList.remove("hidden");
     });
 
     deductions.forEach((item) => {
-      item.classList.add('hidden');
+      item.classList.add("hidden");
     });
   } catch (e) {
     console.log(e);
@@ -2597,11 +2598,34 @@ function openModalEditConsolidation2() {
 
 function closeModalEditConsolidation() {
   try {
-    const modal = document.querySelector('.modal-edit-consolidation');
-    modal.style.display = 'none';
+    const modal = document.querySelector(".modal-edit-consolidation");
+    modal.style.display = "none";
 
     // clearField(txtDateFromModal);
     // clearField(txtDateToModal);
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function leapyear(year) {
+  return year % 100 === 0 ? year % 400 === 0 : year % 4 === 0;
+}
+
+function checkLeapYear() {
+  try {
+    const optLeap = document.querySelector("#optLeap");
+    const optNotLeap = document.querySelector("#optNotLeap");
+    const currentYear = leapyear(new Date().getFullYear());
+
+    optLeap.style.display = "none";
+    optNotLeap.style.display = "none";
+
+    if (currentYear == true) {
+      optLeap.style.display = "block";
+    } else {
+      optNotLeap.style.display = "block";
+    }
   } catch (e) {
     console.log(e);
   }
