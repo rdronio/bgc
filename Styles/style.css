@@ -10,7 +10,7 @@
 
 body,
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   /* background: #ebf0f6; */
   /* background: #e0e0e0; */
   color: #333;
@@ -175,7 +175,7 @@ textarea {
   padding: 0.6rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.7rem;
   font-weight: 400;
   resize: none;
@@ -189,19 +189,19 @@ input {
   padding: 0.5rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.7rem;
   font-weight: 400;
   -webkit-tap-highlight-color: transparent;
 }
 
-input[type="text"]::-moz-selection,
+input[type='text']::-moz-selection,
 textarea::-moz-selection {
   color: white;
   background: #3390ff;
 }
 
-input[type="text"]::selection,
+input[type='text']::selection,
 textarea::selection {
   color: white;
   background: #3390ff;
@@ -211,12 +211,12 @@ input::-webkit-calendar-picker-indicator {
   display: none;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   width: 1rem !important;
 }
 
-input[type="radio"] {
-  content: "";
+input[type='radio'] {
+  content: '';
   /* background: #f4f4f4; */
   border: 1px solid #333;
   display: inline-block;
@@ -235,8 +235,8 @@ input[type="radio"] {
   display: none;
 }
 
-input[type="checkbox"] {
-  content: "";
+input[type='checkbox'] {
+  content: '';
   /* background: #f4f4f4; */
   /* border: 1px solid #333; */
   display: inline-block;
@@ -253,7 +253,7 @@ input[type="checkbox"] {
   transition: all 250ms ease;
 }
 
-input[type="file"] {
+input[type='file'] {
   border: none;
 }
 
@@ -301,7 +301,7 @@ input[type="radio"]:checked::before {
 }
 
 .radio .label:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 1px;
   left: 1px;
@@ -316,12 +316,12 @@ input[type="radio"]:checked::before {
   pointer-events: none;
 }
 
-input[type="radio"]:checked + .label {
+input[type='radio']:checked + .label {
   /* border-color: #225cff; */
   border-color: #333;
 }
 
-input[type="radio"]:checked + .label:after {
+input[type='radio']:checked + .label:after {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
@@ -731,7 +731,7 @@ iframe {
   padding: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
   font-weight: bold;
   width: 100%;
@@ -1349,13 +1349,13 @@ iframe {
   padding: 0.44rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.7rem;
   font-weight: 400;
 }
 
 .select option {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.7rem;
   font-weight: 400;
 }
@@ -1395,7 +1395,7 @@ iframe {
   padding: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
   height: 100%;
@@ -1624,7 +1624,7 @@ iframe {
   padding: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
   height: 100%;
@@ -2210,7 +2210,7 @@ table.tableLayout tbody tr:first-child td {
 }
 
 table.tableLayout tbody tr:first-child td:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2319,7 +2319,7 @@ table.tableLayoutDB tbody tr:first-child td {
 }
 
 table.tableLayoutDB tbody tr:first-child td:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2653,7 +2653,7 @@ table.tableLayout-md tbody tr > td {
   cursor: default !important;
 }
 
-/* ========[ ZUI Table / Sticky Table Layout ]======== */
+/* ========[ ZUI Table ]======== */
 table.zui-table tbody tr:first-child td {
   font-size: 0.65rem !important;
   color: #333 !important;
@@ -2672,7 +2672,7 @@ table.zui-table tbody tr:nth-child(even) {
   background-color: #d3dee2;
 }
 
-table.zui-table tbody tr:first-child td:nth-child(20),
+table.zui-table tbody tr:first-child td:nth-child(21),
 table.zui-table tbody tr:first-child td:nth-child(28) {
   background-color: #8ddcb5;
 }
@@ -2706,7 +2706,6 @@ table.zui-table {
 
 .zui-container {
   display: block;
-  max-height: 550px;
 }
 
 .zui-wrapper {
@@ -2760,6 +2759,117 @@ table.zui-table {
 }
 
 table.zui-table tbody tr:hover {
+  color: #fff;
+  background-color: #2d9cdb;
+  cursor: pointer;
+}
+
+/* ========[ Sticky Table Layout ]======== */
+.sticky-table-container {
+  overflow: auto;
+  width: 100%;
+  max-height: 550px;
+}
+
+table.sticky-table td,
+table.sticky-table th {
+  border: none;
+  text-align: center;
+  padding: 1rem 1rem;
+  width: 10%;
+}
+
+table.sticky-table {
+  table-layout: auto;
+  width: 100%;
+  border-spacing: 0;
+  border-radius: 5px;
+}
+
+table.sticky-table tr:nth-child(1) td:first-child,
+table.sticky-table th:first-child {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #ffffff;
+}
+
+table.sticky-table tr:nth-child(1) td:nth-child(2),
+table.sticky-table th:nth-child(2) {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  position: -webkit-sticky;
+  position: sticky;
+  left: 90px;
+  top: 0;
+  z-index: 2;
+  background-color: #ffffff;
+}
+
+table.sticky-table td:first-child,
+table.sticky-table th:first-child {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffff;
+}
+
+table.sticky-table td:nth-child(2),
+table.sticky-table th:nth-child(2) {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  position: -webkit-sticky;
+  position: sticky;
+  left: 90px;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffff;
+}
+
+table.sticky-table tr:first-child td {
+  font-size: 0.65rem !important;
+  color: #333 !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+  pointer-events: none !important;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+table.sticky-table tbody tr:first-child td:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px #333 solid;
+}
+
+table.sticky-table tbody tr:nth-child(even) td {
+  background-color: #d3dee2;
+}
+
+table.sticky-table tbody tr:first-child td:nth-child(21),
+table.sticky-table tbody tr:first-child td:nth-child(28) {
+  background-color: #8ddcb5;
+}
+
+table.sticky-table tbody tr {
+  font-size: 0.7rem;
+  color: #333;
+  line-height: 1.2;
+  font-weight: unset;
+  border-bottom: 1px solid #eee;
+  height: 3rem;
+  margin: 1rem 0;
+}
+
+table.tableLayout tbody tr:hover {
   color: #fff;
   background-color: #2d9cdb;
   cursor: pointer;
@@ -3021,7 +3131,7 @@ nav ul li ul li a:hover {
 }
 
 nav ul li ul li a::before {
-  content: "\203A";
+  content: '\203A';
   margin: 0 5px 0 20px;
   font-size: 0.9rem;
 }
@@ -3307,32 +3417,73 @@ nav ul li a span.fa {
 }
 
 /* ========[ Overtime Records ]======== */
-#overtime-records .container .card-1 div:first-child {
+#overtime-records .container .card-1 > div:first-child {
   position: relative;
   text-align: right;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 #overtime-records .container .card-1 > div:first-child a {
-  display: inline-block;
+  margin-left: 0.5rem;
+  height: 100%;
 }
 
-#overtime-records .container .card-1 div:nth-child(2) {
-  display: inline-block;
-  margin-bottom: 0.5rem;
-  margin-right: 1rem;
+#overtime-records .modal-payrollconsolidation .modal-content {
+  width: 33%;
 }
 
-#overtime-records .container .card-1 div:nth-child(2) input {
-  margin-right: 0.5rem;
+#overtime-records .modal-payrollconsolidation .modal-content .select {
+  width: 230px;
 }
 
-#overtime-records .container .card-1 div:nth-child(3) {
-  display: inline-block;
+#overtime-records .modal-edit-consolidation .modal-content {
+  width: 60%;
 }
 
-#overtime-records .container .card-1 div:nth-child(3) button {
-  margin-right: 0.5rem;
+#overtime-records .modal-edit-consolidation .modal-content *:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#overtime-records .modal-edit-consolidation .modal-content *:nth-child(3) div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#overtime-records .modal-edit-consolidation2 .modal-content *:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#overtime-records .modal-edit-consolidation2 .modal-content *:nth-child(3) div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 /* ========[ Leave Records ]======== */
@@ -3436,7 +3587,7 @@ nav ul li a span.fa {
   height: 100%;
 }
 
-/* ========[ payroll-consolidation ]======== */
+/* ========[ payroll-consolidation / Admin & Ops Consolidation]======== */
 #payroll-consolidation .container .card-1 > div:first-child {
   position: relative;
   text-align: right;
@@ -3501,6 +3652,84 @@ div {
 }
 
 #payroll-consolidation
+.modal-edit-consolidation2
+.modal-content
+*:nth-child(3)
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/* ========[ payroll-consolidation / Admin & Ops Consolidation]======== */
+#driver-consolidation .container .card-1 > div:first-child {
+  position: relative;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+#driver-consolidation .container .card-1 > div:first-child a {
+  margin-left: 0.5rem;
+  height: 100%;
+}
+
+#driver-consolidation .modal-payrollconsolidation .modal-content {
+  width: 33%;
+}
+
+#driver-consolidation .modal-payrollconsolidation .modal-content .select {
+  width: 230px;
+}
+
+#driver-consolidation .modal-edit-consolidation .modal-content {
+  width: 60%;
+}
+
+#driver-consolidation .modal-edit-consolidation .modal-content *:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#driver-consolidation
+.modal-edit-consolidation
+.modal-content
+*:nth-child(3)
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#driver-consolidation .modal-edit-consolidation2 .modal-content *:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#driver-consolidation
 .modal-edit-consolidation2
 .modal-content
 *:nth-child(3)

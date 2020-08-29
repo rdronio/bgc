@@ -26,7 +26,7 @@
     <form id="payroll-report-per-department" action="#" autocomplete="off">
       <!-- main -->
       <div class="main">
-        <!-- nav -->
+        <!--NAV MENU-->
         <nav id="nav">
           <div class="logo">
             <a href="" class="logo-link">
@@ -52,8 +52,6 @@
             </div>
           </div>
 
-          <!--NAV MENU-->
-
           <!--SUDO ACESS-->
           <ul class="nav-list" id="sudo-access">
             <li>
@@ -63,10 +61,10 @@
             </li>
           </ul>
 
-          <!--HR Admin ACCESS-->
-          <ul class="nav-list" id="hradmin-access">
-            <li class="current-page">
-              <a href="DashboardAdmin.aspx"
+          <!--HR Admin ACESS-->
+          <ul id="hradminaccess" class="nav-list">
+            <li>
+              <a href="DashboardAdmin"
                 ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
               >
             </li>
@@ -78,20 +76,17 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="SaturdaySched.aspx">Saturday Schedule</a>
+                  <a href="SaturdaySched">Saturday Schedule</a>
                 </li>
                 <li>
-                  <a href="PayrollApproval.aspx">Payroll Approval</a>
+                  <a href="Substitution">Substitute Records</a>
                 </li>
                 <li>
-                  <a href="Substitution.aspx">Substitute Records</a>
+                  <a href="LeaveRecords">Leave Records</a>
                 </li>
+                <li><a href="OvertimeRecords">Overtime Records</a></li>
                 <li>
-                  <a href="LeaveRecords.aspx">Leave Records</a>
-                </li>
-                <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
-                <li>
-                  <a href="UndertimeRecords.aspx">Undertime Records</a>
+                  <a href="UndertimeRecords">Undertime Records</a>
                 </li>
               </ul>
             </li>
@@ -103,30 +98,30 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="ManageEmployees.aspx">Employee Masterlist</a>
+                  <a href="ManageEmployees">Employee Masterlist</a>
                 </li>
                 <li>
-                  <a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a>
+                  <a href="EmployeeLeaveRecords">Employee Leave Records</a>
                 </li>
-                <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
+                <li><a href="TimeRecords">Employee Time Records</a></li>
+                <li><a href="merit">Employee Merits</a></li>
+                <li><a href="contribution">Employee Contributions</a></li>
+                <li><a href="savings">Employee Savings</a></li>
+                <li>
+                  <a href="payrollconsolidation">Admin & Ops Consolidation</a>
+                </li>
+                <li>
+                  <a href="driverconsolidation">Driver Consolidation</a>
+                </li>
               </ul>
             </li>
 
             <li>
-              <a href="#"
-                ><i class="fas fa-bullhorn"></i>Memo/Notice<span
-                  class="fa fa-chevron-down"
-                ></span
-              ></a>
-              <ul class="nav child_menu hidden">
-                <li>
-                  <a href="UnderConstructionAdmin.aspx">Bulk Email</a>
-                </li>
-                <li>
-                  <a href="FileCabinet.aspx">File Cabinet</a>
-                </li>
-              </ul>
+              <a href="FileCabinet"
+                ><i class="fas fa-folder-open"></i>File Cabinet</a
+              >
             </li>
+
             <li>
               <a href="#"
                 ><i class="fas fa-chart-area"></i>Reports<span
@@ -135,12 +130,12 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="GenerateDtrReport.aspx">Generate DTR</a>
+                  <a href="GenerateDtrReport">Generate DTR</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="EmployeeMasterlist.aspx"
+              <a href="EmployeeMasterlist"
                 ><i class="fas fa-download"></i>Import Time Records</a
               >
             </li>
@@ -150,31 +145,32 @@
                   class="fa fa-chevron-down"
                 ></span
               ></a>
-              <ul class="nav child_menu hidden">
+              <ul class="nav child_menu">
                 <li>
-                  <a href="HolidayList.aspx">Holiday Notice</a>
+                  <a href="HolidayList">Holiday Notice</a>
                 </li>
+                <li><a class="hidden" href="backups">Backups</a></li>
               </ul>
             </li>
             <li>
-              <a href="LoginPage.aspx"
+              <a href="LoginPage"
                 ><i class="fas fa-sign-out-alt"></i>Sign Out</a
               >
             </li>
           </ul>
 
           <!--HR Payroll ACESS-->
-          <ul class="nav-list block" id="hrpayroll-access">
+          <ul id="hrpayrollaccess" class="nav-list block">
             <!--<li>
-                  <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
-              </li>-->
+                <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
+            </li>-->
             <li>
-              <a href="PayrollMain.aspx"
+              <a href="PayrollMain"
                 ><i class="fas fa-file-invoice"></i>Payroll</a
               >
             </li>
             <li>
-              <a href="ManageEmployees.aspx"
+              <a href="ManageEmployees"
                 ><i class="fas fa-file-alt"></i>Employee Masterlist</a
               >
             </li>
@@ -186,10 +182,7 @@
               ></a>
               <ul class="nav child_menu">
                 <li>
-                  <a href="GenerateDtrReport.aspx">Generate DTR Report</a>
-                </li>
-                <li>
-                  <a href="payrollreport.aspx">Payroll Report</a>
+                  <a href="GenerateDtrReport">Generate DTR Report</a>
                 </li>
                 <li class="current-page">
                   <a href="payrollperdepartment">Payroll Per Department</a>
@@ -197,28 +190,14 @@
                 <li>
                   <a href="payrollperemployee">Payroll Per Employee</a>
                 </li>
-                <li>
-                  <a href="payrollpayslip.aspx">Payslips</a>
-                </li>
               </ul>
             </li>
             <li>
-              <a href="LoginPage.aspx"
+              <a href="LoginPage"
                 ><i class="fas fa-sign-out-alt"></i>Sign Out</a
               >
             </li>
           </ul>
-
-          <!--OIC ACESS-->
-          <ul class="nav-list" id="oic-access">
-            <li>
-              <a href="index.html"
-                ><i class="fas fa-sign-out-alt"></i>Sign Out</a
-              >
-            </li>
-          </ul>
-
-          <!--NAV MENU END-->
 
           <div class="close-menu">
             <a onclick="toggleMenu()">
@@ -226,6 +205,7 @@
             </a>
           </div>
         </nav>
+        <!--NAV MENU END-->
 
         <!-- Payroll Report Per Department-->
         <section id="payroll-report-per-department" class="content">

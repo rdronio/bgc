@@ -25,12 +25,13 @@
   <body>
     <form id="backups" action="#" autocomplete="off">
       <!-- main -->
-      <div class="main ">
-        <!-- nav -->
+      <div class="main">
+        <!--NAV MENU-->
         <nav id="nav">
           <div class="logo">
             <a href="" class="logo-link">
-              <img src="/Images/BGC LOGO CLARK.jpg" alt="BGC Logo" />
+              <img alt="BGC Logo" />
+              <p>HRIS &amp; Payroll System</p>
             </a>
           </div>
 
@@ -46,15 +47,24 @@
             </div>
             <div class="profile_info">
               <span>Welcome</span>
-              <h2>HR Admin</h2>
+              <h2 id="access-role">HR Admin</h2>
               <p>&nbsp;</p>
             </div>
           </div>
 
-          <!-- / menu -->
-          <ul class="nav-list">
+          <!--SUDO ACESS-->
+          <ul class="nav-list" id="sudo-access">
             <li>
-              <a href="admindashboard.html"
+              <a href="index.html"
+                ><i class="fas fa-sign-out-alt"></i>Sign Out</a
+              >
+            </li>
+          </ul>
+
+          <!--HR Admin ACESS-->
+          <ul id="hradminaccess" class="nav-list block">
+            <li>
+              <a href="DashboardAdmin"
                 ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
               >
             </li>
@@ -66,17 +76,17 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="PayrollApproval.html">Payroll Approval</a>
+                  <a href="SaturdaySched">Saturday Schedule</a>
                 </li>
                 <li>
-                  <a href="Substitution.html">Subtitute Records</a>
+                  <a href="Substitution">Substitute Records</a>
                 </li>
                 <li>
-                  <a href="LeaveRecords.html">Leave Records</a>
+                  <a href="LeaveRecords">Leave Records</a>
                 </li>
-                <li><a href="OvertimeRecords.html">Overtime Records</a></li>
+                <li><a href="OvertimeRecords">Overtime Records</a></li>
                 <li>
-                  <a href="Undertime.html">Undertime Records</a>
+                  <a href="UndertimeRecords">Undertime Records</a>
                 </li>
               </ul>
             </li>
@@ -88,30 +98,30 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="employeemasterlist.html">Employee Masterlist</a>
+                  <a href="ManageEmployees">Employee Masterlist</a>
                 </li>
                 <li>
-                  <a href="adminleaverecords.html">Employee Leave Records</a>
+                  <a href="EmployeeLeaveRecords">Employee Leave Records</a>
                 </li>
-                <li><a href="TimeRecords.html">Employee Time Records</a></li>
+                <li><a href="TimeRecords">Employee Time Records</a></li>
+                <li><a href="merit">Employee Merits</a></li>
+                <li><a href="contribution">Employee Contributions</a></li>
+                <li><a href="savings">Employee Savings</a></li>
+                <li>
+                  <a href="payrollconsolidation">Admin & Ops Consolidation</a>
+                </li>
+                <li>
+                  <a href="driverconsolidation">Driver Consolidation</a>
+                </li>
               </ul>
             </li>
 
             <li>
-              <a href="#"
-                ><i class="fas fa-bullhorn"></i>Memo/Notice<span
-                  class="fa fa-chevron-down"
-                ></span
-              ></a>
-              <ul class="nav child_menu hidden">
-                <li>
-                  <a href="memonotice.html">Bulk Email</a>
-                </li>
-                <li>
-                  <a href="filecabinet.html">File Cabinet</a>
-                </li>
-              </ul>
+              <a href="FileCabinet"
+                ><i class="fas fa-folder-open"></i>File Cabinet</a
+              >
             </li>
+
             <li>
               <a href="#"
                 ><i class="fas fa-chart-area"></i>Reports<span
@@ -120,12 +130,12 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="GenerateDtrReport.html">Generate DTR</a>
+                  <a href="GenerateDtrReport">Generate DTR</a>
                 </li>
               </ul>
             </li>
-            <li class="current-page">
-              <a href="importtimerecords.html"
+            <li>
+              <a href="EmployeeMasterlist"
                 ><i class="fas fa-download"></i>Import Time Records</a
               >
             </li>
@@ -135,14 +145,54 @@
                   class="fa fa-chevron-down"
                 ></span
               ></a>
-              <ul class="nav child_menu hidden">
+              <ul class="nav child_menu">
                 <li>
-                  <a href="holidaynotice.html">Holiday Notice</a>
+                  <a href="HolidayList">Holiday Notice</a>
                 </li>
+                <li class="current-page"><a href="backups">Backups</a></li>
               </ul>
             </li>
             <li>
-              <a href="index.html"
+              <a href="LoginPage"
+                ><i class="fas fa-sign-out-alt"></i>Sign Out</a
+              >
+            </li>
+          </ul>
+
+          <!--HR Payroll ACESS-->
+          <ul id="hrpayrollaccess" class="nav-list">
+            <!--<li>
+                        <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
+                    </li>-->
+            <li>
+              <a href="PayrollMain"
+                ><i class="fas fa-file-invoice"></i>Payroll</a
+              >
+            </li>
+            <li class="current-page">
+              <a href="ManageEmployees"
+                ><i class="fas fa-file-alt"></i>Employee Masterlist</a
+              >
+            </li>
+            <!--<li>
+                        <a href="SendMemo"><i class="far fa-bell"></i>Memo / Notice</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chart-area"></i>Reports<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu hidden">
+                            <li>
+                                <a href="GenerateDtrReport">Generate DTR Report</a>
+                            </li>
+                            <li>
+                                <a href="payrollreport">Payroll Report</a>
+                            </li>
+                            <li>
+                                <a href="payrollpayslip">Payslips</a>
+                            </li>
+                        </ul>
+                    </li>-->
+            <li>
+              <a href="LoginPage"
                 ><i class="fas fa-sign-out-alt"></i>Sign Out</a
               >
             </li>
@@ -154,13 +204,7 @@
             </a>
           </div>
         </nav>
-
-          <div class="close-menu">
-            <a onclick="toggleMenu()">
-              <i class="fas fa-times"></i>
-            </a>
-          </div>
-        </nav>
+        <!--NAV MENU END-->
 
         <!-- Backups -->
         <section id="backups" class="content">
@@ -179,24 +223,26 @@
 
           <div class="container">
             <div id="tab">
-                <ul class="tab-list" onclick="selectTab();">
-                    <li class="current-tab">
-                    <a onclick="showB()">Backups</a>
-                    </li>
-                    <li>
-                    <a onclick="showRB()">Restore Backup</a>
-                    </li>
-                </ul>
+              <ul class="tab-list" onclick="selectTab();">
+                <li class="current-tab">
+                  <a onclick="showB()">Backups</a>
+                </li>
+                <li>
+                  <a onclick="showRB()">Restore Backup</a>
+                </li>
+              </ul>
             </div>
 
-            <div class="card card-1 ">
-                <div>
-                    <a class="btn-xs btn-alt" onclick="confirm('Proceed to Backup Data?');"
-                      >Backup
-                    </a>
-                  </div>
+            <div class="card card-1">
+              <div>
+                <a
+                  class="btn-xs btn-alt"
+                  onclick="confirm('Proceed to Backup Data?');"
+                  >Backup
+                </a>
+              </div>
               <!-- backup records -->
-              <table class="tableLayout ">
+              <table class="tableLayout">
                 <tbody>
                   <tr>
                     <td class="column1">Status</td>
@@ -221,7 +267,12 @@
             </div>
 
             <div class="card card-2 hidden">
-              <label for="restoreBackup" class="label-6 block">Select backup to restore <span class="note">(Note: This will also overwrite any existing data)</span></label>
+              <label for="restoreBackup" class="label-6 block"
+                >Select backup to restore
+                <span class="note"
+                  >(Note: This will also overwrite any existing data)</span
+                ></label
+              >
               <input
                 type="file"
                 name="restoreBackup"
@@ -230,7 +281,7 @@
               />
 
               <a
-                class="btn-sm btn-primary "
+                class="btn-sm btn-primary"
                 id="btnRestoreBackup"
                 onclick="confirm('Proceed to Restore Data?\nNote: \nMake sure you have a backup of the current data before overwriting the current data');"
               >
@@ -243,8 +294,6 @@
                 <h3>Successfully restored!</h3>
               </div>
             </div>
-
-
           </div>
 
           <footer id="footer">
