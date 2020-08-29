@@ -226,7 +226,16 @@
           </div>
 
           <div class="container">
-            <h2>Driver Consolidation</h2>
+            <div id="tab">
+              <ul class="tab-list" onclick="selectTab();">
+                <li class="current-tab">
+                  <a onclick="showDC()">Driver Consolidation</a>
+                </li>
+                <li>
+                  <a onclick="showTU()">Trips Upload</a>
+                </li>
+              </ul>
+            </div>
 
             <div class="card card-1">
               <div>
@@ -345,8 +354,7 @@
                       name="showEmployeeByCategory"
                       id="showEmployeeByCategory"
                       class="select"
-                    >
-                    </select>
+                    ></select>
                   </div>
 
                   <div>
@@ -1584,99 +1592,117 @@
 
               <!-- Driver Conso 2nd Table -->
               <!-- <label class="norecords">No Records Found</label> -->
+            </div>
+
+            <div class="card card-2 hidden">
+              <label for="csvFileInput" class="label-6 block">Upload CSV</label>
+              <input
+                type="file"
+                name="csvFileInput"
+                id="csvFileInput"
+                accept=".csv"
+              />
+
+              <a class="btn-sm btn-primary" id="btnUploadMasterlist" onclick="">
+                Upload
+              </a>
+
+              <!--  driver trips -->
               <table class="tableLayout">
                 <tbody>
                   <tr>
-                    <td class="column0">Action</td>
-                    <td class="column1">Employee Name</td>
-                    <td class="column2">13th month</td>
-                    <!-- <td class="column3">Date Hired</td> -->
-                    <td class="column4">Rate Per Day</td>
-                    <td class="column5">Rate Per Hour</td>
-                    <td class="column6">Days Work</td>
-                    <td class="column7">Basic Pay</td>
-                    <td class="column8">Legal Holidays</td>
-                    <td class="column9">Special Holidays</td>
-                    <td class="column10">Special on Rest Day</td>
-                    <td class="column11">Legal on Rest Day</td>
-                    <td class="column12">Sunday Rate</td>
-                    <td class="column13">Total Holiday</td>
-                    <td class="column14">Ordinary Overtime</td>
-                    <td class="column15">Legal Overtime</td>
-                    <td class="column16">Special/Rest Day Overtime</td>
-                    <td class="column17">Regular NSD</td>
-                    <td class="column18">Holiday NSD</td>
-                    <td class="column19">Total OT</td>
-                    <td class="column20">Additional Days Of Work</td>
-                    <td class="column21">Absences/ Undertime</td>
-                    <td class="column22">Allowance/ Retro Pay</td>
-                    <td class="column23">Gross Pay</td>
-                    <td class="column24">SSS-EE</td>
-                    <td class="column24">PHIC-EE</td>
-                    <td class="column25">HDMF-EE</td>
-                    <td class="column25">SSS Loan</td>
-                    <td class="column27">Others</td>
-                    <td class="column28">SBWS</td>
-                    <td class="column30">Total Deductions</td>
-                    <td class="column31">Net Pay</td>
-                    <td class="column32">SSS-ER</td>
-                    <td class="column33">PHIC-ER</td>
-                    <td class="column34">HDMF-ER</td>
-                    <td class="column35">Total SSS</td>
-                    <td class="column36">Total PHIC</td>
-                    <td class="column37">Total HDMF</td>
-                    <td class="column38">ATM</td>
-                    <td class="column39">Cash</td>
+                    <td class="column1">BIO Number</td>
+                    <td class="column2">Employee Number</td>
+                    <td class="column3">Department</td>
+                    <td class="column4">Position</td>
+                    <td class="column5">Employment Status</td>
+                    <td class="column6">Account Number</td>
+                    <td class="column7">Last Name</td>
+                    <td class="column8">Given Name</td>
+                    <td class="column9">Middle Name</td>
+                    <td class="column10">Birthdate</td>
+                    <td class="column11">Civil Status</td>
+                    <td class="column12">Contact No.</td>
+                    <td class="column13">Date Hired</td>
+                    <td class="column14">SSS Number</td>
+                    <td class="column15">Philhealth Number</td>
+                    <td class="column16">Pag Ibig Number</td>
+                    <td class="column17">Tin</td>
+                    <td class="column18">Street</td>
+                    <td class="column19">Province</td>
+                    <td class="column20">City</td>
+                    <td class="column21">Barangay</td>
+                    <td class="column22">Emergency Contact</td>
+                    <td class="column23">Daily Rate</td>
+                    <td class="column24">Basic Salary</td>
+                    <td class="column25">Merits</td>
+                    <td class="column26">SSS</td>
+                    <td class="column27">Philhealth</td>
+                    <td class="column28">Pagibig</td>
+                    <td class="column29">Savings</td>
+                    <td class="column30">Month/Year</td>
+                    <td class="column31">Emergency Contact</td>
+                    <td class="column32">Emergency No.</td>
+                    <td class="column33">Remarks</td>
                   </tr>
                   <tr>
-                    <td class="column0">
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModalEditConsolidation2();"
-                        >Edit</a
-                      >
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="column1"></td>
+                    <td class="column2"></td>
+                    <td class="column3"></td>
+                    <td class="column4"></td>
+                    <td class="column5"></td>
+                    <td class="column6"></td>
+                    <td class="column7"></td>
+                    <td class="column8"></td>
+                    <td class="column9"></td>
+                    <td class="column10"></td>
+                    <td class="column11"></td>
+                    <td class="column12"></td>
+                    <td class="column13"></td>
+                    <td class="column14"></td>
+                    <td class="column15"></td>
+                    <td class="column16"></td>
+                    <td class="column17"></td>
+                    <td class="column18"></td>
+                    <td class="column19"></td>
+                    <td class="column20"></td>
+                    <td class="column21"></td>
+                    <td class="column22"></td>
+                    <td class="column23"></td>
+                    <td class="column24"></td>
+                    <td class="column25"></td>
+                    <td class="column26"></td>
+                    <td class="column27"></td>
+                    <td class="column28"></td>
+                    <td class="column29"></td>
+                    <td class="column30"></td>
+                    <td class="column31"></td>
+                    <td class="column32"></td>
+                    <td class="column33"></td>
                   </tr>
                 </tbody>
               </table>
+
+              <div class="success">
+                <i class="far fa-check-circle"></i>
+                <h3>Successfully saved!</h3>
+              </div>
+
+              <div class="btn-container">
+                <button
+                  href=""
+                  class="btn-sm btn-primary mx-3"
+                  id="btnSaveMasterlist"
+                >
+                  Save
+                </button>
+                <button
+                  class="btn-sm btn-secondary mx-3"
+                  id="btnClearMasterlist"
+                >
+                  Clear
+                </button>
+              </div>
             </div>
           </div>
 
@@ -1707,12 +1733,12 @@
                   <option value="1">January 1 - January 15</option>
                   <option value="2">January 16 - January 30</option>
                   <option value="3">February 1 - February 15</option>
-                  <option id="optNotLeap" value="4"
-                    >February 16 - February 28</option
-                  >
-                  <option id="optLeap" value="4"
-                    >February 16 - February 29</option
-                  >
+                  <option id="optNotLeap" value="4">
+                    February 16 - February 28
+                  </option>
+                  <option id="optLeap" value="4">
+                    February 16 - February 29
+                  </option>
                   <option value="5">March 1 - March 15</option>
                   <option value="6">March 16 - March 30</option>
                   <option value="7">April 1 - April 15</option>
@@ -1816,9 +1842,7 @@
               <div>
                 <div>
                   <label class="label-6" for="empName">Employee Name</label>
-                  <p name="empName" id="empName">
-                    John Doe
-                  </p>
+                  <p name="empName" id="empName">John Doe</p>
                   <label for="txtLegalHoliday" class="label-6"
                     >Legal Holiday</label
                   >
@@ -1879,9 +1903,7 @@
                 </div>
                 <div>
                   <label class="label-6"> &nbsp;</label>
-                  <p>
-                    &nbsp;
-                  </p>
+                  <p>&nbsp;</p>
                   <label for="txtAbsencesUndertime" class="label-6"
                     >Absences/Undertime
                   </label>

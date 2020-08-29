@@ -2176,7 +2176,7 @@ function toggleSearchFilter() {
 
 function toggleSearchFilter2() {
   try {
-    const container = document.querySelector('.sr-f-2');
+    const container = document.querySelector('.search-filter-container2');
     const showSearchOptions = document.querySelector('.showSearchOptions2 svg');
 
     container.classList.toggle('hidden');
@@ -2185,6 +2185,18 @@ function toggleSearchFilter2() {
     console.log(e);
   }
 }
+
+// function toggleSearchFilter2() {
+//   try {
+//     const container = document.querySelector('.sr-f-2');
+//     const showSearchOptions = document.querySelector('.showSearchOptions2 svg');
+
+//     container.classList.toggle('hidden');
+//     showSearchOptions.classList.toggle('rotate');
+//   } catch (e) {
+//     console.log(e);
+//   }
+// }
 
 function toggleSearchRecFilter(btnID) {
   try {
@@ -2654,6 +2666,66 @@ function checkLeapYear() {
     } else {
       optNotLeap.style.display = 'block';
     }
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function showAOC() {
+  try {
+    const card1 = document.querySelector(
+      '#payroll-consolidation .container .card-1'
+    );
+    const card2 = document.querySelector(
+      '#payroll-consolidation .container .card-2'
+    );
+    const card3 = document.querySelector(
+      '#payroll-consolidation .container .card-3'
+    );
+
+    card1.classList.remove('hidden');
+    card2.classList.add('hidden');
+    card3.classList.add('hidden');
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function showDC() {
+  try {
+    const card1 = document.querySelector(
+      '#payroll-consolidation .container .card-1'
+    );
+    const card2 = document.querySelector(
+      '#payroll-consolidation .container .card-2'
+    );
+    const card3 = document.querySelector(
+      '#payroll-consolidation .container .card-3'
+    );
+
+    card1.classList.add('hidden');
+    card2.classList.remove('hidden');
+    card3.classList.add('hidden');
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function showTU() {
+  try {
+    const card1 = document.querySelector(
+      '#payroll-consolidation .container .card-1'
+    );
+    const card2 = document.querySelector(
+      '#payroll-consolidation .container .card-2'
+    );
+    const card3 = document.querySelector(
+      '#payroll-consolidation .container .card-3'
+    );
+
+    card1.classList.add('hidden');
+    card2.classList.add('hidden');
+    card3.classList.remove('hidden');
   } catch (e) {
     console.log(e);
   }

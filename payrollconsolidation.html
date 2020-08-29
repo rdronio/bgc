@@ -226,7 +226,20 @@
           </div>
 
           <div class="container">
-            <h2>Admin & Ops Consolidation</h2>
+            <!-- <h2>Admin & Ops Consolidation</h2> -->
+            <div id="tab">
+              <ul class="tab-list" onclick="selectTab();">
+                <li class="current-tab">
+                  <a onclick="showAOC()">Admin & Ops Consolidation</a>
+                </li>
+                <li>
+                  <a onclick="showDC()">Driver Consolidation</a>
+                </li>
+                <li>
+                  <a onclick="showTU()">Trips Upload</a>
+                </li>
+              </ul>
+            </div>
 
             <div class="card card-1">
               <div>
@@ -345,8 +358,7 @@
                       name="showEmployeeByCategory"
                       id="showEmployeeByCategory"
                       class="select"
-                    >
-                    </select>
+                    ></select>
                   </div>
 
                   <div>
@@ -397,8 +409,8 @@
               </div>
 
               <div class="my-3">
-                <label class="label-6">Payroll Period</label>
-                <h3 id="txtUpcomingSat">June 26, 2020 - July 10, 2020</h3>
+                <label class="label-6">Admin Payroll Period</label>
+                <h3 id="txtUpcomingSat11">July 01, 2020 - July 15, 2020</h3>
               </div>
 
               <!-- Payroll Records 1st Table -->
@@ -408,1174 +420,79 @@
                   <table class="sticky-table">
                     <tbody>
                       <tr>
-                        <td class="column0 zui-sticky-col">Action</td>
-                        <td class="column1 zui-sticky-col2">Employee Name</td>
-                        <td class="column2">13th month</td>
-                        <!-- <td class="column3">Date Hired</td> -->
-                        <td class="column4">Rate Per Day</td>
-                        <td class="column5">Rate Per Hour</td>
-                        <td class="column6">Days Work</td>
-                        <td class="column7">Basic Pay</td>
-                        <td class="column8">Legal Holidays</td>
-                        <td class="column9">Special Holidays</td>
-                        <td class="column10">Special on Rest Day</td>
-                        <td class="column11">Legal on Rest Day</td>
-                        <td class="column12">Sunday Rate</td>
-                        <td class="column13">Total Holiday</td>
-                        <td class="column14">Ordinary Overtime</td>
-                        <td class="column15">Legal Overtime</td>
-                        <td class="column16">Special/Rest Day Overtime</td>
-                        <td class="column17">Regular NSD</td>
-                        <td class="column18">Holiday NSD</td>
-                        <td class="column19">Total OT</td>
-                        <td class="column20">Additional Days Of Work</td>
-                        <td class="column21">Absences/ Undertime</td>
-                        <td class="column22">Allowance/ Retro Pay</td>
-                        <td class="column23">Gross Pay</td>
-                        <td class="column24">SSS Loan</td>
-                        <td class="column25">HDMF Loan</td>
-                        <td class="column26">Cash Bond</td>
-                        <td class="column27">Others</td>
-                        <td class="column28">SBWS</td>
-                        <td class="column29">MP2</td>
-                        <td class="column30">Total Deductions</td>
-                        <td class="column31">Net Pay</td>
-                        <td class="column32">ATM</td>
-                        <td class="column33">Cash</td>
+                        <td>Action</td>
+                        <td>Employee Name</td>
+                        <td>No. of days</td>
+                        <td>13th month</td>
+                        <td>Date Hired</td>
+                        <td>Rate Per Day</td>
+                        <td>Rate Per Hour</td>
+                        <td class="bg-green">Basic Pay</td>
+                        <td>Legal Holiday</td>
+                        <td>Special Holiday</td>
+                        <td>Special on Rest Day Holiday</td>
+                        <td>Legal Rest Day Holiday</td>
+                        <td>Sunday Rate</td>
+                        <td>Ordinary Overtime</td>
+                        <td>Legal Overtime</td>
+                        <td>Special/Rest Day Overtime</td>
+                        <td>Regular NSD</td>
+                        <td>Holiday NSD</td>
+                        <td>Absences/ Undertime</td>
+                        <td>Allowance/ Retro Pay</td>
+                        <td class="bg-green">Gross Pay</td>
+                        <td>SSS Loan</td>
+                        <td>HDMF Loan</td>
+                        <!-- <td>Cash Bond</td> -->
+                        <td>Others</td>
+                        <td>SBWS</td>
+                        <!-- <td>MP2</td> -->
+                        <!-- <td>SSS-EE</td>
+                        <td>PHIC-EE</td>
+                        <td>HDMF-EE</td>
+                        <td>SSS-ER</td>
+                        <td>PHIC-ER</td>
+                        <td>HDMF-ER</td> -->
+                        <td>Net Pay</td>
+                        <td>ATM</td>
+                        <td>Cash</td>
                       </tr>
                       <tr>
-                        <td class="column0 zui-sticky-col">
+                        <td>
                           <a
                             class="btn-table btn-secondary"
                             onclick="openModalEditConsolidation();"
                             >Edit</a
                           >
                         </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
-                      </tr>
-                      <tr>
-                        <td class="column0 zui-sticky-col">
-                          <a
-                            class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td class="column1 zui-sticky-col2">John Doe 2</td>
-                        <td class="column2">604.17</td>
-                        <!-- <td class="column3">07/29/2020</td> -->
-                        <td class="column4">557.69</td>
-                        <td class="column5">69.71</td>
-                        <td class="column6">12.00</td>
-                        <td class="column7">7250.00</td>
-                        <td class="column8">557.69</td>
-                        <td class="column9">167.31</td>
-                        <td class="column10">0.00</td>
-                        <td class="column11">1450.00</td>
-                        <td class="column12">725.00</td>
-                        <td class="column13">2900.00</td>
-                        <td class="column14">87.14</td>
-                        <td class="column15">181.25</td>
-                        <td class="column16">153.16</td>
-                        <td class="column17">94.11</td>
-                        <td class="column18">104.57</td>
-                        <td class="column19">620.22</td>
-                        <td class="column20">(2230.77)</td>
-                        <td class="column21">0.00</td>
-                        <td class="column22">0.00</td>
-                        <td class="column23">12059.00</td>
-                        <td class="column24">1764.64</td>
-                        <td class="column25">1130.00</td>
-                        <td class="column26">400</td>
-                        <td class="column27">0.00</td>
-                        <td class="column28">1000.00</td>
-                        <td class="column29">0.00</td>
-                        <td class="column30">4006.64</td>
-                        <td class="column31">8053.04</td>
-                        <td class="column32">8053.04</td>
-                        <td class="column33"></td>
+                        <td>John Doe 2</td>
+                        <td>13</td>
+                        <td>604.17</td>
+                        <!-- <td>07/29/2020</td> -->
+                        <td>557.69</td>
+                        <td>69.71</td>
+                        <td>12.00</td>
+                        <td>7250.00</td>
+                        <td>557.69</td>
+                        <td>167.31</td>
+                        <td>0.00</td>
+                        <td>1450.00</td>
+                        <td>725.00</td>
+                        <td>2900.00</td>
+                        <td>87.14</td>
+                        <td>181.25</td>
+                        <td>153.16</td>
+                        <td>94.11</td>
+                        <td>104.57</td>
+                        <td>620.22</td>
+                        <td>(2230.77)</td>
+                        <td>0.00</td>
+                        <td>1000.00</td>
+                        <td>0.00</td>
+                        <td>4006.64</td>
+                        <td>8053.04</td>
+                        <td>8053.04</td>
+                        <td></td>
                       </tr>
                     </tbody>
                   </table>
@@ -1584,99 +501,781 @@
 
               <!-- Payroll Records 2nd Table -->
               <!-- <label class="norecords">No Records Found</label> -->
+              <div class="hidden">
+                <div class="sticky-table-container">
+                  <table class="sticky-table">
+                    <tbody>
+                      <tr>
+                        <td>Action</td>
+                        <td>Employee Name</td>
+                        <td>No. of days</td>
+                        <td>13th month</td>
+                        <td>Date Hired</td>
+                        <td>Rate Per Day</td>
+                        <td>Rate Per Hour</td>
+                        <td class="bg-green">Basic Pay</td>
+                        <td>Legal Holiday</td>
+                        <td>Special Holiday</td>
+                        <td>Special on Rest Day Holiday</td>
+                        <td>Legal Rest Day Holiday</td>
+                        <td>Sunday Rate</td>
+                        <td>Ordinary Overtime</td>
+                        <td>Legal Overtime</td>
+                        <td>Special/Rest Day Overtime</td>
+                        <td>Regular NSD</td>
+                        <td>Holiday NSD</td>
+                        <td>Absences/ Undertime</td>
+                        <td>Allowance/ Retro Pay</td>
+                        <td class="bg-green">Gross Pay</td>
+                        <td>SSS Loan</td>
+                        <td>HDMF Loan</td>
+                        <!-- <td>Cash Bond</td> -->
+                        <td>Others</td>
+                        <td>SBWS</td>
+                        <!-- <td>MP2</td> -->
+                        <td>SSS-EE</td>
+                        <td>PHIC-EE</td>
+                        <td>HDMF-EE</td>
+                        <td>SSS-ER</td>
+                        <td>PHIC-ER</td>
+                        <td>HDMF-ER</td>
+                        <td>Net Pay</td>
+                        <td>ATM</td>
+                        <td>Cash</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a
+                            class="btn-table btn-secondary"
+                            onclick="openModalEditConsolidation2();"
+                            >Edit</a
+                          >
+                        </td>
+                        <td>John Doe 2</td>
+                        <td>13</td>
+                        <td>604.17</td>
+                        <!-- <td>07/29/2020</td> -->
+                        <td>557.69</td>
+                        <td>69.71</td>
+                        <td>12.00</td>
+                        <td>7250.00</td>
+                        <td>557.69</td>
+                        <td>167.31</td>
+                        <td>0.00</td>
+                        <td>1450.00</td>
+                        <td>725.00</td>
+                        <td>2900.00</td>
+                        <td>87.14</td>
+                        <td>181.25</td>
+                        <td>153.16</td>
+                        <td>94.11</td>
+                        <td>104.57</td>
+                        <td>620.22</td>
+                        <td>(2230.77)</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>12059.00</td>
+                        <td>1764.64</td>
+                        <td>1130.00</td>
+                        <td>400</td>
+                        <td>0.00</td>
+                        <td>1000.00</td>
+                        <td>0.00</td>
+                        <td>4006.64</td>
+                        <td>8053.04</td>
+                        <td>8053.04</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="my-3">
+                <label class="label-6">Ops Payroll Period</label>
+                <h3 id="txtUpcomingSat12">June 26, 2020 - July 10, 2020</h3>
+              </div>
+
+              <!-- Payroll Records 1st Table -->
+              <!-- <label class="norecords">No Records Found</label> -->
+              <div>
+                <div class="sticky-table-container">
+                  <table class="sticky-table">
+                    <tbody>
+                      <tr>
+                        <td>Action</td>
+                        <td>Employee Name</td>
+                        <td>No. of days</td>
+                        <td>13th month</td>
+                        <td>Date Hired</td>
+                        <td>Rate Per Day</td>
+                        <td>Rate Per Hour</td>
+                        <td class="bg-green">Basic Pay</td>
+                        <td>Legal Holiday</td>
+                        <td>Special Holiday</td>
+                        <td>Special on Rest Day Holiday</td>
+                        <td>Legal Rest Day Holiday</td>
+                        <td>Sunday Rate</td>
+                        <td>Ordinary Overtime</td>
+                        <td>Legal Overtime</td>
+                        <td>Special/Rest Day Overtime</td>
+                        <td>Regular NSD</td>
+                        <td>Holiday NSD</td>
+                        <td>Absences/ Undertime</td>
+                        <td>Allowance/ Retro Pay</td>
+                        <td class="bg-green">Gross Pay</td>
+                        <td>SSS Loan</td>
+                        <td>HDMF Loan</td>
+                        <!-- <td>Cash Bond</td> -->
+                        <td>Others</td>
+                        <td>SBWS</td>
+                        <!-- <td>MP2</td> -->
+                        <!-- <td>SSS-EE</td>
+                        <td>PHIC-EE</td>
+                        <td>HDMF-EE</td>
+                        <td>SSS-ER</td>
+                        <td>PHIC-ER</td>
+                        <td>HDMF-ER</td> -->
+                        <td>Net Pay</td>
+                        <td>ATM</td>
+                        <td>Cash</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a
+                            class="btn-table btn-secondary"
+                            onclick="openModalEditConsolidation();"
+                            >Edit</a
+                          >
+                        </td>
+                        <td>John Doe 2</td>
+                        <td>13</td>
+                        <td>604.17</td>
+                        <!-- <td>07/29/2020</td> -->
+                        <td>557.69</td>
+                        <td>69.71</td>
+                        <td>12.00</td>
+                        <td>7250.00</td>
+                        <td>557.69</td>
+                        <td>167.31</td>
+                        <td>0.00</td>
+                        <td>1450.00</td>
+                        <td>725.00</td>
+                        <td>2900.00</td>
+                        <td>87.14</td>
+                        <td>181.25</td>
+                        <td>153.16</td>
+                        <td>94.11</td>
+                        <td>104.57</td>
+                        <td>620.22</td>
+                        <td>(2230.77)</td>
+                        <td>0.00</td>
+                        <td>1000.00</td>
+                        <td>0.00</td>
+                        <td>4006.64</td>
+                        <td>8053.04</td>
+                        <td>8053.04</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Payroll Records 2nd Table -->
+              <!-- <label class="norecords">No Records Found</label> -->
+              <div class="hidden">
+                <div class="sticky-table-container">
+                  <table class="sticky-table">
+                    <tbody>
+                      <tr>
+                        <td>Action</td>
+                        <td>Employee Name</td>
+                        <td>No. of days</td>
+                        <td>13th month</td>
+                        <td>Date Hired</td>
+                        <td>Rate Per Day</td>
+                        <td>Rate Per Hour</td>
+                        <td class="bg-green">Basic Pay</td>
+                        <td>Legal Holiday</td>
+                        <td>Special Holiday</td>
+                        <td>Special on Rest Day Holiday</td>
+                        <td>Legal Rest Day Holiday</td>
+                        <td>Sunday Rate</td>
+                        <td>Ordinary Overtime</td>
+                        <td>Legal Overtime</td>
+                        <td>Special/Rest Day Overtime</td>
+                        <td>Regular NSD</td>
+                        <td>Holiday NSD</td>
+                        <td>Absences/ Undertime</td>
+                        <td>Allowance/ Retro Pay</td>
+                        <td class="bg-green">Gross Pay</td>
+                        <td>SSS Loan</td>
+                        <td>HDMF Loan</td>
+                        <!-- <td>Cash Bond</td> -->
+                        <td>Others</td>
+                        <td>SBWS</td>
+                        <!-- <td>MP2</td> -->
+                        <td>SSS-EE</td>
+                        <td>PHIC-EE</td>
+                        <td>HDMF-EE</td>
+                        <td>SSS-ER</td>
+                        <td>PHIC-ER</td>
+                        <td>HDMF-ER</td>
+                        <td>Net Pay</td>
+                        <td>ATM</td>
+                        <td>Cash</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a
+                            class="btn-table btn-secondary"
+                            onclick="openModalEditConsolidation2();"
+                            >Edit</a
+                          >
+                        </td>
+                        <td>John Doe 2</td>
+                        <td>13</td>
+                        <td>604.17</td>
+                        <!-- <td>07/29/2020</td> -->
+                        <td>557.69</td>
+                        <td>69.71</td>
+                        <td>12.00</td>
+                        <td>7250.00</td>
+                        <td>557.69</td>
+                        <td>167.31</td>
+                        <td>0.00</td>
+                        <td>1450.00</td>
+                        <td>725.00</td>
+                        <td>2900.00</td>
+                        <td>87.14</td>
+                        <td>181.25</td>
+                        <td>153.16</td>
+                        <td>94.11</td>
+                        <td>104.57</td>
+                        <td>620.22</td>
+                        <td>(2230.77)</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>12059.00</td>
+                        <td>1764.64</td>
+                        <td>1130.00</td>
+                        <td>400</td>
+                        <td>0.00</td>
+                        <td>1000.00</td>
+                        <td>0.00</td>
+                        <td>4006.64</td>
+                        <td>8053.04</td>
+                        <td>8053.04</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-2 hidden">
+              <div>
+                <a class="btn-xs btn-alt" onclick="openModalConsolidation();"
+                  >Generate Consolidation
+                </a>
+                <a class="btn-xs btn-alt">Download </a>
+              </div>
+
+              <div class="search-main-container">
+                <div class="search-container2">
+                  <button class="btn-search tooltip" aria-label="Search Mail">
+                    <span class="tooltiptext">Search</span>
+                    <svg
+                      focusable="false"
+                      height="24px"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20.49,19l-5.73-5.73C15.53,12.2,16,10.91,16,9.5C16,5.91,13.09,3,9.5,3S3,5.91,3,9.5C3,13.09,5.91,16,9.5,16 c1.41,0,2.7-0.47,3.77-1.24L19,20.49L20.49,19z M5,9.5C5,7.01,7.01,5,9.5,5S14,7.01,14,9.5S11.99,14,9.5,14S5,11.99,5,9.5z"
+                      ></path>
+                      <path d="M0,0h24v24H0V0z" fill="none"></path>
+                    </svg>
+                  </button>
+                  <div>
+                    <input
+                      id="txtSearch2"
+                      class="txtSearch"
+                      type="text"
+                      list="txtSearch"
+                      placeholder="Search Employee"
+                      onkeypress="checkSearchInput();"
+                      onchange="checkSearchInput();"
+                    />
+                    <ul class="datalist-data hidden">
+                      <li>
+                        <div><i class="fas fa-search"></i></div>
+                        <div>
+                          <span>John Doe</span>
+                        </div>
+                        <div></div>
+                      </li>
+                      <li class="selected-datalist">
+                        <div><i class="fas fa-search"></i></div>
+                        <div><span>John Doe1</span></div>
+                        <div></div>
+                      </li>
+                      <li>
+                        <div><i class="fas fa-search"></i></div>
+                        <div><span>John Doe2</span></div>
+                        <div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <a
+                    aria-label="Clear search"
+                    type="button"
+                    data-tooltip="Clear search"
+                    onclick="clearSearch(`substitution`);"
+                    class="btn-clear-search tooltip hidden"
+                  >
+                    <span class="tooltiptext">Clear search</span>
+                    <svg
+                      focusable="false"
+                      height="24px"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                      ></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </a>
+                  <a
+                    type="button"
+                    data-tooltip="Search options"
+                    aria-label="Search options"
+                    class="showSearchOptions2 tooltip"
+                    onclick="toggleSearchFilter2();"
+                  >
+                    <span class="tooltiptext">Search options</span>
+                    <svg
+                      focusable="false"
+                      height="24px"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class=""
+                    >
+                      <path d="M7 10l5 5 5-5z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </a>
+                </div>
+                <div class="search-filter-container2 hidden">
+                  <div class="showEmployeeBy">
+                    <label for="showEmployeeBy" class="label-6 block"
+                      >Show Employee by</label
+                    >
+
+                    <select
+                      name="showEmployeeBy"
+                      id="showEmployeeBy2"
+                      class="select"
+                      onchange="getEmployeeBy()"
+                    >
+                      <option value="">--Please choose an option--</option>
+                      <option value="department">Department</option>
+                      <option value="position">Position</option>
+                    </select>
+                    <select
+                      name="showEmployeeByCategory"
+                      id="showEmployeeByCategory2"
+                      class="select"
+                    ></select>
+                  </div>
+
+                  <div>
+                    <label for="selectEmploymentStatus" class="label-6 block"
+                      >Employment Status</label
+                    >
+
+                    <select
+                      name="selectEmploymentStatus"
+                      id="selectEmploymentStatus2"
+                      class="select"
+                    >
+                      <option value="">--Please choose an option--</option>
+                      <option value="probationary">Probationary</option>
+                      <option value="regular">Regular</option>
+                      <option value="resigned">Resigned</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label for="selectEmploymentStatus" class="label-6 block"
+                      >Gender</label
+                    >
+                    <select
+                      name="showEmployeeByCategory"
+                      id="showEmployeeByCategory2"
+                      class="select"
+                    >
+                      <option value="">--Please choose an option--</option>
+                      <option value="department">Male</option>
+                      <option value="position">Female</option>
+                    </select>
+                  </div>
+
+                  <div class="btn-filter-container">
+                    <a class="btn-sm btn-primary" id="btnSearchPayroll2">
+                      Search
+                    </a>
+
+                    <a
+                      class="btn-sm btn-secondary hidden"
+                      id="btnClearMemoNotice2"
+                    >
+                      Clear
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="my-3">
+                <label class="label-6">Payroll Period</label>
+                <h3 id="txtUpcomingSat21">July 01, 2020 - July 15, 2020</h3>
+              </div>
+
+              <!-- Driver 1st Table -->
+              <!-- <label class="norecords">No Records Found</label> -->
+              <div>
+                <div class="sticky-table-container">
+                  <table class="sticky-table">
+                    <tbody>
+                      <tr>
+                        <td>Action</td>
+                        <td>Employee Name</td>
+                        <td>Mixer</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>Total (Trip 160)</td>
+                        <td>Total (Trip 100)</td>
+                        <td>Total Trip</td>
+                        <td>Rate 160</td>
+                        <td>Rate 100</td>
+                        <td>Total Amount</td>
+                        <td>OT 100</td>
+                        <td>OT 50</td>
+                        <td>Total Amount</td>
+                        <td>No. of days</td>
+                        <td>13th month</td>
+                        <td>Date Hired</td>
+                        <td>Rate Per Day</td>
+                        <td>Rate Per Hour</td>
+                        <td class="bg-green">Basic Pay</td>
+                        <td>Legal Holiday</td>
+                        <td>Special Holiday</td>
+                        <td>Special on Rest Day Holiday</td>
+                        <td>Legal Rest Day Holiday</td>
+                        <td>Sunday Rate</td>
+                        <td>Ordinary Overtime</td>
+                        <td>Legal Overtime</td>
+                        <td>Special/Rest Day Overtime</td>
+                        <td>Regular NSD</td>
+                        <td>Holiday NSD</td>
+                        <td>Absences/ Undertime</td>
+                        <td>Allowance/ Retro Pay</td>
+                        <td class="bg-green">Gross Pay</td>
+                        <td>SSS Loan</td>
+                        <td>HDMF Loan</td>
+                        <!-- <td>Cash Bond</td> -->
+                        <td>Others</td>
+                        <td>SBWS</td>
+                        <!-- <td>MP2</td> -->
+                        <!-- <td>SSS-EE</td>
+                        <td>PHIC-EE</td>
+                        <td>HDMF-EE</td>
+                        <td>SSS-ER</td>
+                        <td>PHIC-ER</td>
+                        <td>HDMF-ER</td> -->
+                        <td>Net Pay</td>
+                        <td>ATM</td>
+                        <td>Cash</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a
+                            class="btn-table btn-secondary"
+                            onclick="openModalEditConsolidation();"
+                            >Edit</a
+                          >
+                        </td>
+                        <td>John Doe 2</td>
+                        <td>Big</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>13</td>
+                        <td>604.17</td>
+                        <!-- <td>07/29/2020</td> -->
+                        <td>557.69</td>
+                        <td>69.71</td>
+                        <td>12.00</td>
+                        <td>7250.00</td>
+                        <td>557.69</td>
+                        <td>167.31</td>
+                        <td>0.00</td>
+                        <td>1450.00</td>
+                        <td>725.00</td>
+                        <td>2900.00</td>
+                        <td>87.14</td>
+                        <td>181.25</td>
+                        <td>153.16</td>
+                        <td>94.11</td>
+                        <td>104.57</td>
+                        <td>620.22</td>
+                        <td>(2230.77)</td>
+                        <td>0.00</td>
+                        <td>1000.00</td>
+                        <td>0.00</td>
+                        <td>4006.64</td>
+                        <td>8053.04</td>
+                        <td>8053.04</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Driver 2nd Table -->
+              <!-- <label class="norecords">No Records Found</label> -->
+              <div class="hidden">
+                <div class="sticky-table-container">
+                  <table class="sticky-table">
+                    <tbody>
+                      <tr>
+                        <td>Action</td>
+                        <td>Employee Name</td>
+                        <td>Mixer</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>Total (Trip 160)</td>
+                        <td>Total (Trip 100)</td>
+                        <td>Total Trip</td>
+                        <td>Rate 160</td>
+                        <td>Rate 100</td>
+                        <td>Total Amount</td>
+                        <td>OT 100</td>
+                        <td>OT 50</td>
+                        <td>Total Amount</td>
+                        <td>No. of days</td>
+                        <td>13th month</td>
+                        <td>Date Hired</td>
+                        <td>Rate Per Day</td>
+                        <td>Rate Per Hour</td>
+                        <td class="bg-green">Basic Pay</td>
+                        <td>Legal Holiday</td>
+                        <td>Special Holiday</td>
+                        <td>Special on Rest Day Holiday</td>
+                        <td>Legal Rest Day Holiday</td>
+                        <td>Sunday Rate</td>
+                        <td>Ordinary Overtime</td>
+                        <td>Legal Overtime</td>
+                        <td>Special/Rest Day Overtime</td>
+                        <td>Regular NSD</td>
+                        <td>Holiday NSD</td>
+                        <td>Absences/ Undertime</td>
+                        <td>Allowance/ Retro Pay</td>
+                        <td class="bg-green">Gross Pay</td>
+                        <td>SSS Loan</td>
+                        <td>HDMF Loan</td>
+                        <!-- <td>Cash Bond</td> -->
+                        <td>Others</td>
+                        <td>SBWS</td>
+                        <!-- <td>MP2</td> -->
+                        <td>SSS-EE</td>
+                        <td>PHIC-EE</td>
+                        <td>HDMF-EE</td>
+                        <td>SSS-ER</td>
+                        <td>PHIC-ER</td>
+                        <td>HDMF-ER</td>
+                        <td>Net Pay</td>
+                        <td>ATM</td>
+                        <td>Cash</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a
+                            class="btn-table btn-secondary"
+                            onclick="openModalEditConsolidation2();"
+                            >Edit</a
+                          >
+                        </td>
+                        <td>John Doe 2</td>
+                        <td>Big</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>13</td>
+                        <td>604.17</td>
+                        <!-- <td>07/29/2020</td> -->
+                        <td>557.69</td>
+                        <td>69.71</td>
+                        <td>12.00</td>
+                        <td>7250.00</td>
+                        <td>557.69</td>
+                        <td>167.31</td>
+                        <td>0.00</td>
+                        <td>1450.00</td>
+                        <td>725.00</td>
+                        <td>2900.00</td>
+                        <td>87.14</td>
+                        <td>181.25</td>
+                        <td>153.16</td>
+                        <td>94.11</td>
+                        <td>104.57</td>
+                        <td>620.22</td>
+                        <td>(2230.77)</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>12059.00</td>
+                        <td>1764.64</td>
+                        <td>1130.00</td>
+                        <td>400</td>
+                        <td>0.00</td>
+                        <td>1000.00</td>
+                        <td>0.00</td>
+                        <td>4006.64</td>
+                        <td>8053.04</td>
+                        <td>8053.04</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card-3 hidden">
+              <label for="csvFileInput" class="label-6 block">Upload CSV</label>
+              <input
+                type="file"
+                name="csvFileInput"
+                id="csvFileInput"
+                accept=".csv"
+              />
+
+              <a class="btn-sm btn-primary" id="btnUploadTrip" onclick="">
+                Upload
+              </a>
+
+              <!-- driver trips -->
               <table class="tableLayout">
                 <tbody>
                   <tr>
-                    <td class="column0">Action</td>
-                    <td class="column1">Employee Name</td>
-                    <td class="column2">13th month</td>
-                    <!-- <td class="column3">Date Hired</td> -->
-                    <td class="column4">Rate Per Day</td>
-                    <td class="column5">Rate Per Hour</td>
-                    <td class="column6">Days Work</td>
-                    <td class="column7">Basic Pay</td>
-                    <td class="column8">Legal Holidays</td>
-                    <td class="column9">Special Holidays</td>
-                    <td class="column10">Special on Rest Day</td>
-                    <td class="column11">Legal on Rest Day</td>
-                    <td class="column12">Sunday Rate</td>
-                    <td class="column13">Total Holiday</td>
-                    <td class="column14">Ordinary Overtime</td>
-                    <td class="column15">Legal Overtime</td>
-                    <td class="column16">Special/Rest Day Overtime</td>
-                    <td class="column17">Regular NSD</td>
-                    <td class="column18">Holiday NSD</td>
-                    <td class="column19">Total OT</td>
-                    <td class="column20">Additional Days Of Work</td>
-                    <td class="column21">Absences/ Undertime</td>
-                    <td class="column22">Allowance/ Retro Pay</td>
-                    <td class="column23">Gross Pay</td>
-                    <td class="column24">SSS-EE</td>
-                    <td class="column24">PHIC-EE</td>
-                    <td class="column25">HDMF-EE</td>
-                    <td class="column25">SSS Loan</td>
-                    <td class="column27">Others</td>
-                    <td class="column28">SBWS</td>
-                    <td class="column30">Total Deductions</td>
-                    <td class="column31">Net Pay</td>
-                    <td class="column32">SSS-ER</td>
-                    <td class="column33">PHIC-ER</td>
-                    <td class="column34">HDMF-ER</td>
-                    <td class="column35">Total SSS</td>
-                    <td class="column36">Total PHIC</td>
-                    <td class="column37">Total HDMF</td>
-                    <td class="column38">ATM</td>
-                    <td class="column39">Cash</td>
+                    <td>Driver Name</td>
+                    <td>SO Date</td>
+                    <td>Big</td>
+                    <td>Small</td>
+                    <td>Total Trip</td>
                   </tr>
                   <tr>
-                    <td class="column0">
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModalEditConsolidation2();"
-                        >Edit</a
-                      >
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>John Doe</td>
+                    <td>7/23/2020</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>3</td>
                   </tr>
                 </tbody>
               </table>
+
+              <div class="success">
+                <i class="far fa-check-circle"></i>
+                <h3>Successfully saved!</h3>
+              </div>
+
+              <div class="btn-container">
+                <button
+                  href=""
+                  class="btn-sm btn-primary mx-3"
+                  id="btnSaveTrips"
+                >
+                  Save
+                </button>
+                <button class="btn-sm btn-secondary mx-3" id="btnClearTrips">
+                  Clear
+                </button>
+              </div>
             </div>
           </div>
 
@@ -1707,12 +1306,12 @@
                   <option value="1">January 1 - January 15</option>
                   <option value="2">January 16 - January 30</option>
                   <option value="3">February 1 - February 15</option>
-                  <option id="optNotLeap" value="4"
-                    >February 16 - February 28</option
-                  >
-                  <option id="optLeap" value="4"
-                    >February 16 - February 29</option
-                  >
+                  <option id="optNotLeap" value="4">
+                    February 16 - February 28
+                  </option>
+                  <option id="optLeap" value="4">
+                    February 16 - February 29
+                  </option>
                   <option value="5">March 1 - March 15</option>
                   <option value="6">March 16 - March 30</option>
                   <option value="7">April 1 - April 15</option>
@@ -1816,9 +1415,7 @@
               <div>
                 <div>
                   <label class="label-6" for="empName">Employee Name</label>
-                  <p name="empName" id="empName">
-                    John Doe
-                  </p>
+                  <p name="empName" id="empName">John Doe</p>
                   <label for="txtLegalHoliday" class="label-6"
                     >Legal Holiday</label
                   >
@@ -1879,9 +1476,7 @@
                 </div>
                 <div>
                   <label class="label-6"> &nbsp;</label>
-                  <p>
-                    &nbsp;
-                  </p>
+                  <p>&nbsp;</p>
                   <label for="txtAbsencesUndertime" class="label-6"
                     >Absences/Undertime
                   </label>
