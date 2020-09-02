@@ -943,7 +943,7 @@
               </div>
 
               <div class="my-3">
-                <label class="label-6">Payroll Period</label>
+                <label class="label-6">Admin Driver Payroll Period</label>
                 <h3 id="txtUpcomingSat21">July 01, 2020 - July 15, 2020</h3>
               </div>
 
@@ -957,21 +957,21 @@
                         <td>Action</td>
                         <td>Employee Name</td>
                         <td>Mixer</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
                         <td>11</td>
                         <td>12</td>
                         <td>13</td>
                         <td>14</td>
                         <td>15</td>
-                        <td>16</td>
-                        <td>17</td>
-                        <td>18</td>
-                        <td>19</td>
-                        <td>20</td>
-                        <td>21</td>
-                        <td>22</td>
-                        <td>23</td>
-                        <td>24</td>
-                        <td>25</td>
                         <td>Total (Trip 160)</td>
                         <td>Total (Trip 100)</td>
                         <td>Total Trip</td>
@@ -1083,9 +1083,14 @@
                 </div>
               </div>
 
+              <div class="my-3">
+                <label class="label-6">Ops Driver Payroll Period</label>
+                <h3 id="txtUpcomingSat21">July 11, 2020 - July 25, 2020</h3>
+              </div>
+
               <!-- Driver 2nd Table -->
               <!-- <label class="norecords">No Records Found</label> -->
-              <div class="hidden">
+              <div class="">
                 <div class="sticky-table-container">
                   <table class="sticky-table">
                     <tbody>
@@ -1227,7 +1232,9 @@
             </div>
 
             <div class="card card-3 hidden">
-              <label for="csvFileInput" class="label-6 block">Upload CSV</label>
+              <label for="csvFileInput" class="label-6 block"
+                >Upload CSV/Excel</label
+              >
               <input
                 type="file"
                 name="csvFileInput"
@@ -1243,6 +1250,8 @@
               <table class="tableLayout">
                 <tbody>
                   <tr>
+                    <td>Bio Number</td>
+                    <td>Employee Number</td>
                     <td>Driver Name</td>
                     <td>SO Date</td>
                     <td>Big</td>
@@ -1250,6 +1259,8 @@
                     <td>Total Trip</td>
                   </tr>
                   <tr>
+                    <td>63</td>
+                    <td>20200000</td>
                     <td>John Doe</td>
                     <td>7/23/2020</td>
                     <td>3</td>
@@ -1416,6 +1427,14 @@
                 <div>
                   <label class="label-6" for="empName">Employee Name</label>
                   <p name="empName" id="empName">John Doe</p>
+                  <label for="txtNumberOfDays" class="label-6"
+                    >No. of Days</label
+                  >
+                  <input
+                    name="txtNumberOfDays"
+                    type="text"
+                    id="txtNumberOfDays"
+                  />
                   <label for="txtLegalHoliday" class="label-6"
                     >Legal Holiday</label
                   >
@@ -1480,6 +1499,7 @@
                   <label for="txtAbsencesUndertime" class="label-6"
                     >Absences/Undertime
                   </label>
+                  <span class="note">*Please indicate no. of hours</span>
                   <input
                     name="txtAbsencesUndertime"
                     type="text"
@@ -1504,8 +1524,8 @@
                     class="deductions hidden"
                     id="txtHDMFLoan"
                   />
-                  <!-- <label for="txtCashBond" class="label-6">Cash Bond</label>
-                  <input name="txtCashBond" type="text" id="txtCashBond" /> -->
+                  <label for="txtCashBond" class="label-6">Cash Bond</label>
+                  <input name="txtCashBond" type="text" id="txtCashBond" />
                   <label for="txtOthers" class="label-6">Others</label>
                   <input name="txtOthers" type="text" id="txtOthers" />
                   <label for="txtSBWS" class="label-6">SBWS</label>
@@ -1554,9 +1574,20 @@
                     id="txtHdmfEr"
                     class="contri-ER hidden"
                   />
-
+                  <label for="txtNetpay" class="label-6">Net Pay</label>
+                  <input
+                    name="txtNetPay"
+                    type="text"
+                    id="txtNetPay"
+                    disabled="disabled"
+                  />
                   <label for="txtATM" class="label-6">ATM</label>
-                  <input name="txtATM" type="text" id="txtATM" />
+                  <input
+                    name="txtATM"
+                    type="text"
+                    id="txtATM"
+                    disabled="disabled"
+                  />
                   <label for="txtCash" class="label-6">Cash</label>
                   <input name="txtCash" type="text" id="txtCash" />
                 </div>
