@@ -368,6 +368,7 @@
                     <td class="column2">BIO Number</td>
                     <td class="column3">Employee Number</td>
                     <td class="column4">Employee Name</td>
+                    <td class="column5">Role</td>
                     <td class="column5">Department</td>
                     <td class="column6">Position</td>
                     <td class="column7">Employment Status</td>
@@ -390,6 +391,7 @@
                     <td class="column4">
                       John Doe
                     </td>
+                    <td class="column5">Admin</td>
                     <td class="column5">Human Resources</td>
                     <td class="column6">Hr Staff</td>
                     <td class="column7">Regular</td>
@@ -412,6 +414,7 @@
                     <td class="column4">
                       John Doe
                     </td>
+                    <td class="column5">Admin</td>
                     <td class="column5">Human Resources</td>
                     <td class="column6">Hr Staff</td>
                     <td class="column7">Regular</td>
@@ -434,6 +437,7 @@
                     <td class="column4">
                       John Doe
                     </td>
+                    <td class="column5">Admin</td>
                     <td class="column5">Human Resources</td>
                     <td class="column6">Hr Staff</td>
                     <td class="column7">Regular</td>
@@ -456,6 +460,7 @@
                     <td class="column4">
                       John Doe
                     </td>
+                    <td class="column5">Admin</td>
                     <td class="column5">Human Resources</td>
                     <td class="column6">Hr Staff</td>
                     <td class="column7">Regular</td>
@@ -478,6 +483,7 @@
                     <td class="column4">
                       John Doe
                     </td>
+                    <td class="column5">Admin</td>
                     <td class="column5">Human Resources</td>
                     <td class="column6">Hr Staff</td>
                     <td class="column7">Regular</td>
@@ -500,94 +506,7 @@
                     <td class="column4">
                       John Doe
                     </td>
-                    <td class="column5">Human Resources</td>
-                    <td class="column6">Hr Staff</td>
-                    <td class="column7">Regular</td>
-                  </tr>
-                  <tr>
-                    <td class="column1">
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnViewEmployee`);"
-                        >View</a
-                      >
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnUpdateEmployee`);"
-                        >Edit</a
-                      >
-                    </td>
-                    <td class="column2">00</td>
-                    <td class="column3">0000-0000</td>
-                    <td class="column4">
-                      John Doe
-                    </td>
-                    <td class="column5">Human Resources</td>
-                    <td class="column6">Hr Staff</td>
-                    <td class="column7">Regular</td>
-                  </tr>
-                  <tr>
-                    <td class="column1">
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnViewEmployee`);"
-                        >View</a
-                      >
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnUpdateEmployee`);"
-                        >Edit</a
-                      >
-                    </td>
-                    <td class="column2">00</td>
-                    <td class="column3">0000-0000</td>
-                    <td class="column4">
-                      John Doe
-                    </td>
-                    <td class="column5">Human Resources</td>
-                    <td class="column6">Hr Staff</td>
-                    <td class="column7">Regular</td>
-                  </tr>
-                  <tr>
-                    <td class="column1">
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnViewEmployee`);"
-                        >View</a
-                      >
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnUpdateEmployee`);"
-                        >Edit</a
-                      >
-                    </td>
-                    <td class="column2">00</td>
-                    <td class="column3">0000-0000</td>
-                    <td class="column4">
-                      John Doe
-                    </td>
-                    <td class="column5">Human Resources</td>
-                    <td class="column6">Hr Staff</td>
-                    <td class="column7">Regular</td>
-                  </tr>
-                  <tr>
-                    <td class="column1">
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnViewEmployee`);"
-                        >View</a
-                      >
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnUpdateEmployee`);"
-                        >Edit</a
-                      >
-                    </td>
-                    <td class="column2">00</td>
-                    <td class="column3">0000-0000</td>
-                    <td class="column4">
-                      John Doe
-                    </td>
+                    <td class="column5">Admin</td>
                     <td class="column5">Human Resources</td>
                     <td class="column6">Hr Staff</td>
                     <td class="column7">Regular</td>
@@ -636,6 +555,7 @@
                   <tr>
                     <td class="column1">BIO Number</td>
                     <td class="column2">Employee Number</td>
+                    <td class="column2">Role</td>
                     <td class="column3">Department</td>
                     <td class="column4">Position</td>
                     <td class="column5">Employment Status</td>
@@ -1152,6 +1072,18 @@
                     id="txtDateEmployed"
                     class="datePicker"
                   />
+
+                  <label for="drpRole" class="label-6">Role <span class="note-red">*</span></label>
+                  <select
+                    name="drpRole"
+                    id="drpRole"
+                    class="select"
+                  >
+                  <option value="">Admin</option>
+                  <option value="">Ops</option>
+                  <option value="">Diesel Tanker</option>
+                  <option value="">Driver</option>
+                  </select>
 
                   <label for="drpDepartment" class="label-6">Department <span class="note-red">*</span></label>
                   <select
@@ -2266,6 +2198,9 @@
                   <p name="lblDateEmployed" id="lblDateEmployed">
                     January 06, 2020
                   </p>
+
+                  <label for="lblRole" class="label-6">Role </label>
+                  <p name="lblRole" id="lblRole">Admin</p>
 
                   <label for="lblDepartment" class="label-6">Department </label>
                   <p name="lblDepartment" id="lblDepartment">IT Department</p>
