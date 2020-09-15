@@ -1634,7 +1634,11 @@
             <div class="modal-content">
               <div class="header-delete-container">
                 <h5>Confirm Consolidation</h5>
-                <a class="btn-xs btn-alt mx-3">Close</a>
+                <a
+                  class="btn-xs btn-alt mx-3"
+                  onclick="closeModalConfirmConso();"
+                  >Close</a
+                >
               </div>
 
               <hr />
@@ -1648,11 +1652,7 @@
 
                 <div class="modal-btn-container">
                   <a class="btn-sm btn-green mx-3">Yes</a>
-                  <a
-                    class="btn-sm btn-red mx-3"
-                    onclick="closeModalConfirmConso();"
-                    >No</a
-                  >
+                  <a class="btn-sm btn-red mx-3">No</a>
                 </div>
               </div>
             </div>
