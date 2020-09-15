@@ -2740,3 +2740,80 @@ function selectTabTU() {
     console.log(e);
   }
 }
+
+function openModalConfirmConso() {
+  try {
+    const modal = document.querySelector(".modal-confirm-consolidation");
+    const payPeriod = document.querySelector("#selectPayperiod").value;
+    const existingPayperiod = document.querySelector("#lblExistingPayPeriod");
+    // alert(payPeriod);
+    if (payPeriod == 0) {
+      alert("Please select a Pay Period");
+      return;
+    } else if (payPeriod == 1) {
+      existingPayperiod.innerHTML = "January 1 - January 15";
+    } else if (payPeriod == 2) {
+      existingPayperiod.innerHTML = "January 16 - January 30";
+    } else if (payPeriod == 3) {
+      existingPayperiod.innerHTML = "February 1 - February 15";
+    } else if (payPeriod == 4) {
+      existingPayperiod.innerHTML = "February 16 - February 28";
+    } else if (payPeriod == 4) {
+      existingPayperiod.innerHTML = "February 16 - February 29";
+    } else if (payPeriod == 5) {
+      existingPayperiod.innerHTML = "March 1 - March 15";
+    } else if (payPeriod == 6) {
+      existingPayperiod.innerHTML = "March 16 - March 30";
+    } else if (payPeriod == 7) {
+      existingPayperiod.innerHTML = "April 1 - April 15";
+    } else if (payPeriod == 8) {
+      existingPayperiod.innerHTML = "April 16 - April 30";
+    } else if (payPeriod == 9) {
+      existingPayperiod.innerHTML = "May 1 - May 15";
+    } else if (payPeriod == 10) {
+      existingPayperiod.innerHTML = "May 16 - May 30";
+    } else if (payPeriod == 11) {
+      existingPayperiod.innerHTML = "June 1 - June 15";
+    } else if (payPeriod == 12) {
+      existingPayperiod.innerHTML = "June 16 - June 30";
+    } else if (payPeriod == 13) {
+      existingPayperiod.innerHTML = "July 1 - July 15";
+    } else if (payPeriod == 14) {
+      existingPayperiod.innerHTML = "July 16 - July 30";
+    } else if (payPeriod == 15) {
+      existingPayperiod.innerHTML = "August 1 - August 15";
+    } else if (payPeriod == 16) {
+      existingPayperiod.innerHTML = "August 16 - August 30";
+    } else if (payPeriod == 17) {
+      existingPayperiod.innerHTML = "September 1 - September 15";
+    } else if (payPeriod == 18) {
+      existingPayperiod.innerHTML = "September 16 - September 30";
+    } else if (payPeriod == 19) {
+      existingPayperiod.innerHTML = "October 1 - October 15";
+    } else if (payPeriod == 20) {
+      existingPayperiod.innerHTML = "October 16 - October 30";
+    } else if (payPeriod == 21) {
+      existingPayperiod.innerHTML = "November 1 - November 15";
+    } else if (payPeriod == 22) {
+      existingPayperiod.innerHTML = "November 16 - November 30";
+    } else if (payPeriod == 23) {
+      existingPayperiod.innerHTML = "December 1 - December 15";
+    } else if (payPeriod == 24) {
+      existingPayperiod.innerHTML = "December 16 - December 30";
+    }
+
+    closeModalConsolidation();
+    modal.style.display = "flex";
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function closeModalConfirmConso() {
+  try {
+    const modal = document.querySelector(".modal-confirm-consolidation");
+    modal.style.display = "none";
+  } catch (e) {
+    console.log(e);
+  }
+}

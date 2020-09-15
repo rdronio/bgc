@@ -3013,6 +3013,7 @@ table.sticky-table {
   table-layout: auto;
   width: 100%;
   border-spacing: 0;
+  border-collapse: separate;
   border-radius: 5px;
 }
 
@@ -3028,10 +3029,9 @@ table.sticky-table th:first-child {
 
 table.sticky-table tr:nth-child(1) td:nth-child(2),
 table.sticky-table th:nth-child(2) {
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
   position: -webkit-sticky;
   position: sticky;
-  left: 90px;
+  left: 92px;
   top: 0;
   z-index: 2;
   background-color: #ffffff;
@@ -3052,7 +3052,7 @@ table.sticky-table th:nth-child(2) {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   position: -webkit-sticky;
   position: sticky;
-  left: 90px;
+  left: 92px;
   top: 0;
   z-index: 1;
   background-color: #ffffff;

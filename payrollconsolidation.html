@@ -1412,7 +1412,10 @@
               </div>
 
               <div class="modal-btn-container">
-                <a class="btn-sm btn-primary mx-3" id="btnConsolidate"
+                <a
+                  class="btn-sm btn-primary mx-3"
+                  id="btnConsolidate"
+                  onclick="openModalConfirmConso();"
                   >Consolidate</a
                 >
                 <a
@@ -1622,6 +1625,40 @@
                   onclick="closeModalEditConsolidation();"
                   >Cancel</a
                 >
+              </div>
+            </div>
+          </div>
+
+          <!-- ConfirmConso -->
+          <div class="modal modal-confirm-consolidation">
+            <div class="modal-content">
+              <div class="header-delete-container">
+                <h5>Confirm Consolidation</h5>
+                <a
+                  class="btn-xs btn-alt-red mx-3"
+                  id="btnDelete"
+                  onclick="window.confirm('Are you sure, all edited fields will be cleared?'),closeModalConfirmConso();"
+                  >Reconsolidate</a
+                >
+              </div>
+
+              <hr />
+              <div class="">
+                <label class="label-5 block norecords"
+                  ><span id="lblExistingPayPeriod" class="label-5"
+                    >July 01, 2020 - July 15, 2020</span
+                  >
+                  Pay Period has already been consolidated.
+                </label>
+
+                <div class="modal-btn-container">
+                  <a class="btn-sm btn-green mx-3">Continue Editing</a>
+                  <a
+                    class="btn-sm btn-secondary mx-3"
+                    onclick="closeModalConfirmConso();"
+                    >Cancel</a
+                  >
+                </div>
               </div>
             </div>
           </div>
