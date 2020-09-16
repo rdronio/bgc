@@ -191,6 +191,17 @@ input {
   -webkit-tap-highlight-color: transparent;
 }
 
+input:valid {
+  background: unset;
+  border-color: #aaa;
+}
+
+input:invalid {
+  // background: #ffbfbf;
+  // border-color: #8e1717;
+  border-color: #d93025;
+}
+
 input[type='text']::selection,
 textarea::selection {
   color: white;
@@ -322,6 +333,12 @@ textarea:focus,
 input:focus {
   border-color: #2d9cdb;
   box-shadow: 0 0 4px 0 #2d9cdb;
+}
+
+textarea:invalid:focus,
+input:invalid:focus {
+  border-color: #d93025;
+  box-shadow: 0 0 4px 0 #d93025;
 }
 
 /* ------------------------------------ */

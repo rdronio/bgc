@@ -195,6 +195,15 @@ input {
   -webkit-tap-highlight-color: transparent;
 }
 
+input:valid {
+  background: unset;
+  border-color: #aaa;
+}
+
+input:invalid {
+  border-color: #d93025;
+}
+
 input[type='text']::-moz-selection,
 textarea::-moz-selection {
   color: white;
@@ -339,6 +348,13 @@ input:focus {
   border-color: #2d9cdb;
   -webkit-box-shadow: 0 0 4px 0 #2d9cdb;
           box-shadow: 0 0 4px 0 #2d9cdb;
+}
+
+textarea:invalid:focus,
+input:invalid:focus {
+  border-color: #d93025;
+  -webkit-box-shadow: 0 0 4px 0 #d93025;
+          box-shadow: 0 0 4px 0 #d93025;
 }
 
 /* ------------------------------------ */

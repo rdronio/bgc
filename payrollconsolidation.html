@@ -1539,13 +1539,13 @@
                   />
                   <label for="txtCashBond" class="label-6">Cash Bond</label>
                   <input name="txtCashBond" type="text" id="txtCashBond" />
-                  <label for="txtCashAdvance" class="label-6"
+                  <label for="txtCashAdvances" class="label-6"
                     >Cash Advance</label
                   >
                   <input
-                    name="txtCashAdvance"
+                    name="txtCashAdvances"
                     type="text"
-                    id="txtCashAdvance"
+                    id="txtCashAdvances"
                   />
                   <label for="txtOthers" class="label-6">Others</label>
                   <input name="txtOthers" type="text" id="txtOthers" />
@@ -1561,13 +1561,70 @@
                     class="deductions hidden"
                   />
 
-                  <!-- <label for="txtSssEe2" class="label-6">SSS-EE</label>
-                  <input name="txtSssEe2" type="text" id="txtSssEe2" />
-                  <label for="txtPhicEe2" class="label-6">PHIC-EE</label>
-                  <input name="txtPhicEe2" type="text" id="txtPhicEe2" />
-                  <label for="txtHdmfEe2" class="label-6">HDMF-EE</label>
-                  <input name="txtHdmfEe2" type="text" id="txtHdmfEe2" /> -->
+                  <label for="txtSss" class="label-6 contri-ER hidden"
+                    >SSS</label
+                  >
+                  <input
+                    name="txtSss"
+                    type="text"
+                    id="txtSss"
+                    class="contri-ER hidden"
+                    value="0"
+                  />
 
+                  <label for="txtSssEr" class="label-6 contri-ER hidden"
+                    >SSS-ER</label
+                  >
+                  <input
+                    name="txtSssEr"
+                    type="text"
+                    id="txtSssEr"
+                    class="contri-ER hidden"
+                    value="0"
+                  />
+
+                  <label for="txtPhilhealth" class="label-6 contri-ER hidden"
+                    >PHILHEALTH</label
+                  >
+                  <input
+                    name="txtPhilhealth"
+                    type="text"
+                    id="txtPhilhealth"
+                    class="contri-ER hidden"
+                    value="0"
+                  />
+
+                  <label for="txtPhicEr" class="label-6 contri-ER hidden"
+                    >PHIC-ER</label
+                  >
+                  <input
+                    name="txtPhicEr"
+                    type="text"
+                    id="txtPhicEr"
+                    class="contri-ER hidden"
+                    value="0"
+                  />
+                  <label for="txtHdmf" class="label-6 contri-ER hidden"
+                    >PAGIBIG</label
+                  >
+                  <input
+                    name="txtHdmf"
+                    type="text"
+                    id="txtHdmf"
+                    class="contri-ER hidden"
+                    value="0"
+                  />
+                  <label for="txtHdmfEr" class="label-6 contri-ER hidden"
+                    >HDMF-ER</label
+                  >
+                  <input
+                    name="txtHdmfEr"
+                    type="text"
+                    id="txtHdmfEr"
+                    class="contri-ER hidden"
+                    value="0"
+                  />
+                  <!-- 
                   <label for="txtSssEr" class="label-6 contri-ER hidden"
                     >SSS-ER</label
                   >
@@ -1594,7 +1651,7 @@
                     type="text"
                     id="txtHdmfEr"
                     class="contri-ER hidden"
-                  />
+                  /> -->
                   <label for="txtNetpay" class="label-6">Net Pay</label>
                   <input
                     name="txtNetPay"
@@ -1614,12 +1671,7 @@
                 </div>
               </div>
               <div class="modal-btn-container">
-                <a
-                  class="btn-sm btn-primary mx-3"
-                  onclick="confirm('You want to save changes made?')"
-                  id="btnSave"
-                  >Save</a
-                >
+                <a class="btn-sm btn-primary mx-3" id="btnSave">Save</a>
                 <a
                   class="btn-sm btn-secondary mx-3"
                   onclick="closeModalEditConsolidation();"
@@ -1775,5 +1827,6 @@
       </div>
     </form>
     <script src="Scripts/main.js"></script>
+    <script src="Scripts/validation.js"></script>
   </body>
 </html>
