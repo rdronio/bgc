@@ -17,6 +17,38 @@ try {
       //Proceed on savings
     }
   });
+
+  $('#btnCancelEdit').on('click', function () {
+    txtNumberOfDays.setCustomValidity('');
+    txtLegalHoliday.setCustomValidity('');
+    txtSpecialHoliday.setCustomValidity('');
+    txtRestDay.setCustomValidity('');
+    txtLegalRestDay.setCustomValidity('');
+    txtSundayRate.setCustomValidity('');
+    txtOrdinaryOT.setCustomValidity('');
+    txtLegalOT.setCustomValidity('');
+    txtSpecialRestOT.setCustomValidity('');
+    txtRegularNSD.setCustomValidity('');
+    txtHolidayNSD.setCustomValidity('');
+    txtAbsencesUndertime.setCustomValidity('');
+    txtAllowancesRetro.setCustomValidity('');
+    txtSSSLoan.setCustomValidity('');
+    txtHDMFLoan.setCustomValidity('');
+    txtCashBond.setCustomValidity('');
+    txtCashAdvances.setCustomValidity('');
+    txtOthers.setCustomValidity('');
+    txtSBWS.setCustomValidity('');
+    txtMP2.setCustomValidity('');
+    txtSss.setCustomValidity('');
+    txtSssEr.setCustomValidity('');
+    txtPhilhealth.setCustomValidity('');
+    txtPhicEr.setCustomValidity('');
+    txtHdmf.setCustomValidity('');
+    txtHdmfEr.setCustomValidity('');
+    txtCash.setCustomValidity('');
+
+    closeModalEditConsolidation();
+  });
 } catch (e) {
   console.log(e);
 }
