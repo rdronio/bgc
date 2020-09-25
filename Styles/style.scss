@@ -2912,6 +2912,7 @@ table.sticky-table th:nth-child(2) {
   z-index: 1;
   background-color: #ffffff;
 }
+
 // table.sticky-table td:last-child,
 // table.sticky-table th:last-child {
 //   position: sticky;
@@ -2969,6 +2970,281 @@ table.tableLayout tbody tr:hover {
 
 // table.sticky-table th:first-child,
 // table.sticky-table th:last-child {
+//   z-index: 1;
+//   background-color: red;
+// }
+
+/* ========[ Sticky Joined Table Layout ]======== */
+.sticky-joined-table-container {
+  overflow: auto;
+  width: 100%;
+
+  max-height: 550px;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+// TABLE 1
+table.sticky-joined-table1 td,
+table.sticky-joined-table1 th {
+  border: none;
+
+  text-align: center;
+  padding: 1rem 1rem;
+
+  // width: 100px;
+  width: 10%;
+}
+
+table.sticky-joined-table1 {
+  table-layout: auto;
+  width: 200px;
+
+  border-spacing: 0;
+  // border-collapse: collapse;
+  border-collapse: separate;
+  border-radius: 5px;
+  // overflow: hidden;
+
+  // max-height: 550px;
+  // display: block;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #ffffff;
+}
+
+// // column headers
+table.sticky-joined-table1 tr:nth-child(1) td:first-child,
+table.sticky-joined-table1 th:first-child {
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  background-color: #ffffff;
+}
+
+table.sticky-joined-table1 tr:nth-child(1) td:nth-child(2),
+table.sticky-joined-table1 th:nth-child(2) {
+  // border-right: 1px solid rgba(0, 0, 0, 0.1);
+  position: sticky;
+  left: 92px;
+  top: 0;
+  z-index: 2;
+  background-color: #ffffff;
+}
+
+// // 1st data row
+// table.sticky-joined-table1 td:first-child,
+// table.sticky-joined-table1 th:first-child {
+//   position: sticky;
+//   left: 0;
+//   top: 0;
+//   z-index: 1;
+//   background-color: #ffffff;
+// }
+
+// table.sticky-joined-table1 td:nth-child(2),
+// table.sticky-joined-table1 th:nth-child(2) {
+//   border-right: 1px solid rgba(0, 0, 0, 0.1);
+//   position: sticky;
+//   left: 92px;
+//   top: 0;
+//   z-index: 1;
+//   background-color: #ffffff;
+// }
+
+// table.sticky-joined-table1 td:last-child,
+// table.sticky-joined-table1 th:last-child {
+//   position: sticky;
+//   right: 0;
+//   z-index: 1;
+//   background-color: blue;
+// }
+
+table.sticky-joined-table1 tr:first-child td {
+  font-size: 0.65rem !important;
+  color: #333 !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+  pointer-events: none !important;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1;
+  height: 80px !important;
+}
+
+table.sticky-joined-table1 tbody tr:first-child td:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px #333 solid;
+}
+
+table.sticky-joined-table1 tbody tr:nth-child(even) td {
+  background-color: #d3dee2;
+}
+
+// Gross pay and net pay
+// table.sticky-joined-table1 tbody tr:first-child td:nth-child(21),
+// table.sticky-joined-table1 tbody tr:first-child td:nth-child(28) {
+//   background-color: #8ddcb5;
+// }
+
+table.sticky-joined-table1 tbody tr {
+  font-size: 0.7rem;
+  color: #333;
+  line-height: 1.2;
+  font-weight: unset;
+  border-bottom: 1px solid #eee;
+  height: 60px;
+  margin: 1rem 0;
+}
+
+table.tableLayout tbody tr:hover {
+  color: #fff;
+  background-color: #2d9cdb;
+  cursor: pointer;
+}
+
+// table.sticky-joined-table1 th:first-child,
+// table.sticky-joined-table1 th:last-child {
+//   z-index: 1;
+//   background-color: red;
+// }
+
+// TABLE2
+table.sticky-joined-table2 td,
+table.sticky-joined-table2 th {
+  border: none;
+
+  text-align: center;
+  padding: 1rem 1rem;
+
+  // width: 100px;
+  width: 10%;
+}
+
+table.sticky-joined-table2 {
+  table-layout: auto;
+  width: 90%;
+
+  border-spacing: 0;
+  // border-collapse: collapse;
+  border-collapse: separate;
+  border-radius: 5px;
+  // overflow: hidden;
+
+  // max-height: 550px;
+  position: absolute;
+  left: 201px;
+  top: 0;
+}
+
+// // column headers
+// table.sticky-joined-table2 tr:nth-child(1) td:first-child,
+// table.sticky-joined-table2 th:first-child {
+//   position: sticky;
+//   top: 0;
+//   left: 0;
+//   z-index: 2;
+//   background-color: #ffffff;
+// }
+
+// table.sticky-joined-table2 tr:nth-child(1) td:nth-child(2),
+// table.sticky-joined-table2 th:nth-child(2) {
+//   // border-right: 1px solid rgba(0, 0, 0, 0.1);
+//   position: sticky;
+//   left: 92px;
+//   top: 0;
+//   z-index: 2;
+//   background-color: #ffffff;
+// }
+
+// // 1st data row
+// table.sticky-joined-table2 td:first-child,
+// table.sticky-joined-table2 th:first-child {
+//   position: sticky;
+//   left: 0;
+//   top: 0;
+//   z-index: 1;
+//   background-color: #ffffff;
+// }
+
+// table.sticky-joined-table2 td:nth-child(2),
+// table.sticky-joined-table2 th:nth-child(2) {
+//   border-right: 1px solid rgba(0, 0, 0, 0.1);
+//   position: sticky;
+//   left: 92px;
+//   top: 0;
+//   z-index: 1;
+//   background-color: #ffffff;
+// }
+
+// table.sticky-joined-table2 td:last-child,
+// table.sticky-joined-table2 th:last-child {
+//   position: sticky;
+//   right: 0;
+//   z-index: 1;
+//   background-color: blue;
+// }
+
+table.sticky-joined-table2 tr:first-child td {
+  font-size: 0.65rem !important;
+  color: #333 !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+  pointer-events: none !important;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1;
+  height: 80px !important;
+}
+
+table.sticky-joined-table2 tbody tr:first-child td:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px #333 solid;
+}
+
+table.sticky-joined-table2 tbody tr:nth-child(even) td {
+  background-color: #d3dee2;
+}
+
+// Gross pay and net pay
+// table.sticky-joined-table2 tbody tr:first-child td:nth-child(21),
+// table.sticky-joined-table2 tbody tr:first-child td:nth-child(28) {
+//   background-color: #8ddcb5;
+// }
+
+table.sticky-joined-table2 tbody tr {
+  font-size: 0.7rem;
+  color: #333;
+  line-height: 1.2;
+  font-weight: unset;
+  border-bottom: 1px solid #eee;
+  height: 60px;
+  margin: 1rem 0;
+}
+
+table.tableLayout tbody tr:hover {
+  color: #fff;
+  background-color: #2d9cdb;
+  cursor: pointer;
+}
+
+// table.sticky-joined-table2 th:first-child,
+// table.sticky-joined-table2 th:last-child {
 //   z-index: 1;
 //   background-color: red;
 // }
