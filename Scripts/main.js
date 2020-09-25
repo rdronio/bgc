@@ -2601,6 +2601,8 @@ function openModalEditConsolidation() {
     const modal = document.querySelector('.modal-edit-consolidation');
     const contriER = document.querySelectorAll('.contri-ER');
     const deductions = document.querySelectorAll('.deductions');
+    const driverField = document.querySelectorAll('.driverField');
+    const notDriverField = document.querySelectorAll('.notDriverField');
 
     modal.style.display = 'flex';
 
@@ -2609,6 +2611,14 @@ function openModalEditConsolidation() {
     });
 
     deductions.forEach((item) => {
+      item.classList.remove('hidden');
+    });
+
+    driverField.forEach((item) => {
+      item.classList.add('hidden');
+    });
+
+    notDriverField.forEach((item) => {
       item.classList.remove('hidden');
     });
   } catch (e) {
@@ -2621,6 +2631,8 @@ function openModalEditConsolidation2() {
     const modal = document.querySelector('.modal-edit-consolidation');
     const contriER = document.querySelectorAll('.contri-ER');
     const deductions = document.querySelectorAll('.deductions');
+    const driverField = document.querySelectorAll('.driverField');
+    const notDriverField = document.querySelectorAll('.notDriverField');
 
     modal.style.display = 'flex';
 
@@ -2629,6 +2641,71 @@ function openModalEditConsolidation2() {
     });
 
     deductions.forEach((item) => {
+      item.classList.add('hidden');
+    });
+
+    driverField.forEach((item) => {
+      item.classList.add('hidden');
+    });
+
+    notDriverField.forEach((item) => {
+      item.classList.remove('hidden');
+    });
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function openModalEditDriverConsolidation() {
+  try {
+    const modal = document.querySelector('.modal-edit-consolidation');
+    const contriER = document.querySelectorAll('.contri-ER');
+    const deductions = document.querySelectorAll('.deductions');
+    const driverField = document.querySelectorAll('.driverField');
+    const notDriverField = document.querySelectorAll('.notDriverField');
+
+    modal.style.display = 'flex';
+
+    contriER.forEach((item) => {
+      item.classList.add('hidden');
+    });
+
+    deductions.forEach((item) => {
+      item.classList.remove('hidden');
+    });
+
+    driverField.forEach((item) => {
+      item.classList.remove('hidden');
+    });
+    notDriverField.forEach((item) => {
+      item.classList.add('hidden');
+    });
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function openModalEditDriverConsolidation2() {
+  try {
+    const modal = document.querySelector('.modal-edit-consolidation');
+    const contriER = document.querySelectorAll('.contri-ER');
+    const deductions = document.querySelectorAll('.deductions');
+    const driverField = document.querySelectorAll('.driverField');
+    const notDriverField = document.querySelectorAll('.notDriverField');
+
+    modal.style.display = 'flex';
+
+    contriER.forEach((item) => {
+      item.classList.remove('hidden');
+    });
+
+    deductions.forEach((item) => {
+      item.classList.add('hidden');
+    });
+    driverField.forEach((item) => {
+      item.classList.remove('hidden');
+    });
+    notDriverField.forEach((item) => {
       item.classList.add('hidden');
     });
   } catch (e) {

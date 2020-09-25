@@ -965,7 +965,7 @@
                         <td>
                           <button
                             class="btn-table btn-secondary"
-                            onclick="openModalEditConsolidation2();"
+                            onclick="openModalEditDriverConsolidation2();"
                           >
                             Edit
                           </button>
@@ -1330,65 +1330,134 @@
                     type="text"
                     id="txtSpecialHoliday"
                   />
-                  <label for="txtRestDay" class="label-6"
+                  <label for="txtRestDay" class="label-6 notDriverField"
                     >Special on Rest Day
                   </label>
-                  <span class="note">*Please indicate no. of days</span>
-                  <input name="txtRestDay" type="text" id="txtRestDay" />
-                  <label for="txtLegalRestDay" class="label-6"
+                  <span class="note notDriverField"
+                    >*Please indicate no. of days</span
+                  >
+                  <input
+                    name="txtRestDay"
+                    type="text"
+                    id="txtRestDay"
+                    class="notDriverField"
+                  />
+                  <label for="txtLegalRestDay" class="label-6 notDriverField"
                     >Legal on Rest Day
                   </label>
-                  <span class="note">*Please indicate no. of days</span>
+                  <span class="note notDriverField"
+                    >*Please indicate no. of days</span
+                  >
                   <input
                     name="txtLegalRestDay"
                     type="text"
                     id="txtLegalRestDay"
+                    class="notDriverField"
                   />
                   <label for="txtSundayRate" class="label-6">Sunday Rate</label
                   ><span class="note">*Please indicate no. of days</span>
                   <input name="txtSundayRate" type="text" id="txtSundayRate" />
 
-                  <label for="txtOrdinaryOT" class="label-6"
+                  <label for="txtOT50" class="label-6 driverField">OT 50</label>
+                  <input
+                    name="txtOT50"
+                    type="text"
+                    id="txtOT50"
+                    class="driverField"
+                  />
+                  <label for="txtOT100" class="label-6 driverField"
+                    >OT 100</label
+                  >
+                  <input
+                    name="txtOT100"
+                    type="text"
+                    id="txtOT100"
+                    class="driverField"
+                  />
+
+                  <label for="txtOrdinaryOT" class="label-6 notDriverField"
                     >Ordinary Overtime</label
-                  ><span class="note">*Please indicate no. of hours</span>
-                  <input name="txtOrdinaryOT" type="text" id="txtOrdinaryOT" />
-                  <label for="txtLegalOT" class="label-6">Legal Overtime</label
-                  ><span class="note">*Please indicate no. of hours</span>
-                  <input name="txtLegalOT" type="text" id="txtLegalOT" />
-                  <label for="txtSpecialRestOT" class="label-6"
+                  ><span class="note notDriverField"
+                    >*Please indicate no. of hours</span
+                  >
+                  <input
+                    name="txtOrdinaryOT"
+                    type="text"
+                    id="txtOrdinaryOT"
+                    class="notDriverField"
+                  />
+
+                  <label for="txtLegalOT" class="label-6 notDriverField"
+                    >Legal Overtime</label
+                  ><span class="note notDriverField"
+                    >*Please indicate no. of hours</span
+                  >
+                  <input
+                    name="txtLegalOT"
+                    type="text"
+                    id="txtLegalOT"
+                    class="notDriverField"
+                  />
+                  <label for="txtSpecialRestOT" class="label-6 notDriverField"
                     >Special/Rest Day OT</label
-                  ><span class="note">*Please indicate no. of hours</span>
+                  ><span class="note notDriverField"
+                    >*Please indicate no. of hours</span
+                  >
                   <input
                     name="txtSpecialRestOT"
                     type="text"
                     id="txtSpecialRestOT"
+                    class="notDriverField"
                   />
-                  <label for="txtRegularNSD" class="label-6">Regular NSD</label
-                  ><span class="note">*Please indicate no. of hours</span>
-                  <input name="txtRegularNSD" type="text" id="txtRegularNSD" />
-                  <label for="txtHolidayNSD" class="label-6">Holiday NSD</label
-                  ><span class="note">*Please indicate no. of hours</span>
-                  <input name="txtHolidayNSD" type="text" id="txtHolidayNSD" />
+                  <label for="txtRegularNSD" class="label-6 notDriverField"
+                    >Regular NSD</label
+                  ><span class="note notDriverField"
+                    >*Please indicate no. of hours</span
+                  >
+                  <input
+                    name="txtRegularNSD"
+                    type="text"
+                    id="txtRegularNSD"
+                    class="notDriverField"
+                  />
+                  <label for="txtHolidayNSD" class="label-6 notDriverField"
+                    >Holiday NSD</label
+                  ><span class="note notDriverField"
+                    >*Please indicate no. of hours</span
+                  >
+                  <input
+                    name="txtHolidayNSD"
+                    type="text"
+                    id="txtHolidayNSD"
+                    class="notDriverField"
+                  />
                 </div>
                 <div>
                   <label class="label-6"> &nbsp;</label>
                   <p>&nbsp;</p>
-                  <label for="txtAbsencesUndertime" class="label-6"
+
+                  <label
+                    for="txtAbsencesUndertime"
+                    class="label-6 notDriverField"
                     >Absences/Undertime
                   </label>
-                  <span class="note">*Please indicate no. of hours</span>
+                  <span class="note notDriverField"
+                    >*Please indicate no. of hours</span
+                  >
                   <input
                     name="txtAbsencesUndertime"
                     type="text"
                     id="txtAbsencesUndertime"
+                    class="notDriverField"
                   />
-                  <label for="txtAllowancesRetro" class="label-6"
+                  <label for="txtAllowancesRetro" class="label-6 notDriverField"
                     >Allowances/Retro Pay
                   </label>
                   <input
                     name="txtAllowancesRetro"
                     type="text"
                     id="txtAllowancesRetro"
+                    class="notDriverField"
                   />
                   <label for="txtSSSLoan" class="label-6">SSS Loan</label>
                   <input name="txtSSSLoan" type="text" id="txtSSSLoan" />
@@ -1415,14 +1484,16 @@
                   <input name="txtOthers" type="text" id="txtOthers" />
                   <label for="txtSBWS" class="label-6">SBWS</label>
                   <input name="txtSBWS" type="text" id="txtSBWS" />
-                  <label for="txtMP2" class="label-6 deductions hidden"
+                  <label
+                    for="txtMP2"
+                    class="label-6 deductions hidden notDriverField"
                     >MP2</label
                   >
                   <input
                     name="txtMP2"
                     type="text"
                     id="txtMP2"
-                    class="deductions hidden"
+                    class="deductions hidden notDriverField"
                   />
 
                   <label for="txtSss" class="label-6 contri-ER hidden"

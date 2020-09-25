@@ -4308,6 +4308,15 @@
     width: 100%;
   }
 
+  /* ========[ Payroll Consolidation ]======== */
+  #payroll-consolidation
+    .modal-edit-consolidation
+    .modal-content
+    *:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+  }
+
   /* ========[ Payslip Template ]======== */
   #payslip-template .modal-content {
     padding: 2rem 2rem;
