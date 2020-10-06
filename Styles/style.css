@@ -10,7 +10,7 @@
 
 body,
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   /* background: #ebf0f6; */
   /* background: #e0e0e0; */
   color: #333;
@@ -173,7 +173,7 @@ textarea {
   padding: 0.6rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.7rem;
   font-weight: 400;
   resize: none;
@@ -187,28 +187,28 @@ input {
   padding: 0.5rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.7rem;
   font-weight: 400;
   -webkit-tap-highlight-color: transparent;
 }
 
-input[type="text"]:valid {
+input[type='text']:valid {
   background: unset;
   border-color: -internal-light-dark(#767676, #c3c3c3);
 }
 
-input[type="text"]:invalid {
+input[type='text']:invalid {
   border-color: #d93025;
 }
 
-input[type="text"]::-moz-selection,
+input[type='text']::-moz-selection,
 textarea::-moz-selection {
   color: white;
   background: #3390ff;
 }
 
-input[type="text"]::selection,
+input[type='text']::selection,
 textarea::selection {
   color: white;
   background: #3390ff;
@@ -218,12 +218,12 @@ input::-webkit-calendar-picker-indicator {
   display: none;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   width: 1rem !important;
 }
 
-input[type="radio"] {
-  content: "";
+input[type='radio'] {
+  content: '';
   /* background: #f4f4f4; */
   border: 1px solid #333;
   display: inline-block;
@@ -242,8 +242,8 @@ input[type="radio"] {
   display: none;
 }
 
-input[type="checkbox"] {
-  content: "";
+input[type='checkbox'] {
+  content: '';
   /* background: #f4f4f4; */
   /* border: 1px solid #333; */
   display: inline-block;
@@ -260,7 +260,7 @@ input[type="checkbox"] {
   transition: all 250ms ease;
 }
 
-input[type="file"] {
+input[type='file'] {
   border: none;
 }
 
@@ -308,7 +308,7 @@ input[type="radio"]:checked::before {
 }
 
 .radio .label:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 1px;
   left: 1px;
@@ -323,12 +323,12 @@ input[type="radio"]:checked::before {
   pointer-events: none;
 }
 
-input[type="radio"]:checked + .label {
+input[type='radio']:checked + .label {
   /* border-color: #225cff; */
   border-color: #333;
 }
 
-input[type="radio"]:checked + .label:after {
+input[type='radio']:checked + .label:after {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
@@ -372,6 +372,7 @@ iframe {
 
 /* ========[ UTILITY ]======== */
 .btn {
+  display: inline-block;
   font-family: inherit;
   font-size: 0.7rem;
   font-weight: 500;
@@ -382,6 +383,7 @@ iframe {
 }
 
 .btn-xs {
+  display: inline-block;
   font-family: inherit;
   font-size: 0.7rem;
   font-weight: 600;
@@ -392,9 +394,11 @@ iframe {
   cursor: pointer !important;
   -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.1), 0 1px 3px 1px rgba(60, 64, 67, 0.1);
           box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.1), 0 1px 3px 1px rgba(60, 64, 67, 0.1);
+  min-width: 120px;
 }
 
 .btn-sm {
+  display: inline-block;
   border-radius: 3px;
   font-family: inherit;
   font-size: 0.7rem;
@@ -405,9 +409,11 @@ iframe {
   cursor: pointer !important;
   -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.1), 0 1px 3px 1px rgba(60, 64, 67, 0.1);
           box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.1), 0 1px 3px 1px rgba(60, 64, 67, 0.1);
+  min-width: 120px;
 }
 
 .btn-md {
+  display: inline-block;
   font-family: inherit;
   font-size: 0.9rem;
   font-weight: 500;
@@ -419,6 +425,7 @@ iframe {
 }
 
 .btn-table {
+  display: inline-block;
   font-family: inherit;
   font-size: 0.7rem;
   font-weight: 500;
@@ -427,7 +434,7 @@ iframe {
   border-radius: 100px;
   text-align: center;
   cursor: pointer;
-  min-width: 100px;
+  min-width: 60px;
 }
 
 button.btn-table {
@@ -749,7 +756,7 @@ button.btn-table {
   padding: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
   font-weight: bold;
   width: 100%;
@@ -1370,13 +1377,13 @@ button.btn-table {
   padding: 0.44rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.7rem;
   font-weight: 400;
 }
 
 .select option {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.7rem;
   font-weight: 400;
 }
@@ -1416,7 +1423,7 @@ button.btn-table {
   padding: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
   height: 100%;
@@ -1643,7 +1650,7 @@ button.btn-table {
   padding: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
   height: 100%;
@@ -1872,7 +1879,7 @@ button.btn-table {
   padding: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
   height: 100%;
@@ -2513,7 +2520,7 @@ table.tableLayout tbody tr:first-child td {
 }
 
 table.tableLayout tbody tr:first-child td:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2622,7 +2629,7 @@ table.tableLayoutDB tbody tr:first-child td {
 }
 
 table.tableLayoutDB tbody tr:first-child td:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -3145,7 +3152,7 @@ table.sticky-table tr:first-child td {
 }
 
 table.sticky-table tbody tr:first-child td:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -3240,7 +3247,7 @@ table.sticky-joined-table1 tr:first-child td {
 }
 
 table.sticky-joined-table1 tbody tr:first-child td:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -3302,7 +3309,7 @@ table.sticky-joined-table2 tr:first-child td {
 }
 
 table.sticky-joined-table2 tbody tr:first-child td:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -3586,7 +3593,7 @@ nav ul li ul li a:hover {
 }
 
 nav ul li ul li a::before {
-  content: "\203A";
+  content: '\203A';
   margin: 0 5px 0 20px;
   font-size: 0.9rem;
 }

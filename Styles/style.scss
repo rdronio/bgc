@@ -1,5 +1,5 @@
 /* ========[ FONT ]======== */
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
 
 /* ========[ RESTYLE ]======== */
 * {
@@ -10,7 +10,7 @@
 
 body,
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   /* background: #ebf0f6; */
   /* background: #e0e0e0; */
   color: #333;
@@ -165,7 +165,7 @@ textarea {
   padding: 0.6rem;
   transition: 0.3s;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.7rem;
   font-weight: 400;
 
@@ -181,25 +181,25 @@ input {
   padding: 0.5rem;
   transition: 0.3s;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.7rem;
   font-weight: 400;
 
   -webkit-tap-highlight-color: transparent;
 }
 
-input[type="text"]:valid {
+input[type='text']:valid {
   background: unset;
   border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
 }
 
-input[type="text"]:invalid {
+input[type='text']:invalid {
   // background: #ffbfbf;
   // border-color: #8e1717;
   border-color: #d93025;
 }
 
-input[type="text"]::selection,
+input[type='text']::selection,
 textarea::selection {
   color: white;
   background: #3390ff;
@@ -209,12 +209,12 @@ input::-webkit-calendar-picker-indicator {
   display: none;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   width: 1rem !important;
 }
 
-input[type="radio"] {
-  content: "";
+input[type='radio'] {
+  content: '';
   /* background: #f4f4f4; */
 
   border: 1px solid #333;
@@ -233,8 +233,8 @@ input[type="radio"] {
   display: none;
 }
 
-input[type="checkbox"] {
-  content: "";
+input[type='checkbox'] {
+  content: '';
   /* background: #f4f4f4; */
 
   /* border: 1px solid #333; */
@@ -251,7 +251,7 @@ input[type="checkbox"] {
   transition: all 250ms ease;
 }
 
-input[type="file"] {
+input[type='file'] {
   border: none;
 }
 
@@ -298,7 +298,7 @@ input[type="radio"]:checked::before {
   -webkit-tap-highlight-color: transparent;
 }
 .radio .label:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 1px;
   left: 1px;
@@ -311,11 +311,11 @@ input[type="radio"]:checked::before {
   pointer-events: none;
 }
 
-input[type="radio"]:checked + .label {
+input[type='radio']:checked + .label {
   /* border-color: #225cff; */
   border-color: #333;
 }
-input[type="radio"]:checked + .label:after {
+input[type='radio']:checked + .label:after {
   transform: scale(1);
   transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
   opacity: 1;
@@ -358,6 +358,7 @@ iframe {
 }
 
 .btn {
+  display: inline-block;
   font-family: inherit;
   font-size: 0.7rem;
   font-weight: 500;
@@ -368,6 +369,7 @@ iframe {
 }
 
 .btn-xs {
+  display: inline-block;
   font-family: inherit;
   font-size: 0.7rem;
   font-weight: 600;
@@ -378,6 +380,7 @@ iframe {
   cursor: pointer !important;
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.1),
     0 1px 3px 1px rgba(60, 64, 67, 0.1);
+  min-width: 120px;
 }
 
 // .btn-xs {
@@ -393,6 +396,7 @@ iframe {
 // }
 
 .btn-sm {
+  display: inline-block;
   border-radius: 3px;
   font-family: inherit;
   font-size: 0.7rem;
@@ -403,9 +407,11 @@ iframe {
   cursor: pointer !important;
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.1),
     0 1px 3px 1px rgba(60, 64, 67, 0.1);
+  min-width: 120px;
 }
 
 .btn-md {
+  display: inline-block;
   font-family: inherit;
   font-size: 0.9rem;
   font-weight: 500;
@@ -417,6 +423,7 @@ iframe {
 }
 
 .btn-table {
+  display: inline-block;
   font-family: inherit;
   font-size: 0.7rem;
   font-weight: 500;
@@ -425,7 +432,7 @@ iframe {
   border-radius: 100px;
   text-align: center;
   cursor: pointer;
-  min-width: 100px;
+  min-width: 60px;
 }
 
 button.btn-table {
@@ -711,7 +718,7 @@ button.btn-table {
   outline: none;
   padding: 0;
   transition: 0.3s;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
   font-weight: bold;
   width: 100%;
@@ -987,7 +994,7 @@ button.btn-table {
 }
 
 .logo .logo-link img {
-  content: url("http://hris-bgc-test.azurewebsites.net/Images/BGC-LOGO-CLARK.png");
+  content: url('http://hris-bgc-test.azurewebsites.net/Images/BGC-LOGO-CLARK.png');
   width: 70px;
 }
 
@@ -1219,13 +1226,13 @@ button.btn-table {
   padding: 0.44rem;
   transition: 0.3s;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.7rem;
   font-weight: 400;
 }
 
 .select option {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.7rem;
   font-weight: 400;
 }
@@ -1270,7 +1277,7 @@ button.btn-table {
   padding: 0;
   transition: 0.3s;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
 
@@ -1463,7 +1470,7 @@ button.btn-table {
   padding: 0;
   transition: 0.3s;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
 
@@ -1654,7 +1661,7 @@ button.btn-table {
   padding: 0;
   transition: 0.3s;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
 
@@ -2249,7 +2256,7 @@ table.tableLayout tbody tr:first-child td {
 }
 
 table.tableLayout tbody tr:first-child td:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2370,7 +2377,7 @@ table.tableLayoutDB tbody tr:first-child td {
 }
 
 table.tableLayoutDB tbody tr:first-child td:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2968,7 +2975,7 @@ table.sticky-table tr:first-child td {
 }
 
 table.sticky-table tbody tr:first-child td:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -3113,7 +3120,7 @@ table.sticky-joined-table1 tr:first-child td {
 }
 
 table.sticky-joined-table1 tbody tr:first-child td:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -3243,7 +3250,7 @@ table.sticky-joined-table2 tr:first-child td {
 }
 
 table.sticky-joined-table2 tbody tr:first-child td:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -3411,7 +3418,7 @@ table.tableLayout tbody tr:hover {
 
 #login .right-container {
   flex: 1;
-  background: url("../Images/bg.jpg") no-repeat center center/cover;
+  background: url('../Images/bg.jpg') no-repeat center center/cover;
 }
 
 #login .right-container .overlay {
@@ -3505,7 +3512,7 @@ nav ul li ul li a:hover {
 }
 
 nav ul li ul li a::before {
-  content: "\203A";
+  content: '\203A';
   margin: 0 5px 0 20px;
   font-size: 0.9rem;
 }
