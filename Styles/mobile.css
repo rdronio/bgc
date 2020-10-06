@@ -1014,7 +1014,7 @@ td:nth-child(5):before {
 tbody
 tr
 td:nth-child(1):before {
-    content: 'Employee Name';
+    content: 'Action';
   }
   #overtime-records
 .container
@@ -1023,7 +1023,7 @@ td:nth-child(1):before {
 tbody
 tr
 td:nth-child(2):before {
-    content: 'Date';
+    content: 'Employee Name';
   }
   #overtime-records
 .container
@@ -1032,7 +1032,7 @@ td:nth-child(2):before {
 tbody
 tr
 td:nth-child(3):before {
-    content: 'Total Hours';
+    content: 'Date';
   }
   #overtime-records
 .container
@@ -1041,6 +1041,93 @@ td:nth-child(3):before {
 tbody
 tr
 td:nth-child(4):before {
+    content: 'Overtime Type';
+  }
+  #overtime-records
+.container
+.card-1
+.tableLayout
+tbody
+tr
+td:nth-child(5):before {
+    content: 'Total Hour/s';
+  }
+  #overtime-records
+.container
+.card-1
+.tableLayout
+tbody
+tr
+td:nth-child(6):before {
+    content: 'Reason';
+  }
+  /* ========[ Overtime Driver Records ]======== */
+  #overtime-driver-records .container .card-1 > div:first-child a {
+    margin-left: 0rem;
+  }
+  #overtime-driver-records .container .card-1 div:nth-child(2),
+  #overtime-driver-records .container .card-1 div:nth-child(2) input {
+    margin-right: 0;
+    display: block;
+  }
+  #overtime-driver-records .container .card-1 div:nth-child(3),
+  #overtime-driver-records .container .card-1 div:nth-child(3) button {
+    width: 100%;
+    margin-right: 0;
+  }
+  /* card-1 table */
+  #overtime-records
+.container
+.card-1
+.tableLayout
+tbody
+tr
+td:nth-child(1):before {
+    content: 'Action';
+  }
+  #overtime-records
+.container
+.card-1
+.tableLayout
+tbody
+tr
+td:nth-child(2):before {
+    content: 'Employee Name';
+  }
+  #overtime-records
+.container
+.card-1
+.tableLayout
+tbody
+tr
+td:nth-child(3):before {
+    content: 'Date';
+  }
+  #overtime-records
+.container
+.card-1
+.tableLayout
+tbody
+tr
+td:nth-child(4):before {
+    content: 'OT Big';
+  }
+  #overtime-records
+.container
+.card-1
+.tableLayout
+tbody
+tr
+td:nth-child(5):before {
+    content: 'OT Small';
+  }
+  #overtime-records
+.container
+.card-1
+.tableLayout
+tbody
+tr
+td:nth-child(6):before {
     content: 'Reason';
   }
   /* ========[ Leave Records ]======== */
@@ -3997,6 +4084,11 @@ td:nth-child(6):before {
     margin: 1rem 0 !important;
     padding: 1rem 1.5rem;
     border-radius: 0px;
+  }
+  .modal-content,
+  .modal-content-sm {
+    width: 80% !important;
+    padding: 2rem 3rem 0 3rem !important;
   }
   /* ========[ Admin Dashboard ]======== */
   #admin-dashboard .container > div > div:nth-child(1) {

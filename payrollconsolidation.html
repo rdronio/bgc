@@ -965,7 +965,7 @@
                         <td>
                           <button
                             class="btn-table btn-secondary"
-                            onclick="openModalEditDriverConsolidation2();"
+                            onclick="openModalEditDriverConsolidation2(); return false;"
                           >
                             Edit
                           </button>
@@ -1145,8 +1145,21 @@
               </table>
 
               <div class="success">
-                <i class="far fa-check-circle"></i>
+                <i class="fas fa-check-circle"></i>
                 <h3>Successfully saved!</h3>
+              </div>
+
+              <div class="error">
+                <i class="fas fa-times-circle"></i>
+                <h3>
+                  There's a missing value! Please re-check and re-upload the
+                  file.
+                </h3>
+              </div>
+
+              <div class="upload-success">
+                <i class="fas fa-exclamation-circle"></i>
+                <h3>You have uploaded a file!</h3>
               </div>
 
               <div class="btn-container">
@@ -1607,6 +1620,7 @@
               </div>
               <div class="modal-btn-container">
                 <a class="btn-sm btn-primary mx-3" id="btnSave">Save</a>
+                <a class="btn-sm btn-primary mx-3" id="btnSaveDriver">Save</a>
                 <a class="btn-sm btn-secondary mx-3" id="btnCancelEdit"
                   >Cancel</a
                 >

@@ -95,7 +95,7 @@ a:focus {
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 a::-moz-selection {
@@ -193,12 +193,12 @@ input {
   -webkit-tap-highlight-color: transparent;
 }
 
-input:valid {
+input[type="text"]:valid {
   background: unset;
-  border-color: #aaa;
+  border-color: -internal-light-dark(#767676, #c3c3c3);
 }
 
-input:invalid {
+input[type="text"]:invalid {
   border-color: #d93025;
 }
 
@@ -363,7 +363,7 @@ button {
 }
 
 button:hover {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 iframe {
@@ -447,8 +447,8 @@ button.btn-table {
 }
 
 .btn-alt:hover {
-  background: #333;
-  color: #fff;
+  background: #333 !important;
+  color: #fff !important;
 }
 
 .btn-alt:active {
@@ -463,7 +463,7 @@ button.btn-table {
 }
 
 .btn-primary:hover {
-  background: #55c9e7;
+  background: #55c9e7 !important;
 }
 
 .btn-primary:active {
@@ -478,7 +478,7 @@ button.btn-table {
 }
 
 .btn-secondary:hover {
-  background: #777777;
+  background: #777777 !important;
 }
 
 .btn-secondary:active {
@@ -493,7 +493,7 @@ button.btn-table {
 }
 
 .btn-green:hover {
-  background: #55cb90;
+  background: #55cb90 !important;
 }
 
 .btn-green:active {
@@ -508,8 +508,8 @@ button.btn-table {
 }
 
 .btn-alt-green:hover {
-  background: #00b159;
-  color: #fff;
+  background: #00b159 !important;
+  color: #fff !important;
 }
 
 .btn-alt-green:active {
@@ -524,7 +524,7 @@ button.btn-table {
 }
 
 .btn-red:hover {
-  background: #e26181;
+  background: #e26181 !important;
 }
 
 .btn-red:active {
@@ -539,8 +539,8 @@ button.btn-table {
 }
 
 .btn-alt-red:hover {
-  background: #e26181;
-  color: #fff;
+  background: #e26181 !important;
+  color: #fff !important;
 }
 
 .btn-alt-red:active {
@@ -586,8 +586,8 @@ button.btn-table {
 }
 
 .btn-dropdown > button:hover {
-  background: #55cb90;
-  color: #fff;
+  background: #55cb90 !important;
+  color: #fff !important;
 }
 
 .btn-dropdown > button:active {
@@ -602,7 +602,7 @@ button.btn-table {
 }
 
 .btn-tools:hover {
-  background: #55cb90;
+  background: #55cb90 !important;
 }
 
 .btn-tools:active {
@@ -710,7 +710,7 @@ button.btn-table {
 }
 
 .datalist-data li:hover {
-  background: #e5e6e7;
+  background: #e5e6e7 !important;
 }
 
 .datalist-data li div {
@@ -1198,7 +1198,7 @@ button.btn-table {
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  color: #000;
+  color: #000 !important;
   text-decoration: none;
   cursor: pointer;
 }
@@ -1350,7 +1350,7 @@ button.btn-table {
 }
 
 .pagination a span:hover:not(.active) {
-  background-color: #ddd;
+  background-color: #ddd !important;
 }
 
 .pagination a:first-child {
@@ -1448,7 +1448,7 @@ button.btn-table {
 }
 
 .search-container a:hover svg {
-  background-color: rgba(60, 64, 67, 0.12);
+  background-color: rgba(55, 141, 206, 0.12) !important;
 }
 
 .search-container a:focus svg,
@@ -1475,7 +1475,7 @@ button.btn-table {
 }
 
 .search-container button:hover svg {
-  background-color: rgba(60, 64, 67, 0.12);
+  background-color: rgba(60, 64, 67, 0.12) !important;
 }
 
 .search-container button:focus svg,
@@ -1675,7 +1675,7 @@ button.btn-table {
 }
 
 .search-container2 a:hover svg {
-  background-color: rgba(60, 64, 67, 0.12);
+  background-color: rgba(60, 64, 67, 0.12) !important;
 }
 
 .search-container2 a:focus svg,
@@ -1702,7 +1702,7 @@ button.btn-table {
 }
 
 .search-container2 button:hover svg {
-  background-color: rgba(60, 64, 67, 0.12);
+  background-color: rgba(60, 64, 67, 0.12) !important;
 }
 
 .search-container2 button:focus svg,
@@ -1904,7 +1904,7 @@ button.btn-table {
 }
 
 .searchRec-container a:hover {
-  background-color: rgba(60, 64, 67, 0.12);
+  background-color: rgba(60, 64, 67, 0.12) !important;
 }
 
 .searchRec-container a:focus,
@@ -1931,7 +1931,7 @@ button.btn-table {
 }
 
 .searchRec-container button:hover {
-  background-color: rgba(60, 64, 67, 0.12);
+  background-color: rgba(60, 64, 67, 0.12) !important;
 }
 
 .searchRec-container button:focus,
@@ -2073,11 +2073,11 @@ button.btn-table {
 }
 
 .search:hover {
-  color: #000;
+  color: #000 !important;
 }
 
 .search:active {
-  color: #ddd;
+  color: #ddd !important;
 }
 
 .search i {
@@ -2108,6 +2108,61 @@ button.btn-table {
 
 .success h3 {
   font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.error {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #d41243;
+}
+
+.error i {
+  font-size: 3rem;
+}
+
+.error h3 {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+}
+
+.upload-success {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #edae0f;
+}
+
+.upload-success i {
+  font-size: 3rem;
+}
+
+.upload-success h3 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 .icon {
@@ -2171,7 +2226,7 @@ button.btn-table {
 }
 
 .tooltip:hover .tooltiptext {
-  visibility: visible;
+  visibility: visible !important;
 }
 
 .py-1 {
@@ -2308,7 +2363,7 @@ button.btn-table {
 .tab-list li a:hover {
   /* background: #00aedb; */
   /* border: 1px solid rgba(0, 0, 0, 0.75); */
-  background: rgba(232, 232, 232, 0.8);
+  background: rgba(232, 232, 232, 0.8) !important;
   /* color: #fff !important; */
   color: #000 !important;
   /* box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1); */
@@ -2370,7 +2425,7 @@ button.btn-table {
 }
 
 .modal-tab-list li a:hover {
-  background: rgba(232, 232, 232, 0.8);
+  background: rgba(232, 232, 232, 0.8) !important;
   color: #000 !important;
 }
 
@@ -2485,8 +2540,8 @@ table.tableLayout tbody tr {
 }
 
 table.tableLayout tbody tr:hover {
-  color: #fff;
-  background-color: #2d9cdb;
+  color: #fff !important;
+  background-color: #2d9cdb !important;
   cursor: pointer;
 }
 
@@ -2594,8 +2649,8 @@ table.tableLayoutDB tbody tr {
 }
 
 table.tableLayoutDB tbody tr:hover {
-  color: #fff;
-  background-color: #2d9cdb;
+  color: #fff !important;
+  background-color: #2d9cdb !important;
   cursor: pointer;
 }
 
@@ -2696,7 +2751,7 @@ table.tableLayout-md tbody tr {
 }
 
 table.tableLayout-md tbody tr:hover {
-  cursor: default;
+  cursor: default !important;
 }
 
 table.tableLayout-md .column1,
@@ -2982,8 +3037,8 @@ table.zui-table {
 }
 
 .zui-table tr:hover .zui-sticky-col {
-  color: #fff;
-  background-color: #2d9cdb;
+  color: #fff !important;
+  background-color: #2d9cdb !important;
   cursor: pointer;
 }
 
@@ -3001,14 +3056,14 @@ table.zui-table {
 }
 
 .zui-table tr:hover .zui-sticky-col2 {
-  color: #fff;
-  background-color: #2d9cdb;
+  color: #fff !important;
+  background-color: #2d9cdb !important;
   cursor: pointer;
 }
 
 table.zui-table tbody tr:hover {
-  color: #fff;
-  background-color: #2d9cdb;
+  color: #fff !important;
+  background-color: #2d9cdb !important;
   cursor: pointer;
 }
 
@@ -3113,8 +3168,8 @@ table.sticky-table tbody tr {
 }
 
 table.tableLayout tbody tr:hover {
-  color: #fff;
-  background-color: #2d9cdb;
+  color: #fff !important;
+  background-color: #2d9cdb !important;
   cursor: pointer;
 }
 
@@ -3208,8 +3263,8 @@ table.sticky-joined-table1 tbody tr {
 }
 
 table.tableLayout tbody tr:hover {
-  color: #fff;
-  background-color: #2d9cdb;
+  color: #fff !important;
+  background-color: #2d9cdb !important;
   cursor: pointer;
 }
 
@@ -3270,8 +3325,8 @@ table.sticky-joined-table2 tbody tr {
 }
 
 table.tableLayout tbody tr:hover {
-  color: #fff;
-  background-color: #2d9cdb;
+  color: #fff !important;
+  background-color: #2d9cdb !important;
   cursor: pointer;
 }
 
@@ -3512,8 +3567,8 @@ nav ul li a {
 }
 
 nav ul li > a:hover {
-  background: #00aedb;
-  color: #fff;
+  background: #00aedb !important;
+  color: #fff !important;
 }
 
 nav ul li a i {
@@ -3526,8 +3581,8 @@ nav ul li ul li a {
 }
 
 nav ul li ul li a:hover {
-  background: #e8e8e8;
-  color: #333;
+  background: #e8e8e8 !important;
+  color: #333 !important;
 }
 
 nav ul li ul li a::before {
@@ -3870,6 +3925,90 @@ nav ul li a span.fa {
 }
 
 #overtime-records .modal-edit-consolidation2 .modal-content *:nth-child(3) div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/* ========[ Overtime Driver Records ]======== */
+#overtime-driver-records .container .card-1 > div:first-child {
+  position: relative;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+#overtime-driver-records .container .card-1 > div:first-child a {
+  margin-left: 0.5rem;
+  height: 100%;
+}
+
+#overtime-driver-records .modal-payrollconsolidation .modal-content {
+  width: 33%;
+}
+
+#overtime-driver-records .modal-payrollconsolidation .modal-content .select {
+  width: 230px;
+}
+
+#overtime-driver-records .modal-edit-consolidation .modal-content {
+  width: 60%;
+}
+
+#overtime-driver-records
+.modal-edit-consolidation
+.modal-content
+*:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#overtime-driver-records
+.modal-edit-consolidation
+.modal-content
+*:nth-child(3)
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#overtime-driver-records
+.modal-edit-consolidation2
+.modal-content
+*:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#overtime-driver-records
+.modal-edit-consolidation2
+.modal-content
+*:nth-child(3)
+div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7436,6 +7575,11 @@ p {
   }
   .label-0 {
     font-size: 1.5rem;
+  }
+  .modal-content,
+  .modal-content-sm {
+    width: 60% !important;
+    padding: 2rem 3rem 0 3rem !important;
   }
   /* ========[ HOME ]======== */
   #home .container .card-1 .btn {

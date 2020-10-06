@@ -234,7 +234,7 @@
 
               <div class="search-main-container">
                 <div class="search-container">
-                  <a class="btn-search tooltip" aria-label="Search Mail">
+                  <a class="btn-search tooltip" aria-label="Search Mail" onclick="searchTable(`txtSearch`,`tableEmployeeMasterlist`);">
                     <span class="tooltiptext">Search</span>
                     <svg
                       focusable="false"
@@ -257,8 +257,7 @@
                       list="txtSearch"
                       class="select block"
                       placeholder="Search Employee"
-                      onkeypress="checkSearchInput();"
-                      onchange="checkSearchInput();"
+                      onkeyup="searchTable(`txtSearch`,`tableEmployeeMasterlist`), checkSearchInput();"
                     />
                     <ul class="datalist-data hidden">
                       <li>
@@ -284,7 +283,7 @@
                     aria-label="Clear search"
                     type="button"
                     data-tooltip="Clear search"
-                    onclick="clearSearch(`manage-employee`);"
+                    onclick="clearSearch(`manage-employee`,`tableEmployeeMasterlist`);"
                     class="btn-clear-search tooltip hidden"
                   >
                     <span class="tooltiptext">Clear search</span>
@@ -361,7 +360,7 @@
 
               <!-- employee masterlist -->
               <!-- <label class="norecords">No Records Found</label> -->
-              <table class="tableLayout">
+              <table id="tableEmployeeMasterlist" class="tableLayout">
                 <tbody>
                   <tr>
                     <td class="column1">Action</td>
@@ -386,8 +385,8 @@
                         >Edit</a
                       >
                     </td>
-                    <td class="column2">00</td>
-                    <td class="column3">0000-0000</td>
+                    <td class="column2">01</td>
+                    <td class="column3">0000-0001</td>
                     <td class="column4">
                       John Doe
                     </td>
@@ -409,8 +408,8 @@
                         >Edit</a
                       >
                     </td>
-                    <td class="column2">00</td>
-                    <td class="column3">0000-0000</td>
+                    <td class="column2">02</td>
+                    <td class="column3">0000-0002</td>
                     <td class="column4">
                       John Doe
                     </td>
@@ -432,10 +431,56 @@
                         >Edit</a
                       >
                     </td>
-                    <td class="column2">00</td>
-                    <td class="column3">0000-0000</td>
+                    <td class="column2">03</td>
+                    <td class="column3">0000-0003</td>
                     <td class="column4">
-                      John Doe
+                      John Doe1
+                    </td>
+                    <td class="column5">Operations</td>
+                    <td class="column5">Human Resources</td>
+                    <td class="column6">Hr Staff</td>
+                    <td class="column7">Regular</td>
+                  </tr>
+                  <tr>
+                    <td class="column1">
+                      <a
+                        class="btn-table btn-secondary"
+                        onclick="openModal(`#btnViewEmployee`);"
+                        >View</a
+                      >
+                      <a
+                        class="btn-table btn-secondary"
+                        onclick="openModal(`#btnUpdateEmployee`);"
+                        >Edit</a
+                      >
+                    </td>
+                    <td class="column2">04</td>
+                    <td class="column3">0000-0004</td>
+                    <td class="column4">
+                      John Doe2
+                    </td>
+                    <td class="column5">Operations</td>
+                    <td class="column5">Human Resources</td>
+                    <td class="column6">Hr Staff</td>
+                    <td class="column7">Regular</td>
+                  </tr>
+                  <tr>
+                    <td class="column1">
+                      <a
+                        class="btn-table btn-secondary"
+                        onclick="openModal(`#btnViewEmployee`);"
+                        >View</a
+                      >
+                      <a
+                        class="btn-table btn-secondary"
+                        onclick="openModal(`#btnUpdateEmployee`);"
+                        >Edit</a
+                      >
+                    </td>
+                    <td class="column2">05</td>
+                    <td class="column3">0000-0005</td>
+                    <td class="column4">
+                      John Doe3
                     </td>
                     <td class="column5">Admin</td>
                     <td class="column5">Human Resources</td>
@@ -455,65 +500,19 @@
                         >Edit</a
                       >
                     </td>
-                    <td class="column2">00</td>
-                    <td class="column3">0000-0000</td>
+                    <td class="column2">06</td>
+                    <td class="column3">0000-0006</td>
                     <td class="column4">
-                      John Doe
+                      John Doe4
                     </td>
-                    <td class="column5">Admin</td>
-                    <td class="column5">Human Resources</td>
-                    <td class="column6">Hr Staff</td>
-                    <td class="column7">Regular</td>
-                  </tr>
-                  <tr>
-                    <td class="column1">
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnViewEmployee`);"
-                        >View</a
-                      >
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnUpdateEmployee`);"
-                        >Edit</a
-                      >
-                    </td>
-                    <td class="column2">00</td>
-                    <td class="column3">0000-0000</td>
-                    <td class="column4">
-                      John Doe
-                    </td>
-                    <td class="column5">Admin</td>
-                    <td class="column5">Human Resources</td>
-                    <td class="column6">Hr Staff</td>
-                    <td class="column7">Regular</td>
-                  </tr>
-                  <tr>
-                    <td class="column1">
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnViewEmployee`);"
-                        >View</a
-                      >
-                      <a
-                        class="btn-table btn-secondary"
-                        onclick="openModal(`#btnUpdateEmployee`);"
-                        >Edit</a
-                      >
-                    </td>
-                    <td class="column2">00</td>
-                    <td class="column3">0000-0000</td>
-                    <td class="column4">
-                      John Doe
-                    </td>
-                    <td class="column5">Admin</td>
+                    <td class="column5">Operations</td>
                     <td class="column5">Human Resources</td>
                     <td class="column6">Hr Staff</td>
                     <td class="column7">Regular</td>
                   </tr>
                 </tbody>
               </table>
-              <div class="pagination-container">
+              <div class="pagination-container hidden">
                 <div class="showmore-container">
                   <a class="btn-showmore" href="#"
                     ><i class="fas fa-chevron-down"></i>More Results</a
@@ -2501,7 +2500,7 @@
                   </tbody>
                 </table>
 
-                <div class="pagination-container">
+                <div class="pagination-container hidden">
                   <div class="showmore-container">
                     <a class="btn-showmore" href="#"
                       ><i class="fas fa-chevron-down"></i>More Results</a
@@ -2563,7 +2562,7 @@
                   </tbody>
                 </table>
 
-                <div class="pagination-container">
+                <div class="pagination-container hidden">
                   <div class="showmore-container">
                     <a class="btn-showmore" href="#"
                       ><i class="fas fa-chevron-down"></i>More Results</a
@@ -2630,7 +2629,7 @@
                   </tbody>
                 </table>
 
-                <div class="pagination-container">
+                <div class="pagination-container hidden">
                   <div class="showmore-container">
                     <a class="btn-showmore" href="#"
                       ><i class="fas fa-chevron-down"></i>More Results</a
@@ -2685,7 +2684,7 @@
                   </tbody>
                 </table>
 
-                <div class="pagination-container">
+                <div class="pagination-container hidden">
                   <div class="showmore-container">
                     <a class="btn-showmore" href="#"
                       ><i class="fas fa-chevron-down"></i>More Results</a
@@ -2769,7 +2768,7 @@
                   </tbody>
                 </table>
 
-                <div class="pagination-container">
+                <div class="pagination-container hidden">
                   <div class="showmore-container">
                     <a class="btn-showmore" href="#"
                       ><i class="fas fa-chevron-down"></i>More Results</a
