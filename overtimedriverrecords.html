@@ -169,7 +169,7 @@
           </div>
 
           <div class="container">
-            <h2>Overtime Driver Records</h2>
+            <h2>Overtime Application(Drivers)</h2>
             <!-- <div id="tab">
               <ul class="tab-list" onclick="selectTab();">
                 <li class="current-tab">
@@ -183,7 +183,7 @@
             <div class="card card-1">
               <div>
                 <a
-                  class="btn-xs btn-alt"
+                  class="btn-cta btn-alt"
                   id="btnTimeAlteration"
                   onclick="openModalOT();"
                 >
@@ -360,8 +360,8 @@
                     <td class="column0">Action</td>
                     <td class="column1">Employee Name</td>
                     <td class="column2">Date</td>
-                    <td class="column3">Overtime Type</td>
-                    <td class="column4">Total Hours</td>
+                    <td class="column3">OT Big</td>
+                    <td class="column4">OT Small</td>
                     <td class="column5">Reason</td>
                   </tr>
                   <tr>
@@ -374,8 +374,8 @@
                     </td>
                     <td class="column1">John Doe</td>
                     <td class="column2">Mar 12, 2020</td>
-                    <td class="column3">Ordinary Time</td>
-                    <td class="column4">6</td>
+                    <td class="column3">200.00</td>
+                    <td class="column4">200.00</td>
                     <td class="column5">Lorem ipsum dolor sit amet.</td>
                   </tr>
                 </tbody>
@@ -412,7 +412,7 @@
               <div class="header-delete-container">
                 <h5>Overtime Application Form</h5>
                 <a
-                  class="btn-sm btn-alt-red mx-3"
+                  class="btn-xs btn-alt-red mx-3"
                   id="btnDelete"
                   onclick="window.confirm('Delete this Overtime record?')"
                   >Delete</a
@@ -485,7 +485,7 @@
               </div>
               <div class="modal-btn-container">
                 <a class="btn-sm btn-primary mx-3" id="btnRequestOvertime"
-                  >New</a
+                  >Save</a
                 >
                 <a class="btn-sm btn-primary mx-3" id="btnUpdateOvertime"
                   >Update</a

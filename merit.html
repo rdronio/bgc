@@ -186,9 +186,7 @@
             </div> -->
             <div class="card card-1">
               <div>
-                <a class="btn-xs btn-alt" onclick="addModalMerit();"
-                  >Add Merit
-                </a>
+                <a class="btn-cta btn-alt" onclick="addModalMerit();">New </a>
               </div>
               <div>
                 <!-- <label class="label-6">Filter Date</label>
@@ -324,8 +322,7 @@
                       name="showEmployeeByCategory"
                       id="showEmployeeByCategory"
                       class="select"
-                    >
-                    </select>
+                    ></select>
                   </div>
 
                   <div>
@@ -392,8 +389,8 @@
                     <td class="column1">
                       <a
                         class="btn-table btn-secondary"
-                        onclick="window.confirm('Delete this Merit record?')"
-                        >Delete</a
+                        onclick="editModalMerit();"
+                        >Edit</a
                       >
                       <!-- <a
                         class="btn-table btn-secondary"
@@ -434,8 +431,7 @@
                   id="txtDepartment"
                   class="select"
                   onchange=""
-                >
-                </select>
+                ></select>
 
                 <label for="txtEmployee" class="label-6">Employee </label>
                 <select
@@ -443,8 +439,7 @@
                   id="txtEmployee"
                   class="select"
                   onchange=""
-                >
-                </select>
+                ></select>
 
                 <label for="selectMonth" class="label-6">Month </label>
                 <input
@@ -461,7 +456,7 @@
                 <textarea name="txtAreaReason" id="txtAreaReason"></textarea>
               </div>
               <div class="modal-btn-container">
-                <a class="btn-sm btn-primary mx-3" id="btnAdd">Add Merit</a>
+                <a class="btn-sm btn-primary mx-3" id="btnAdd">Save</a>
                 <a class="btn-sm btn-primary mx-3 hidden" id="btnEdit"
                   >Save Changes</a
                 >

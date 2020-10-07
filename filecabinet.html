@@ -175,16 +175,16 @@
             <div class="card card-1">
               <div class="">
                 <a
-                  class="btn-xs btn-alt"
+                  class="btn-cta btn-alt"
                   id="btnFileUpload"
                   onclick="openModal(`#btnFileUpload`)"
                 >
-                  File Upload
+                  New
                 </a>
               </div>
               <div class="search-main-container">
                 <div class="search-container">
-                  <a class="btn-search tooltip" aria-label="Search Mail">
+                  <button class="btn-search tooltip" aria-label="Search Mail">
                     <span class="tooltiptext">Search</span>
                     <svg
                       focusable="false"
@@ -198,16 +198,16 @@
                       ></path>
                       <path d="M0,0h24v24H0V0z" fill="none"></path>
                     </svg>
-                  </a>
+                  </button>
                   <div>
                     <input
                       id="txtSearch"
                       class="txtSearch"
                       type="text"
                       list="txtSearch"
-                      class="select block"
                       placeholder="Search File"
                       onkeypress="checkSearchInput();"
+                      onchange="checkSearchInput();"
                     />
                     <ul class="datalist-data hidden">
                       <li>
@@ -233,7 +233,7 @@
                     aria-label="Clear search"
                     type="button"
                     data-tooltip="Clear search"
-                    onclick="clearSearch(`file-cabinet`);"
+                    onclick="clearSearch(`substitution`);"
                     class="btn-clear-search tooltip hidden"
                   >
                     <span class="tooltiptext">Clear search</span>
@@ -252,22 +252,58 @@
                   </a>
                   <a
                     type="button"
-                    data-tooltip="Show search options"
-                    aria-label="Advanced search options"
-                    class="showSearchOptions hidden"
+                    data-tooltip="Search options"
+                    aria-label="Search options"
+                    class="showSearchOptions tooltip"
                     onclick="toggleSearchFilter();"
                   >
+                    <span class="tooltiptext">Search options</span>
                     <svg
                       focusable="false"
                       height="24px"
                       viewBox="0 0 24 24"
                       width="24px"
                       xmlns="http://www.w3.org/2000/svg"
+                      class=""
                     >
                       <path d="M7 10l5 5 5-5z"></path>
                       <path d="M0 0h24v24H0z" fill="none"></path>
                     </svg>
                   </a>
+                </div>
+                <div class="search-filter-container hidden">
+                  <div>
+                    <label class="block">Filter Date</label>
+                    <div class="datePeriod">
+                      <label for="txtDateFrom">From: </label>
+                      <input
+                        name="txtDateFrom"
+                        type="text"
+                        id="txtDateFrom"
+                        class="otPicker"
+                      />
+                      <label for="txtDateTo">To: </label>
+                      <input
+                        name="txtDateTo"
+                        type="text"
+                        id="txtDateTo"
+                        class="otPicker"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="btn-filter-container">
+                    <a class="btn-sm btn-primary" id="btnSearchPayroll">
+                      Search
+                    </a>
+
+                    <a
+                      class="btn-sm btn-secondary hidden"
+                      id="btnClearMemoNotice"
+                    >
+                      Clear
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -280,19 +316,15 @@
                     <td class="column3">Action</td>
                   </tr>
                   <tr>
-                    <td class="column1">
-                      File 01
-                    </td>
-                    <td class="column2">
-                      File01.pdf
-                    </td>
+                    <td class="column1">File 01</td>
+                    <td class="column2">File01.pdf</td>
                     <td class="column3">
                       <a class="btn-table btn-secondary">Download</a>
                     </td>
                   </tr>
                 </tbody>
               </table>
-              <div class="pagination-container">
+              <div class="pagination-container hidden">
                 <div class="showmore-container">
                   <a class="btn-showmore" href="#"
                     ><i class="fas fa-chevron-down"></i>More Results</a
@@ -336,7 +368,7 @@
               </div>
               <div class="modal-btn-container">
                 <a class="btn-sm btn-primary mx-3" id="btnSubmitAddHoliday"
-                  >Save File</a
+                  >New</a
                 >
                 <a
                   class="btn-sm btn-secondary mx-3"

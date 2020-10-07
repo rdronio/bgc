@@ -368,6 +368,21 @@ iframe {
   cursor: pointer;
 }
 
+.btn-cta {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  letter-spacing: 1px;
+  border-radius: 120px;
+  text-align: center;
+  cursor: pointer !important;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.1),
+    0 1px 3px 1px rgba(60, 64, 67, 0.1);
+  min-width: 120px;
+}
+
 .btn-xs {
   display: inline-block;
   font-family: inherit;
@@ -901,18 +916,22 @@ button.btn-table {
 
 .hidden {
   display: none !important;
+  transition: all 0.4s ease-out;
 }
 
 .show {
   display: inline-block !important;
+  transition: all 0.4s ease-in;
 }
 
 .block {
   display: block !important;
+  transition: all 0.4s ease-in;
 }
 
 .inline-block {
   display: inline-block;
+  transition: all 0.4s ease-in;
 }
 
 .header-delete-container {
@@ -3442,9 +3461,6 @@ nav {
   overflow-y: auto;
   z-index: 2;
   transition: all 0.4s ease-in;
-  -webkit-transition: all 0.4s ease-in;
-  -o-transition: all 0.4s ease-in;
-  -moz-transition: all 0.4s ease-in;
 }
 
 nav::-webkit-scrollbar {
@@ -3712,36 +3728,14 @@ nav ul li a span.fa {
 }
 
 /* ========[ Holiday Notice ]======== */
-#holiday-notice .container .card-1 div:first-child {
+#holiday-notice .container .card-1 > div:first-child {
   position: relative;
   text-align: right;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-#holiday-notice .container .card-1 div:first-child a {
+#holiday-notice .container .card-1 > div:first-child a {
   margin-left: 0.5rem;
-}
-
-#holiday-notice .container .card-1 div:nth-child(2) {
-  display: inline-block;
-  margin-bottom: 0.5rem;
-  margin-right: 1rem;
-}
-
-#holiday-notice .container .card-1 div:nth-child(2) input {
-  margin-right: 0.5rem;
-}
-
-#holiday-notice .container .card-1 div:nth-child(3) {
-  display: inline-block;
-}
-
-#holiday-notice .container .card-1 div:nth-child(3) a {
-  margin-right: 0.5rem;
-}
-
-#holiday-notice .modal-content > div > .modal-chk-container label {
-  margin-right: 1.5rem;
 }
 
 /* ========[ Overtime Records ]======== */
@@ -3853,34 +3847,16 @@ nav ul li a span.fa {
   /* display: grid;
   grid-template-columns: 1fr 1.5fr; */
 }
-/* #leaverecords .container .card-1 .card-subhead-container .card-subhead {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 2rem 1rem 2rem 2rem 1rem 2rem;
-  gap: 1rem;
-} */
 
-/* #leaverecords
-  .container
-  .card-1
-  .card-subhead-container
-  .card-subhead
-  > *:nth-child(1),
-#leaverecords
-  .container
-  .card-1
-  .card-subhead-container
-  .card-subhead
-  > *:nth-child(8) {
-  grid-column: 1 / span 3;
-} */
-
-#leaverecords .container .card-1 .card-subhead-container div:nth-child(2) {
+#leaverecords .container .card-1 > div:first-child {
+  position: relative;
   text-align: right;
+  margin-bottom: 1rem;
 }
 
-#leaverecords .container .card-1 .card-subhead-container div:nth-child(2) a {
-  display: inline-block;
+#leaverecords .container .card-1 > div:first-child a {
+  margin-left: 0.5rem;
+  height: 100%;
 }
 
 #leaverecords .tableLayout tbody tr {
@@ -3911,32 +3887,14 @@ nav ul li a span.fa {
 
 /* ========[ Undertime Records ]======== */
 
-#undertime-records .container .card-1 div:first-child {
+#undertime-records .container .card-1 > div:first-child {
   position: relative;
   text-align: right;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 #undertime-records .container .card-1 > div:first-child a {
   display: inline-block;
-}
-
-#undertime-records .container .card-1 div:nth-child(2) {
-  display: inline-block;
-  margin-bottom: 0.5rem;
-  margin-right: 1rem;
-}
-
-#undertime-records .container .card-1 div:nth-child(2) input {
-  margin-right: 0.5rem;
-}
-
-#undertime-records .container .card-1 div:nth-child(3) {
-  display: inline-block;
-}
-
-#undertime-records .container .card-1 div:nth-child(3) button {
-  margin-right: 0.5rem;
 }
 
 /* ========[ Substitution ]======== */

@@ -48,7 +48,7 @@
             </div>
             <div class="profile_info">
               <span>Welcome</span>
-              <h2 id="access-role">HR Admin</h2>
+              <h2 id="accessrole">HR Admin</h2>
               <p>&nbsp;</p>
             </div>
           </div>
@@ -65,29 +65,34 @@
           <!--HR Admin ACESS-->
           <ul id="hradminaccess" class="nav-list block">
             <li class="current-page">
-              <a href="DashboardAdmin.aspx"
+              <a href="DashboardAdmin"
                 ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
               >
             </li>
             <li>
               <a href="#"
-                ><i class="fas fa-tasks"> </i>Approvals<span
+                ><i class="fas fa-tasks"> </i>Applications<span
                   class="fa fa-chevron-down"
                 ></span
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="SaturdaySched.aspx">Saturday Schedule</a>
+                  <a href="SaturdaySched">Saturday Schedule</a>
                 </li>
                 <li>
-                  <a href="Substitution.aspx">Substitute Records</a>
+                  <a href="Substitution">Substitute Application</a>
                 </li>
                 <li>
-                  <a href="LeaveRecords.aspx">Leave Records</a>
+                  <a href="LeaveRecords">Leave Application</a>
                 </li>
-                <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
+                <li><a href="OvertimeRecords">Overtime Application(A/O)</a></li>
                 <li>
-                  <a href="UndertimeRecords.aspx">Undertime Records</a>
+                  <a href="OvertimeRecordsDriver"
+                    >Overtime Application(Drivers)</a
+                  >
+                </li>
+                <li>
+                  <a href="UndertimeRecords">Undertime Application</a>
                 </li>
               </ul>
             </li>
@@ -99,20 +104,24 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="ManageEmployees.aspx">Employee Masterlist</a>
+                  <a href="ManageEmployees">Employee Masterlist</a>
                 </li>
                 <li>
-                  <a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a>
+                  <a href="EmployeeLeaveRecords">Employee Leave Records</a>
                 </li>
-                <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
-                <li><a href="merit.aspx">Employee Merits</a></li>
-                <li><a href="contribution.aspx">Employee Contributions</a></li>
-                <li><a href="savings.aspx">Employee Savings</a></li>
+                <li><a href="TimeRecords">Employee Time Records</a></li>
+                <li><a href="merit">Employee Merits</a></li>
+                <li><a href="contribution">Employee Contributions</a></li>
+                <li><a href="savings">Employee Savings</a></li>
               </ul>
             </li>
-
             <li>
-              <a href="FileCabinet.aspx"
+              <a href="payrollconsolidation">
+                <i class="fas fa-calculator"></i>Payroll Consolidation</a
+              >
+            </li>
+            <li>
+              <a href="FileCabinet"
                 ><i class="fas fa-folder-open"></i>File Cabinet</a
               >
             </li>
@@ -125,12 +134,12 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="GenerateDtrReport.aspx">Generate DTR</a>
+                  <a href="GenerateDtrReport">Generate DTR</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="EmployeeMasterlist.aspx"
+              <a href="EmployeeMasterlist"
                 ><i class="fas fa-download"></i>Import Time Records</a
               >
             </li>
@@ -142,13 +151,13 @@
               ></a>
               <ul class="nav child_menu hidden">
                 <li>
-                  <a href="HolidayList.aspx">Holiday Notice</a>
-                  <a class="hidden" href="backups.aspx">Backups</a>
+                  <a href="HolidayList">Holiday Notice</a>
                 </li>
+                <li><a class="hidden" href="backups">Backups</a></li>
               </ul>
             </li>
             <li>
-              <a href="LoginPage.aspx"
+              <a href="LoginPage"
                 ><i class="fas fa-sign-out-alt"></i>Sign Out</a
               >
             </li>
@@ -160,34 +169,34 @@
                         <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
                     </li>-->
             <li>
-              <a href="PayrollMain.aspx"
+              <a href="PayrollMain"
                 ><i class="fas fa-file-invoice"></i>Payroll</a
               >
             </li>
             <li class="current-page">
-              <a href="ManageEmployees.aspx"
+              <a href="ManageEmployees"
                 ><i class="fas fa-file-alt"></i>Employee Masterlist</a
               >
             </li>
             <!--<li>
-                        <a href="SendMemo.aspx"><i class="far fa-bell"></i>Memo / Notice</a>
+                        <a href="SendMemo"><i class="far fa-bell"></i>Memo / Notice</a>
                     </li>
                     <li>
                         <a href="#"><i class="fas fa-chart-area"></i>Reports<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu hidden">
                             <li>
-                                <a href="GenerateDtrReport.aspx">Generate DTR Report</a>
+                                <a href="GenerateDtrReport">Generate DTR Report</a>
                             </li>
                             <li>
-                                <a href="payrollreport.aspx">Payroll Report</a>
+                                <a href="payrollreport">Payroll Report</a>
                             </li>
                             <li>
-                                <a href="payrollpayslip.aspx">Payslips</a>
+                                <a href="payrollpayslip">Payslips</a>
                             </li>
                         </ul>
                     </li>-->
             <li>
-              <a href="LoginPage.aspx"
+              <a href="LoginPage"
                 ><i class="fas fa-sign-out-alt"></i>Sign Out</a
               >
             </li>
@@ -475,9 +484,9 @@
                               id="showEmployeeBy"
                               class="select"
                             >
-                              <option value=""
-                                >--Please choose an option--</option
-                              >
+                              <option value="">
+                                --Please choose an option--
+                              </option>
                               <option value="department">Department</option>
                               <option value="position">Position</option>
                             </select>
@@ -485,8 +494,7 @@
                               name="showEmployeeByCategory"
                               id="showEmployeeByCategory"
                               class="select"
-                            >
-                            </select>
+                            ></select>
                           </div>
 
                           <div>
@@ -501,9 +509,9 @@
                               id="selectEmploymentStatus"
                               class="select"
                             >
-                              <option value=""
-                                >--Please choose an option--</option
-                              >
+                              <option value="">
+                                --Please choose an option--
+                              </option>
                               <option value="probationary">Probationary</option>
                               <option value="regular">Regular</option>
                               <option value="resigned">Resigned</option>
@@ -523,9 +531,9 @@
                               id="showEmployeeByCategory"
                               class="select"
                             >
-                              <option value=""
-                                >--Please choose an option--</option
-                              >
+                              <option value="">
+                                --Please choose an option--
+                              </option>
                               <option value="department">Male</option>
                               <option value="position">Female</option>
                             </select>
@@ -571,126 +579,98 @@
                         <td class="column2">John Doe</td>
                         <td class="column3">IT Department</td>
                         <td class="column4">Programmer</td>
-                        <td class="column5">
-                          Lorem ipsum dolor sit amet.
-                        </td>
+                        <td class="column5">Lorem ipsum dolor sit amet.</td>
                       </tr>
                       <tr>
                         <td class="column1">00001</td>
                         <td class="column2">John Doe</td>
                         <td class="column3">IT Department</td>
                         <td class="column4">Programmer</td>
-                        <td class="column5">
-                          Lorem ipsum dolor sit amet.
-                        </td>
+                        <td class="column5">Lorem ipsum dolor sit amet.</td>
                       </tr>
                       <tr>
                         <td class="column1">00001</td>
                         <td class="column2">John Doe</td>
                         <td class="column3">IT Department</td>
                         <td class="column4">Programmer</td>
-                        <td class="column5">
-                          Lorem ipsum dolor sit amet.
-                        </td>
+                        <td class="column5">Lorem ipsum dolor sit amet.</td>
                       </tr>
                       <tr>
                         <td class="column1">00001</td>
                         <td class="column2">John Doe</td>
                         <td class="column3">IT Department</td>
                         <td class="column4">Programmer</td>
-                        <td class="column5">
-                          Lorem ipsum dolor sit amet.
-                        </td>
+                        <td class="column5">Lorem ipsum dolor sit amet.</td>
                       </tr>
                       <tr>
                         <td class="column1">00001</td>
                         <td class="column2">John Doe</td>
                         <td class="column3">IT Department</td>
                         <td class="column4">Programmer</td>
-                        <td class="column5">
-                          Lorem ipsum dolor sit amet.
-                        </td>
+                        <td class="column5">Lorem ipsum dolor sit amet.</td>
                       </tr>
                       <tr>
                         <td class="column1">00001</td>
                         <td class="column2">John Doe</td>
                         <td class="column3">IT Department</td>
                         <td class="column4">Programmer</td>
-                        <td class="column5">
-                          Lorem ipsum dolor sit amet.
-                        </td>
+                        <td class="column5">Lorem ipsum dolor sit amet.</td>
                       </tr>
                       <tr>
                         <td class="column1">00001</td>
                         <td class="column2">John Doe</td>
                         <td class="column3">IT Department</td>
                         <td class="column4">Programmer</td>
-                        <td class="column5">
-                          Lorem ipsum dolor sit amet.
-                        </td>
+                        <td class="column5">Lorem ipsum dolor sit amet.</td>
                       </tr>
                       <tr>
                         <td class="column1">00001</td>
                         <td class="column2">John Doe</td>
                         <td class="column3">IT Department</td>
                         <td class="column4">Programmer</td>
-                        <td class="column5">
-                          Lorem ipsum dolor sit amet.
-                        </td>
+                        <td class="column5">Lorem ipsum dolor sit amet.</td>
                       </tr>
                       <tr>
                         <td class="column1">00001</td>
                         <td class="column2">John Doe</td>
                         <td class="column3">IT Department</td>
                         <td class="column4">Programmer</td>
-                        <td class="column5">
-                          Lorem ipsum dolor sit amet.
-                        </td>
+                        <td class="column5">Lorem ipsum dolor sit amet.</td>
                       </tr>
                       <tr>
                         <td class="column1">00001</td>
                         <td class="column2">John Doe</td>
                         <td class="column3">IT Department</td>
                         <td class="column4">Programmer</td>
-                        <td class="column5">
-                          Lorem ipsum dolor sit amet.
-                        </td>
+                        <td class="column5">Lorem ipsum dolor sit amet.</td>
                       </tr>
                       <tr>
                         <td class="column1">00001</td>
                         <td class="column2">John Doe</td>
                         <td class="column3">IT Department</td>
                         <td class="column4">Programmer</td>
-                        <td class="column5">
-                          Lorem ipsum dolor sit amet.
-                        </td>
+                        <td class="column5">Lorem ipsum dolor sit amet.</td>
                       </tr>
                       <tr>
                         <td class="column1">00001</td>
                         <td class="column2">John Doe</td>
                         <td class="column3">IT Department</td>
                         <td class="column4">Programmer</td>
-                        <td class="column5">
-                          Lorem ipsum dolor sit amet.
-                        </td>
+                        <td class="column5">Lorem ipsum dolor sit amet.</td>
                       </tr>
                       <tr>
                         <td class="column1">00001</td>
                         <td class="column2">John Doe</td>
                         <td class="column3">IT Department</td>
                         <td class="column4">Programmer</td>
-                        <td class="column5">
-                          Lorem ipsum dolor sit amet.
-                        </td>
+                        <td class="column5">Lorem ipsum dolor sit amet.</td>
                       </tr>
                       <tr>
                         <td class="column1">00001</td>
                         <td class="column2">John Doe</td>
                         <td class="column3">IT Department</td>
                         <td class="column4">Programmer</td>
-                        <td class="column5">
-                          Lorem ipsum dolor sit amet.
-                        </td>
+                        <td class="column5">Lorem ipsum dolor sit amet.</td>
                       </tr>
                     </tbody>
                   </table>

@@ -178,16 +178,15 @@
             <div class="card card-1">
               <div class="">
                 <a
-                  class="btn-xs btn-alt"
+                  class="btn-cta btn-alt"
                   id="btnFileUpload"
                   onclick="openModal(`#btnModal1`)"
-                >
-                  Schedule Employee
+                  >New
                 </a>
               </div>
               <div class="search-main-container">
                 <div class="search-container">
-                  <a class="btn-search tooltip" aria-label="Search Mail">
+                  <button class="btn-search tooltip" aria-label="Search Mail">
                     <span class="tooltiptext">Search</span>
                     <svg
                       focusable="false"
@@ -201,14 +200,13 @@
                       ></path>
                       <path d="M0,0h24v24H0V0z" fill="none"></path>
                     </svg>
-                  </a>
+                  </button>
                   <div>
                     <input
                       id="txtSearch"
                       class="txtSearch"
                       type="text"
                       list="txtSearch"
-                      class="select block"
                       placeholder="Search Employee"
                       onkeypress="checkSearchInput();"
                       onchange="checkSearchInput();"
@@ -237,7 +235,7 @@
                     aria-label="Clear search"
                     type="button"
                     data-tooltip="Clear search"
-                    onclick="clearSearch(`skeletalforce`);"
+                    onclick="clearSearch(`substitution`);"
                     class="btn-clear-search tooltip hidden"
                   >
                     <span class="tooltiptext">Clear search</span>
@@ -256,22 +254,95 @@
                   </a>
                   <a
                     type="button"
-                    data-tooltip="Show search options"
-                    aria-label="Advanced search options"
-                    class="showSearchOptions hidden"
+                    data-tooltip="Search options"
+                    aria-label="Search options"
+                    class="showSearchOptions tooltip"
                     onclick="toggleSearchFilter();"
                   >
+                    <span class="tooltiptext">Search options</span>
                     <svg
                       focusable="false"
                       height="24px"
                       viewBox="0 0 24 24"
                       width="24px"
                       xmlns="http://www.w3.org/2000/svg"
+                      class=""
                     >
                       <path d="M7 10l5 5 5-5z"></path>
                       <path d="M0 0h24v24H0z" fill="none"></path>
                     </svg>
                   </a>
+                </div>
+                <div class="search-filter-container hidden">
+                  <div>
+                    <label class="block">Filter Date</label>
+                    <div class="datePeriod">
+                      <label for="txtDateFrom">From: </label>
+                      <input
+                        name="txtDateFrom"
+                        type="text"
+                        id="txtDateFrom"
+                        class="otPicker"
+                      />
+                      <label for="txtDateTo">To: </label>
+                      <input
+                        name="txtDateTo"
+                        type="text"
+                        id="txtDateTo"
+                        class="otPicker"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="showEmployeeBy">
+                    <label for="showEmployeeBy" class="label-6 block"
+                      >Show Employee by</label
+                    >
+
+                    <select
+                      name="showEmployeeBy"
+                      id="showEmployeeBy"
+                      class="select"
+                      onchange="getEmployeeBy()"
+                    >
+                      <option value="">--Please choose an option--</option>
+                      <option value="department">Department</option>
+                      <option value="position">Position</option>
+                    </select>
+                    <select
+                      name="showEmployeeByCategory"
+                      id="showEmployeeByCategory"
+                      class="select"
+                    ></select>
+                  </div>
+
+                  <div>
+                    <label for="selectEmploymentStatus" class="label-6 block"
+                      >Gender</label
+                    >
+                    <select
+                      name="showEmployeeByCategory"
+                      id="showEmployeeByCategory"
+                      class="select"
+                    >
+                      <option value="">--Please choose an option--</option>
+                      <option value="department">Male</option>
+                      <option value="position">Female</option>
+                    </select>
+                  </div>
+
+                  <div class="btn-filter-container">
+                    <a class="btn-sm btn-primary" id="btnSearchPayroll">
+                      Search
+                    </a>
+
+                    <a
+                      class="btn-sm btn-secondary hidden"
+                      id="btnClearMemoNotice"
+                    >
+                      Clear
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -285,22 +356,14 @@
                     <td class="column4">End Time</td>
                   </tr>
                   <tr>
-                    <td class="column1">
-                      John Doe
-                    </td>
-                    <td class="column2">
-                      03/28/2020
-                    </td>
-                    <td class="column3">
-                      09:00AM
-                    </td>
-                    <td class="column4">
-                      10:00PM
-                    </td>
+                    <td class="column1">John Doe</td>
+                    <td class="column2">03/28/2020</td>
+                    <td class="column3">09:00AM</td>
+                    <td class="column4">10:00PM</td>
                   </tr>
                 </tbody>
               </table>
-              <div class="pagination-container">
+              <div class="pagination-container hidden">
                 <div class="showmore-container">
                   <a class="btn-showmore" href="#"
                     ><i class="fas fa-chevron-down"></i>More Results</a
@@ -405,7 +468,7 @@
               </div>
               <div class="modal-btn-container">
                 <a class="btn-sm btn-primary mx-3" id="btnSubmitAddHoliday"
-                  >Schedule Employee</a
+                  >Save</a
                 >
                 <a
                   class="btn-sm btn-secondary mx-3"
