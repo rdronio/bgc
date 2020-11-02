@@ -23,7 +23,7 @@
     <title>HRIS & Payroll System</title>
   </head>
   <body>
-    <form id="payroll-report-per-employee" action="#" autocomplete="off">
+    <form id="atm" action="#" autocomplete="off">
       <!-- main -->
       <div class="main">
         <!--NAV MENU-->
@@ -47,7 +47,7 @@
             </div>
             <div class="profile_info">
               <span>Welcome</span>
-              <h2 id="access-role">HR Payroll</h2>
+              <h2 id="accessrole">HR Payroll</h2>
               <p>&nbsp;</p>
             </div>
           </div>
@@ -63,14 +63,14 @@
 
           <!--HR Admin ACESS-->
           <ul id="hradminaccess" class="nav-list">
-            <li>
+            <li class="current-page">
               <a href="DashboardAdmin"
                 ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
               >
             </li>
             <li>
               <a href="#"
-                ><i class="fas fa-tasks"> </i>Approvals<span
+                ><i class="fas fa-tasks"> </i>Applications<span
                   class="fa fa-chevron-down"
                 ></span
               ></a>
@@ -79,14 +79,19 @@
                   <a href="SaturdaySched">Saturday Schedule</a>
                 </li>
                 <li>
-                  <a href="Substitution">Substitute Records</a>
+                  <a href="Substitution">Substitute Application</a>
                 </li>
                 <li>
-                  <a href="LeaveRecords">Leave Records</a>
+                  <a href="LeaveRecords">Leave Application</a>
                 </li>
-                <li><a href="OvertimeRecords">Overtime Records</a></li>
+                <li><a href="OvertimeRecords">Overtime Application(A/O)</a></li>
                 <li>
-                  <a href="UndertimeRecords">Undertime Records</a>
+                  <a href="OvertimeRecordsDriver"
+                    >Overtime Application(Drivers)</a
+                  >
+                </li>
+                <li>
+                  <a href="UndertimeRecords">Undertime Application</a>
                 </li>
               </ul>
             </li>
@@ -107,15 +112,13 @@
                 <li><a href="merit">Employee Merits</a></li>
                 <li><a href="contribution">Employee Contributions</a></li>
                 <li><a href="savings">Employee Savings</a></li>
-                <li>
-                  <a href="payrollconsolidation">Admin & Ops Consolidation</a>
-                </li>
-                <li>
-                  <a href="driverconsolidation">Driver Consolidation</a>
-                </li>
               </ul>
             </li>
-
+            <li>
+              <a href="payrollconsolidation">
+                <i class="fas fa-calculator"></i>Payroll Consolidation</a
+              >
+            </li>
             <li>
               <a href="FileCabinet"
                 ><i class="fas fa-folder-open"></i>File Cabinet</a
@@ -145,7 +148,7 @@
                   class="fa fa-chevron-down"
                 ></span
               ></a>
-              <ul class="nav child_menu">
+              <ul class="nav child_menu hidden">
                 <li>
                   <a href="HolidayList">Holiday Notice</a>
                 </li>
@@ -162,35 +165,21 @@
           <!--HR Payroll ACESS-->
           <ul id="hrpayrollaccess" class="nav-list block">
             <!--<li>
-                <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
-            </li>-->
-            <li>
-              <a href="PayrollMain"
-                ><i class="fas fa-file-invoice"></i>Payroll</a
-              >
+        <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
+      </li>-->
+            <li class="current-page">
+              <a href="PayrollMain"><i class="far fa-credit-card"></i>ATM</a>
             </li>
             <li>
-              <a href="ManageEmployees"
-                ><i class="fas fa-file-alt"></i>Employee Masterlist</a
-              >
+              <a href=""><i class="fas fa-hands"></i>Benefits</a>
             </li>
             <li>
-              <a href="#"
-                ><i class="fas fa-chart-area"></i>Reports<span
-                  class="fa fa-chevron-down"
-                ></span
-              ></a>
-              <ul class="nav child_menu">
-                <li>
-                  <a href="GenerateDtrReport">Generate DTR Report</a>
-                </li>
-                <li>
-                  <a href="payrollperdepartment">Payroll Per Department</a>
-                </li>
-                <li class="current-page">
-                  <a href="payrollperemployee">Payroll Per Employee</a>
-                </li>
-              </ul>
+              <a href=""><i class="fas fa-file-invoice-dollar"></i>Payslips</a>
+            </li>
+            <li>
+              <a href="payrollperdepartment"
+                ><i class="fas fa-users"></i>Payroll per Department</a
+              >
             </li>
             <li>
               <a href="LoginPage"
@@ -208,7 +197,7 @@
         <!--NAV MENU END-->
 
         <!-- Payroll Report Per Department-->
-        <section id="payroll-report-per-employee" class="content">
+        <section id="atm" class="content">
           <!-- TOP NAV  -->
           <div class="top-nav">
             <span class="menu-btn">
@@ -223,7 +212,7 @@
           </div>
 
           <div class="container">
-            <h2>Payroll Report Per Employee</h2>
+            <h2>ATM</h2>
             <div class="card card-1">
               <!-- <div class="">
                 <a
@@ -259,9 +248,8 @@
                       type="text"
                       list="txtSearch"
                       class="select block"
-                      placeholder="Search Employee"
-                      onkeypress="checkSearchInput();"
-                      onchange="checkSearchInput();"
+                      placeholder="Search Pay Period"
+                      onkeyup="searchTable1(`txtSearch`,`dgAtm`), checkSearchInput();"
                     />
                     <ul class="datalist-data hidden">
                       <li>
@@ -287,7 +275,7 @@
                     aria-label="Clear search"
                     type="button"
                     data-tooltip="Clear search"
-                    onclick="clearSearch(`payroll`);"
+                    onclick="clearSearch(`atm`,`dgAtm`);"
                     class="btn-clear-search tooltip hidden"
                   >
                     <span class="tooltiptext">Clear search</span>
@@ -308,7 +296,7 @@
                     type="button"
                     data-tooltip="Show search options"
                     aria-label="Advanced search options"
-                    class="showSearchOptions"
+                    class="showSearchOptions hidden"
                     onclick="toggleSearchFilter();"
                   >
                     <svg
@@ -343,8 +331,7 @@
                       name="showEmployeeByCategory"
                       id="showEmployeeByCategory"
                       class="select"
-                    >
-                    </select>
+                    ></select>
                   </div>
 
                   <div class="btn-filter-container">
@@ -362,36 +349,26 @@
                 </div>
               </div>
 
-              <!-- Payroll Report per employee -->
-              <table class="tableLayout">
+              <!-- ATM -->
+              <table class="tableLayout" id="dgAtm">
                 <tbody>
                   <tr>
+                    <td>Action</td>
                     <td>Payroll Period</td>
                     <td>Online Total</td>
                     <td>Cash Total</td>
                     <td>Total BIG C Payroll</td>
                     <td>Prepared By</td>
-                    <td>Action</td>
                   </tr>
                   <tr>
                     <td>
-                      Feb 01, 2020 - Feb 15, 2020
-                    </td>
-                    <td>
-                      480,000.00
-                    </td>
-                    <td>
-                      10,000.00
-                    </td>
-                    <td>
-                      500,000.00
-                    </td>
-                    <td>
-                      RACHELLE NAE M. LAYUG
-                    </td>
-                    <td>
                       <a class="btn-table btn-secondary">Download</a>
                     </td>
+                    <td>February 01-15, 2020</td>
+                    <td>480,000.00</td>
+                    <td>10,000.00</td>
+                    <td>500,000.00</td>
+                    <td>RACHELLE NAE M. LAYUG</td>
                   </tr>
                 </tbody>
               </table>

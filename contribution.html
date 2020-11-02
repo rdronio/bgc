@@ -414,12 +414,23 @@
             <div class="modal-content">
               <div class="header-delete-container">
                 <h5>Contribution Form</h5>
-                <a
-                  class="btn-xs btn-alt-red mx-3"
-                  id="btnDelete"
-                  onclick="window.confirm('Delete this Merit record?')"
-                  >Delete</a
-                >
+                <div class="more-container">
+                  <a
+                    class="more tooltip"
+                    id="btnMore"
+                    onclick="toggleMoreSubContainer();"
+                    ><i class="fas fa-ellipsis-v"></i
+                  ></a>
+                  <div class="more-sub-container hidden">
+                    <a
+                      class="btn"
+                      id="btnDelete"
+                      onclick="window.confirm('Delete this Merit record?')"
+                    >
+                      <i class="fas fa-trash-alt"></i>Delete</a
+                    >
+                  </div>
+                </div>
               </div>
               <hr />
               <div class="">

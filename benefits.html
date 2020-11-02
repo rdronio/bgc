@@ -15,15 +15,17 @@
       href="Styles/mobile.css"
     />
     <link rel="stylesheet" href="Styles/jquery/jquery-ui-custom.css" />
+    <link rel="stylesheet" href="Styles/jquery/jquery.timepicker.css" />
 
     <!-- JavaScript -->
     <script src="Scripts/jquery-3.4.1.min.js"></script>
     <script src="Scripts/jquery-ui.min.js"></script>
+    <script src="Scripts/jquery.timepicker.min.js"></script>
 
     <title>HRIS & Payroll System</title>
   </head>
   <body>
-    <form id="payrollPerDepartment" action="#" autocomplete="off">
+    <form id="benefits" action="#" autocomplete="off">
       <!-- main -->
       <div class="main">
         <!--NAV MENU-->
@@ -170,13 +172,13 @@
             <li>
               <a href="PayrollMain"><i class="far fa-credit-card"></i>ATM</a>
             </li>
-            <li>
+            <li class="current-page">
               <a href=""><i class="fas fa-hands"></i>Benefits</a>
             </li>
             <li>
               <a href=""><i class="fas fa-file-invoice-dollar"></i>Payslips</a>
             </li>
-            <li class="current-page">
+            <li>
               <a href="payrollperdepartment"
                 ><i class="fas fa-users"></i>Payroll per Department</a
               >
@@ -196,8 +198,8 @@
         </nav>
         <!--NAV MENU END-->
 
-        <!-- Payroll Report Per Department-->
-        <section id="payrollPerDepartment" class="content">
+        <!-- Benefits -->
+        <section id="benefits" class="content">
           <!-- TOP NAV  -->
           <div class="top-nav">
             <span class="menu-btn">
@@ -212,21 +214,46 @@
           </div>
 
           <div class="container">
-            <h2>Payroll Report Per Department</h2>
+            <h2>Benefits</h2>
+            <!-- <div id="tab">
+              <ul class="tab-list" onclick="selectTab();">
+                <li class="current-tab">
+                  <a onclick="showTR()">Time Records</a>
+                </li>
+                <li>
+                  <a onclick="showPTA()">Time Alteration</a>
+                </li>
+              </ul>
+            </div> -->
             <div class="card card-1">
-              <!-- <div class="">
-                <a
-                  class="btn-xs btn-alt"
-                  id="btnMassGeneratePayroll"
-                  onclick="openModal(`#btnMassGeneratePayroll`)"
-                >
-                  Mass Generate Payroll
-                </a>
-              </div> -->
+              <div>
+                <!-- <label class="label-6">Filter Date</label>
+                <br />
+                <label for="txtDateFrom" class="label-6">From: </label>
+                <input
+                  name="txtDateFrom"
+                  type="text"
+                  id="txtDateFrom"
+                  class="datePicker"
+                />
+                <a class="icon"><i class="far fa-calendar-alt"></i></a>
+                <label for="txtDateTo" class="label-6">To: </label>
+                <input
+                  name="txtDateTo"
+                  type="text"
+                  id="txtDateTo"
+                  class="datePicker"
+                />
+                <a class="icon"><i class="far fa-calendar-alt"></i></a> -->
+              </div>
+
+              <div>
+                <!-- <a class="btn btn-secondary">Clear</a> -->
+              </div>
 
               <div class="search-main-container">
                 <div class="search-container">
-                  <a class="btn-search tooltip" aria-label="Search Mail">
+                  <button class="btn-search tooltip" aria-label="Search Mail">
                     <span class="tooltiptext">Search</span>
                     <svg
                       focusable="false"
@@ -240,16 +267,15 @@
                       ></path>
                       <path d="M0,0h24v24H0V0z" fill="none"></path>
                     </svg>
-                  </a>
+                  </button>
                   <div>
                     <input
                       id="txtSearch"
                       class="txtSearch"
                       type="text"
                       list="txtSearch"
-                      class="select block"
                       placeholder="Search Payroll Period"
-                      onkeyup="searchTable1(`txtSearch`,`dgPayrollPerDepartment`), checkSearchInput();"
+                      onkeyup="searchTable1(`txtSearch`,`dgBenefits`), checkSearchInput();"
                     />
                     <ul class="datalist-data hidden">
                       <li>
@@ -275,7 +301,7 @@
                     aria-label="Clear search"
                     type="button"
                     data-tooltip="Clear search"
-                    onclick="clearSearch(`payrollPerDepartment`,`dgPayrollPerDepartment`);"
+                    onclick="clearSearch(`benefits`,`dgBenefits`);"
                     class="btn-clear-search tooltip hidden"
                   >
                     <span class="tooltiptext">Clear search</span>
@@ -294,17 +320,19 @@
                   </a>
                   <a
                     type="button"
-                    data-tooltip="Show search options"
-                    aria-label="Advanced search options"
-                    class="showSearchOptions hidden"
+                    data-tooltip="Search options"
+                    aria-label="Search options"
+                    class="showSearchOptions tooltip hidden"
                     onclick="toggleSearchFilter();"
                   >
+                    <span class="tooltiptext">Search options</span>
                     <svg
                       focusable="false"
                       height="24px"
                       viewBox="0 0 24 24"
                       width="24px"
                       xmlns="http://www.w3.org/2000/svg"
+                      class=""
                     >
                       <path d="M7 10l5 5 5-5z"></path>
                       <path d="M0 0h24v24H0z" fill="none"></path>
@@ -334,6 +362,40 @@
                     ></select>
                   </div>
 
+                  <div>
+                    <label for="selectEmploymentStatus" class="label-6 block"
+                      >Employment Status</label
+                    >
+
+                    <select
+                      name="selectEmploymentStatus"
+                      id="selectEmploymentStatus"
+                      class="select"
+                    >
+                      <option value="">--Please choose an option--</option>
+                      <option value="probationary">Probationary</option>
+                      <option value="regular">Regular</option>
+                      <option value="resigned">Resigned</option>
+                      <option value="end">End of Contract</option>
+                      <option value="terminated">Terminated</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label for="selectEmploymentStatus" class="label-6 block"
+                      >Gender</label
+                    >
+                    <select
+                      name="showEmployeeByCategory"
+                      id="showEmployeeByCategory"
+                      class="select"
+                    >
+                      <option value="">--Please choose an option--</option>
+                      <option value="department">Male</option>
+                      <option value="position">Female</option>
+                    </select>
+                  </div>
+
                   <div class="btn-filter-container">
                     <a class="btn-sm btn-primary" id="btnSearchPayroll">
                       Search
@@ -349,31 +411,43 @@
                 </div>
               </div>
 
-              <!-- Payroll per Department -->
-              <table class="tableLayout" id="dgPayrollPerDepartment">
+              <!-- benefits -->
+              <table class="tableLayout" id="dgBenefits">
                 <tbody>
                   <tr>
-                    <td>Action</td>
-                    <td>Payroll Period</td>
-                    <td>Total1</td>
-                    <td>Total2</td>
-                    <td>Total3</td>
-                    <td>Prepared By</td>
+                    <td class="">Action</td>
+                    <td class="">Payroll Period</td>
+                    <td class="">Total SSS EE</td>
+                    <td class="">Total SSS ER</td>
+                    <td class="">Total SSS Loan</td>
+                    <td class="">Total PHI EE</td>
+                    <td class="">Total PHI ER</td>
+                    <td class="">Total PAGIBIG EE</td>
+                    <td class="">Total PAGIBIG ER</td>
+                    <td class="">Total PAGIBIG Loan</td>
+                    <td class="">Total MP2 Savings</td>
                   </tr>
                   <tr>
-                    <td>
-                      <a class="btn-table btn-secondary">Download</a>
+                    <td class="">
+                      <a class="btn-table btn-secondary" onclick="">Download</a>
                     </td>
-                    <td>February 01 - 15, 2020</td>
-                    <td>500,000.00</td>
-                    <td>500,000.00</td>
-                    <td>0.00</td>
-                    <td>RACHELLE NAE M. LAYUG</td>
+                    <td class="">September 1-15, 2020</td>
+                    <td class="">59,220.00</td>
+                    <td class="">127,300.00</td>
+                    <td class="">22,725.14</td>
+                    <td class="">22,713.90</td>
+                    <td class="">25,414.07</td>
+                    <td class="">11,700.00</td>
+                    <td class="">12,600.00</td>
+                    <td class="">16,909.13</td>
+                    <td class="">1,500.00</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
+
+          <!-- Modal Section -->
 
           <section id="footer">
             <a href="https://systemoph.com/">

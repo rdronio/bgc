@@ -18,19 +18,17 @@
     <!-- JavaScript -->
     <script src="Scripts/jquery-3.4.1.min.js"></script>
 
-    <title>HRIS, Payroll & Time Keeping System</title>
+    <title>HRIS & Time Keeping System</title>
   </head>
   <body>
     <!-- main -->
     <div class="main">
-      <!-- nav -->
+      <!--NAV MENU-->
       <nav id="nav">
         <div class="logo">
           <a href="" class="logo-link">
-            <h1>LOGO HERE</h1>
-            <p>
-              HRIS, Payroll & Time Keeping System
-            </p>
+            <img alt="BGC Logo" />
+            <p>HRIS &amp; Payroll System</p>
           </a>
         </div>
 
@@ -46,75 +44,148 @@
           </div>
           <div class="profile_info">
             <span>Welcome</span>
-            <h2>John Doe</h2>
+            <h2 id="accessrole">HR Payroll</h2>
             <p>&nbsp;</p>
           </div>
         </div>
 
-        <!-- / menu -->
-        <ul class="nav-list">
-          <li class="current-page">
-            <a href="dashboard.html"
-              ><i class="fas fa-tachometer-alt"></i>Dashboard</a
-            >
-          </li>
+        <!--SUDO ACESS-->
+        <ul class="nav-list" id="sudo-access">
           <li>
-            <a href="timerecords.html"
-              ><i class="fas fa-user-clock"></i>Time Records</a
-            >
+            <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
           </li>
+        </ul>
+
+        <!--HR Admin ACESS-->
+        <ul id="hradminaccess" class="nav-list">
           <li>
-            <a href="profile.html"
-              ><i class="fas fa-address-card"></i>Profile</a
+            <a href="DashboardAdmin"
+              ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
             >
           </li>
           <li>
             <a href="#"
-              ><i class="fas fa-history"></i>Application<span
+              ><i class="fas fa-tasks"> </i>Applications<span
                 class="fa fa-chevron-down"
               ></span
             ></a>
             <ul class="nav child_menu hidden">
               <li>
-                <a href="leaverecords.html">Leave Records</a>
+                <a href="SaturdaySched">Saturday Schedule</a>
               </li>
               <li>
-                <a href="overtimerecords.html">Overtime Records</a>
+                <a href="Substitution">Substitute Application</a>
               </li>
               <li>
-                <a href="expense.html">Expense Records</a>
+                <a href="LeaveRecords">Leave Application</a>
+              </li>
+              <li><a href="OvertimeRecords">Overtime Application(A/O)</a></li>
+              <li>
+                <a href="OvertimeRecordsDriver"
+                  >Overtime Application(Drivers)</a
+                >
               </li>
               <li>
-                <a href="undertime.html">Undertime Records</a>
+                <a href="UndertimeRecords">Undertime Application</a>
               </li>
             </ul>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-file-alt"></i> Employee Records<span
+                class="fa fa-chevron-down"
+              ></span
+            ></a>
+            <ul class="nav child_menu hidden">
+              <li>
+                <a href="ManageEmployees">Employee Masterlist</a>
+              </li>
+              <li>
+                <a href="EmployeeLeaveRecords">Employee Leave Records</a>
+              </li>
+              <li><a href="TimeRecords">Employee Time Records</a></li>
+              <li><a href="merit">Employee Merits</a></li>
+              <li><a href="contribution">Employee Contributions</a></li>
+              <li><a href="savings">Employee Savings</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="payrollconsolidation">
+              <i class="fas fa-calculator"></i>Payroll Consolidation</a
+            >
+          </li>
+          <li>
+            <a href="FileCabinet"
+              ><i class="fas fa-folder-open"></i>File Cabinet</a
+            >
           </li>
 
           <li>
-            <!-- <a href="team.html"><i class="fas fa-users"></i>Team</a> -->
-            <a href="underconstruction.html"
-              ><i class="fas fa-users"></i>Team</a
-            >
-          </li>
-          <li>
-            <a href="projecttask.html"
-              ><i class="fas fa-tasks"></i>Project/Task</a
-            >
-          </li>
-          <li>
             <a href="#"
-              ><i class="fas fa-chart-area"></i>Report<span
+              ><i class="fas fa-chart-area"></i>Reports<span
                 class="fa fa-chevron-down"
               ></span
             ></a>
             <ul class="nav child_menu hidden">
               <li>
-                <a href="payslip.html">Payslip</a>
+                <a href="GenerateDtrReport">Generate DTR</a>
               </li>
             </ul>
           </li>
           <li>
-            <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+            <a href="EmployeeMasterlist"
+              ><i class="fas fa-download"></i>Import Time Records</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-cog"></i>System Preferences<span
+                class="fa fa-chevron-down"
+              ></span
+            ></a>
+            <ul class="nav child_menu hidden">
+              <li>
+                <a href="HolidayList">Holiday Notice</a>
+              </li>
+              <li><a class="hidden" href="backups">Backups</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="LoginPage"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+          </li>
+        </ul>
+
+        <!--HR Payroll ACESS-->
+        <ul id="hrpayrollaccess" class="nav-list block">
+          <!--<li>
+      <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
+    </li>-->
+          <!-- <li>
+          <a href="PayrollMain"><i class="far fa-credit-card"></i>ATM</a>
+        </li> -->
+          <li class="current-page">
+            <a href=""><i class="fas fa-hands"></i>Benefits</a>
+          </li>
+          <!-- <li>
+          <a href=""><i class="fas fa-file-invoice-dollar"></i>Payslips</a>
+        </li>
+        <li>
+          <a href="payrollperdepartment"
+            ><i class="fas fa-users"></i>Payroll per Department</a
+          >
+        </li> -->
+          <li>
+            <a href="LoginPage"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+          </li>
+        </ul>
+
+        <!--EMPLOYEE ACESS-->
+        <ul id="employee" class="nav-list">
+          <li>
+            <a href="Home"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="LoginPage"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
           </li>
         </ul>
 
@@ -124,6 +195,7 @@
           </a>
         </div>
       </nav>
+      <!--NAV MENU END-->
 
       <!-- Home -->
       <section id="home" class="content">

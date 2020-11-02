@@ -301,7 +301,7 @@
                       list="txtSearch"
                       class="select block"
                       placeholder="Search Employee"
-                      onkeyup="searchTable(`txtSearch`,`tableEmployeeMasterlist`), checkSearchInput();"
+                      onkeyup="searchTable(`txtSearch`,`dgManageEmployee`), checkSearchInput();"
                     />
                     <ul class="datalist-data hidden">
                       <li>
@@ -327,7 +327,7 @@
                     aria-label="Clear search"
                     type="button"
                     data-tooltip="Clear search"
-                    onclick="clearSearch(`manage-employee`,`tableEmployeeMasterlist`);"
+                    onclick="clearSearch(`manage-employee`,`dgManageEmployee`);"
                     class="btn-clear-search tooltip hidden"
                   >
                     <span class="tooltiptext">Clear search</span>
@@ -850,7 +850,25 @@
           <!-- Modal Add Employee: btnAddEmployee -->
           <div class="modal modal-add-employee">
             <div class="modal-content">
-              <h4 id="add-employee-header">Add Employment Information</h4>
+              <div class="header-delete-container">
+                <h4 id="add-employee-header">Add Employment Information</h4>
+                <div class="more-container">
+                  <a
+                    class="more tooltip"
+                    id="btnMore"
+                    onclick="toggleMoreSubContainer();"
+                    ><i class="fas fa-ellipsis-v"></i
+                  ></a>
+                  <div class="more-sub-container hidden">
+                    <a
+                      class="btn"
+                      id="btnModalDeleteEmployee"
+                      onclick="window.confirm('Delete this Merit record?')"
+                      ><i class="fas fa-trash-alt"></i>Delete</a
+                    >
+                  </div>
+                </div>
+              </div>
               <br />
 
               <div id="tabIE">
@@ -1128,7 +1146,7 @@
                   >
                   <select
                     name="drpDepartment"
-                    id="drptDepartment"
+                    id="drpDepartment"
                     class="select"
                   ></select>
 
@@ -1449,12 +1467,12 @@
                   id="btnModalUpdateEmployee"
                   >Update</a
                 >
-                <a
+                <!-- <a
                   class="btn-sm btn-red mx-3 hidden"
                   id="btnModalDeleteEmployee"
                   onclick="confirm('Archive this Employee Record?');"
                   >Archive</a
-                >
+                > -->
                 <a
                   class="btn-sm btn-secondary mx-3"
                   onclick="closeModal(`#btnCloseAddEmployee`);"

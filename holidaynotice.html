@@ -315,7 +315,7 @@
                     <td class="column2">January 1, 2020</td>
                     <td class="column3">New Year</td>
                     <td class="column4">1</td>
-                    <td class="column5"><a onclick="openModal('#btnEditHoliday')" class="btn-table btn-secondary">Edit</a><a class="btn-table btn-secondary">Delete </a></td>
+                    <td class="column5"><a onclick="openModal('#btnEditHoliday')" class="btn-table btn-secondary">Edit</a></td>
                   </tr>
                 </tbody>
               </table>
@@ -390,10 +390,26 @@
 
           <div class="modal modal-edit-holiday">
             <div class="modal-content">
-              <!-- <span class="modal-close-btn" onclick="closeModal();"
-                >&times;</span
-              > -->
-              <h5>Edit Holiday Form</h5>
+              <div class="header-delete-container">
+                <h5>Edit Holiday Form</h5>
+                <div class="more-container">
+                  <a
+                    class="more tooltip"
+                    id="btnMore"
+                    onclick="toggleMoreSubContainer();"
+                    ><i class="fas fa-ellipsis-v"></i
+                  ></a>
+                  <div class="more-sub-container hidden">
+                    <a
+                      class="btn"
+                      id="btnDelete"
+                      onclick="window.confirm('Delete this Merit record?')"
+                      ><i class="fas fa-trash-alt"></i>Delete</a
+                    >
+                  </div>
+                </div>
+              </div>
+             
               <hr />
               <div class="">
                 <label for="txtStartDate" class="label-6">Start Date: </label>

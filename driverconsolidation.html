@@ -15,116 +15,162 @@
       href="Styles/mobile.css"
     />
     <link rel="stylesheet" href="Styles/jquery/jquery-ui-custom.css" />
+    <link rel="stylesheet" href="Styles/jquery/jquery.timepicker.css" />
 
-    <title>HRIS, Payroll & Time Keeping System</title>
+    <!-- JavaScript -->
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script src="Scripts/jquery-ui.min.js"></script>
+    <script src="Scripts/jquery.timepicker.min.js"></script>
+
+    <title>HRIS & Payroll System</title>
   </head>
   <body>
-    <form action="#" autocomplete="off">
+    <form id="payroll-consolidation" action="#" autocomplete="off">
       <!-- main -->
       <div class="main">
-        <!-- nav -->
-        <nav id="nav">
-          <div class="logo">
-            <a href="" class="logo-link">
-              <img src="/Images/BGC LOGO CLARK.jpg" alt="BGC Logo" />
-            </a>
+      <!--NAV MENU-->
+      <nav id="nav">
+        <div class="logo">
+          <a href="" class="logo-link">
+            <img alt="BGC Logo" />
+            <p>HRIS &amp; Payroll System</p>
+          </a>
+        </div>
+
+        <!-- profile quick info -->
+        <div class="profile">
+          <div class="profile_pic">
+            <a href="#"><img src="/Images/user.png" alt="..." class="img-circle profile_img" /></a>
           </div>
-
-          <!-- profile quick info -->
-          <div class="profile">
-            <div class="profile_pic">
-              <a href="#"
-                ><img
-                  src="/images/user.png"
-                  alt="..."
-                  class="img-circle profile_img"
-              /></a>
-            </div>
-            <div class="profile_info">
-              <span>Welcome</span>
-              <h2>John Doe</h2>
-              <p>&nbsp;</p>
-            </div>
+          <div class="profile_info">
+            <span>Welcome</span>
+            <h2 id="accessrole" runat="server">HR Admin</h2>
+            <p>&nbsp;</p>
           </div>
+        </div>
 
-          <!-- / menu -->
-          <ul class="nav-list">
-            <li>
-              <a href="dashboard.html"
-                ><i class="fas fa-tachometer-alt"></i>Dashboard</a
-              >
-            </li>
-            <li>
-              <a href="timerecords.html"
-                ><i class="fas fa-user-clock"></i>Time Records</a
-              >
-            </li>
-            <li>
-              <a href="profile.html"
-                ><i class="fas fa-address-card"></i>Profile</a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><i class="fas fa-history"></i>Application<span
-                  class="fa fa-chevron-down"
-                ></span
-              ></a>
-              <ul class="nav child_menu hidden">
-                <li>
-                  <a href="leaverecords.html">Leave Records</a>
-                </li>
-                <li>
-                  <a href="overtimerecords.html">Overtime Records</a>
-                </li>
-                <li>
-                  <a href="expense.html">Expense Records</a>
-                </li>
-                <li>
-                  <a href="undertime.html">Undertime Records</a>
-                </li>
-              </ul>
-            </li>
+        <!--SUDO ACESS-->
+        <ul class="nav-list" id="sudo-access">
+          <li>
+            <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+          </li>
+        </ul>
 
-            <li>
-              <!-- <a href="team.html"><i class="fas fa-users"></i>Team</a> -->
-              <a href="underconstruction.html"
-                ><i class="fas fa-users"></i>Team</a
-              >
-            </li>
-            <li>
-              <a href="projecttask.html"
-                ><i class="fas fa-tasks"></i>Project/Task</a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><i class="fas fa-chart-area"></i>Report<span
-                  class="fa fa-chevron-down"
-                ></span
-              ></a>
-              <ul class="nav child_menu">
-                <li class="current-page">
-                  <a href="payslip.html">Payslip</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="index.html"
-                ><i class="fas fa-sign-out-alt"></i>Sign Out</a
-              >
-            </li>
-          </ul>
+        <!--HR Admin ACESS-->
+        <ul id="hradminaccess" class="nav-list block">
+          <li>
+            <a href="DashboardAdmin"><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-tasks"> </i>Applications<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu hidden">
+              <li>
+                <a href="SaturdaySched">Saturday Schedule</a>
+              </li>
+              <li>
+                <a href="Substitution">Substitute Application</a>
+              </li>
+              <li>
+                <a href="LeaveRecords">Leave Application</a>
+              </li>
+              <li><a href="OvertimeRecords">Overtime Application(A/O)</a></li>
+              <li>
+                <a href="OvertimeRecordsDriver">Overtime Application(Drivers)</a>
+              </li>
+              <li>
+                <a href="UndertimeRecords">Undertime Application</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-file-alt"></i> Employee Records<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu hidden">
+              <li>
+                <a href="ManageEmployees">Employee Masterlist</a>
+              </li>
+              <li><a href="EmployeeLeaveRecords">Employee Leave Records</a></li>
+              <li><a href="TimeRecords">Employee Time Records</a></li>
+              <li><a href="merit">Employee Merits</a></li>
+              <li><a href="contribution">Employee Contributions</a></li>
+              <li><a href="savings">Employee Savings</a></li>
+            </ul>
+          </li>
+          <li class="current-page">
+            <a href="payrollconsolidation">
+              <i class="fas fa-calculator"></i>Payroll Consolidation</a>
+          </li>
+          <li>
+            <a href="FileCabinet"><i class="fas fa-folder-open"></i>File Cabinet</a>
+          </li>
 
-          <div class="close-menu">
-            <a onclick="toggleMenu()">
-              <i class="fas fa-times"></i>
-            </a>
-          </div>
-        </nav>
+          <li>
+            <a href="#"><i class="fas fa-chart-area"></i>Reports<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu hidden">
+              <li>
+                <a href="GenerateDtrReport">Generate DTR</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="EmployeeMasterlist"><i class="fas fa-download"></i>Import Time Records</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cog"></i>System Preferences<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu hidden">
+              <li>
+                <a href="HolidayList">Holiday Notice</a>
+              </li>
+              <li><a class="hidden" href="backups">Backups</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="LoginPage"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+          </li>
+        </ul>
 
-        <!-- Payslip -->
-        <section id="payslip" class="content">
+        <!--HR Payroll ACESS-->
+        <ul id="hrpayrollaccess" class="nav-list">
+          <!--<li>
+                        <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
+                    </li>-->
+          <li>
+            <a href="PayrollMain"><i class="fas fa-file-invoice"></i>Payroll</a>
+          </li>
+          <li class="current-page">
+            <a href="ManageEmployees"><i class="fas fa-file-alt"></i>Employee Masterlist</a>
+          </li>
+          <!--<li>
+                        <a href="SendMemo"><i class="far fa-bell"></i>Memo / Notice</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chart-area"></i>Reports<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu hidden">
+                            <li>
+                                <a href="GenerateDtrReport">Generate DTR Report</a>
+                            </li>
+                            <li>
+                                <a href="payrollreport">Payroll Report</a>
+                            </li>
+                            <li>
+                                <a href="payrollpayslip">Payslips</a>
+                            </li>
+                        </ul>
+                    </li>-->
+          <li>
+            <a href="LoginPage"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+          </li>
+        </ul>
+
+        <div class="close-menu">
+          <a onclick="toggleMenu()">
+            <i class="fas fa-times"></i>
+          </a>
+        </div>
+      </nav>
+      <!--NAV MENU END-->
+
+        <!-- payroll-consolidation-->
+        <section id="payroll-consolidation" class="content">
           <!-- TOP NAV  -->
           <div class="top-nav">
             <span class="menu-btn">
@@ -139,153 +185,31 @@
           </div>
 
           <div class="container">
-            <!-- <div id="tab">
-              <ul class="tab-list" onclick="selectTab();">
-                <li class="current-tab"> 
-                  <a onclick="showOR()">Overtime Records</a>
-                </li>
-                <li>
-                  <a onclick="showPOA()">Pending Overtime</a>
-                </li>
-              </ul>
-            </div> -->
-            <h2>Payslip</h2>
-            <div class="card card-1">
-              <div class="container-sm">
-                <div>
-                  <label class="label-6 block">Pay Period</label>
-                  <label for="txtDateFrom" class="label-6">From: </label>
-                  <input
-                    name="txtDateFrom"
-                    type="text"
-                    id="txtDateFrom"
-                    class="datePickerPayroll"
-                  />
-                  <label for="txtDateTo" class="label-6">To: </label>
-                  <input
-                    name="txtDateTo"
-                    type="text"
-                    id="txtDateTo"
-                    class="datePickerPayroll"
-                  />
-                  <a class="btn-sm btn-secondary">Clear</a>
-                </div>
-                <!-- Payslip -->
-                <table class="tableLayout">
-                  <tbody>
-                    <tr>
-                      <td class="column1">Pay Period</td>
-                      <td class="column2">Payroll Date</td>
-                      <td class="column3">Total Earnings</td>
-                      <td class="column4">Total Deductions</td>
-                      <td class="column5">Net Pay</td>
-                      <td class="column6">Action</td>
-                    </tr>
-                    <tr>
-                      <td class="column1">Dec. 01, 2019 - Dec. 15, 2019</td>
-                      <td class="column2">Dec. 14, 2019</td>
-                      <td class="column3">20,000.00</td>
-                      <td class="column4">1,100.00</td>
-                      <td class="column5">18,900.00</td>
-                      <td class="column6">
-                        <a
-                          class="btn-table btn-secondary"
-                          onclick="openModal(`#btnViewPayslip`);"
-                          >View</a
-                        >
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
+            <h2>Driver Consolidation</h2>
 
-          <!-- Modal Section -->
-          <!-- btnViewPayslip -->
-          <div class="modal modal-view-payslip">
-            <div class="modal-content">
-              <h5>Payslip</h5>
-              <hr />
-              <div>
-                <div>
-                  <label class="label-6">Pay Period</label>
-                  <p id="lblPayPeriod">Dec. 01, 2019 - Dec. 15, 2019</p>
-                  <label class="label-6">Payroll Date</label>
-                  <p id="lblPayrollDate">Dec. 14, 2019</p>
-                  <label class="label-6">Name</label>
-                  <p id="lblName">John Doe</p>
-                  <label class="label-6">Position</label>
-                  <p id="lblPosition">Programmer</p>
-                  <label class="label-6">Department</label>
-                  <p id="lblDepartment">IT Department</p>
-                </div>
-                <div>
-                  <label class="label-6">TIN Number</label>
-                  <p id="lblTinNo">000-000-000-000</p>
-                  <label class="label-6">Philhealth Number</label>
-                  <p id="lblPhilHealth">00-000000000-0</p>
-                  <label class="label-6">HDMF Number</label>
-                  <p id="lblHDMF">0000-0000-0000</p>
-                  <label class="label-6">SSS/GSIS Number</label>
-                  <p id="lblSssGsis">00-0000000-0</p>
-                </div>
-              </div>
-              <hr />
-              <div>
-                <label class="label-6">Basic Salary</label>
-                <p id="lblBasicSalary">0.00</p>
-              </div>
-              <hr />
-
-              <div>
-                <div>
-                  <label class="label-6">Total Hours</label>
-                  <p id="lblTotalHours">0.00</p>
-                  <label class="label-6">Absent</label>
-                  <p id="lblAbsent">0.00</p>
-                  <label class="label-6">Tardiness</label>
-                  <p id="lblTardiness">0.00</p>
-                  <label class="label-6">Overtime</label>
-                  <p id="lblOvertime">0.00</p>
-                  <label class="label-6">Leave</label>
-                  <p id="lblLeave">0</p>
-                </div>
-
-                <div>
-                  <label class="label-6">SSS/GSIS</label>
-                  <p id="lblSssGsis">400</p>
-                  <label class="label-6">Pag-ibig</label>
-                  <p id="lblPagibig">400</p>
-                  <label class="label-6">Philhealth</label>
-                  <p id="lblPhilhealth">400</p>
-                  <label class="label-6">Other Deductions</label>
-                  <p id="lblOtherDeduction">400</p>
-                  <label class="label-6">&nbsp;</label>
-                  <p>&nbsp;</p>
-                </div>
-              </div>
-
-              <hr />
-              <div>
-                <label class="label-6">Gross Pay</label>
-                <p id="lblGrossPay">20,000</p>
-                <label class="label-6">Net Pay</label>
-                <p id="lblNetPay">20,000</p>
-              </div>
-              <hr />
-
-              <div class="modal-btn-container">
-                <!-- <a class="btn-sm btn-primary mx-3" id="btnPrintPayslip">
-                  Print
-                </a> -->
-                <a
-                  class="btn-sm btn-secondary mx-3"
-                  onclick="closeModal(`#btnCloseViewPayslip`);"
-                >
-                  Close
-                </a>
-              </div>
+            <div class="card card-1 ">
+              
+              <!-- Driver  Table -->
+              <!-- <label class="norecords">No Records Found</label> -->
+              <table class="tableLayout">
+                <tbody>
+                  <tr>
+                    <td>Column1</td>
+                    <td>Column2</td>
+                    <td>Column3</td>
+                    <td>Column4</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Lorem.
+                    </td>
+                    <td>Lorem, ipsum.</td>
+                    <td>Lorem, ipsum dolor.</td>
+                    <td> Lorem ipsum dolor sit.  
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 
@@ -405,11 +329,7 @@
         </section>
       </div>
     </form>
-
-    <!-- JavaScript -->
-    <script src="Scripts/jquery-3.4.1.min.js"></script>
-    <script src="Scripts/jquery-ui.min.js"></script>
-
     <script src="Scripts/main.js"></script>
+    <script src="Scripts/validation.js"></script>
   </body>
 </html>
