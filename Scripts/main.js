@@ -28,17 +28,24 @@ function togglePassword2() {
 
 function checkAccessRole() {
   try {
-    const accessRole = document.querySelector("#access-role").innerHTML;
-    const navList = document.querySelector(".nav-list");
-    const sudoAccess = document.querySelector("#sudo-access");
-    const hradminAccess = document.querySelector("#hradmin-access");
-    const hrpayrollAccess = document.querySelector("#hrpayroll-access");
-    const oicAccess = document.querySelector("#oic-access");
+    const accessRole = document.querySelector("#accessrole").innerHTML;
+    const navList = document.querySelectorAll(".nav-list");
+    const sudoAccess = document.querySelector("#sudoaccess");
+    const hrsupervisorAccess = document.querySelector("#hrsupervisoraccess");
+    const hradminAccess = document.querySelector("#hradminaccess");
+    const hrpayrollAccess = document.querySelector("#hrpayrollaccess");
+    const oicAccess = document.querySelector("#oicaccess");
     const employeeAccess = document.querySelector("#employee");
+
+    navList.forEach((item) => {
+      item.classList.remove("block");
+    });
 
     if (accessRole === "Admin") {
       sudoAccess.classList.add("block");
-    } else if (accessRole === "HR Admin") {
+    } else if (accessRole === "Supervisor") {
+      hrsupervisorAccess.classList.add("block");
+    }else if (accessRole === "HR Admin") {
       hradminAccess.classList.add("block");
     } else if (accessRole === "HR Payroll") {
       hrpayrollAccess.classList.add("block");
