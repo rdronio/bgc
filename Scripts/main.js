@@ -3242,7 +3242,7 @@ function openModalEditCashAdvance() {
     const modal = document.querySelector(".modal-edit-cashadvance");
     const accessRole = document.querySelector("#accessrole").innerHTML;
 
-    modal.style.display = "flex";
+    // modal.style.display = "flex";
     if (accessRole === "HR Admin") {
       modal.style.display = "flex";
     } else {
