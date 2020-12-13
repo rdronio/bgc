@@ -3243,12 +3243,12 @@ function openModalEditCashAdvance() {
     const accessRole = document.querySelector("#accessrole").innerHTML;
 
     modal.style.display = "flex";
-    // if (accessRole === "HR Admin") {
-    //   modal.style.display = "flex";
-    // } else {
-    //   modal.style.display = "none";
-    //   alert("You don't have enough permission!");
-    // }
+    if (accessRole === "HR Admin") {
+      modal.style.display = "flex";
+    } else {
+      modal.style.display = "none";
+      alert("You don't have enough permission!");
+    }
   } catch (e) {
     console.log(e);
   }
