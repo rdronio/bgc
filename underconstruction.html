@@ -23,7 +23,7 @@
 
   <body id="under-construction">
     <div class="main">
-      <!-- nav -->
+      <!--NAV MENU-->
       <nav id="nav">
         <div class="logo">
           <a href="" class="logo-link">
@@ -44,46 +44,49 @@
           </div>
           <div class="profile_info">
             <span>Welcome</span>
-            <h2 id="access-role">HR Admin</h2>
+            <h2 id="accessrole" runat="server">Finance</h2>
             <p>&nbsp;</p>
           </div>
         </div>
 
-        <!--NAV MENU-->
-
         <!--SUDO ACESS-->
-        <ul class="nav-list" id="sudo-access">
+        <ul class="nav-list" id="sudoaccess">
           <li>
             <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
           </li>
         </ul>
 
-        <!--HR Admin ACESS-->
-        <ul id="hradminaccess" class="nav-list block">
+        <!--HR Supervisor ACESS-->
+        <ul id="hrsupervisoraccess" class="nav-list">
           <li>
-            <a href="DashboardAdmin.aspx"
-              ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
+            <a href="EmployeeMasterlist"
+              ><i class="fas fa-download"></i>Import Time Records</a
             >
           </li>
           <li>
             <a href="#"
-              ><i class="fas fa-tasks"> </i>Approvals<span
+              ><i class="fas fa-tasks"> </i>Applications<span
                 class="fa fa-chevron-down"
               ></span
             ></a>
             <ul class="nav child_menu hidden">
               <li>
-                <a href="SaturdaySched.aspx">Saturday Schedule</a>
+                <a href="SaturdaySched">Saturday Schedule</a>
               </li>
               <li>
-                <a href="Substitution.aspx">Substitute Records</a>
+                <a href="Substitution">Substitute Application</a>
               </li>
               <li>
-                <a href="LeaveRecords.aspx">Leave Records</a>
+                <a href="LeaveRecords">Leave Application</a>
               </li>
-              <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
+              <li><a href="OvertimeRecords">Overtime Application(A/O)</a></li>
               <li>
-                <a href="UndertimeRecords.aspx">Undertime Records</a>
+                <a href="OvertimeRecordsDriver"
+                  >Overtime Application(Drivers)</a
+                >
+              </li>
+              <li>
+                <a href="UndertimeRecords">Undertime Application</a>
               </li>
             </ul>
           </li>
@@ -93,32 +96,79 @@
                 class="fa fa-chevron-down"
               ></span
             ></a>
-            <ul class="nav child_menu">
-              <li class="current-page">
-                <a href="ManageEmployees.aspx">Employee Masterlist</a>
-              </li>
-              <li>
-                <a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a>
-              </li>
-              <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
-              <li><a href="merit.aspx">Employee Merits</a></li>
-              <li><a href="contribution.aspx">Employee Contributions</a></li>
-              <li><a href="savings.aspx">Employee Savings</a></li>
+            <ul class="nav child_menu hidden">
+              <li><a href="TimeRecords">Employee Time Records</a></li>
             </ul>
           </li>
+          <li>
+            <a href="LoginPage"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+          </li>
+        </ul>
 
+        <!--HR Admin ACESS-->
+        <ul id="hradminaccess" class="nav-list">
+          <li class="current-page">
+            <a href="DashboardAdmin"
+              ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
+            >
+          </li>
           <li>
             <a href="#"
-              ><i class="fas fa-bullhorn"></i>Memo/Notice<span
+              ><i class="fas fa-tasks"> </i>Applications<span
                 class="fa fa-chevron-down"
               ></span
             ></a>
             <ul class="nav child_menu hidden">
               <li>
-                <a href="FileCabinet.aspx">File Cabinet</a>
+                <a href="SaturdaySched">Saturday Schedule</a>
+              </li>
+              <li>
+                <a href="Substitution">Substitute Application</a>
+              </li>
+              <li>
+                <a href="LeaveRecords">Leave Application</a>
+              </li>
+              <li><a href="OvertimeRecords">Overtime Application(A/O)</a></li>
+              <li>
+                <a href="OvertimeRecordsDriver"
+                  >Overtime Application(Drivers)</a
+                >
+              </li>
+              <li>
+                <a href="UndertimeRecords">Undertime Application</a>
               </li>
             </ul>
           </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-file-alt"></i> Employee Records<span
+                class="fa fa-chevron-down"
+              ></span
+            ></a>
+            <ul class="nav child_menu hidden">
+              <li>
+                <a href="ManageEmployees">Employee Masterlist</a>
+              </li>
+              <li>
+                <a href="EmployeeLeaveRecords">Employee Leave Records</a>
+              </li>
+              <li><a href="TimeRecords">Employee Time Records</a></li>
+              <li><a href="merit">Employee Merits</a></li>
+              <li><a href="contribution">Employee Contributions</a></li>
+              <li><a href="savings">Employee Savings</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="payrollconsolidation">
+              <i class="fas fa-calculator"></i>Payroll Consolidation</a
+            >
+          </li>
+          <li>
+            <a href="FileCabinet"
+              ><i class="fas fa-folder-open"></i>File Cabinet</a
+            >
+          </li>
+
           <li>
             <a href="#"
               ><i class="fas fa-chart-area"></i>Reports<span
@@ -127,12 +177,15 @@
             ></a>
             <ul class="nav child_menu hidden">
               <li>
-                <a href="GenerateDtrReport.aspx">Generate DTR</a>
+                <a href="Benefits">Benefits</a>
+              </li>
+              <li>
+                <a href="GenerateDtrReport">Generate DTR</a>
               </li>
             </ul>
           </li>
           <li>
-            <a href="EmployeeMasterlist.aspx"
+            <a href="EmployeeMasterlist"
               ><i class="fas fa-download"></i>Import Time Records</a
             >
           </li>
@@ -144,64 +197,45 @@
             ></a>
             <ul class="nav child_menu hidden">
               <li>
-                <a href="HolidayList.aspx">Holiday Notice</a>
+                <a href="HolidayList">Holiday Notice</a>
               </li>
+              <li><a class="hidden" href="backups">Backups</a></li>
             </ul>
           </li>
           <li>
-            <a href="LoginPage.aspx"
-              ><i class="fas fa-sign-out-alt"></i>Sign Out</a
-            >
+            <a href="LoginPage"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
           </li>
         </ul>
 
-        <!--HR Payroll ACESS-->
-        <ul id="hrpayrollaccess" class="nav-list">
-          <!--<li>
-                <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
-            </li>-->
+        <!--FINANCE ACESS-->
+        <ul id="financeaccess" class="nav-list">
           <li>
-            <a href="PayrollMain.aspx"
-              ><i class="fas fa-file-invoice"></i>Payroll</a
+            <a href="cashbond"><i class="fas fa-piggy-bank"></i>Cash Bond</a>
+          </li>
+          <li>
+            <a href="cashadvance"
+              ><i class="fas fa-hand-holding-usd"></i>Cash Advance</a
             >
           </li>
-          <li class="current-page">
-            <a href="ManageEmployees.aspx"
-              ><i class="fas fa-file-alt"></i>Employee Masterlist</a
+          <li>
+            <a href="13thmonth"
+              ><i class="fas fa-money-bill-alt"></i>13th Month</a
             >
           </li>
-          <!--<li>
-                <a href="SendMemo.aspx"><i class="far fa-bell"></i>Memo / Notice</a>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-chart-area"></i>Reports<span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu hidden">
-                    <li>
-                        <a href="GenerateDtrReport.aspx">Generate DTR Report</a>
-                    </li>
-                    <li>
-                        <a href="payrollreport.aspx">Payroll Report</a>
-                    </li>
-                    <li>
-                        <a href="payrollpayslip.aspx">Payslips</a>
-                    </li>
-                </ul>
-            </li>-->
           <li>
-            <a href="LoginPage.aspx"
-              ><i class="fas fa-sign-out-alt"></i>Sign Out</a
-            >
+            <a href="LoginPage"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
           </li>
         </ul>
 
-        <!--OIC ACESS-->
-        <ul class="nav-list" id="oic-access">
+        <!--EMPLOYEE ACESS-->
+        <ul id="employee" class="nav-list">
           <li>
-            <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+            <a href="Home"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="LoginPage"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
           </li>
         </ul>
-
-        <!--NAV MENU END-->
 
         <div class="close-menu">
           <a onclick="toggleMenu()">
@@ -209,6 +243,8 @@
           </a>
         </div>
       </nav>
+      <!--NAV MENU END-->
+
       <!-- Underconstruction -->
       <section id="underconstruction" class="content">
         <!-- TOP NAV  -->
@@ -226,10 +262,10 @@
 
         <main class="showcase container">
           <div>
-            <img src="Images/error.png" alt="" />
+            <img src="Images/under-construction.png" alt="" />
           </div>
           <div class="lead">
-            <h1>Not available for Demo</h1>
+            <h1>Oops!<br />Currently this page is Under Construction.</h1>
           </div>
         </main>
 

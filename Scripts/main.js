@@ -33,6 +33,7 @@ function checkAccessRole() {
     const sudoAccess = document.querySelector("#sudoaccess");
     const hrsupervisorAccess = document.querySelector("#hrsupervisoraccess");
     const hradminAccess = document.querySelector("#hradminaccess");
+    const financeAccess = document.querySelector("#financeaccess");
     const hrpayrollAccess = document.querySelector("#hrpayrollaccess");
     const oicAccess = document.querySelector("#oicaccess");
     const employeeAccess = document.querySelector("#employee");
@@ -45,8 +46,10 @@ function checkAccessRole() {
       sudoAccess.classList.add("block");
     } else if (accessRole === "Supervisor") {
       hrsupervisorAccess.classList.add("block");
-    }else if (accessRole === "HR Admin") {
+    } else if (accessRole === "HR Admin") {
       hradminAccess.classList.add("block");
+    } else if (accessRole === "Finance") {
+      financeAccess.classList.add("block");
     } else if (accessRole === "HR Payroll") {
       hrpayrollAccess.classList.add("block");
     } else if (accessRole === "OIC") {
@@ -2794,10 +2797,12 @@ function openModalEditConsolidation() {
 
     modal.style.display = "flex";
 
+    // always show contri
     contriER.forEach((item) => {
-      item.classList.add("hidden");
+      item.classList.remove("hidden");
     });
 
+    // always show deductions
     deductions.forEach((item) => {
       item.classList.remove("hidden");
     });
@@ -2830,12 +2835,14 @@ function openModalEditConsolidation2() {
 
     modal.style.display = "flex";
 
+    // always show contri
     contriER.forEach((item) => {
       item.classList.remove("hidden");
     });
 
+    // always show deductions
     deductions.forEach((item) => {
-      item.classList.add("hidden");
+      item.classList.remove("hidden");
     });
 
     driverField.forEach((item) => {
@@ -2866,10 +2873,12 @@ function openModalEditDriverConsolidation() {
 
     modal.style.display = "flex";
 
+    // always show contri
     contriER.forEach((item) => {
-      item.classList.add("hidden");
+      item.classList.remove("hidden");
     });
 
+    // always show deductions
     deductions.forEach((item) => {
       item.classList.remove("hidden");
     });
@@ -2884,9 +2893,8 @@ function openModalEditDriverConsolidation() {
     adminOpsButton.classList.add("hidden");
 
     driverButton.classList.remove("hidden");
-    
-    selectTabAOC();
 
+    selectTabAOC();
   } catch (e) {
     console.log(e);
   }
@@ -2904,12 +2912,14 @@ function openModalEditDriverConsolidation2() {
 
     modal.style.display = "flex";
 
+    // always show contri
     contriER.forEach((item) => {
       item.classList.remove("hidden");
     });
 
+    // always show deductions
     deductions.forEach((item) => {
-      item.classList.add("hidden");
+      item.classList.remove("remove");
     });
     driverField.forEach((item) => {
       item.classList.remove("hidden");
@@ -3167,6 +3177,101 @@ function toggleMoreSubContainer() {
     const container = document.querySelector(".more-sub-container");
 
     container.classList.toggle("hidden");
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function openModalCashBond() {
+  try {
+    const modal = document.querySelector(".modal-cashbond");
+
+    modal.style.display = "flex";
+    // checkLeapYear();
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function openModalEditCashbond() {
+  try {
+    const modal = document.querySelector(".modal-edit-cashbond");
+    const accessRole = document.querySelector("#accessrole").innerHTML;
+
+    if (accessRole === "HR Admin") {
+      modal.style.display = "flex";
+    } else {
+      modal.style.display = "none";
+      alert("You don't have enough permission!");
+    }
+  } catch (e) {
+    console.log(e);
+  }
+}
+function closeModalEditCashbond() {
+  try {
+    const modal = document.querySelector(".modal-edit-cashbond");
+
+    modal.style.display = "none";
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function closeModalCashBond() {
+  try {
+    const modal = document.querySelector(".modal-cashbond");
+    modal.style.display = "none";
+  } catch (e) {
+    console.log(e);
+  }
+}
+function openModalCashAdvance() {
+  try {
+    const modal = document.querySelector(".modal-cashadvance");
+
+    modal.style.display = "flex";
+    // checkLeapYear();
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function openModalEditCashAdvance() {
+  try {
+    const modal = document.querySelector(".modal-edit-cashadvance");
+    const accessRole = document.querySelector("#accessrole").innerHTML;
+
+    modal.style.display = "flex";
+    // if (accessRole === "HR Admin") {
+    //   modal.style.display = "flex";
+    // } else {
+    //   modal.style.display = "none";
+    //   alert("You don't have enough permission!");
+    // }
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function closeModalEditCashAdvance() {
+  try {
+    const modal = document.querySelector(".modal-edit-cashadvance");
+
+    modal.style.display = "none";
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function closeModalCashAdvance() {
+  try {
+    const modal = document.querySelector(".modal-cashadvance");
+    modal.style.display = "none";
+
+    // clearField(txtDateFromModal);
+    // clearField(txtDateToModal);
+    // clearSelectPayPeriod(selectPayperiod);
   } catch (e) {
     console.log(e);
   }

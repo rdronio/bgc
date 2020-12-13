@@ -26,9 +26,9 @@
       <!-- nav -->
       <nav id="nav">
         <div class="logo">
-          <a href="home.html" class="logo-link">
-            <h1>LOGO HERE</h1>
-            <p>HRIS, Payroll & Time Keeping System</p>
+          <a href="" class="logo-link">
+            <img alt="BGC Logo" />
+            <p>HRIS &amp; Payroll System</p>
           </a>
         </div>
 
@@ -37,22 +37,31 @@
           <div class="profile_pic">
             <a href="#"
               ><img
-                src="Images/user.png"
+                src="/Images/user.png"
                 alt="..."
                 class="img-circle profile_img"
             /></a>
           </div>
           <div class="profile_info">
             <span>Welcome</span>
-            <h2>Employee</h2>
+            <h2 id="access-role">HR Admin</h2>
             <p>&nbsp;</p>
           </div>
         </div>
 
-        <!-- / menu -->
-        <ul class="nav-list">
+        <!--NAV MENU-->
+
+        <!--SUDO ACESS-->
+        <ul class="nav-list" id="sudo-access">
           <li>
-            <a href="admindashboard.html"
+            <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+          </li>
+        </ul>
+
+        <!--HR Admin ACESS-->
+        <ul id="hradminaccess" class="nav-list block">
+          <li>
+            <a href="DashboardAdmin.aspx"
               ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
             >
           </li>
@@ -64,16 +73,17 @@
             ></a>
             <ul class="nav child_menu hidden">
               <li>
-                <a href="payrollapproval.html">Payroll Approval</a>
+                <a href="SaturdaySched.aspx">Saturday Schedule</a>
               </li>
               <li>
-                <a href="leaveapproval.html">Leave Approval</a>
+                <a href="Substitution.aspx">Substitute Records</a>
               </li>
-              <li><a href="overtimeapproval.html">Overtime Approval</a></li>
               <li>
-                <a href="timealterationapproval.html"
-                  >Time Alteration Approval</a
-                >
+                <a href="LeaveRecords.aspx">Leave Records</a>
+              </li>
+              <li><a href="OvertimeRecords.aspx">Overtime Records</a></li>
+              <li>
+                <a href="UndertimeRecords.aspx">Undertime Records</a>
               </li>
             </ul>
           </li>
@@ -83,31 +93,30 @@
                 class="fa fa-chevron-down"
               ></span
             ></a>
-            <ul class="nav child_menu hidden">
-              <li>
-                <a href="employeemasterlist.html">Employee Masterlist</a>
+            <ul class="nav child_menu">
+              <li class="current-page">
+                <a href="ManageEmployees.aspx">Employee Masterlist</a>
               </li>
               <li>
-                <a href="adminleaverecords.html">Employee Leave Records</a>
+                <a href="EmployeeLeaveRecords.aspx">Employee Leave Records</a>
               </li>
+              <li><a href="TimeRecords.aspx">Employee Time Records</a></li>
+              <li><a href="merit.aspx">Employee Merits</a></li>
+              <li><a href="contribution.aspx">Employee Contributions</a></li>
+              <li><a href="savings.aspx">Employee Savings</a></li>
             </ul>
           </li>
-          <li>
-            <a href="underconstruction.html"
-              ><i class="fas fa-list"></i>Employee Assignment</a
-            >
-          </li>
+
           <li>
             <a href="#"
-              ><i class="fas fa-bullhorn"></i>Memo & Annountments<span
+              ><i class="fas fa-bullhorn"></i>Memo/Notice<span
                 class="fa fa-chevron-down"
               ></span
             ></a>
             <ul class="nav child_menu hidden">
               <li>
-                <a href="underconstruction.html">Bulk Email</a>
+                <a href="FileCabinet.aspx">File Cabinet</a>
               </li>
-              <li><a href="underconstruction.html">File Cabinet</a></li>
             </ul>
           </li>
           <li>
@@ -118,23 +127,81 @@
             ></a>
             <ul class="nav child_menu hidden">
               <li>
-                <a href="generatedtrreport.html">Generate DTR</a>
+                <a href="GenerateDtrReport.aspx">Generate DTR</a>
               </li>
-              <li>
-                <a href="underconstruction.html">Payroll Report</a>
-              </li>
-              <li><a href="underconstruction.html">Government Report</a></li>
             </ul>
           </li>
           <li>
-            <a href="importtimerecords.html"
+            <a href="EmployeeMasterlist.aspx"
               ><i class="fas fa-download"></i>Import Time Records</a
             >
           </li>
           <li>
+            <a href="#"
+              ><i class="fas fa-cog"></i>System Preferences<span
+                class="fa fa-chevron-down"
+              ></span
+            ></a>
+            <ul class="nav child_menu hidden">
+              <li>
+                <a href="HolidayList.aspx">Holiday Notice</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="LoginPage.aspx"
+              ><i class="fas fa-sign-out-alt"></i>Sign Out</a
+            >
+          </li>
+        </ul>
+
+        <!--HR Payroll ACESS-->
+        <ul id="hrpayrollaccess" class="nav-list">
+          <!--<li>
+                <a href="payrolldashboard.html"><i class="fas fa-tachometer-alt"></i>Payroll Dashboard</a>
+            </li>-->
+          <li>
+            <a href="PayrollMain.aspx"
+              ><i class="fas fa-file-invoice"></i>Payroll</a
+            >
+          </li>
+          <li class="current-page">
+            <a href="ManageEmployees.aspx"
+              ><i class="fas fa-file-alt"></i>Employee Masterlist</a
+            >
+          </li>
+          <!--<li>
+                <a href="SendMemo.aspx"><i class="far fa-bell"></i>Memo / Notice</a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-chart-area"></i>Reports<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu hidden">
+                    <li>
+                        <a href="GenerateDtrReport.aspx">Generate DTR Report</a>
+                    </li>
+                    <li>
+                        <a href="payrollreport.aspx">Payroll Report</a>
+                    </li>
+                    <li>
+                        <a href="payrollpayslip.aspx">Payslips</a>
+                    </li>
+                </ul>
+            </li>-->
+          <li>
+            <a href="LoginPage.aspx"
+              ><i class="fas fa-sign-out-alt"></i>Sign Out</a
+            >
+          </li>
+        </ul>
+
+        <!--OIC ACESS-->
+        <ul class="nav-list" id="oic-access">
+          <li>
             <a href="index.html"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
           </li>
         </ul>
+
+        <!--NAV MENU END-->
 
         <div class="close-menu">
           <a onclick="toggleMenu()">
@@ -142,7 +209,6 @@
           </a>
         </div>
       </nav>
-
       <!-- Underconstruction -->
       <section id="underconstruction" class="content">
         <!-- TOP NAV  -->
@@ -160,10 +226,10 @@
 
         <main class="showcase container">
           <div>
-            <img src="Images/under-construction.png" alt="" />
+            <img src="Images/error.png" alt="" />
           </div>
           <div class="lead">
-            <h1>Oops!<br />Currently this page is Under Construction.</h1>
+            <h1>Not available for Demo</h1>
           </div>
         </main>
 

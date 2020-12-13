@@ -1,5 +1,5 @@
 /* ========[ FONT ]======== */
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
+// @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
 
 /* ========[ RESTYLE ]======== */
 * {
@@ -6768,6 +6768,180 @@ nav ul li a span.fa {
 #backups .container .card-1 div:nth-child(1) a {
   margin-left: 0.5rem;
 }
+
+/* ========[ Cashbond]======== */
+#cashbond .container .card-1 > div:first-child {
+  position: relative;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+#cashbond .container .card-1 > div:first-child a {
+  margin-left: 0.5rem;
+  height: 100%;
+}
+
+#cashbond .modal-cashbond .modal-content {
+  width: 33%;
+}
+
+#cashbond .modal-cashbond .modal-content .select {
+  width: 230px;
+}
+
+#cashbond .modal-edit-cashbond .modal-content {
+  width: 60%;
+}
+
+#cashbond .modal-edit-cashbond .modal-content *:nth-child(3) {
+  display: flex;
+  flex-direction: row;
+}
+
+#cashbond .modal-edit-cashbond .modal-content *:nth-child(3) div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#cashbond table.sticky-table {
+  table-layout: fixed;
+}
+
+#cashbond table.sticky-table th,
+#cashbond table.sticky-table td {
+  width: 110px;
+  word-wrap: break-word;
+}
+
+#cashbond table.sticky-table td:nth-child(1),
+#cashbond table.sticky-table th:nth-child(1) {
+  width: 110px;
+}
+
+#cashbond table.sticky-table tr:nth-child(1) td:nth-child(2),
+#cashbond table.sticky-table th:nth-child(2) {
+  left: 110px;
+}
+
+#cashbond table.sticky-table td:nth-child(2),
+#cashbond table.sticky-table th:nth-child(2) {
+  left: 110px;
+  width: 150px;
+}
+
+/* ========[ Cash Advance ]======== */
+#cashadvance .container .card-1 > div:first-child {
+  position: relative;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+#cashadvance .container .card-1 > div:first-child a {
+  margin-left: 0.5rem;
+  height: 100%;
+}
+
+#cashadvance .modal-cashadvance .modal-content {
+  width: 33%;
+}
+
+#cashadvance .modal-cashadvance .modal-content .select {
+  width: 230px;
+}
+
+#cashadvance .modal-edit-cashadvance .modal-content {
+  width: 60%;
+}
+
+#cashadvance .modal-edit-cashadvance .modal-content *:nth-child(3) {
+  display: flex;
+  flex-direction: row;
+}
+
+#cashadvance .modal-edit-cashadvance .modal-content *:nth-child(3) div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#cashadvance table.sticky-table {
+  table-layout: fixed;
+}
+
+#cashadvance table.sticky-table th,
+#cashadvance table.sticky-table td {
+  width: 110px;
+  word-wrap: break-word;
+}
+
+#cashadvance table.sticky-table td:nth-child(1),
+#cashadvance table.sticky-table th:nth-child(1) {
+  width: 110px;
+}
+
+#cashadvance table.sticky-table tr:nth-child(1) td:nth-child(2),
+#cashadvance table.sticky-table th:nth-child(2) {
+  left: 110px;
+}
+
+#cashadvance table.sticky-table td:nth-child(2),
+#cashadvance table.sticky-table th:nth-child(2) {
+  left: 110px;
+  width: 150px;
+}
+
+#cashadvance .lblCAMonths {
+  font-weight: 600;
+  font-size: 0.7rem;
+  padding: 0.6rem 0 0 0;
+  position: relative;
+  top: 0.4rem;
+}
+
+// #cashadvance table.sticky-table {
+//   table-layout: fixed;
+// }
+
+// #cashadvance table.sticky-table th,
+// #cashadvance table.sticky-table td {
+//   width: 110px;
+//   word-wrap: break-word;
+// }
+
+// #cashadvance table.sticky-table td:nth-child(1),
+// #cashadvance table.sticky-table th:nth-child(1) {
+//   width: 150px;
+//   border-right: 1px solid rgba(0, 0, 0, 0.1);
+// }
+
+// // column headers
+// #cashadvance table.sticky-table tr:nth-child(1) td:nth-child(1),
+// #cashadvance table.sticky-table th:nth-child(1) {
+//   border-right: 1px solid rgba(0, 0, 0, 0.1);
+// }
+
+// #cashadvance table.sticky-table tr:nth-child(1) td:nth-child(2),
+// #cashadvance table.sticky-table th:nth-child(2) {
+//   left: 150px;
+
+//   border: none;
+//   position: relative;
+//   left: 0;
+//   top: 0;
+//   z-index: 0;
+// }
+
+// #cashadvance table.sticky-table td:nth-child(2),
+// #cashadvance table.sticky-table th:nth-child(2) {
+//   left: 150px;
+
+//   border: none;
+//   position: relative;
+//   left: 0;
+//   top: 0;
+//   z-index: 0;
+// }
 
 /* ==========================[ MEDIA QUERIES ]====================== */
 

@@ -25,7 +25,7 @@
     <title>HRIS & Payroll System</title>
   </head>
   <body>
-    <form id="benefits" action="#" autocomplete="off">
+    <form id="cashadvance" action="#" autocomplete="off">
       <!-- main -->
       <div class="main">
         <!--NAV MENU-->
@@ -49,7 +49,7 @@
             </div>
             <div class="profile_info">
               <span>Welcome</span>
-              <h2 id="accessrole" runat="server">HR Admin</h2>
+              <h2 id="accessrole" runat="server">Finance</h2>
               <p>&nbsp;</p>
             </div>
           </div>
@@ -116,7 +116,7 @@
 
           <!--HR Admin ACESS-->
           <ul id="hradminaccess" class="nav-list">
-            <li>
+            <li class="current-page">
               <a href="DashboardAdmin"
                 ><i class="fas fa-tachometer-alt"></i>Admin Dashboard</a
               >
@@ -184,8 +184,8 @@
                   class="fa fa-chevron-down"
                 ></span
               ></a>
-              <ul class="nav child_menu">
-                <li class="current-page">
+              <ul class="nav child_menu hidden">
+                <li>
                   <a href="Benefits">Benefits</a>
                 </li>
                 <li>
@@ -223,7 +223,7 @@
             <li>
               <a href="cashbond"><i class="fas fa-piggy-bank"></i>Cash Bond</a>
             </li>
-            <li>
+            <li class="current-page">
               <a href="cashadvance"
                 ><i class="fas fa-hand-holding-usd"></i>Cash Advance</a
               >
@@ -233,7 +233,7 @@
                 ><i class="fas fa-money-bill-alt"></i>13th Month</a
               >
             </li>
-            <li class="current-page">
+            <li>
               <a href="Benefits"><i class="fas fa-hands"></i>Benefits</a>
             </li>
             <li>
@@ -263,8 +263,8 @@
         </nav>
         <!--NAV MENU END-->
 
-        <!-- Benefits -->
-        <section id="benefits" class="content">
+        <!-- cash advance-->
+        <section id="cashadvance" class="content">
           <!-- TOP NAV  -->
           <div class="top-nav">
             <span class="menu-btn">
@@ -279,46 +279,25 @@
           </div>
 
           <div class="container">
-            <h2>Benefits</h2>
-            <!-- <div id="tab">
-              <ul class="tab-list" onclick="selectTab();">
-                <li class="current-tab">
-                  <a onclick="showTR()">Time Records</a>
-                </li>
-                <li>
-                  <a onclick="showPTA()">Time Alteration</a>
-                </li>
-              </ul>
-            </div> -->
+            <div id="tab">
+              <h2>Cash Advance</h2>
+            </div>
+
             <div class="card card-1">
               <div>
-                <!-- <label class="label-6">Filter Date</label>
-                <br />
-                <label for="txtDateFrom" class="label-6">From: </label>
-                <input
-                  name="txtDateFrom"
-                  type="text"
-                  id="txtDateFrom"
-                  class="datePicker"
-                />
-                <a class="icon"><i class="far fa-calendar-alt"></i></a>
-                <label for="txtDateTo" class="label-6">To: </label>
-                <input
-                  name="txtDateTo"
-                  type="text"
-                  id="txtDateTo"
-                  class="datePicker"
-                />
-                <a class="icon"><i class="far fa-calendar-alt"></i></a> -->
-              </div>
+                <a
+                  id="btnSelectYear"
+                  class="btn-xs btn-alt"
+                  onclick="openModalCashAdvance();"
+                  >Select Year
+                </a>
 
-              <div>
-                <!-- <a class="btn btn-secondary">Clear</a> -->
+                <a class="btn-xs btn-alt">Download </a>
               </div>
 
               <div class="search-main-container">
                 <div class="search-container">
-                  <button class="btn-search tooltip" aria-label="Search Mail">
+                  <a class="btn-search tooltip" aria-label="Search Mail">
                     <span class="tooltiptext">Search</span>
                     <svg
                       focusable="false"
@@ -332,15 +311,16 @@
                       ></path>
                       <path d="M0,0h24v24H0V0z" fill="none"></path>
                     </svg>
-                  </button>
+                  </a>
                   <div>
                     <input
                       id="txtSearch"
                       class="txtSearch"
                       type="text"
                       list="txtSearch"
-                      placeholder="Search Payroll Period"
-                      onkeyup="searchTable1(`txtSearch`,`dgBenefits`), checkSearchInput();"
+                      class="select block"
+                      placeholder="Search Employee"
+                      onkeyup="searchTable0(`txtSearch`,`dgCashAdvance`), checkSearchInput();"
                     />
                     <ul class="datalist-data hidden">
                       <li>
@@ -366,7 +346,7 @@
                     aria-label="Clear search"
                     type="button"
                     data-tooltip="Clear search"
-                    onclick="clearSearch(`benefits`,`dgBenefits`);"
+                    onclick="clearSearch(`cashadvance`,`dgCashAdvance`);"
                     class="btn-clear-search tooltip hidden"
                   >
                     <span class="tooltiptext">Clear search</span>
@@ -385,19 +365,17 @@
                   </a>
                   <a
                     type="button"
-                    data-tooltip="Search options"
-                    aria-label="Search options"
-                    class="showSearchOptions tooltip hidden"
+                    data-tooltip="Show search options"
+                    aria-label="Advanced search options"
+                    class="showSearchOptions hidden"
                     onclick="toggleSearchFilter();"
                   >
-                    <span class="tooltiptext">Search options</span>
                     <svg
                       focusable="false"
                       height="24px"
                       viewBox="0 0 24 24"
                       width="24px"
                       xmlns="http://www.w3.org/2000/svg"
-                      class=""
                     >
                       <path d="M7 10l5 5 5-5z"></path>
                       <path d="M0 0h24v24H0z" fill="none"></path>
@@ -427,42 +405,8 @@
                     ></select>
                   </div>
 
-                  <div>
-                    <label for="selectEmploymentStatus" class="label-6 block"
-                      >Employment Status</label
-                    >
-
-                    <select
-                      name="selectEmploymentStatus"
-                      id="selectEmploymentStatus"
-                      class="select"
-                    >
-                      <option value="">--Please choose an option--</option>
-                      <option value="probationary">Probationary</option>
-                      <option value="regular">Regular</option>
-                      <option value="resigned">Resigned</option>
-                      <option value="end">End of Contract</option>
-                      <option value="terminated">Terminated</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label for="selectEmploymentStatus" class="label-6 block"
-                      >Gender</label
-                    >
-                    <select
-                      name="showEmployeeByCategory"
-                      id="showEmployeeByCategory"
-                      class="select"
-                    >
-                      <option value="">--Please choose an option--</option>
-                      <option value="department">Male</option>
-                      <option value="position">Female</option>
-                    </select>
-                  </div>
-
                   <div class="btn-filter-container">
-                    <a class="btn-sm btn-primary" id="btnSearchPayroll">
+                    <a class="btn-sm btn-primary" id="btnSearchEmployee">
                       Search
                     </a>
 
@@ -476,43 +420,405 @@
                 </div>
               </div>
 
-              <!-- benefits -->
-              <table class="tableLayout" id="dgBenefits">
-                <tbody>
-                  <tr>
-                    <td class="">Action</td>
-                    <td class="">Payroll Period</td>
-                    <td class="">Total SSS EE</td>
-                    <td class="">Total SSS ER</td>
-                    <td class="">Total SSS Loan</td>
-                    <td class="">Total PHI EE</td>
-                    <td class="">Total PHI ER</td>
-                    <td class="">Total PAGIBIG EE</td>
-                    <td class="">Total PAGIBIG ER</td>
-                    <td class="">Total PAGIBIG Loan</td>
-                    <td class="">Total MP2 Savings</td>
-                  </tr>
-                  <tr>
-                    <td class="">
-                      <a class="btn-table btn-secondary" onclick="">Download</a>
-                    </td>
-                    <td class="">September 1-15, 2020</td>
-                    <td class="">59,220.00</td>
-                    <td class="">127,300.00</td>
-                    <td class="">22,725.14</td>
-                    <td class="">22,713.90</td>
-                    <td class="">25,414.07</td>
-                    <td class="">11,700.00</td>
-                    <td class="">12,600.00</td>
-                    <td class="">16,909.13</td>
-                    <td class="">1,500.00</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="my-3">
+                <label class="label-6">Year</label>
+                <h3 id="txtUpcomingSat11">2020</h3>
+              </div>
+
+              <!-- 1st Table -->
+              <!-- <label class="norecords">No Records Found</label> -->
+              <div>
+                <div class="sticky-table-container">
+                  <table class="sticky-table" id="dgCashAdvance">
+                    <tbody>
+                      <tr>
+                        <td>Action</td>
+                        <td>Name</td>
+                        <td>Ending December 2019</td>
+                        <td>Current CA</td>
+                        <td>1. Deduction</td>
+                        <td>2. Deduction</td>
+                        <td>Ending January 2020</td>
+                        <td>Current CA</td>
+                        <td>1. Deduction</td>
+                        <td>2. Deduction</td>
+                        <td>Ending February 2020</td>
+                        <td>Current CA</td>
+                        <td>1. Deduction</td>
+                        <td>2. Deduction</td>
+                        <td>Ending March 2020</td>
+                        <td>Current CA</td>
+                        <td>1. Deduction</td>
+                        <td>2. Deduction</td>
+                        <td>Ending April 2020</td>
+                        <td>Current CA</td>
+                        <td>1. Deduction</td>
+                        <td>2. Deduction</td>
+                        <td>Ending May 2020</td>
+                        <td>Current CA</td>
+                        <td>1. Deduction</td>
+                        <td>2. Deduction</td>
+                        <td>Ending June 2020</td>
+                        <td>Current CA</td>
+                        <td>1. Deduction</td>
+                        <td>2. Deduction</td>
+                        <td>Ending July 2020</td>
+                        <td>Current CA</td>
+                        <td>1. Deduction</td>
+                        <td>2. Deduction</td>
+                        <td>Ending August 2020</td>
+                        <td>Current CA</td>
+                        <td>1. Deduction</td>
+                        <td>2. Deduction</td>
+                        <td>Ending September 2020</td>
+                        <td>Current CA</td>
+                        <td>1. Deduction</td>
+                        <td>2. Deduction</td>
+                        <td>Ending October 2020</td>
+                        <td>Current CA</td>
+                        <td>1. Deduction</td>
+                        <td>2. Deduction</td>
+                        <td>Ending November 2020</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a
+                            class="btn-table btn-secondary btn-edit"
+                            onclick="openModalEditCashAdvance();"
+                            >Edit</a
+                          >
+                        </td>
+                        <td>John Doe</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- Modal Section -->
+          <!-- btnselectyear -->
+          <div class="modal modal-cashadvance">
+            <div class="modal-content">
+              <div class="header-delete-container">
+                <h5>Cash Bond Form</h5>
+              </div>
+
+              <hr />
+              <div>
+                <label class="label-6">Current Year</label>
+                <h4>
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                </h4>
+
+                <label class="label-6 block">Year</label>
+                <select
+                  id="filterYear"
+                  class="select"
+                  onfocus="populateYear()"
+                ></select>
+              </div>
+
+              <div class="modal-btn-container">
+                <a class="btn-sm btn-primary mx-3" id="btnSelectYearModal"
+                  >Select</a
+                >
+                <a
+                  class="btn-sm btn-secondary mx-3"
+                  onclick="closeModalCashAdvance();"
+                  >Cancel</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- btnEdit Cash Advance-->
+          <div class="modal modal-edit-cashadvance">
+            <div class="modal-content">
+              <div class="header-delete-container">
+                <h5>Update Employee Cash Advance</h5>
+              </div>
+
+              <hr />
+
+              <div>
+                <!-- 1st column -->
+                <div>
+                  <label class="label-6" for="empName">Employee Name</label>
+                  <p name="empName" id="empName">John Doe</p>
+
+                  <!-- January -->
+                  <label class="lblCAMonths">January</label>
+                  <label for="txtJanDeduction1" class="label-6"
+                    >1. Deduction</label
+                  >
+                  <input
+                    name="txtJanDeduction1"
+                    type="text"
+                    id="txtJanDeduction1"
+                  />
+                  <label for="txtJanDeduction2" class="label-6"
+                    >2. Deduction</label
+                  >
+                  <input
+                    name="txtJanDeduction2"
+                    type="text"
+                    id="txtJanDeduction2"
+                  />
+                  <!-- February -->
+                  <label class="lblCAMonths">February</label>
+                  <label for="txtFebDeduction1" class="label-6"
+                    >1. Deduction</label
+                  >
+                  <input
+                    name="txtFebDeduction1"
+                    type="text"
+                    id="txtFebDeduction1"
+                  />
+                  <label for="txtFebDeduction2" class="label-6"
+                    >2. Deduction</label
+                  >
+                  <input
+                    name="txtFebDeduction2"
+                    type="text"
+                    id="txtFebDeduction2"
+                  />
+
+                  <!-- March -->
+                  <label class="lblCAMonths">March</label>
+                  <label for="txtMarDeduction1" class="label-6"
+                    >1. Deduction</label
+                  >
+                  <input
+                    name="txtMarDeduction1"
+                    type="text"
+                    id="txtMarDeduction1"
+                  />
+                  <label for="txtMarDeduction2" class="label-6"
+                    >2. Deduction</label
+                  >
+                  <input
+                    name="txtMarDeduction2"
+                    type="text"
+                    id="txtMarDeduction2"
+                  />
+
+                  <!-- April -->
+                  <label class="lblCAMonths">April</label>
+                  <label for="txtAprDeduction1" class="label-6"
+                    >1. Deduction</label
+                  >
+                  <input
+                    name="txtAprDeduction1"
+                    type="text"
+                    id="txtAprDeduction1"
+                  />
+                  <label for="txtAprDeduction2" class="label-6"
+                    >2. Deduction</label
+                  >
+                  <input
+                    name="txtAprDeduction2"
+                    type="text"
+                    id="txtAprDeduction2"
+                  />
+
+                  <!-- May -->
+                  <label class="lblCAMonths">May</label>
+                  <label for="txtMayDeduction1" class="label-6"
+                    >1. Deduction</label
+                  >
+                  <input
+                    name="txtMayDeduction1"
+                    type="text"
+                    id="txtMayDeduction1"
+                  />
+                  <label for="txtMayDeduction2" class="label-6"
+                    >2. Deduction</label
+                  >
+                  <input
+                    name="txtMayDeduction2"
+                    type="text"
+                    id="txtMayDeduction2"
+                  />
+
+                  <!-- June -->
+                  <label class="lblCAMonths">June</label>
+                  <label for="txtJunDeduction1" class="label-6"
+                    >1. Deduction</label
+                  >
+                  <input
+                    name="txtJunDeduction1"
+                    type="text"
+                    id="txtJunDeduction1"
+                  />
+                  <label for="txtJunDeduction2" class="label-6"
+                    >2. Deduction</label
+                  >
+                  <input
+                    name="txtJunDeduction2"
+                    type="text"
+                    id="txtJunDeduction2"
+                  />
+                </div>
+                <!-- 2nd column -->
+                <div>
+                  <label class="label-6">&nbsp;</label>
+                  <p>&nbsp;</p>
+
+                  <!-- July -->
+                  <label class="lblCAMonths">July</label>
+                  <label for="txtJulDeduction1" class="label-6"
+                    >1. Deduction</label
+                  >
+                  <input
+                    name="txtJulDeduction1"
+                    type="text"
+                    id="txtJulDeduction1"
+                  />
+                  <label for="txtJulDeduction2" class="label-6"
+                    >2. Deduction</label
+                  >
+                  <input
+                    name="txtJulDeduction2"
+                    type="text"
+                    id="txtJulDeduction2"
+                  />
+                  <!-- August -->
+                  <label class="lblCAMonths">August</label>
+                  <label for="txtAugDeduction1" class="label-6"
+                    >1. Deduction</label
+                  >
+                  <input
+                    name="txtAugDeduction1"
+                    type="text"
+                    id="txtAugDeduction1"
+                  />
+                  <label for="txtAugDeduction2" class="label-6"
+                    >2. Deduction</label
+                  >
+                  <input
+                    name="txtAugDeduction2"
+                    type="text"
+                    id="txtAugDeduction2"
+                  />
+
+                  <!-- September -->
+                  <label class="lblCAMonths">September</label>
+                  <label for="txtSepDeduction1" class="label-6"
+                    >1. Deduction</label
+                  >
+                  <input
+                    name="txtSepDeduction1"
+                    type="text"
+                    id="txtSepDeduction1"
+                  />
+                  <label for="txtSepDeduction2" class="label-6"
+                    >2. Deduction</label
+                  >
+                  <input
+                    name="txtSepDeduction2"
+                    type="text"
+                    id="txtSepDeduction2"
+                  />
+
+                  <!-- October -->
+                  <label class="lblCAMonths">October</label>
+                  <label for="txtAprDeduction1" class="label-6"
+                    >1. Deduction</label
+                  >
+                  <input
+                    name="txtAprDeduction1"
+                    type="text"
+                    id="txtAprDeduction1"
+                  />
+                  <label for="txtAprDeduction2" class="label-6"
+                    >2. Deduction</label
+                  >
+                  <input
+                    name="txtAprDeduction2"
+                    type="text"
+                    id="txtAprDeduction2"
+                  />
+
+                  <!-- November -->
+                  <label class="lblCAMonths">November</label>
+                  <label for="txtNovDeduction1" class="label-6"
+                    >1. Deduction</label
+                  >
+                  <input
+                    name="txtNovDeduction1"
+                    type="text"
+                    id="txtNovDeduction1"
+                  />
+                  <label for="txtNovDeduction2" class="label-6"
+                    >2. Deduction</label
+                  >
+                  <input
+                    name="txtNovDeduction2"
+                    type="text"
+                    id="txtNovDeduction2"
+                  />
+                </div>
+              </div>
+              <div class="modal-btn-container">
+                <a class="btn-sm btn-primary mx-3" id="btnSave">Save</a>
+                <a
+                  class="btn-sm btn-secondary mx-3"
+                  id="btnCancelEdit"
+                  onclick="closeModalEditCashAdvance()"
+                  >Cancel</a
+                >
+              </div>
+            </div>
+          </div>
 
           <section id="footer">
             <a href="https://systemoph.com/">
@@ -631,5 +937,16 @@
       </div>
     </form>
     <script src="Scripts/main.js"></script>
+    <!-- <script src="Scripts/validation.js"></script> -->
+    <!-- <script>
+      const accessRole = document.querySelector("#accessrole").innerHTML;
+      const editTableButton = document.querySelectorAll(".btn-edit");
+
+      if (accessRole !== "HR Admin") {
+        editTableButton.forEach((item) => {
+          item.classList.add("disabled");
+        });
+      }
+    </script> -->
   </body>
 </html>
