@@ -7765,6 +7765,53 @@ p {
   top: 0.4rem;
 }
 
+/* ========[ Scheduling ]======== */
+#scheduling .container .card-1 > div:first-child {
+  position: relative;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+#scheduling .container .card-1 > div:first-child a {
+  margin-left: 0.5rem;
+  height: 100%;
+}
+
+#scheduling .modal-scheduling .modal-content {
+  width: 20%;
+}
+
+/* ========[ Scheduling Status]======== */
+#schedulingstatus .container .card-1 > div:nth-child(1) {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+}
+
+#schedulingstatus .container .card-1 div:nth-child(2) {
+  display: inline-block;
+}
+
+#schedulingstatus .modal-scheduling .modal-content {
+  width: 20%;
+}
+
+/* ========[ Scheduling Approval ]======== */
+#scheduling .container .card-1 > div:first-child {
+  position: relative;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+#scheduling .container .card-1 > div:first-child a {
+  margin-left: 0.5rem;
+  height: 100%;
+}
+
+#scheduling .modal-scheduling .modal-content {
+  width: 20%;
+}
+
 /* ==========================[ MEDIA QUERIES ]====================== */
 /* TABLETS PORTRAIT */
 @media only screen and (min-width: 768px) and (max-width: 991px) {

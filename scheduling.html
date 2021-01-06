@@ -25,7 +25,7 @@
     <title>HRIS & Payroll System</title>
   </head>
   <body>
-    <form id="cashbond" action="#" autocomplete="off">
+    <form id="scheduling" action="#" autocomplete="off">
       <!-- main -->
       <div class="main">
         <!--NAV MENU-->
@@ -49,7 +49,7 @@
             </div>
             <div class="profile_info">
               <span>Welcome</span>
-              <h2 id="accessrole" runat="server">HR Admin</h2>
+              <h2 id="accessrole" runat="server">Coordinator</h2>
               <p>&nbsp;</p>
             </div>
           </div>
@@ -184,8 +184,8 @@
                   class="fa fa-chevron-down"
                 ></span
               ></a>
-              <ul class="nav child_menu">
-                <li class="current-page">
+              <ul class="nav child_menu hidden">
+                <li>
                   <a href="cashbond">Cash Bond</a>
                 </li>
                 <li>
@@ -229,7 +229,7 @@
 
           <!--FINANCE ACESS-->
           <ul id="financeaccess" class="nav-list">
-            <li class="current-page">
+            <li>
               <a href="cashbond"><i class="fas fa-piggy-bank"></i>Cash Bond</a>
             </li>
             <li>
@@ -264,6 +264,23 @@
             </li>
           </ul>
 
+          <!--COORDINATOR ACESS-->
+          <ul id="coordinator" class="nav-list">
+            <li>
+              <a href="schedulingstatus"
+                ><i class="fas fa-tasks"></i>Scheduling Status</a
+              >
+            </li>
+            <li class="current-page">
+              <a href="coordinatordashboard"
+                ><i class="fas fa-calendar-day"></i>Employee Scheduling</a
+              >
+            </li>
+            <li>
+              <a href=""><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+            </li>
+          </ul>
+
           <div class="close-menu">
             <a onclick="toggleMenu()">
               <i class="fas fa-times"></i>
@@ -272,8 +289,8 @@
         </nav>
         <!--NAV MENU END-->
 
-        <!-- cashbond-->
-        <section id="cashbond" class="content">
+        <!-- Scheduling -->
+        <section id="scheduling" class="content">
           <!-- TOP NAV  -->
           <div class="top-nav">
             <span class="menu-btn">
@@ -288,9 +305,8 @@
           </div>
 
           <div class="container">
-            <!-- <h2>Admin & Ops Consolidation</h2> -->
             <div id="tab">
-              <h2>Cash Bond</h2>
+              <h2>Employee Scheduling</h2>
             </div>
 
             <div class="card card-1">
@@ -298,11 +314,9 @@
                 <a
                   id="btnSelectYear"
                   class="btn-xs btn-alt"
-                  onclick="openModalCashBond();"
-                  >Select Year
+                  onclick="openModalScheduling();"
+                  >Select Date
                 </a>
-
-                <a class="btn-xs btn-alt">Download </a>
               </div>
 
               <div class="search-main-container">
@@ -330,7 +344,7 @@
                       list="txtSearch"
                       class="select block"
                       placeholder="Search Employee"
-                      onkeyup="searchTable1(`txtSearch`,`dgCashbond`), checkSearchInput();"
+                      onkeyup="searchTable0(`txtSearch`,`dgScheduling`), checkSearchInput();"
                     />
                     <ul class="datalist-data hidden">
                       <li>
@@ -356,7 +370,7 @@
                     aria-label="Clear search"
                     type="button"
                     data-tooltip="Clear search"
-                    onclick="clearSearch(`cashbond`,`dgCashbond`);"
+                    onclick="clearSearch(`cashadvance`,`dgScheduling`);"
                     class="btn-clear-search tooltip hidden"
                   >
                     <span class="tooltiptext">Clear search</span>
@@ -416,7 +430,7 @@
                   </div>
 
                   <div class="btn-filter-container">
-                    <a class="btn-sm btn-primary" id="btnSearchPayroll">
+                    <a class="btn-sm btn-primary" id="btnSearchEmployee">
                       Search
                     </a>
 
@@ -431,204 +445,50 @@
               </div>
 
               <div class="my-3">
-                <label class="label-6">Year</label>
-                <h3 id="txtUpcomingSat11">2020</h3>
+                <label class="label-6">Date</label>
+                <h3 id="txtDate">January 06, 2021</h3>
               </div>
 
-              <!-- 1st Table -->
+              <!-- Scheduling Table -->
               <!-- <label class="norecords">No Records Found</label> -->
-              <div>
-                <div class="sticky-table-container">
-                  <table class="sticky-table" id="dgCashbond">
-                    <tbody>
-                      <tr>
-                        <td>Action</td>
-                        <td>Name</td>
-                        <td>Remarks</td>
-                        <td>Ending December 2019</td>
-                        <td>CB Jan 15</td>
-                        <td>CB Jan 30</td>
-                        <td>Excess</td>
-                        <td>1. Withdrawal</td>
-                        <td>2. Withdrawal</td>
-                        <td>Resigned</td>
-                        <td>Ending CB January 2020</td>
-                        <td>CB Feb 15</td>
-                        <td>CB Feb 28</td>
-                        <td>1. Withdrawal</td>
-                        <td>2. Withdrawal</td>
-                        <td>Resigned</td>
-                        <td>Transfer to Diesel Tanker</td>
-                        <td>Ending CB February 2020</td>
-                        <td>CB March 15</td>
-                        <td>CB March 31</td>
-                        <td>1. Withdrawal</td>
-                        <td>2. Withdrawal</td>
-                        <td>Resigned</td>
-                        <td>Ending CB March 2020</td>
-                        <td>CB Apr 15</td>
-                        <td>CB Apr 30</td>
-                        <td>1. Withdrawal</td>
-                        <td>2. Withdrawal</td>
-                        <td>Resigned</td>
-                        <td>Ending CB April 2020</td>
-                        <td>CB May 15</td>
-                        <td>CB May 31</td>
-                        <td>1. Withdrawal</td>
-                        <td>2. Withdrawal</td>
-                        <td>Resigned</td>
-                        <td>Ending CB May 2020</td>
-                        <td>Deductions SBWS</td>
-                        <td>CB June 15</td>
-                        <td>CB June 30</td>
-                        <td>1. Withdrawal</td>
-                        <td>2. Withdrawal</td>
-                        <td>Resigned</td>
-                        <td>Ending CB June 2020</td>
-                        <td>CB July 15</td>
-                        <td>CB July 31</td>
-                        <td>1. Withdrawal</td>
-                        <td>2. Withdrawal</td>
-                        <td>Resigned</td>
-                        <td>Ending CB July 2020</td>
-                        <td>CB Aug 15</td>
-                        <td>CB Aug 30</td>
-                        <td>1. Withdrawal</td>
-                        <td>2. Withdrawal</td>
-                        <td>Resigned/Transfer</td>
-                        <td>Transfer from NCC</td>
-                        <td>Ending CB August 2020</td>
-                        <td>CB Sept 15</td>
-                        <td>CB Sept 30</td>
-                        <td>1. Withdrawal</td>
-                        <td>2. Withdrawal</td>
-                        <td>Resigned/Transfer</td>
-                        <td>Ending CB September 2020</td>
-                        <td>CB Oct 15</td>
-                        <td>CB Oct 31</td>
-                        <td>1. Withdrawal</td>
-                        <td>2. Withdrawal</td>
-                        <td>Resigned/Transfer</td>
-                        <td>Ending CB October 2020</td>
-                        <td>CB Nov 15</td>
-                        <td>CB Nov 30</td>
-                        <td>1. Withdrawal</td>
-                        <td>2. Withdrawal</td>
-                        <td>Resigned/Transfer</td>
-                        <td>Ending CB November 2020</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <a
-                            class="btn-table btn-secondary btn-edit"
-                            onclick="openModalEditCashbond();"
-                            >Edit</a
-                          >
-                        </td>
-                        <td>CASUPANANAN, GABRIELA CELENE</td>
-                        <td>Active</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+              <table class="tableLayout" id="dgScheduling">
+                <tbody>
+                  <tr>
+                    <td>Employee Name</td>
+                    <td>Time In</td>
+                    <td>Time Out</td>
+                  </tr>
+                  <tr>
+                    <td>Juan Miguel Dela Cruz</td>
+                    <td contenteditable="true">8:00 AM</td>
+                    <td contenteditable="true">5:00 PM</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="btn-container">
+                <button href="" class="btn-sm btn-primary mx-3" id="btnSubmit">
+                  Submit
+                </button>
+                <button class="btn-sm btn-secondary mx-3" id="btnClear">
+                  Clear All
+                </button>
               </div>
             </div>
           </div>
 
           <!-- Modal Section -->
-          <!-- btnselectyear -->
-          <div class="modal modal-cashbond">
+          <!-- btnselectdate -->
+          <div class="modal modal-scheduling">
             <div class="modal-content">
-              <div class="header-delete-container">
-                <h5>Cash Bond Form</h5>
+              <div>
+                <h5>Date Selection Form</h5>
               </div>
 
               <hr />
               <div>
-                <label class="label-6">Current Year</label>
-                <h4>
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                </h4>
-
-                <label class="label-6 block">Year</label>
-                <select
-                  id="filterYear"
-                  class="select"
-                  onfocus="populateYear()"
-                ></select>
+                <label class="label-6 block">Date</label>
+                <input type="text" class="datePicker2" />
               </div>
 
               <div class="modal-btn-container">
@@ -637,276 +497,7 @@
                 >
                 <a
                   class="btn-sm btn-secondary mx-3"
-                  onclick="closeModalCashBond();"
-                  >Cancel</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- btnEdit Cash Bond-->
-          <div class="modal modal-edit-cashbond">
-            <div class="modal-content">
-              <div class="header-delete-container">
-                <h5>Update Employee Cash Bond</h5>
-              </div>
-
-              <hr />
-
-              <div>
-                <!-- 1st column -->
-                <div>
-                  <label class="label-6" for="empName">Employee Name</label>
-                  <p name="empName" id="empName">John Doe</p>
-
-                  <!-- December -->
-                  <label for="txtDecEnding" class="label-6"
-                    >Ending December</label
-                  >
-                  <input name="txtDecEnding" type="text" id="txtDecEnding" />
-
-                  <!-- January -->
-                  <label for="txtJanExcess" class="label-6"
-                    >January Excess</label
-                  >
-                  <input name="txtJanExcess" type="text" id="txtJanExcess" />
-                  <label for="txtJanWithdrawal1" class="label-6"
-                    >1. Withdrawal</label
-                  >
-                  <input
-                    name="txtJanWithdrawal1"
-                    type="text"
-                    id="txtJanWithdrawal1"
-                  />
-                  <label for="txtJanWithdrawal2" class="label-6"
-                    >2. Withdrawal</label
-                  >
-                  <input
-                    name="txtJanWithdrawal2"
-                    type="text"
-                    id="txtJanWithdrawal2"
-                  />
-                  <!-- February -->
-                  <label for="txtFebExcess" class="label-6"
-                    >February Excess</label
-                  >
-                  <input name="txtFebExcess" type="text" id="txtFebExcess" />
-                  <label for="txtFebWithdrawal1" class="label-6"
-                    >1. Withdrawal</label
-                  >
-                  <input
-                    name="txtFebWithdrawal1"
-                    type="text"
-                    id="txtFebWithdrawal1"
-                  />
-                  <label for="txtFebWithdrawal2" class="label-6"
-                    >2. Withdrawal</label
-                  >
-                  <input
-                    name="txtFebWithdrawal2"
-                    type="text"
-                    id="txtFebWithdrawal2"
-                  />
-
-                  <!-- March -->
-                  <label for="txtMarExcess" class="label-6">March Excess</label>
-                  <input name="txtMarExcess" type="text" id="txtMarExcess" />
-                  <label for="txtMarWithdrawal1" class="label-6"
-                    >1. Withdrawal</label
-                  >
-                  <input
-                    name="txtMarWithdrawal1"
-                    type="text"
-                    id="txtMarWithdrawal1"
-                  />
-                  <label for="txtMarWithdrawal2" class="label-6"
-                    >2. Withdrawal</label
-                  >
-                  <input
-                    name="txtMarWithdrawal2"
-                    type="text"
-                    id="txtMarWithdrawal2"
-                  />
-
-                  <!-- April -->
-                  <label for="txtAprExcess" class="label-6">April Excess</label>
-                  <input name="txtAprExcess" type="text" id="txtAprExcess" />
-                  <label for="txtAprWithdrawal1" class="label-6"
-                    >1. Withdrawal</label
-                  >
-                  <input
-                    name="txtAprWithdrawal1"
-                    type="text"
-                    id="txtAprWithdrawal1"
-                  />
-                  <label for="txtAprWithdrawal2" class="label-6"
-                    >2. Withdrawal</label
-                  >
-                  <input
-                    name="txtAprWithdrawal2"
-                    type="text"
-                    id="txtAprWithdrawal2"
-                  />
-
-                  <!-- May -->
-                  <label for="txtMayExcess" class="label-6">May Excess</label>
-                  <input name="txtMayExcess" type="text" id="txtMayExcess" />
-                  <label for="txtMayWithdrawal1" class="label-6"
-                    >1. Withdrawal</label
-                  >
-                  <input
-                    name="txtMayWithdrawal1"
-                    type="text"
-                    id="txtMayWithdrawal1"
-                  />
-                  <label for="txtMayWithdrawal2" class="label-6"
-                    >2. Withdrawal</label
-                  >
-                  <input
-                    name="txtMayWithdrawal2"
-                    type="text"
-                    id="txtMayWithdrawal2"
-                  />
-
-                  <!-- June -->
-                  <label for="txtJunExcess" class="label-6">June Excess</label>
-                  <input name="txtJunExcess" type="text" id="txtJunExcess" />
-                  <label for="txtJunWithdrawal1" class="label-6"
-                    >1. Withdrawal</label
-                  >
-                  <input
-                    name="txtJunWithdrawal1"
-                    type="text"
-                    id="txtJunWithdrawal1"
-                  />
-                  <label for="txtJunWithdrawal2" class="label-6"
-                    >2. Withdrawal</label
-                  >
-                  <input
-                    name="txtJunWithdrawal2"
-                    type="text"
-                    id="txtJunWithdrawal2"
-                  />
-                </div>
-                <!-- 2nd column -->
-                <div>
-                  <label class="label-6" for="empRemarks">Remarks</label>
-                  <p name="empRemarks" id="empRemarks">Active</p>
-
-                  <!-- July -->
-                  <label for="txtJulExcess" class="label-6">July Excess</label>
-                  <input name="txtJulExcess" type="text" id="txtJulExcess" />
-                  <label for="txtJulWithdrawal1" class="label-6"
-                    >1. Withdrawal</label
-                  >
-                  <input
-                    name="txtJulWithdrawal1"
-                    type="text"
-                    id="txtJulWithdrawal1"
-                  />
-                  <label for="txtJulWithdrawal2" class="label-6"
-                    >2. Withdrawal</label
-                  >
-                  <input
-                    name="txtJulWithdrawal2"
-                    type="text"
-                    id="txtJulWithdrawal2"
-                  />
-                  <!-- August -->
-                  <label for="txtAugExcess" class="label-6"
-                    >August Excess</label
-                  >
-                  <input name="txtAugExcess" type="text" id="txtAugExcess" />
-                  <label for="txtAugWithdrawal1" class="label-6"
-                    >1. Withdrawal</label
-                  >
-                  <input
-                    name="txtAugWithdrawal1"
-                    type="text"
-                    id="txtAugWithdrawal1"
-                  />
-                  <label for="txtAugWithdrawal2" class="label-6"
-                    >2. Withdrawal</label
-                  >
-                  <input
-                    name="txtAugWithdrawal2"
-                    type="text"
-                    id="txtAugWithdrawal2"
-                  />
-
-                  <!-- September -->
-                  <label for="txtSepExcess" class="label-6"
-                    >September Excess</label
-                  >
-                  <input name="txtSepExcess" type="text" id="txtSepExcess" />
-                  <label for="txtSepWithdrawal1" class="label-6"
-                    >1. Withdrawal</label
-                  >
-                  <input
-                    name="txtSepWithdrawal1"
-                    type="text"
-                    id="txtSepWithdrawal1"
-                  />
-                  <label for="txtSepWithdrawal2" class="label-6"
-                    >2. Withdrawal</label
-                  >
-                  <input
-                    name="txtSepWithdrawal2"
-                    type="text"
-                    id="txtSepWithdrawal2"
-                  />
-
-                  <!-- October -->
-                  <label for="txtOctExcess" class="label-6"
-                    >October Excess</label
-                  >
-                  <input name="txtOctExcess" type="text" id="txtOctExcess" />
-                  <label for="txtAprWithdrawal1" class="label-6"
-                    >1. Withdrawal</label
-                  >
-                  <input
-                    name="txtAprWithdrawal1"
-                    type="text"
-                    id="txtAprWithdrawal1"
-                  />
-                  <label for="txtAprWithdrawal2" class="label-6"
-                    >2. Withdrawal</label
-                  >
-                  <input
-                    name="txtAprWithdrawal2"
-                    type="text"
-                    id="txtAprWithdrawal2"
-                  />
-
-                  <!-- November -->
-                  <label for="txtNovExcess" class="label-6"
-                    >November Excess</label
-                  >
-                  <input name="txtNovExcess" type="text" id="txtNovExcess" />
-                  <label for="txtNovWithdrawal1" class="label-6"
-                    >1. Withdrawal</label
-                  >
-                  <input
-                    name="txtNovWithdrawal1"
-                    type="text"
-                    id="txtNovWithdrawal1"
-                  />
-                  <label for="txtNovWithdrawal2" class="label-6"
-                    >2. Withdrawal</label
-                  >
-                  <input
-                    name="txtNovWithdrawal2"
-                    type="text"
-                    id="txtNovWithdrawal2"
-                  />
-                </div>
-              </div>
-              <div class="modal-btn-container">
-                <a class="btn-sm btn-primary mx-3" id="btnSave">Save</a>
-                <a
-                  class="btn-sm btn-secondary mx-3"
-                  id="btnCancelEdit"
-                  onclick="closeModalEditCashbond()"
+                  onclick="closeModalScheduling();"
                   >Cancel</a
                 >
               </div>

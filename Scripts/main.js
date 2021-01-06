@@ -37,6 +37,8 @@ function checkAccessRole() {
     const hrpayrollAccess = document.querySelector("#hrpayrollaccess");
     const oicAccess = document.querySelector("#oicaccess");
     const employeeAccess = document.querySelector("#employee");
+    const coordinatorAccess = document.querySelector("#coordinator");
+    const engineeringAccess = document.querySelector("#engineering");
 
     navList.forEach((item) => {
       item.classList.remove("block");
@@ -56,6 +58,10 @@ function checkAccessRole() {
       oicAccess.classList.add("block");
     } else if (accessRole === "Employee") {
       employeeAccess.classList.add("block");
+    } else if (accessRole === "Coordinator") {
+      coordinatorAccess.classList.add("block");
+    } else if (accessRole === "Engineering") {
+      engineeringAccess.classList.add("block");
     } else {
       navList.classList.remove("block");
     }
@@ -3272,6 +3278,85 @@ function closeModalCashAdvance() {
     // clearField(txtDateFromModal);
     // clearField(txtDateToModal);
     // clearSelectPayPeriod(selectPayperiod);
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function openModalScheduling() {
+  try {
+    const modal = document.querySelector(".modal-scheduling");
+
+    modal.style.display = "flex";
+    // checkLeapYear();
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function closeModalScheduling() {
+  try {
+    const modal = document.querySelector(".modal-scheduling");
+
+    modal.style.display = "none";
+  } catch (e) {
+    console.log(e);
+  }
+}
+function openModalSchedulingStatus() {
+  try {
+    const modal = document.querySelector(".modal-schedulingstatus");
+
+    modal.style.display = "flex";
+    // checkLeapYear();
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function closeModalSchedulingStatus() {
+  try {
+    const modal = document.querySelector(".modal-schedulingstatus");
+
+    modal.style.display = "none";
+  } catch (e) {
+    console.log(e);
+  }
+}
+function openModalSchedulingApproval() {
+  try {
+    const modal = document.querySelector(".modal-schedulingapproval");
+
+    modal.style.display = "flex";
+    // checkLeapYear();
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function closeModalSchedulingApproval() {
+  try {
+    const modal = document.querySelector(".modal-schedulingapproval");
+
+    modal.style.display = "none";
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function openModalRemarks() {
+  try {
+    const modalRemarks = document.querySelector(".modal-remarks");
+    modalRemarks.style.display = "flex";
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function closeModalRemarks() {
+  try {
+    const modalRemarks = document.querySelector(".modal-remarks");
+    modalRemarks.style.display = "none";
   } catch (e) {
     console.log(e);
   }
