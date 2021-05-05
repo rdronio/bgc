@@ -192,6 +192,10 @@ input {
   -webkit-tap-highlight-color: transparent;
 }
 
+input[type="text"]:disabled {
+  background: #ebebe3;
+}
+
 input[type="text"]:valid {
   background: unset;
   border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
@@ -5048,6 +5052,16 @@ nav ul li a span.fa {
   z-index: 2;
 }
 
+#employee-masterlist
+  .modal-view-employee
+  .modal-content
+  .header-promote-container {
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-between;
+  gap: 16px;
+}
+
 #employee-masterlist .modal-view-employee .modal-content .label-6 {
   font-weight: 600;
 }
@@ -5204,6 +5218,28 @@ nav ul li a span.fa {
   flex: 1;
 }
 
+#employee-masterlist
+  .modal-view-employee
+  .modal-content
+  #view-hr-info
+  div
+  .two-col-container {
+  padding: 0.8rem 0 0.4rem 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+}
+#employee-masterlist
+  .modal-view-employee
+  .modal-content
+  #view-hr-info
+  div
+  .two-col-container
+  .col2
+  label {
+  font-style: italic;
+}
+
 /* view merits */
 #employee-masterlist .modal-view-employee .modal-content #view-hr-merits > div {
   display: flex;
@@ -5261,6 +5297,15 @@ nav ul li a span.fa {
   > div
   > div {
   flex: 1;
+}
+
+#employee-masterlist
+  .modal-promote-employee
+  .modal-content-sm
+  .field-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.75rem;
 }
 
 /* ========[ Payroll Add Employee ]======== */

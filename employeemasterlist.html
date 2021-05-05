@@ -1165,6 +1165,16 @@
                     class="select"
                   ></select>
 
+                  <label for="dtNewSalary" class="label-6"
+                    >Promotion Date</label
+                  >
+                  <input
+                    name="dtNewSalary"
+                    type="text"
+                    id="dtNewSalary"
+                    class="datePicker2"
+                  />
+
                   <label for="selectManager" class="label-6 hidden"
                     >Manager <span class="note">(Approver)</span></label
                   >
@@ -1174,7 +1184,7 @@
                     class="select hidden"
                   ></select>
 
-                  <label for="txtDailyRate" class="label-6"
+                  <label for="txtDailyRate" class="label-6 hidden"
                     >Daily Rate <span class="note-red">*</span></label
                   >
                   <input
@@ -1182,6 +1192,7 @@
                     type="number"
                     min="0"
                     id="txtDailyRate"
+                    class="hidden"
                   />
 
                   <label for="txtSalary" class="label-6"
@@ -1992,7 +2003,17 @@
           <!-- Modal View Employee: btnViewEmployee -->
           <div class="modal modal-view-employee">
             <div class="modal-content">
-              <h4>View Employment Information</h4>
+              <div class="header-promote-container">
+                <h4>View Employment Information</h4>
+                <a
+                  class="btn-cta btn-alt"
+                  id="btnAddEmployee"
+                  onclick="openModalPromotion();"
+                >
+                  Promote Employee
+                </a>
+              </div>
+
               <br />
 
               <div id="tabViewIE">
@@ -2023,6 +2044,11 @@
                   <li>
                     <a onclick="openViewEmpInfoTab('leave-records')"
                       >Leave Records</a
+                    >
+                  </li>
+                  <li>
+                    <a onclick="openViewEmpInfoTab('view-employee-history')"
+                      >Employee History</a
                     >
                   </li>
                   <!-- <li>
@@ -2256,8 +2282,18 @@
                   <label for="lblDepartment" class="label-6">Department </label>
                   <p name="lblDepartment" id="lblDepartment">IT Department</p>
 
-                  <label for="lblPosition" class="label-6">Position </label>
-                  <p name="lblPosition" id="lblPosition">Programmer</p>
+                  <div class="two-col-container">
+                    <div class="col1">
+                      <label for="lblPosition" class="label-6">Position </label>
+                      <p name="lblPosition" id="lblPosition">Programmer</p>
+                    </div>
+                    <div class="col2">
+                      <label for="lblPromoted" class="label-6"
+                        >Promotion Date
+                      </label>
+                      <p name="lblPromoted" id="lblPromoted">May 06, 2021</p>
+                    </div>
+                  </div>
 
                   <label for="lblManager" class="label-6 hidden"
                     >Manager <span class="note">(Approver)</span></label
@@ -2266,8 +2302,12 @@
                     Manager John Doe
                   </p>
 
-                  <label for="lblDailyRate" class="label-6">Daily Rate </label>
-                  <p name="lblDailyRate" id="lblDailyRate">500</p>
+                  <label for="lblDailyRate" class="label-6 hidden"
+                    >Daily Rate
+                  </label>
+                  <p name="lblDailyRate" id="lblDailyRate" class="hidden">
+                    500
+                  </p>
 
                   <label for="lblBasicSalary" class="label-6"
                     >Basic Salary
@@ -2396,6 +2436,83 @@
                         Lorem, ipsum dolor sit amet consectetur adipisicing
                         elit. Sapiente, quia.
                       </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Employee History Tab -->
+              <div
+                id="view-employee-history"
+                class="tabViewIEList"
+                style="display: none"
+              >
+                <!-- Employee History Table -->
+                <!-- <label class="norecords">No Records Found</label> -->
+                <table class="tableLayout">
+                  <tbody>
+                    <tr>
+                      <td class="column1">Employee Name</td>
+                      <td class="column2">Date</td>
+                      <td class="column3">Field Change</td>
+                      <td class="column4">Old</td>
+                      <td class="column5">New</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">John Doe</td>
+                      <td class="column2">1/1/2021</td>
+                      <td class="column3">STATUS</td>
+                      <td class="column4"></td>
+                      <td class="column5">PROBATIONARY</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">John Doe</td>
+                      <td class="column2">1/1/2021</td>
+                      <td class="column3">POSITION</td>
+                      <td class="column4"></td>
+                      <td class="column5">HELPER</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">John Doe</td>
+                      <td class="column2">1/1/2021</td>
+                      <td class="column3">SALARY</td>
+                      <td class="column4"></td>
+                      <td class="column5">10,000.00</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">John Doe</td>
+                      <td class="column2">3/1/2021</td>
+                      <td class="column3">STATUS</td>
+                      <td class="column4">PROBATIONARY</td>
+                      <td class="column5">REGULAR</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">John Doe</td>
+                      <td class="column2">3/1/2021</td>
+                      <td class="column3">SALARY</td>
+                      <td class="column4">10,000.00</td>
+                      <td class="column5">15,000.00</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">John Doe</td>
+                      <td class="column2">5/1/2021</td>
+                      <td class="column3">PROMOTION DATE</td>
+                      <td class="column4"></td>
+                      <td class="column5">5/1/2021</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">John Doe</td>
+                      <td class="column2">5/1/2021</td>
+                      <td class="column3">POSITION</td>
+                      <td class="column4">HELPER</td>
+                      <td class="column5">DRIVER</td>
+                    </tr>
+                    <tr>
+                      <td class="column1">John Doe</td>
+                      <td class="column2">5/1/2021</td>
+                      <td class="column3">SALARY</td>
+                      <td class="column4">15,000.00</td>
+                      <td class="column5">20,000.00</td>
                     </tr>
                   </tbody>
                 </table>
@@ -2829,6 +2946,47 @@
                   class="btn-sm btn-secondary mx-3"
                   onclick="closeModal(`#btnCloseViewEmployee`);"
                   >Close</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Promote Employee: btnPromoteEmployee -->
+          <div class="modal modal-promote-employee">
+            <div class="modal-content-sm">
+              <h4 id="add-employee-header">Employee Promotion</h4>
+
+              <hr />
+              <div class="field-container">
+                <label for="selectNewPosition" class="label-6"
+                  >New Position</label
+                >
+                <select
+                  name="selectNewPosition"
+                  id="selectNewPosition"
+                  class="select"
+                ></select>
+
+                <label for="dtNewSalary" class="label-6">Promotion Date</label>
+                <input
+                  name="dtNewSalary"
+                  type="text"
+                  id="dtNewSalary"
+                  class="datePicker2"
+                />
+                <label for="txtNewSalary" class="label-6">New Salary</label>
+                <input name="txtNewSalary" type="text" id="txtNewSalary" />
+              </div>
+
+              <div class="modal-btn-container">
+                <a class="btn-sm btn-primary mx-3" id="btnModalPromoteEmployee"
+                  >Submit</a
+                >
+
+                <a
+                  class="btn-sm btn-secondary mx-3"
+                  onclick="closeModalPromotion();"
+                  >Cancel</a
                 >
               </div>
             </div>

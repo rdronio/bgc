@@ -3361,3 +3361,21 @@ function closeModalRemarks() {
     console.log(e);
   }
 }
+
+function openModalPromotion() {
+  try {
+    const modalRemarks = document.querySelector(".modal-promote-employee");
+    modalRemarks.style.display = "flex";
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function closeModalPromotion() {
+  try {
+    const modalRemarks = document.querySelector(".modal-promote-employee");
+    modalRemarks.style.display = "none";
+  } catch (e) {
+    console.log(e);
+  }
+}
