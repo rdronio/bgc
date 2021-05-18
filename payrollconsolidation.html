@@ -275,8 +275,7 @@
                       type="text"
                       list="txtSearch"
                       placeholder="Search Employee"
-                      onkeypress="checkSearchInput();"
-                      onchange="checkSearchInput();"
+                      onkeyup="search2TableAll(`txtSearch`,`adminTable1`,`adminTable2`), checkSearchInput();"
                     />
                     <ul class="datalist-data hidden">
                       <li>
@@ -302,7 +301,7 @@
                     aria-label="Clear search"
                     type="button"
                     data-tooltip="Clear search"
-                    onclick="clearSearch(`substitution`);"
+                    onclick="clearSearch3(`payroll-consolidation`,`adminTable1`,`adminTable2`);"
                     class="btn-clear-search tooltip hidden"
                   >
                     <span class="tooltiptext">Clear search</span>
@@ -419,7 +418,7 @@
               <!-- <label class="norecords">No Records Found</label> -->
               <div>
                 <div class="sticky-table-container">
-                  <table class="sticky-table">
+                  <table class="sticky-table" id="adminTable1">
                     <tbody>
                       <tr>
                         <td>Action</td>
@@ -506,7 +505,7 @@
               <!-- <label class="norecords">No Records Found</label> -->
               <div class="hidden">
                 <div class="sticky-table-container">
-                  <table class="sticky-table">
+                  <table class="sticky-table" id="adminTable2">
                     <tbody>
                       <tr>
                         <td>Action</td>
@@ -837,7 +836,7 @@
                     aria-label="Clear search"
                     type="button"
                     data-tooltip="Clear search"
-                    onclick="clearSearch(`substitution`);"
+                    onclick="clearSearch1(`substitution`);"
                     class="btn-clear-search tooltip hidden"
                   >
                     <span class="tooltiptext">Clear search</span>

@@ -104,8 +104,9 @@ $(document).ready(function () {
       $(".datalist-data li").removeClass("selected-datalist");
       $(this).addClass("selected-datalist");
 
-      let selectedOption = document.querySelector(".selected-datalist div span")
-        .innerHTML;
+      let selectedOption = document.querySelector(
+        ".selected-datalist div span"
+      ).innerHTML;
       let txtSearch = document.querySelector("#txtSearch");
 
       txtSearch.value = selectedOption;
@@ -2205,6 +2206,45 @@ function clearSearch2(formID) {
   }
 }
 
+function clearSearch3(formID, tableID1, tableID2) {
+  try {
+    const btnClearSearch = document.querySelector(".btn-clear-search");
+    var n = 0;
+
+    btnClearSearch.classList.add("hidden");
+    reset(formID);
+
+    var tr1, td1, i;
+    table1 = document.getElementById(tableID1);
+    table2 = document.getElementById(tableID2);
+    //Last edited
+    tr1 = table1.getElementsByTagName("tr");
+    tr2 = table1.getElementsByTagName("tr");
+
+    for (i = 1; i < tr1.length; i++) {
+      tr1[i].style.display = "";
+      if (n % 2 == 0) {
+        tr1[i].style.backgroundColor = "#d3dee2";
+      } else {
+        tr1[i].style.backgroundColor = "#ffffff";
+      }
+      n++;
+    }
+    n = 0;
+    for (i = 1; i < tr2.length; i++) {
+      tr2[i].style.display = "";
+      if (n % 2 == 0) {
+        tr2[i].style.backgroundColor = "#d3dee2";
+      } else {
+        tr2[i].style.backgroundColor = "#ffffff";
+      }
+      n++;
+    }
+  } catch (e) {
+    console.log(e);
+  }
+}
+
 function toggleSearchFilter() {
   try {
     const container = document.querySelector(".search-filter-container");
@@ -2340,6 +2380,75 @@ function searchTable0(txtSearchID, tableID) {
         n++;
       } else {
         tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+function search1TableAll(txtSearchID, tableID_1) {
+  var input, filter, tr, td, i;
+  input = document.getElementById(txtSearchID);
+  filter = input.value.toUpperCase();
+  table1 = document.getElementById(tableID_1);
+
+  (tr = table1.getElementsByTagName("tr")),
+    (td = table1.getElementsByTagName("td"));
+  var colLength = document.getElementById(tableID_1).rows[0].cells.length;
+  var n = 0;
+
+  for (i = 1; i < tr.length; i++) {
+    // tr[i].style.display = "none";
+    for (var j = 1; j < colLength; j++) {
+      td = tr[i].getElementsByTagName("td")[j];
+      if (td) {
+        if (td.innerHTML.toUpperCase().indexOf(filter.toUpperCase()) > -1) {
+          tr[i].style.display = "";
+          if (n % 2 == 0) {
+            tr[i].style.backgroundColor = "#d3dee2";
+          } else {
+            tr[i].style.backgroundColor = "#FFFFFF";
+          }
+          n++;
+          break;
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+}
+
+function search2TableAll(txtSearchID, tableID_1, tableID_2) {
+  var input, filter, tr1, td1, tr2, td2, i;
+  input = document.getElementById(txtSearchID);
+  filter = input.value.toUpperCase();
+  table1 = document.getElementById(tableID_1);
+  table2 = document.getElementById(tableID_2);
+
+  (tr1 = table1.getElementsByTagName("tr")),
+    (td1 = table1.getElementsByTagName("td"));
+  (tr2 = table2.getElementsByTagName("tr")),
+    (td2 = table2.getElementsByTagName("td"));
+  var colLength = document.getElementById(tableID_1).rows[0].cells.length;
+  var n = 0;
+
+  for (i = 1; i < tr1.length; i++) {
+    // tr1[i].style.display = "none";
+    for (var j = 1; j < colLength; j++) {
+      td1 = tr1[i].getElementsByTagName("td")[j];
+      if (td1) {
+        if (td1.innerHTML.toUpperCase().indexOf(filter.toUpperCase()) > -1) {
+          tr1[i].style.display = "";
+          if (n % 2 == 0) {
+            tr1[i].style.backgroundColor = "#d3dee2";
+          } else {
+            tr1[i].style.backgroundColor = "#FFFFFF";
+          }
+          n++;
+          break;
+        } else {
+          tr1[i].style.display = "none";
+        }
       }
     }
   }

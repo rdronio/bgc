@@ -277,7 +277,7 @@
                   <a
                     class="btn-search tooltip"
                     aria-label="Search Mail"
-                    onclick="searchTable(`txtSearch`,`tableEmployeeMasterlist`);"
+                    onclick="searchTable(`txtSearch`,`dgManageEmployee`);"
                   >
                     <span class="tooltiptext">Search</span>
                     <svg
@@ -301,7 +301,7 @@
                       list="txtSearch"
                       class="select block"
                       placeholder="Search Employee"
-                      onkeyup="searchTable(`txtSearch`,`dgManageEmployee`), checkSearchInput();"
+                      onkeyup="search1TableAll(`txtSearch`,`dgManageEmployee`), checkSearchInput();"
                     />
                     <ul class="datalist-data hidden">
                       <li>
@@ -403,7 +403,7 @@
 
               <!-- employee masterlist -->
               <!-- <label class="norecords">No Records Found</label> -->
-              <table id="tableEmployeeMasterlist" class="tableLayout">
+              <table id="dgManageEmployee" class="tableLayout">
                 <tbody>
                   <tr>
                     <td class="column1">Action</td>
