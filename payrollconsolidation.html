@@ -275,7 +275,7 @@
                       type="text"
                       list="txtSearch"
                       placeholder="Search Employee"
-                      onkeyup="search2TableAll(`txtSearch`,`adminTable1`,`adminTable2`), checkSearchInput();"
+                      onkeyup="search2TableAll(`txtSearch`,`adminTable1`,`opsTable1`,`noresults_adminTable1`,`noresults_opsTable1`), checkSearchInput();"
                     />
                     <ul class="datalist-data hidden">
                       <li>
@@ -301,7 +301,7 @@
                     aria-label="Clear search"
                     type="button"
                     data-tooltip="Clear search"
-                    onclick="clearSearch3(`payroll-consolidation`,`adminTable1`,`adminTable2`);"
+                    onclick="clearSearch3(`payroll-consolidation`,`adminTable1`,`opsTable1`,`noresults_adminTable1`,`noresults_opsTable1`);"
                     class="btn-clear-search tooltip hidden"
                   >
                     <span class="tooltiptext">Clear search</span>
@@ -416,6 +416,9 @@
 
               <!-- Payroll Records 1st Table -->
               <!-- <label class="norecords">No Records Found</label> -->
+              <label class="norecords hidden" id="noresults_adminTable1"
+                >No Match Found</label
+              >
               <div>
                 <div class="sticky-table-container">
                   <table class="sticky-table" id="adminTable1">
@@ -601,9 +604,12 @@
 
               <!-- Payroll Records 1st Table -->
               <!-- <label class="norecords">No Records Found</label> -->
+              <label class="norecords hidden" id="noresults_opsTable1"
+                >No Match Found</label
+              >
               <div>
                 <div class="sticky-table-container">
-                  <table class="sticky-table">
+                  <table class="sticky-table" id="opsTable1">
                     <tbody>
                       <tr>
                         <td>Action</td>
@@ -652,7 +658,7 @@
                             >Edit</a
                           >
                         </td>
-                        <td>John Doe 2</td>
+                        <td>John Did</td>
                         <td>13</td>
                         <td>604.17</td>
                         <!-- <td>07/29/2020</td> -->
@@ -809,8 +815,7 @@
                       type="text"
                       list="txtSearch"
                       placeholder="Search Employee"
-                      onkeypress="checkSearchInput();"
-                      onchange="checkSearchInput();"
+                      onkeyup="search2TableAll(`txtSearch`,`driverTable1`,`driverTable2`,`noresults_adminTable1`,`noresults_opsTable1`), checkSearchInput();"
                     />
                     <ul class="datalist-data hidden">
                       <li>
@@ -953,7 +958,7 @@
               <!-- <label class="norecords">No Records Found</label> -->
               <div class="">
                 <div class="sticky-joined-table-container">
-                  <table class="sticky-joined-table1">
+                  <table class="sticky-joined-table1" id="driverTable1">
                     <tbody>
                       <tr>
                         <td>Action</td>
@@ -972,7 +977,7 @@
                       </tr>
                     </tbody>
                   </table>
-                  <table class="sticky-joined-table2">
+                  <table class="sticky-joined-table2" id="driverTable2">
                     <tbody>
                       <tr>
                         <td>Mixer</td>
