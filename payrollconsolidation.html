@@ -275,7 +275,7 @@
                       type="text"
                       list="txtSearch"
                       placeholder="Search Employee"
-                      onkeyup="search2TableAll(`txtSearch`,`adminTable1`,`opsTable1`,`noresults_adminTable1`,`noresults_opsTable1`), checkSearchInput();"
+                      onkeyup="search4TableAll(`txtSearch`,`adminTable1`,`adminTable2`,`opsTable1`,`opsTable2`,`noresults_adminTable1`,`noresults_opsTable1`), checkSearchInput();"
                     />
                     <ul class="datalist-data hidden">
                       <li>
@@ -301,7 +301,7 @@
                     aria-label="Clear search"
                     type="button"
                     data-tooltip="Clear search"
-                    onclick="clearSearch3(`payroll-consolidation`,`adminTable1`,`opsTable1`,`noresults_adminTable1`,`noresults_opsTable1`);"
+                    onclick="clearSearch4(`payroll-consolidation`,`adminTable1`,`adminTable2`,`opsTable1`,`opsTable2`,`noresults_adminTable1`,`noresults_opsTable1`);"
                     class="btn-clear-search tooltip hidden"
                   >
                     <span class="tooltiptext">Clear search</span>
@@ -501,13 +501,8 @@
                       </tr>
                     </tbody>
                   </table>
-                </div>
-              </div>
 
-              <!-- Payroll Records 2nd Table -->
-              <!-- <label class="norecords">No Records Found</label> -->
-              <div class="hidden">
-                <div class="sticky-table-container">
+                  <!-- Payroll Records 2nd Table -->
                   <table class="sticky-table" id="adminTable2">
                     <tbody>
                       <tr>
@@ -557,7 +552,7 @@
                             >Edit</a
                           >
                         </td>
-                        <td>John Doe 2</td>
+                        <td>Johnaa 2</td>
                         <td>13</td>
                         <td>604.17</td>
                         <!-- <td>07/29/2020</td> -->
@@ -689,14 +684,9 @@
                       </tr>
                     </tbody>
                   </table>
-                </div>
-              </div>
 
-              <!-- Payroll Records 2nd Table -->
-              <!-- <label class="norecords">No Records Found</label> -->
-              <div class="hidden">
-                <div class="sticky-table-container">
-                  <table class="sticky-table">
+                  <!-- Payroll Records 2nd Table -->
+                  <table class="sticky-table" id="opsTable2">
                     <tbody>
                       <tr>
                         <td>Action</td>
