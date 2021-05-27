@@ -805,7 +805,7 @@
                       type="text"
                       list="txtSearch"
                       placeholder="Search Employee"
-                      onkeyup="search2TableAll(`txtSearch`,`driverTable1`,`driverTable2`,`noresults_adminTable1`,`noresults_opsTable1`), checkSearchInput();"
+                      onkeyup="searchTableAll(`txtSearch2`,`driverconsobestgeo`,`noresults_driver`), checkSearchInput2();"
                     />
                     <ul class="datalist-data hidden">
                       <li>
@@ -946,9 +946,59 @@
 
               <!-- Driver 2nd Table -->
               <!-- <label class="norecords">No Records Found</label> -->
+              <label class="norecords hidden" id="noresults_driver"
+                >No Match Found</label
+              >
+
+              <!-- driver conso table for bestgeo -->
+              <div class="hidden">
+                <div class="sticky-joined-table-container">
+                  <table class="sticky-table" id="driverconsobestgeo">
+                    <tbody>
+                      <tr>
+                        <td>Action</td>
+                        <td>Employee Name</td>
+                        <td class="bg-green">Gross Pay</td>
+                        <td>C/A</td>
+                        <td>C/B</td>
+                        <td>Pagibig loan</td>
+                        <td>SSS loan</td>
+                        <td>SSS loan</td>
+                        <td>SSS EE</td>
+                        <td>Phil EE</td>
+                        <td>HDMF EE</td>
+                        <td>Net Pay</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <button
+                            class="btn-table btn-secondary"
+                            onclick="openModalEditDriverConsolidation2(); return false;"
+                          >
+                            Edit
+                          </button>
+                        </td>
+                        <td>Medina, Jhay Lester Sundiam Sundiam</td>
+                        <td>0</td>
+                        <td>100</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- driver conso table for bgc -->
               <div class="">
                 <div class="sticky-joined-table-container">
-                  <table class="sticky-joined-table1" id="driverTable1">
+                  <table class="sticky-joined-table1" id="driver1_1stcutoff">
                     <tbody>
                       <tr>
                         <td>Action</td>
@@ -967,7 +1017,7 @@
                       </tr>
                     </tbody>
                   </table>
-                  <table class="sticky-joined-table2" id="driverTable2">
+                  <table class="sticky-joined-table2" id="driver2_1stcutoff">
                     <tbody>
                       <tr>
                         <td>Mixer</td>
