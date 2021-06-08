@@ -2155,7 +2155,7 @@ function checkSearchInput() {
 
 function checkSearchInput2() {
   try {
-    const txtSearch = document.querySelector(".txtSearch2").value;
+    const txtSearch = document.querySelector("#txtSearch2").value;
     const btnClearSearch = document.querySelector(".btn-clear-search2");
 
     if (txtSearch === "") {
@@ -2201,6 +2201,85 @@ function clearSearch2(formID) {
 
     btnClearSearch.classList.add("hidden");
     reset(formID);
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function clearSearch1(formID, tableID1, noresult_id1) {
+  try {
+    const btnClearSearch = document.querySelector(".btn-clear-search");
+    var n = 0;
+
+    btnClearSearch.classList.add("hidden");
+    reset(formID);
+
+    var tr1, tr2;
+    table1 = document.getElementById(tableID1);
+    //Last edited
+    tr1 = table1.getElementsByTagName("tr");
+
+    var noresult1 = document.getElementById(noresult_id1);
+    noresult1.classList.add("hidden");
+
+    table1.style.display = "block";
+
+    for (i = 1; i < tr1.length; i++) {
+      tr1[i].style.display = "";
+      if (n % 2 == 0) {
+        tr1[i].style.backgroundColor = "#d3dee2";
+      } else {
+        tr1[i].style.backgroundColor = "#ffffff";
+      }
+      n++;
+    }
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function clearSearch2(formID, tableID1, tableID2, noresult_id1, noresult_id2) {
+  try {
+    const btnClearSearch = document.querySelector(".btn-clear-search");
+    var n = 0;
+
+    btnClearSearch.classList.add("hidden");
+    reset(formID);
+
+    var tr1, tr2;
+    table1 = document.getElementById(tableID1);
+    table2 = document.getElementById(tableID2);
+    //Last edited
+    tr1 = table1.getElementsByTagName("tr");
+    tr2 = table2.getElementsByTagName("tr");
+
+    var noresult1 = document.getElementById(noresult_id1);
+    var noresult2 = document.getElementById(noresult_id2);
+    noresult1.classList.add("hidden");
+    noresult2.classList.add("hidden");
+
+    table1.style.display = "block";
+    table2.style.display = "block";
+
+    for (i = 1; i < tr1.length; i++) {
+      tr1[i].style.display = "";
+      if (n % 2 == 0) {
+        tr1[i].style.backgroundColor = "#d3dee2";
+      } else {
+        tr1[i].style.backgroundColor = "#ffffff";
+      }
+      n++;
+    }
+    n = 0;
+    for (i = 1; i < tr2.length; i++) {
+      tr2[i].style.display = "";
+      if (n % 2 == 0) {
+        tr2[i].style.backgroundColor = "#d3dee2";
+      } else {
+        tr2[i].style.backgroundColor = "#ffffff";
+      }
+      n++;
+    }
   } catch (e) {
     console.log(e);
   }
@@ -2904,6 +2983,118 @@ function search4TableAll(
         var noresult = document.getElementById(noresult_ops);
         noresult.classList.add("hidden");
         table4.style.display = "block";
+      }
+    }
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+function search2TableAll(
+  txtSearchID,
+  tableID_admin,
+  tableID_ops,
+  noresult_admin,
+  noresult_ops
+) {
+  try {
+    var input, filter, tr1, td1, tr2, td2, i;
+    input = document.getElementById(txtSearchID);
+    filter = input.value.toUpperCase();
+    table1 = document.getElementById(tableID_admin);
+    table2 = document.getElementById(tableID_ops);
+
+    (tr1 = table1.getElementsByTagName("tr")),
+      (td1 = table1.getElementsByTagName("td"));
+    (tr2 = table2.getElementsByTagName("tr")),
+      (td2 = table2.getElementsByTagName("td"));
+
+    var n = 0;
+    var matchCounter1 = 0;
+    var matchCounter2 = 0;
+
+    // Admin table
+    if (tr1.length > 0) {
+      var col1Length =
+        document.getElementById(tableID_admin).rows[0].cells.length;
+
+      for (var i = 1; i < tr1.length; i++) {
+        // tr1[i].style.display = "none";
+        for (var j = 1; j < col1Length; j++) {
+          td1 = tr1[i].getElementsByTagName("td")[j];
+
+          if (td1) {
+            if (
+              td1.innerHTML.toUpperCase().indexOf(filter.toUpperCase()) > -1
+            ) {
+              tr1[i].style.display = "";
+
+              if (n % 2 == 0) {
+                tr1[i].style.backgroundColor = "#d3dee2";
+              } else {
+                tr1[i].style.backgroundColor = "#FFFFFF";
+              }
+              n++;
+              matchCounter1++;
+              break;
+            } else {
+              tr1[i].style.display = "none";
+            }
+          }
+        }
+      }
+      if (matchCounter1 == 0) {
+        var noresult = document.getElementById(noresult_admin);
+        noresult.classList.remove("hidden");
+
+        table1.style.display = "none";
+      } else {
+        var noresult = document.getElementById(noresult_admin);
+        noresult.classList.add("hidden");
+
+        table1.style.display = "block";
+      }
+    }
+
+    // Ops Table
+    if (tr2.length > 0) {
+      var col2Length =
+        document.getElementById(tableID_ops).rows[0].cells.length;
+
+      //Admin table 2
+      for (i = 1; i < tr2.length; i++) {
+        // tr1[i].style.display = "none";
+        for (var j = 1; j < col2Length; j++) {
+          td2 = tr2[i].getElementsByTagName("td")[j];
+          if (td2) {
+            if (
+              td2.innerHTML.toUpperCase().indexOf(filter.toUpperCase()) > -1
+            ) {
+              tr2[i].style.display = "";
+              if (n % 2 == 0) {
+                tr2[i].style.backgroundColor = "#d3dee2";
+              } else {
+                tr2[i].style.backgroundColor = "#FFFFFF";
+              }
+              n++;
+              matchCounter2++;
+              break;
+            } else {
+              tr2[i].style.display = "none";
+            }
+          }
+        }
+      }
+      if (matchCounter2 == 0) {
+        var noresult = document.getElementById(noresult_ops);
+        noresult.classList.remove("hidden");
+
+        table2.style.display = "none";
+      } else {
+        var noresult = document.getElementById(noresult_ops);
+        noresult.classList.add("hidden");
+
+        table2.style.display = "block";
       }
     }
   } catch (e) {

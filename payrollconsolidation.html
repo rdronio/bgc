@@ -275,7 +275,7 @@
                       type="text"
                       list="txtSearch"
                       placeholder="Search Employee"
-                      onkeyup="search4TableAll(`txtSearch`,`adminTable1`,`adminTable2`,`opsTable1`,`opsTable2`,`noresults_adminTable1`,`noresults_opsTable1`), checkSearchInput();"
+                      onkeyup="search2TableAll(`txtSearch`,`adminTable1`,`opsTable1`,`noresults_adminTable1`,`noresults_opsTable1`), checkSearchInput();"
                     />
                     <ul class="datalist-data hidden">
                       <li>
@@ -301,7 +301,7 @@
                     aria-label="Clear search"
                     type="button"
                     data-tooltip="Clear search"
-                    onclick="clearSearch4(`payroll-consolidation`,`adminTable1`,`adminTable2`,`opsTable1`,`opsTable2`,`noresults_adminTable1`,`noresults_opsTable1`);"
+                    onclick="clearSearch2(`payroll-consolidation`,`adminTable1`,`opsTable1`,`noresults_adminTable1`,`noresults_opsTable1`);"
                     class="btn-clear-search tooltip hidden"
                   >
                     <span class="tooltiptext">Clear search</span>
@@ -470,7 +470,119 @@
                             >Edit</a
                           >
                         </td>
-                        <td>John Doe 2</td>
+                        <td>John Doe test</td>
+                        <td>13</td>
+                        <td>604.17</td>
+                        <!-- <td>07/29/2020</td> -->
+                        <td>557.69</td>
+                        <td>69.71</td>
+                        <td>12.00</td>
+                        <td>7250.00</td>
+                        <td>557.69</td>
+                        <td>167.31</td>
+                        <td>0.00</td>
+                        <td>1450.00</td>
+                        <td>725.00</td>
+                        <td>2900.00</td>
+                        <td>87.14</td>
+                        <td>181.25</td>
+                        <td>153.16</td>
+                        <td>94.11</td>
+                        <td>104.57</td>
+                        <td>620.22</td>
+                        <td>(2230.77)</td>
+                        <td>0.00</td>
+                        <td>1000.00</td>
+                        <td>0.00</td>
+                        <td>4006.64</td>
+                        <td>8053.04</td>
+                        <td>8053.04</td>
+                        <td></td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <a
+                            class="btn-table btn-secondary"
+                            onclick="openModalEditConsolidation();"
+                            >Edit</a
+                          >
+                        </td>
+                        <td>John Doe 5</td>
+                        <td>13</td>
+                        <td>604.17</td>
+                        <!-- <td>07/29/2020</td> -->
+                        <td>557.69</td>
+                        <td>69.71</td>
+                        <td>12.00</td>
+                        <td>7250.00</td>
+                        <td>557.69</td>
+                        <td>167.31</td>
+                        <td>0.00</td>
+                        <td>1450.00</td>
+                        <td>725.00</td>
+                        <td>2900.00</td>
+                        <td>87.14</td>
+                        <td>181.25</td>
+                        <td>153.16</td>
+                        <td>94.11</td>
+                        <td>104.57</td>
+                        <td>620.22</td>
+                        <td>(2230.77)</td>
+                        <td>0.00</td>
+                        <td>1000.00</td>
+                        <td>0.00</td>
+                        <td>4006.64</td>
+                        <td>8053.04</td>
+                        <td>8053.04</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a
+                            class="btn-table btn-secondary"
+                            onclick="openModalEditConsolidation();"
+                            >Edit</a
+                          >
+                        </td>
+                        <td>John Doe test</td>
+                        <td>13</td>
+                        <td>604.17</td>
+                        <!-- <td>07/29/2020</td> -->
+                        <td>557.69</td>
+                        <td>69.71</td>
+                        <td>12.00</td>
+                        <td>7250.00</td>
+                        <td>557.69</td>
+                        <td>167.31</td>
+                        <td>0.00</td>
+                        <td>1450.00</td>
+                        <td>725.00</td>
+                        <td>2900.00</td>
+                        <td>87.14</td>
+                        <td>181.25</td>
+                        <td>153.16</td>
+                        <td>94.11</td>
+                        <td>104.57</td>
+                        <td>620.22</td>
+                        <td>(2230.77)</td>
+                        <td>0.00</td>
+                        <td>1000.00</td>
+                        <td>0.00</td>
+                        <td>4006.64</td>
+                        <td>8053.04</td>
+                        <td>8053.04</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a
+                            class="btn-table btn-secondary"
+                            onclick="openModalEditConsolidation();"
+                            >Edit</a
+                          >
+                        </td>
+                        <td>John Doe 6</td>
                         <td>13</td>
                         <td>604.17</td>
                         <!-- <td>07/29/2020</td> -->
@@ -503,7 +615,7 @@
                   </table>
 
                   <!-- Payroll Records 2nd Table -->
-                  <table class="sticky-table" id="adminTable2">
+                  <table class="sticky-table hidden" id="adminTable2">
                     <tbody>
                       <tr>
                         <td>Action</td>
@@ -686,7 +798,7 @@
                   </table>
 
                   <!-- Payroll Records 2nd Table -->
-                  <table class="sticky-table" id="opsTable2">
+                  <table class="sticky-table hidden" id="opsTable2">
                     <tbody>
                       <tr>
                         <td>Action</td>
@@ -832,7 +944,7 @@
                     type="button"
                     data-tooltip="Clear search"
                     onclick="clearSearch1(`substitution`);"
-                    class="btn-clear-search tooltip hidden"
+                    class="btn-clear-search2 tooltip hidden"
                   >
                     <span class="tooltiptext">Clear search</span>
                     <svg

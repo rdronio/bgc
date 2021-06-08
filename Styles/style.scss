@@ -1021,7 +1021,7 @@ button.btn-table {
 }
 
 .logo .logo-link img {
-  content: url("../Images/BGC-LOGO-CLARK.png");
+  content: url("../Images/client_logo.png");
   width: 70px;
 }
 
@@ -3032,7 +3032,7 @@ table.sticky-table th:first-child {
   left: 0;
   top: 0;
   z-index: 1;
-  background-color: #ffffff;
+  // background-color: #ffffff;
 }
 
 table.sticky-table td:nth-child(2),
@@ -3042,7 +3042,7 @@ table.sticky-table th:nth-child(2) {
   left: 92px;
   top: 0;
   z-index: 1;
-  background-color: #ffffff;
+  // background-color: #ffffff;
 }
 
 // table.sticky-table td:last-child,
@@ -3074,7 +3074,7 @@ table.sticky-table tbody tr:first-child td:after {
   border-bottom: 2px #333 solid;
 }
 
-table.sticky-table tbody tr:nth-child(even) td {
+table.sticky-table tbody tr:nth-child(even) {
   background-color: #d3dee2;
 }
 
